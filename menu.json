@@ -12,10 +12,34 @@
       "nombre": "Ensaladas",
       "nota": null,
       "items": [
-        { "id": "ens1", "nombre": "Ensalada de Campo", "descripcion": "Lechuga, bondiola braseada, tomate, parmesano, mostaza, miel y soja", "precio": 19000, "disponible": true },
-        { "id": "ens2", "nombre": "Ensalada de Mar", "descripcion": "Rúcula, langostinos rebozados, tomate y panceta ahumada", "precio": 21500, "disponible": true },
-        { "id": "ens3", "nombre": "Ensalada Gourmet", "descripcion": "Lechuga, rúcula, tomate, pollo, queso, croutons y mostaza antigua", "precio": 19000, "disponible": true },
-        { "id": "ens4", "nombre": "Ensalada de Salmón Ahumado", "descripcion": "Rúcula, salmón, tomate, cebolla, aceitunas negras y roquefort", "precio": 25000, "disponible": true }
+        {
+          "id": "ens1",
+          "nombre": "Ensalada de Campo",
+          "descripcion": "Lechuga, bondiola braseada, tomate, parmesano, mostaza, miel y soja",
+          "precio": 17000,
+          "disponible": true
+        },
+        {
+          "id": "ens2",
+          "nombre": "Ensalada de Mar",
+          "descripcion": "Rúcula, langostinos rebozados, tomate y panceta ahumada",
+          "precio": 21500,
+          "disponible": true
+        },
+        {
+          "id": "ens3",
+          "nombre": "Ensalada Gourmet",
+          "descripcion": "Lechuga, rúcula, tomate, pollo, queso, croutons y mostaza antigua",
+          "precio": 19000,
+          "disponible": true
+        },
+        {
+          "id": "ens4",
+          "nombre": "Ensalada de Salmón Ahumado",
+          "descripcion": "Rúcula, salmón, tomate, cebolla, aceitunas negras y roquefort",
+          "precio": 25000,
+          "disponible": true
+        }
       ]
     },
     {
@@ -24,11 +48,41 @@
       "nombre": "Pastas Caseras",
       "nota": "Salsas: Fileto · Rosa · Bolognesa",
       "items": [
-        { "id": "pas1", "nombre": "Ravioli Capresse Frito", "descripcion": "", "precio": 25000, "disponible": true },
-        { "id": "pas2", "nombre": "Sorrentinos de Jamón y Queso", "descripcion": "", "precio": 25000, "disponible": true },
-        { "id": "pas3", "nombre": "Panzottis de Calabaza y Mozzarella", "descripcion": "", "precio": 25000, "disponible": true },
-        { "id": "pas4", "nombre": "Lasagna", "descripcion": "Jamón, queso, bolognesa, acelga y salsa fileto", "precio": 27000, "disponible": true },
-        { "id": "pas5", "nombre": "Sorrentino Ojo de Bife al Horno", "descripcion": "Ojo de bife braseado, caldo, vino blanco y crema de roquefort", "precio": 28000, "disponible": true }
+        {
+          "id": "pas1",
+          "nombre": "Ravioli Capresse Frito",
+          "descripcion": "",
+          "precio": 25000,
+          "disponible": true
+        },
+        {
+          "id": "pas2",
+          "nombre": "Sorrentinos de Jamón y Queso",
+          "descripcion": "",
+          "precio": 25000,
+          "disponible": true
+        },
+        {
+          "id": "pas3",
+          "nombre": "Panzottis de Calabaza y Mozzarella",
+          "descripcion": "",
+          "precio": 25000,
+          "disponible": true
+        },
+        {
+          "id": "pas4",
+          "nombre": "Lasagna",
+          "descripcion": "Jamón, queso, bolognesa, acelga y salsa fileto",
+          "precio": 27000,
+          "disponible": true
+        },
+        {
+          "id": "pas5",
+          "nombre": "Sorrentino Ojo de Bife al Horno",
+          "descripcion": "Ojo de bife braseado, caldo, vino blanco y crema de roquefort",
+          "precio": 28000,
+          "disponible": true
+        }
       ]
     },
     {
@@ -37,12 +91,48 @@
       "nombre": "Empanadas",
       "nota": null,
       "items": [
-        { "id": "emp1", "nombre": "Jamón y Queso", "descripcion": "", "precio": 3500, "disponible": true },
-        { "id": "emp2", "nombre": "Bondiola", "descripcion": "", "precio": 4100, "disponible": true },
-        { "id": "emp3", "nombre": "Carne al Malbec", "descripcion": "", "precio": 4100, "disponible": true },
-        { "id": "emp4", "nombre": "Pollo Agridulce", "descripcion": "", "precio": 4100, "disponible": true },
-        { "id": "emp5", "nombre": "Vegetariana", "descripcion": "", "precio": 4100, "disponible": true },
-        { "id": "emp6", "nombre": "Tucumana", "descripcion": "", "precio": 4100, "disponible": true }
+        {
+          "id": "emp1",
+          "nombre": "Jamón y Queso",
+          "descripcion": "",
+          "precio": 3500,
+          "disponible": true
+        },
+        {
+          "id": "emp2",
+          "nombre": "Bondiola",
+          "descripcion": "",
+          "precio": 4100,
+          "disponible": true
+        },
+        {
+          "id": "emp3",
+          "nombre": "Carne al Malbec",
+          "descripcion": "",
+          "precio": 4100,
+          "disponible": true
+        },
+        {
+          "id": "emp4",
+          "nombre": "Pollo Agridulce",
+          "descripcion": "",
+          "precio": 4100,
+          "disponible": true
+        },
+        {
+          "id": "emp5",
+          "nombre": "Vegetariana",
+          "descripcion": "",
+          "precio": 4100,
+          "disponible": true
+        },
+        {
+          "id": "emp6",
+          "nombre": "Tucumana",
+          "descripcion": "",
+          "precio": 4100,
+          "disponible": true
+        }
       ]
     },
     {
@@ -51,8 +141,20 @@
       "nombre": "Minutas",
       "nota": "Guarnición: Papas Fritas · Rúcula y Parmesano · Lechuga, Tomate y Cebolla",
       "items": [
-        { "id": "min1", "nombre": "Milanesa de Ternera o Suprema de Pollo", "descripcion": "", "precio": 20000, "disponible": true },
-        { "id": "min2", "nombre": "Milanesa a la Napolitana", "descripcion": "Ternera o suprema de pollo", "precio": 25000, "disponible": true }
+        {
+          "id": "min1",
+          "nombre": "Milanesa de Ternera o Suprema de Pollo",
+          "descripcion": "",
+          "precio": 20000,
+          "disponible": true
+        },
+        {
+          "id": "min2",
+          "nombre": "Milanesa a la Napolitana",
+          "descripcion": "Ternera o suprema de pollo",
+          "precio": 25000,
+          "disponible": true
+        }
       ]
     },
     {
@@ -61,13 +163,55 @@
       "nombre": "Sugerencias del Chef",
       "nota": null,
       "items": [
-        { "id": "che1", "nombre": "Salmón al Roquefort", "descripcion": "Al grill con crema roquefort sobre vegetales grillados", "precio": 33000, "disponible": true },
-        { "id": "che2", "nombre": "Entraña a la Pimienta", "descripcion": "Con crema de pimienta negra, rúcula y parmesano", "precio": 31500, "disponible": true },
-        { "id": "che3", "nombre": "Pollo a la Mostaza", "descripcion": "Pechuga con crema de mostaza y papas españolas", "precio": 22000, "disponible": true },
-        { "id": "che4", "nombre": "Merluza a los 4 Quesos", "descripcion": "Acompañada de chips de batata", "precio": 21000, "disponible": true },
-        { "id": "che5", "nombre": "Bondiola de Cerdo a la Cerveza", "descripcion": "Bondiola braseada con papas españolas", "precio": 27000, "disponible": true },
-        { "id": "che6", "nombre": "Lenguado", "descripcion": "A la crema de puerro con papas rústicas", "precio": 27000, "disponible": true },
-        { "id": "che7", "nombre": "Guiso de Lenteja", "descripcion": "Chorizo, carne vacuna, panceta ahumada y lentejas", "precio": 23000, "disponible": true }
+        {
+          "id": "che1",
+          "nombre": "Salmón al Roquefort",
+          "descripcion": "Al grill con crema roquefort sobre vegetales grillados",
+          "precio": 33000,
+          "disponible": true
+        },
+        {
+          "id": "che2",
+          "nombre": "Entraña a la Pimienta",
+          "descripcion": "Con crema de pimienta negra, rúcula y parmesano",
+          "precio": 31500,
+          "disponible": true
+        },
+        {
+          "id": "che3",
+          "nombre": "Pollo a la Mostaza",
+          "descripcion": "Pechuga con crema de mostaza y papas españolas",
+          "precio": 22000,
+          "disponible": true
+        },
+        {
+          "id": "che4",
+          "nombre": "Merluza a los 4 Quesos",
+          "descripcion": "Acompañada de chips de batata",
+          "precio": 21000,
+          "disponible": true
+        },
+        {
+          "id": "che5",
+          "nombre": "Bondiola de Cerdo a la Cerveza",
+          "descripcion": "Bondiola braseada con papas españolas",
+          "precio": 27000,
+          "disponible": true
+        },
+        {
+          "id": "che6",
+          "nombre": "Lenguado",
+          "descripcion": "A la crema de puerro con papas rústicas",
+          "precio": 27000,
+          "disponible": true
+        },
+        {
+          "id": "che7",
+          "nombre": "Guiso de Lenteja",
+          "descripcion": "Chorizo, carne vacuna, panceta ahumada y lentejas",
+          "precio": 23000,
+          "disponible": true
+        }
       ]
     },
     {
@@ -76,17 +220,83 @@
       "nombre": "Pizzas",
       "nota": null,
       "items": [
-        { "id": "piz1", "nombre": "El Bajo", "descripcion": "Tomate, muzzarella, queso azul, panceta, morrones y aceitunas", "precio": 28500, "disponible": true },
-        { "id": "piz2", "nombre": "Pollo BBQ", "descripcion": "Tomate, muzzarella, pollo en salsa BBQ, morrones y aceitunas", "precio": 28500, "disponible": true },
-        { "id": "piz3", "nombre": "Mediterránea", "descripcion": "Tomate, muzzarella, champiñones con panceta y aceitunas", "precio": 28500, "disponible": true },
-        { "id": "piz4", "nombre": "4 Quesos", "descripcion": "Tomate, muzzarella, provolone, reggianito, queso azul y aceitunas", "precio": 28500, "disponible": true },
-        { "id": "piz5", "nombre": "Siciliana", "descripcion": "Tomate, muzzarella, anchoas, champiñones y aceitunas", "precio": 28500, "disponible": true },
-        { "id": "piz6", "nombre": "Hawaiana", "descripcion": "Tomate, muzzarella, jamón cocido, ananá y aceitunas", "precio": 28500, "disponible": true },
-        { "id": "piz7", "nombre": "Vegetariana", "descripcion": "Tomate, muzzarella, vegetales grillados y aceitunas", "precio": 28500, "disponible": true },
-        { "id": "piz8", "nombre": "Muzzarella", "descripcion": "Tomate, muzzarella y aceitunas", "precio": 23000, "disponible": true },
-        { "id": "piz9", "nombre": "Especial", "descripcion": "Tomate, muzzarella, jamón cocido, morrones y aceitunas", "precio": 27000, "disponible": true },
-        { "id": "piz10", "nombre": "Napolitana", "descripcion": "Tomate, muzzarella, tomate fresco, provenzal y aceitunas", "precio": 27000, "disponible": true },
-        { "id": "piz11", "nombre": "Fugazzetta", "descripcion": "Tomate, muzzarella, cebolla salteada y aceitunas", "precio": 27000, "disponible": true }
+        {
+          "id": "piz1",
+          "nombre": "El Bajo",
+          "descripcion": "Tomate, muzzarella, queso azul, panceta, morrones y aceitunas",
+          "precio": 28500,
+          "disponible": true
+        },
+        {
+          "id": "piz2",
+          "nombre": "Pollo BBQ",
+          "descripcion": "Tomate, muzzarella, pollo en salsa BBQ, morrones y aceitunas",
+          "precio": 28500,
+          "disponible": true
+        },
+        {
+          "id": "piz3",
+          "nombre": "Mediterránea",
+          "descripcion": "Tomate, muzzarella, champiñones con panceta y aceitunas",
+          "precio": 28500,
+          "disponible": true
+        },
+        {
+          "id": "piz4",
+          "nombre": "4 Quesos",
+          "descripcion": "Tomate, muzzarella, provolone, reggianito, queso azul y aceitunas",
+          "precio": 28500,
+          "disponible": true
+        },
+        {
+          "id": "piz5",
+          "nombre": "Siciliana",
+          "descripcion": "Tomate, muzzarella, anchoas, champiñones y aceitunas",
+          "precio": 28500,
+          "disponible": true
+        },
+        {
+          "id": "piz6",
+          "nombre": "Hawaiana",
+          "descripcion": "Tomate, muzzarella, jamón cocido, ananá y aceitunas",
+          "precio": 28500,
+          "disponible": true
+        },
+        {
+          "id": "piz7",
+          "nombre": "Vegetariana",
+          "descripcion": "Tomate, muzzarella, vegetales grillados y aceitunas",
+          "precio": 28500,
+          "disponible": true
+        },
+        {
+          "id": "piz8",
+          "nombre": "Muzzarella",
+          "descripcion": "Tomate, muzzarella y aceitunas",
+          "precio": 23000,
+          "disponible": true
+        },
+        {
+          "id": "piz9",
+          "nombre": "Especial",
+          "descripcion": "Tomate, muzzarella, jamón cocido, morrones y aceitunas",
+          "precio": 27000,
+          "disponible": true
+        },
+        {
+          "id": "piz10",
+          "nombre": "Napolitana",
+          "descripcion": "Tomate, muzzarella, tomate fresco, provenzal y aceitunas",
+          "precio": 27000,
+          "disponible": true
+        },
+        {
+          "id": "piz11",
+          "nombre": "Fugazzetta",
+          "descripcion": "Tomate, muzzarella, cebolla salteada y aceitunas",
+          "precio": 27000,
+          "disponible": true
+        }
       ]
     },
     {
@@ -95,9 +305,27 @@
       "nombre": "Picadas",
       "nota": null,
       "items": [
-        { "id": "pic1", "nombre": "Picada Clásica", "descripcion": "Salame, jamón cocido, jamón crudo, bondiola, quesos, pickles, aceitunas y papas fritas", "precio": 45000, "disponible": true },
-        { "id": "pic2", "nombre": "Picada Playera", "descripcion": "Rabas, bastones de trucha, langostinos, ceviche, salsa tártara y papas fritas", "precio": 54000, "disponible": true },
-        { "id": "pic3", "nombre": "Picada Campestre", "descripcion": "Milanesas en tiras, bastones de muzzarella, aros de cebolla y papas con cheddar", "precio": 45000, "disponible": true }
+        {
+          "id": "pic1",
+          "nombre": "Picada Clásica",
+          "descripcion": "Salame, jamón cocido, jamón crudo, bondiola, quesos, pickles, aceitunas y papas fritas",
+          "precio": 45000,
+          "disponible": true
+        },
+        {
+          "id": "pic2",
+          "nombre": "Picada Playera",
+          "descripcion": "Rabas, bastones de trucha, langostinos, ceviche, salsa tártara y papas fritas",
+          "precio": 54000,
+          "disponible": true
+        },
+        {
+          "id": "pic3",
+          "nombre": "Picada Campestre",
+          "descripcion": "Milanesas en tiras, bastones de muzzarella, aros de cebolla y papas con cheddar",
+          "precio": 45000,
+          "disponible": true
+        }
       ]
     },
     {
@@ -106,13 +334,55 @@
       "nombre": "Sándwiches",
       "nota": "Todos incluyen papas fritas",
       "items": [
-        { "id": "san1", "nombre": "Tostado", "descripcion": "Pan de miga, jamón cocido, queso tybo y mayonesa", "precio": 12000, "disponible": true },
-        { "id": "san2", "nombre": "Hamburguesa", "descripcion": "Medallón de carne, cheddar, lechuga y tomate", "precio": 18500, "disponible": true },
-        { "id": "san3", "nombre": "Hamburguesa El Bajo", "descripcion": "Medallón de carne, doble cheddar y panceta", "precio": 22000, "disponible": true },
-        { "id": "san4", "nombre": "Lomo Completo", "descripcion": "Bife de lomo, lechuga, tomate, jamón, queso, huevo y mayonesa casera", "precio": 22000, "disponible": true },
-        { "id": "san5", "nombre": "Lomo El Bajo", "descripcion": "Lomo, jamón, queso, huevo, panceta, pimientos asados y mayonesa casera", "precio": 24000, "disponible": true },
-        { "id": "san6", "nombre": "Salmón Ahumado", "descripcion": "Pan de salvado, salmón ahumado, tomates deshidratados, rúcula y queso crema", "precio": 25000, "disponible": true },
-        { "id": "san7", "nombre": "Bondiola Braseada", "descripcion": "Bondiola, cebollas caramelizadas, pimientos, panceta y huevo frito", "precio": 22000, "disponible": true }
+        {
+          "id": "san1",
+          "nombre": "Tostado",
+          "descripcion": "Pan de miga, jamón cocido, queso tybo y mayonesa",
+          "precio": 12000,
+          "disponible": true
+        },
+        {
+          "id": "san2",
+          "nombre": "Hamburguesa",
+          "descripcion": "Medallón de carne, cheddar, lechuga y tomate",
+          "precio": 18500,
+          "disponible": true
+        },
+        {
+          "id": "san3",
+          "nombre": "Hamburguesa El Bajo",
+          "descripcion": "Medallón de carne, doble cheddar y panceta",
+          "precio": 22000,
+          "disponible": true
+        },
+        {
+          "id": "san4",
+          "nombre": "Lomo Completo",
+          "descripcion": "Bife de lomo, lechuga, tomate, jamón, queso, huevo y mayonesa casera",
+          "precio": 22000,
+          "disponible": true
+        },
+        {
+          "id": "san5",
+          "nombre": "Lomo El Bajo",
+          "descripcion": "Lomo, jamón, queso, huevo, panceta, pimientos asados y mayonesa casera",
+          "precio": 24000,
+          "disponible": true
+        },
+        {
+          "id": "san6",
+          "nombre": "Salmón Ahumado",
+          "descripcion": "Pan de salvado, salmón ahumado, tomates deshidratados, rúcula y queso crema",
+          "precio": 25000,
+          "disponible": true
+        },
+        {
+          "id": "san7",
+          "nombre": "Bondiola Braseada",
+          "descripcion": "Bondiola, cebollas caramelizadas, pimientos, panceta y huevo frito",
+          "precio": 22000,
+          "disponible": true
+        }
       ]
     },
     {
@@ -121,20 +391,104 @@
       "nombre": "Tragos",
       "nota": null,
       "items": [
-        { "id": "tra1", "nombre": "Fernet Branca & Cola", "descripcion": "", "precio": 9100, "disponible": true },
-        { "id": "tra2", "nombre": "Fernet Branca XL", "descripcion": "", "precio": 15000, "disponible": true },
-        { "id": "tra3", "nombre": "Cuba Libre", "descripcion": "Havana Añejo Especial, Cola y Limón", "precio": 9100, "disponible": true },
-        { "id": "tra4", "nombre": "Aperol Spritz", "descripcion": "Aperol, Espumante, soda y naranja", "precio": 10900, "disponible": true },
-        { "id": "tra5", "nombre": "Mojito Clásico", "descripcion": "Havana 3 años, Menta y Lima", "precio": 10900, "disponible": true },
-        { "id": "tra6", "nombre": "Mojito Maracuyá", "descripcion": "Havana 3 años, Maracuyá, Menta y Lima", "precio": 11600, "disponible": true },
-        { "id": "tra7", "nombre": "Caipirinha", "descripcion": "Cachaça, Lima y Azúcar", "precio": 10900, "disponible": true },
-        { "id": "tra8", "nombre": "Caipiroska", "descripcion": "Vodka Sernova, Lima y Azúcar", "precio": 10200, "disponible": true },
-        { "id": "tra9", "nombre": "Beefeater Tonic", "descripcion": "Gin Beefeater, Tónica y Limón", "precio": 11600, "disponible": true },
-        { "id": "tra10", "nombre": "Tanqueray Tonic", "descripcion": "Gin Tanqueray, Tónica y Limón", "precio": 12100, "disponible": true },
-        { "id": "tra11", "nombre": "Jarra Spritz", "descripcion": "Aperol, jugo de naranja y rodajas", "precio": 23000, "disponible": true },
-        { "id": "tra12", "nombre": "Borghetti Frozen", "descripcion": "Licor Borghetti, helado Americana y Chocolate Águila", "precio": 11600, "disponible": true },
-        { "id": "tra13", "nombre": "Vodka Sernova c/ Speed", "descripcion": "", "precio": 8500, "disponible": true },
-        { "id": "tra14", "nombre": "Absolut c/ Speed", "descripcion": "", "precio": 12700, "disponible": true }
+        {
+          "id": "tra1",
+          "nombre": "Fernet Branca & Cola",
+          "descripcion": "",
+          "precio": 9100,
+          "disponible": true
+        },
+        {
+          "id": "tra2",
+          "nombre": "Fernet Branca XL",
+          "descripcion": "",
+          "precio": 15000,
+          "disponible": true
+        },
+        {
+          "id": "tra3",
+          "nombre": "Cuba Libre",
+          "descripcion": "Havana Añejo Especial, Cola y Limón",
+          "precio": 9100,
+          "disponible": true
+        },
+        {
+          "id": "tra4",
+          "nombre": "Aperol Spritz",
+          "descripcion": "Aperol, Espumante, soda y naranja",
+          "precio": 10900,
+          "disponible": true
+        },
+        {
+          "id": "tra5",
+          "nombre": "Mojito Clásico",
+          "descripcion": "Havana 3 años, Menta y Lima",
+          "precio": 10900,
+          "disponible": true
+        },
+        {
+          "id": "tra6",
+          "nombre": "Mojito Maracuyá",
+          "descripcion": "Havana 3 años, Maracuyá, Menta y Lima",
+          "precio": 11600,
+          "disponible": true
+        },
+        {
+          "id": "tra7",
+          "nombre": "Caipirinha",
+          "descripcion": "Cachaça, Lima y Azúcar",
+          "precio": 10900,
+          "disponible": true
+        },
+        {
+          "id": "tra8",
+          "nombre": "Caipiroska",
+          "descripcion": "Vodka Sernova, Lima y Azúcar",
+          "precio": 10200,
+          "disponible": true
+        },
+        {
+          "id": "tra9",
+          "nombre": "Beefeater Tonic",
+          "descripcion": "Gin Beefeater, Tónica y Limón",
+          "precio": 11600,
+          "disponible": true
+        },
+        {
+          "id": "tra10",
+          "nombre": "Tanqueray Tonic",
+          "descripcion": "Gin Tanqueray, Tónica y Limón",
+          "precio": 12100,
+          "disponible": true
+        },
+        {
+          "id": "tra11",
+          "nombre": "Jarra Spritz",
+          "descripcion": "Aperol, jugo de naranja y rodajas",
+          "precio": 23000,
+          "disponible": true
+        },
+        {
+          "id": "tra12",
+          "nombre": "Borghetti Frozen",
+          "descripcion": "Licor Borghetti, helado Americana y Chocolate Águila",
+          "precio": 11600,
+          "disponible": true
+        },
+        {
+          "id": "tra13",
+          "nombre": "Vodka Sernova c/ Speed",
+          "descripcion": "",
+          "precio": 8500,
+          "disponible": true
+        },
+        {
+          "id": "tra14",
+          "nombre": "Absolut c/ Speed",
+          "descripcion": "",
+          "precio": 12700,
+          "disponible": true
+        }
       ]
     },
     {
@@ -143,16 +497,76 @@
       "nombre": "Cervezas",
       "nota": null,
       "items": [
-        { "id": "cer1", "nombre": "Imperial Lager 473cc", "descripcion": "", "precio": 6500, "disponible": true },
-        { "id": "cer2", "nombre": "Imperial Lager 1 Lt", "descripcion": "", "precio": 11000, "disponible": true },
-        { "id": "cer3", "nombre": "Imperial Stout 1 Lt", "descripcion": "", "precio": 0, "disponible": false },
-        { "id": "cer4", "nombre": "Imperial Roja 473cc", "descripcion": "", "precio": 6700, "disponible": true },
-        { "id": "cer5", "nombre": "Imperial IPA / APA 473cc", "descripcion": "", "precio": 6700, "disponible": true },
-        { "id": "cer6", "nombre": "Blue Moon 473cc", "descripcion": "", "precio": 8500, "disponible": true },
-        { "id": "cer7", "nombre": "Heineken 1 Lt", "descripcion": "", "precio": 14500, "disponible": true },
-        { "id": "cer8", "nombre": "Miller 330cc", "descripcion": "", "precio": 7100, "disponible": true },
-        { "id": "cer9", "nombre": "Amstel 250cc (Chopp)", "descripcion": "", "precio": 4600, "disponible": true },
-        { "id": "cer10", "nombre": "Amstel 500cc (Chopp)", "descripcion": "", "precio": 7400, "disponible": true }
+        {
+          "id": "cer1",
+          "nombre": "Imperial Lager 473cc",
+          "descripcion": "",
+          "precio": 6500,
+          "disponible": true
+        },
+        {
+          "id": "cer2",
+          "nombre": "Imperial Lager 1 Lt",
+          "descripcion": "",
+          "precio": 11000,
+          "disponible": true
+        },
+        {
+          "id": "cer3",
+          "nombre": "Imperial Stout 1 Lt",
+          "descripcion": "",
+          "precio": 0,
+          "disponible": false
+        },
+        {
+          "id": "cer4",
+          "nombre": "Imperial Roja 473cc",
+          "descripcion": "",
+          "precio": 6700,
+          "disponible": true
+        },
+        {
+          "id": "cer5",
+          "nombre": "Imperial IPA / APA 473cc",
+          "descripcion": "",
+          "precio": 6700,
+          "disponible": true
+        },
+        {
+          "id": "cer6",
+          "nombre": "Blue Moon 473cc",
+          "descripcion": "",
+          "precio": 8500,
+          "disponible": true
+        },
+        {
+          "id": "cer7",
+          "nombre": "Heineken 1 Lt",
+          "descripcion": "",
+          "precio": 14500,
+          "disponible": true
+        },
+        {
+          "id": "cer8",
+          "nombre": "Miller 330cc",
+          "descripcion": "",
+          "precio": 7100,
+          "disponible": true
+        },
+        {
+          "id": "cer9",
+          "nombre": "Amstel 250cc (Chopp)",
+          "descripcion": "",
+          "precio": 4600,
+          "disponible": true
+        },
+        {
+          "id": "cer10",
+          "nombre": "Amstel 500cc (Chopp)",
+          "descripcion": "",
+          "precio": 7400,
+          "disponible": true
+        }
       ]
     },
     {
@@ -161,12 +575,48 @@
       "nombre": "Vinos",
       "nota": null,
       "items": [
-        { "id": "vin1", "nombre": "Tribu 3/4", "descripcion": "Malbec · Blanco Dulce", "precio": 12500, "disponible": true },
-        { "id": "vin2", "nombre": "Trivento Reserve 3/4", "descripcion": "Malbec · White Malbec", "precio": 20000, "disponible": true },
-        { "id": "vin3", "nombre": "Casillero del Diablo 3/4", "descripcion": "Malbec · Red Blend · Rosado · Chardonnay", "precio": 20000, "disponible": true },
-        { "id": "vin4", "nombre": "Trivento Private Reserve 3/4", "descripcion": "Malbec", "precio": 22000, "disponible": true },
-        { "id": "vin5", "nombre": "Norton Reserva 3/4", "descripcion": "Malbec · Chardonnay", "precio": 18400, "disponible": true },
-        { "id": "vin6", "nombre": "Trivento Golden Reserve 3/4", "descripcion": "Malbec · Cabernet Franc", "precio": 34000, "disponible": true }
+        {
+          "id": "vin1",
+          "nombre": "Tribu 3/4",
+          "descripcion": "Malbec · Blanco Dulce",
+          "precio": 12500,
+          "disponible": true
+        },
+        {
+          "id": "vin2",
+          "nombre": "Trivento Reserve 3/4",
+          "descripcion": "Malbec · White Malbec",
+          "precio": 20000,
+          "disponible": true
+        },
+        {
+          "id": "vin3",
+          "nombre": "Casillero del Diablo 3/4",
+          "descripcion": "Malbec · Red Blend · Rosado · Chardonnay",
+          "precio": 20000,
+          "disponible": true
+        },
+        {
+          "id": "vin4",
+          "nombre": "Trivento Private Reserve 3/4",
+          "descripcion": "Malbec",
+          "precio": 22000,
+          "disponible": true
+        },
+        {
+          "id": "vin5",
+          "nombre": "Norton Reserva 3/4",
+          "descripcion": "Malbec · Chardonnay",
+          "precio": 18400,
+          "disponible": true
+        },
+        {
+          "id": "vin6",
+          "nombre": "Trivento Golden Reserve 3/4",
+          "descripcion": "Malbec · Cabernet Franc",
+          "precio": 34000,
+          "disponible": true
+        }
       ]
     },
     {
@@ -175,12 +625,48 @@
       "nombre": "Whiskies & Medidas",
       "nota": null,
       "items": [
-        { "id": "whi1", "nombre": "Johnnie Walker Red Label", "descripcion": "", "precio": 8500, "disponible": true },
-        { "id": "whi2", "nombre": "Jim Beam", "descripcion": "", "precio": 12500, "disponible": true },
-        { "id": "whi3", "nombre": "Johnnie Walker Black Label", "descripcion": "", "precio": 13500, "disponible": true },
-        { "id": "whi4", "nombre": "Chivas Regal", "descripcion": "", "precio": 19500, "disponible": true },
-        { "id": "whi5", "nombre": "Medida de Fernet Branca", "descripcion": "", "precio": 7500, "disponible": true },
-        { "id": "whi6", "nombre": "Shot de Tequila", "descripcion": "", "precio": 9500, "disponible": true }
+        {
+          "id": "whi1",
+          "nombre": "Johnnie Walker Red Label",
+          "descripcion": "",
+          "precio": 8500,
+          "disponible": true
+        },
+        {
+          "id": "whi2",
+          "nombre": "Jim Beam",
+          "descripcion": "",
+          "precio": 12500,
+          "disponible": true
+        },
+        {
+          "id": "whi3",
+          "nombre": "Johnnie Walker Black Label",
+          "descripcion": "",
+          "precio": 13500,
+          "disponible": true
+        },
+        {
+          "id": "whi4",
+          "nombre": "Chivas Regal",
+          "descripcion": "",
+          "precio": 19500,
+          "disponible": true
+        },
+        {
+          "id": "whi5",
+          "nombre": "Medida de Fernet Branca",
+          "descripcion": "",
+          "precio": 7500,
+          "disponible": true
+        },
+        {
+          "id": "whi6",
+          "nombre": "Shot de Tequila",
+          "descripcion": "",
+          "precio": 9500,
+          "disponible": true
+        }
       ]
     },
     {
@@ -189,13 +675,55 @@
       "nombre": "Cafetería",
       "nota": null,
       "items": [
-        { "id": "caf1", "nombre": "Expreso Chico", "descripcion": "", "precio": 3300, "disponible": true },
-        { "id": "caf2", "nombre": "Café con Leche", "descripcion": "", "precio": 4800, "disponible": true },
-        { "id": "caf3", "nombre": "Café Suizo", "descripcion": "Helado, Café y Chocolate", "precio": 8100, "disponible": true },
-        { "id": "caf4", "nombre": "Cappuccino Jarro", "descripcion": "", "precio": 4900, "disponible": true },
-        { "id": "caf5", "nombre": "Desayuno Simple", "descripcion": "Café o Té, Jugo Exprimido, 1 medialuna y 2 criollos", "precio": 10700, "disponible": true },
-        { "id": "caf6", "nombre": "Desayuno Completo", "descripcion": "Café, Jugo, 2 medialunas, 1 criollo, tostadas, manteca y mermelada", "precio": 14500, "disponible": true },
-        { "id": "caf7", "nombre": "Desayuno El Bajo", "descripcion": "Café o Té, Jugo, Tostadas, huevo revuelto, jamón, queso, manteca, mermelada y fruta", "precio": 18000, "disponible": true }
+        {
+          "id": "caf1",
+          "nombre": "Expreso Chico",
+          "descripcion": "",
+          "precio": 3300,
+          "disponible": true
+        },
+        {
+          "id": "caf2",
+          "nombre": "Café con Leche",
+          "descripcion": "",
+          "precio": 4800,
+          "disponible": true
+        },
+        {
+          "id": "caf3",
+          "nombre": "Café Suizo",
+          "descripcion": "Helado, Café y Chocolate",
+          "precio": 8100,
+          "disponible": true
+        },
+        {
+          "id": "caf4",
+          "nombre": "Cappuccino Jarro",
+          "descripcion": "",
+          "precio": 4900,
+          "disponible": true
+        },
+        {
+          "id": "caf5",
+          "nombre": "Desayuno Simple",
+          "descripcion": "Café o Té, Jugo Exprimido, 1 medialuna y 2 criollos",
+          "precio": 10700,
+          "disponible": true
+        },
+        {
+          "id": "caf6",
+          "nombre": "Desayuno Completo",
+          "descripcion": "Café, Jugo, 2 medialunas, 1 criollo, tostadas, manteca y mermelada",
+          "precio": 14500,
+          "disponible": true
+        },
+        {
+          "id": "caf7",
+          "nombre": "Desayuno El Bajo",
+          "descripcion": "Café o Té, Jugo, Tostadas, huevo revuelto, jamón, queso, manteca, mermelada y fruta",
+          "precio": 18000,
+          "disponible": true
+        }
       ]
     },
     {
@@ -204,10 +732,34 @@
       "nombre": "Postres",
       "nota": null,
       "items": [
-        { "id": "pos1", "nombre": "Copa de Tiramisú Borghetti", "descripcion": "", "precio": 8500, "disponible": true },
-        { "id": "pos2", "nombre": "Crocante de Pera", "descripcion": "Tibio con Helado de Crema Americana y canela", "precio": 12100, "disponible": true },
-        { "id": "pos3", "nombre": "Brownie", "descripcion": "Tibio con Helado de Crema Americana", "precio": 12100, "disponible": true },
-        { "id": "pos4", "nombre": "Bocha de Helado", "descripcion": "Americana · Chocolate · Dulce de Leche · Frutilla · Limón", "precio": 3200, "disponible": true }
+        {
+          "id": "pos1",
+          "nombre": "Copa de Tiramisú Borghetti",
+          "descripcion": "",
+          "precio": 8500,
+          "disponible": true
+        },
+        {
+          "id": "pos2",
+          "nombre": "Crocante de Pera",
+          "descripcion": "Tibio con Helado de Crema Americana y canela",
+          "precio": 12100,
+          "disponible": true
+        },
+        {
+          "id": "pos3",
+          "nombre": "Brownie",
+          "descripcion": "Tibio con Helado de Crema Americana",
+          "precio": 12100,
+          "disponible": true
+        },
+        {
+          "id": "pos4",
+          "nombre": "Bocha de Helado",
+          "descripcion": "Americana · Chocolate · Dulce de Leche · Frutilla · Limón",
+          "precio": 3200,
+          "disponible": true
+        }
       ]
     },
     {
@@ -216,11 +768,41 @@
       "nombre": "Sin Alcohol",
       "nota": null,
       "items": [
-        { "id": "sal1", "nombre": "Gaseosa 350cc", "descripcion": "", "precio": 4000, "disponible": true },
-        { "id": "sal2", "nombre": "Agua c/s Gas 500cc", "descripcion": "", "precio": 4700, "disponible": true },
-        { "id": "sal3", "nombre": "Licuados", "descripcion": "", "precio": 6700, "disponible": true },
-        { "id": "sal4", "nombre": "Exprimido de Naranja", "descripcion": "", "precio": 6700, "disponible": true },
-        { "id": "sal5", "nombre": "SPEED", "descripcion": "", "precio": 4900, "disponible": true }
+        {
+          "id": "sal1",
+          "nombre": "Gaseosa 350cc",
+          "descripcion": "",
+          "precio": 4000,
+          "disponible": true
+        },
+        {
+          "id": "sal2",
+          "nombre": "Agua c/s Gas 500cc",
+          "descripcion": "",
+          "precio": 4700,
+          "disponible": true
+        },
+        {
+          "id": "sal3",
+          "nombre": "Licuados",
+          "descripcion": "",
+          "precio": 6700,
+          "disponible": true
+        },
+        {
+          "id": "sal4",
+          "nombre": "Exprimido de Naranja",
+          "descripcion": "",
+          "precio": 6700,
+          "disponible": true
+        },
+        {
+          "id": "sal5",
+          "nombre": "SPEED",
+          "descripcion": "",
+          "precio": 4900,
+          "disponible": true
+        }
       ]
     }
   ]
