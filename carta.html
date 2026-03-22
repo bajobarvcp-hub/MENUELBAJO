@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>El Bajo — Beach & Drinks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080806;--bg2:#0e0e0b;--card:#131310;--gold:#C9A84C;--gold2:#E8C06A;--text:#F5EDD8;--muted:#9a948c;--border:rgba(201,168,76,0.13);}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;overflow-x:hidden;}
+.info-bar{background:#000;padding:9px 18px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 16px;border-bottom:1px solid rgba(201,168,76,.25);}
+.ib-item{display:flex;align-items:center;gap:6px;font-size:.75rem;color:#8a847c;}
+.ib-item strong{color:#E8C06A;}
+.ib-sep{color:#333;}
+.hd{background:#000;padding:20px;text-align:center;position:relative;overflow:hidden;}
+.hd::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% -10%,rgba(201,168,76,.12) 0%,transparent 65%);pointer-events:none;}
+.logo{font-family:'Playfair Display',serif;font-size:3.4rem;font-weight:700;color:#F5EDD8;letter-spacing:-1px;line-height:1;}
+.logo em{color:#C9A84C;font-style:normal;}
+.logo-sub{font-size:.62rem;letter-spacing:.38em;color:#6a645c;text-transform:uppercase;margin-top:5px;}
+.bubbles{display:flex;justify-content:center;gap:8px;margin:12px 0 0;}
+.bubble{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;}
+.search-wrap{padding:10px 16px;background:var(--bg2);border-bottom:1px solid var(--border);}
+.search-input{width:100%;background:var(--card);border:1px solid var(--border);border-radius:22px;color:#F5EDD8;font-family:'Nunito',sans-serif;font-size:.85rem;padding:9px 16px 9px 38px;outline:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='%237a756e' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.099zm-5.44 1.398a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:13px center;}
+.search-input::placeholder{color:#6a645c;}
+.nav-wrap{position:sticky;top:0;z-index:100;background:rgba(8,8,6,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none;}
+.nav-wrap::-webkit-scrollbar{display:none;}
+.nav-bar{display:flex;padding:9px 14px;gap:7px;min-width:max-content;}
+.nb{background:transparent;border:1px solid var(--border);color:#7a746e;border-radius:20px;padding:5px 13px;font-family:'Nunito',sans-serif;font-size:.76rem;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .2s;}
+.nb.on{background:#C9A84C;color:#000;border-color:#C9A84C;}
+main{padding-bottom:70px;}
+.sec{padding:28px 0 14px;border-bottom:1px solid var(--border);}
+.sh{padding:0 18px 14px;display:flex;align-items:center;gap:11px;}
+.si{width:36px;height:36px;background:#C9A84C;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.st{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;}
+.note{margin:2px 16px 10px;padding:9px 13px;background:rgba(201,168,76,.05);border-left:2px solid #C9A84C;border-radius:0 6px 6px 0;font-size:.75rem;color:#8a847c;font-style:italic;}
+.il{padding:0 14px;}
+.mi{display:flex;align-items:flex-start;justify-content:space-between;padding:11px 13px;background:#131310;border-radius:10px;margin-bottom:7px;border:1px solid var(--border);gap:10px;}
+.mi.off{opacity:.35;}
+.ii{flex:1;min-width:0;}
+.in{font-weight:600;font-size:.88rem;color:#F5EDD8;line-height:1.3;}
+.id{font-size:.75rem;color:#ddd8d0;font-weight:400;margin-top:4px;line-height:1.5;}
+.ip{font-weight:700;font-size:.92rem;color:#E8C06A;white-space:nowrap;flex-shrink:0;padding-top:1px;min-width:58px;text-align:right;}
+.ip.nh{color:#484440;font-weight:400;font-size:.78rem;}
+footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid var(--border);}
+.fl{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:#C9A84C;}
+.fsub{font-size:.58rem;letter-spacing:.38em;color:#6a645c;text-transform:uppercase;margin:3px 0 14px;}
+.finfo{font-size:.77rem;color:#7a746e;line-height:2.2;}
+.rights{margin-top:18px;font-size:.9rem;color:#C9A84C;font-style:normal;font-weight:700;font-family:'Playfair Display',serif;letter-spacing:.03em;text-transform:uppercase;}
+.up{position:fixed;bottom:18px;right:18px;width:42px;height:42px;background:#C9A84C;color:#000;border-radius:50%;border:none;font-size:1.1rem;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:200;}
+.up.on{display:flex;}
+/* Loading state */
+.loading-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:50vh;gap:16px;color:var(--muted);}
+.loading-logo{font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold);animation:pulse 1.5s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.error-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:50vh;gap:10px;color:var(--muted);text-align:center;padding:20px;}
+.error-screen button{margin-top:10px;background:var(--gold);color:#000;border:none;border-radius:8px;padding:9px 20px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.85rem;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<!--
+  ══════════════════════════════════════════
+  ⚙️  CONFIGURACIÓN — EDITÁ SOLO ESTA LÍNEA
+  ══════════════════════════════════════════
+  Reemplazá con tu usuario, repo y rama de GitHub.
+  El archivo menu.json debe estar en la raíz del repo.
+-->
+<script>
+  const MENU_URL = 'https://raw.githubusercontent.com/TU_USUARIO/TU_REPO/main/menu.json';
+  // Ejemplos:
+  // 'https://raw.githubusercontent.com/juanperez/carta-elbajo/main/menu.json'
+  // Si el archivo no está en la raíz: '.../main/carpeta/menu.json'
+</script>
+
+<div class="info-bar" id="infoBar">
+  <div class="ib-item">📍 <span id="infoDir">Cargando...</span></div>
+  <span class="ib-sep">|</span>
+  <div class="ib-item">📶 WiFi · Contraseña: <strong id="infoWifi">...</strong></div>
+</div>
+
+<header class="hd">
+  <div class="logo">el <em>bajo</em></div>
+  <div class="logo-sub">Beach &amp; Drinks</div>
+  <div class="bubbles">
+    <div class="bubble" style="background:#1a5a8a">🌊</div>
+    <div class="bubble" style="background:#7a1a1a">🍸</div>
+    <div class="bubble" style="background:#a8882a">🍽️</div>
+    <div class="bubble" style="background:#1a5e1a">☰</div>
+  </div>
+</header>
+
+<div class="search-wrap">
+  <input class="search-input" type="text" id="si" placeholder="Buscar en la carta..." oninput="doSearch(this.value)">
+</div>
+
+<div class="nav-wrap" id="nw">
+  <div class="nav-bar" id="nb"></div>
+</div>
+
+<main id="mc">
+  <div class="loading-screen">
+    <div class="loading-logo">el bajo</div>
+    <div style="font-size:.85rem">Cargando carta...</div>
+  </div>
+</main>
+
+<footer id="mainFooter" style="display:none">
+  <div class="fl">el bajo</div>
+  <div class="fsub">Beach &amp; Drinks</div>
+  <div class="finfo" id="footerInfo"></div>
+  <div class="rights">La casa se reserva el derecho de admisión y permanencia en el local</div>
+</footer>
+
+<button class="up" id="up" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// ── PRECIO FORMATTER ──────────────────────────────────
+function fmtPrecio(n) {
+  // Format: $19.000 (Argentine style — period as thousands separator)
+  return '$' + Number(n).toLocaleString('es-AR');
+}
+
+// ── RENDER MENU ───────────────────────────────────────
+function renderMenu(data) {
+  const mc = document.getElementById('mc');
+  const nb = document.getElementById('nb');
+  mc.innerHTML = '';
+  nb.innerHTML = '';
+
+  // Info bar
+  document.getElementById('infoDir').textContent = data.restaurante.direccion || '';
+  document.getElementById('infoWifi').textContent = data.restaurante.wifi_password || '';
+
+  // Footer
+  const footerInfo = document.getElementById('footerInfo');
+  footerInfo.innerHTML = `<div>📍 ${data.restaurante.direccion}</div><div>📶 WiFi · Contraseña: <strong style="color:#E8C06A">${data.restaurante.wifi_password}</strong></div>`;
+  document.getElementById('mainFooter').style.display = '';
+
+  const navMap = {};
+
+  data.categorias.forEach(cat => {
+    // Nav button
+    const btn = document.createElement('button');
+    btn.className = 'nb';
+    btn.textContent = cat.nombre;
+    btn.onclick = () => goTo(cat.id);
+    nb.appendChild(btn);
+    navMap[cat.id] = btn;
+
+    // Section
+    const sec = document.createElement('section');
+    sec.className = 'sec';
+    sec.id = cat.id;
+
+    let html = `
+      <div class="sh">
+        <div class="si">${cat.emoji}</div>
+        <h2 class="st">${cat.nombre}</h2>
+      </div>`;
+
+    if (cat.nota) {
+      html += `<div class="note">${cat.nota}</div>`;
+    }
+
+    html += `<div class="il">`;
+
+    cat.items.forEach(item => {
+      const off = !item.disponible;
+      html += `<div class="mi${off ? ' off' : ''}">
+        <div class="ii">
+          <div class="in">${item.nombre}</div>
+          ${item.descripcion ? `<div class="id">${item.descripcion}</div>` : ''}
+        </div>
+        ${off
+          ? `<div class="ip nh">No hay</div>`
+          : `<div class="ip">${fmtPrecio(item.precio)}</div>`
+        }
+      </div>`;
+    });
+
+    html += `</div>`;
+    sec.innerHTML = html;
+    mc.appendChild(sec);
+  });
+
+  // No results message
+  const nr = document.createElement('div');
+  nr.id = 'nr';
+  nr.style.cssText = 'display:none;text-align:center;padding:28px;color:#6a645c;font-size:.85rem;';
+  nr.textContent = 'No se encontraron resultados.';
+  mc.appendChild(nr);
+
+  // Intersection observer for nav highlight
+  const secs = document.querySelectorAll('.sec[id]');
+  secs.forEach(s => new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        document.querySelectorAll('.nb').forEach(b => b.classList.remove('on'));
+        const btn = navMap[e.target.id];
+        if (btn) {
+          btn.classList.add('on');
+          const nw = document.getElementById('nw');
+          nw.scrollLeft = btn.offsetLeft - nw.offsetWidth / 2 + btn.offsetWidth / 2;
+        }
+      }
+    });
+  }, { rootMargin: '-15% 0px -80% 0px', threshold: 0 }).observe(s));
+}
+
+// ── NAV & SEARCH ──────────────────────────────────────
+function goTo(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const nh = document.getElementById('nw').offsetHeight + document.querySelector('.search-wrap').offsetHeight;
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - nh - 6, behavior: 'smooth' });
+}
+
+window.addEventListener('scroll', () => {
+  document.getElementById('up').classList.toggle('on', window.scrollY > 400);
+});
+
+function doSearch(q) {
+  q = q.toLowerCase().trim();
+  const items = document.querySelectorAll('.mi');
+  const sections = document.querySelectorAll('.sec');
+  let any = false;
+  if (!q) {
+    items.forEach(i => i.style.display = '');
+    sections.forEach(s => s.style.display = '');
+    document.getElementById('nr').style.display = 'none';
+    document.getElementById('nb').style.display = 'flex';
+    return;
+  }
+  document.getElementById('nb').style.display = 'none';
+  items.forEach(i => {
+    const txt = (i.querySelector('.in')?.textContent || '') + (i.querySelector('.id')?.textContent || '');
+    const m = txt.toLowerCase().includes(q);
+    i.style.display = m ? '' : 'none';
+    if (m) any = true;
+  });
+  sections.forEach(s => {
+    const v = [...s.querySelectorAll('.mi')].some(i => i.style.display !== 'none');
+    s.style.display = v ? '' : 'none';
+  });
+  document.getElementById('nr').style.display = any ? 'none' : 'block';
+}
+
+// ── FETCH MENU ────────────────────────────────────────
+async function init() {
+  // Add cache-busting to always get fresh data
+  const url = MENU_URL + '?v=' + Date.now();
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    renderMenu(data);
+  } catch(e) {
+    document.getElementById('mc').innerHTML = `
+      <div class="error-screen">
+        <div style="font-size:2rem">⚠️</div>
+        <div style="font-size:.95rem;color:var(--text)">No se pudo cargar la carta</div>
+        <div style="font-size:.78rem">${e.message}</div>
+        <button onclick="init()">Reintentar</button>
+      </div>`;
+  }
+}
+
+init();
+</script>
+</body>
+</html>
