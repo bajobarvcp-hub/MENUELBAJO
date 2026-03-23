@@ -86,27 +86,96 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .print-btn{display:none;position:fixed;top:14px;right:14px;z-index:999;background:#fff;color:#000;border:none;border-radius:10px;padding:9px 16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);align-items:center;gap:6px;}
 .print-btn.visible{display:flex;}
 
-/* ── ESTILOS DE IMPRESIÓN ───────────────────────────── */
-@media print{
-  .info-bar,.wifi-block,.search-wrap,.nav-wrap,.social-float,.up,.print-btn,.reviews-sec,footer{display:none!important;}
-  body{background:#fff!important;color:#000!important;}
-  .hd{background:#fff!important;padding:16px 10px;}
-  .logo{color:#000!important;font-size:2.4rem!important;}
-  .logo-sub{color:#555!important;opacity:1!important;}
-  .palm,.bubbles{display:none!important;}
-  .hd::before{display:none!important;}
-  main{padding-bottom:0!important;}
-  .sec{border-bottom:1px solid #ddd!important;padding:14px 0 8px!important;break-inside:avoid;}
-  .sh{padding:0 10px 8px!important;}
-  .si{background:#eee!important;border-color:#ccc!important;}
-  .st{color:#000!important;font-size:1.1rem!important;}
-  .note{color:#666!important;border-left-color:#999!important;background:none!important;}
-  .il{padding:0 10px!important;}
-  .mi{background:#fff!important;border:1px solid #eee!important;padding:7px 10px!important;margin-bottom:3px!important;border-radius:6px!important;}
-  .mi.off{display:none!important;}
-  .in{color:#000!important;font-size:.82rem!important;}
-  .id{color:#444!important;font-size:.72rem!important;}
-  .ip{color:#000!important;font-size:.85rem!important;}
+/* ── ESTILOS DE IMPRESIÓN OPTIMIZADOS ───────────────────────────── */
+@media print {
+  /* Ocultamos solo lo interactivo */
+  .info-bar, .search-wrap, .nav-wrap, .social-float, .up, .print-btn, .reviews-sec {
+    display: none !important;
+  }
+
+  /* Reset general para papel */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    margin: 0;
+    padding: 0;
+    font-size: 10pt;
+  }
+
+  /* Header y Logo */
+  .hd {
+    background: #fff !important;
+    padding: 10px 0 !important;
+    border-bottom: 2px solid #000;
+  }
+  .logo { color: #000 !important; font-size: 2.2rem !important; }
+  .logo-sub { color: #555 !important; opacity: 1 !important; margin-bottom: 5px; }
+  .palm, .bubbles, .hd::before { display: none !important; }
+
+  /* Bloque WiFi visible y compacto al inicio */
+  .wifi-block {
+    display: block !important;
+    background: #f5f5f5 !important;
+    border: 1px solid #ddd !important;
+    margin: 10px 0 !important;
+    padding: 8px !important;
+    text-align: center;
+  }
+  .wifi-label-big { color: #000 !important; font-size: 0.7rem !important; }
+  .wifi-label-big svg { stroke: #000 !important; }
+  .wifi-pass-big { font-size: 1.5rem !important; color: #000 !important; }
+
+  /* Optimización de Espacio (Grilla de 2 columnas para el menú) */
+  main {
+    padding: 0 !important;
+    display: block;
+  }
+  
+  .sec {
+    border-bottom: 1px solid #eee !important;
+    padding: 10px 0 !important;
+    break-inside: avoid; /* Evita que una sección se corte entre dos páginas */
+  }
+
+  .sh { padding: 0 0 5px 0 !important; }
+  .si { display: none !important; } /* Quitamos emojis para ahorrar espacio */
+  .st { color: #000 !important; font-size: 1.2rem !important; text-transform: uppercase; }
+  
+  /* Los items en dos columnas para no dejar blancos */
+  .il {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px;
+    padding: 0 !important;
+  }
+
+  .mi {
+    background: #fff !important;
+    border: none !important;
+    border-bottom: 0.5pt dashed #ccc !important;
+    padding: 4px 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .mi.off { display: none !important; } /* No imprimimos lo que no hay */
+  .in { color: #000 !important; font-size: 0.9rem !important; flex: 1; }
+  .id { color: #666 !important; font-size: 0.7rem !important; line-height: 1.1; }
+  .ip { color: #000 !important; font-size: 0.9rem !important; font-weight: bold; margin-left: 8px; }
+
+  /* Footer visible al final */
+  footer {
+    display: block !important;
+    background: #fff !important;
+    border-top: 1px solid #000 !important;
+    margin-top: 20px;
+    padding: 10px 0 !important;
+  }
+  .fl { color: #000 !important; font-size: 1.5rem !important; }
+  .finfo, .fsub, .rights { color: #333 !important; }
+  footer svg { stroke: #000 !important; }
 }
 </style>
 </head>
