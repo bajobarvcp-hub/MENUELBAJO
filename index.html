@@ -81,6 +81,33 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .loading-logo{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;animation:pulse 1.5s ease-in-out infinite;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 #no-results{display:none;text-align:center;padding:28px;color:#6a645c;font-size:.85rem;}
+
+/* ── BOTÓN IMPRIMIR (solo visible con ?print=1) ─────── */
+.print-btn{display:none;position:fixed;top:14px;right:14px;z-index:999;background:#fff;color:#000;border:none;border-radius:10px;padding:9px 16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);align-items:center;gap:6px;}
+.print-btn.visible{display:flex;}
+
+/* ── ESTILOS DE IMPRESIÓN ───────────────────────────── */
+@media print{
+  .info-bar,.wifi-block,.search-wrap,.nav-wrap,.social-float,.up,.print-btn,.reviews-sec,footer{display:none!important;}
+  body{background:#fff!important;color:#000!important;}
+  .hd{background:#fff!important;padding:16px 10px;}
+  .logo{color:#000!important;font-size:2.4rem!important;}
+  .logo-sub{color:#555!important;opacity:1!important;}
+  .palm,.bubbles{display:none!important;}
+  .hd::before{display:none!important;}
+  main{padding-bottom:0!important;}
+  .sec{border-bottom:1px solid #ddd!important;padding:14px 0 8px!important;break-inside:avoid;}
+  .sh{padding:0 10px 8px!important;}
+  .si{background:#eee!important;border-color:#ccc!important;}
+  .st{color:#000!important;font-size:1.1rem!important;}
+  .note{color:#666!important;border-left-color:#999!important;background:none!important;}
+  .il{padding:0 10px!important;}
+  .mi{background:#fff!important;border:1px solid #eee!important;padding:7px 10px!important;margin-bottom:3px!important;border-radius:6px!important;}
+  .mi.off{display:none!important;}
+  .in{color:#000!important;font-size:.82rem!important;}
+  .id{color:#444!important;font-size:.72rem!important;}
+  .ip{color:#000!important;font-size:.85rem!important;}
+}
 </style>
 </head>
 <body>
@@ -201,6 +228,9 @@ const GMAPS_URL = 'https://search.google.com/local/writereview?placeid=ChIJq9vuJ
 </div>
 
 <button class="up" id="upBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- BOTÓN IMPRIMIR (solo visible con ?print=1) -->
+<button class="print-btn" id="printBtn" onclick="window.print()">🖨️ Imprimir carta</button>
 
 <script>
 // ── RENDER ────────────────────────────────────────────
@@ -348,6 +378,11 @@ async function init() {
 }
 
 init();
+
+// ── MODO IMPRESIÓN (solo con ?print=1) ───────────────
+if (new URLSearchParams(window.location.search).get('print') === '1') {
+  document.getElementById('printBtn').classList.add('visible');
+}
 </script>
 </body>
 </html>
