@@ -105,7 +105,17 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .print-btn{display:none;position:fixed;top:14px;right:14px;z-index:999;background:#fff;color:#000;border:none;border-radius:10px;padding:9px 16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);align-items:center;gap:6px;}
 .print-btn.visible{display:flex;}
 
-/* ── IMPRESIÓN ───────────────────────────────────── */
+/* ── WIFI SOLO EN IMPRESIÓN ─────────────────────── */
+.wifi-print{display:none;}
+@media print{
+  .wifi-print{display:flex!important;flex-direction:column;align-items:center;gap:4px;padding:14px;background:#111!important;border:1px solid rgba(255,255,255,.15)!important;border-radius:10px;margin:10px 30px 0;text-align:center;}
+  .wifi-print-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5)!important;}
+  .wifi-print-row{display:flex;gap:28px;align-items:center;}
+  .wifi-print-item{display:flex;flex-direction:column;align-items:center;gap:2px;}
+  .wifi-print-key{font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.45)!important;}
+  .wifi-print-val{font-family:'Playfair Display',serif!important;font-size:1rem!important;font-weight:700!important;color:#fff!important;letter-spacing:.05em;}
+}
+
 @media print{
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
   @page{size:A4;margin:0;}
@@ -188,6 +198,21 @@ const WIFI_NAME = 'El Bajo';
     </div>
   </div>
 </header>
+
+<!-- WIFI SOLO IMPRESIÓN -->
+<div class="wifi-print">
+  <div class="wifi-print-label">WiFi</div>
+  <div class="wifi-print-row">
+    <div class="wifi-print-item">
+      <span class="wifi-print-key">Red</span>
+      <span class="wifi-print-val" id="printWifiName">elbajobar</span>
+    </div>
+    <div class="wifi-print-item">
+      <span class="wifi-print-key">Contraseña</span>
+      <span class="wifi-print-val" id="printWifiPass">elbajocp20</span>
+    </div>
+  </div>
+</div>
 
 <!-- SEARCH -->
 <div class="search-wrap">
@@ -303,9 +328,11 @@ function renderMenu(data) {
   // Wifi desde JSON si existe
   if (data.restaurante?.wifi_password) {
     document.getElementById('popupWifiPass').textContent = data.restaurante.wifi_password;
+    document.getElementById('printWifiPass').textContent = data.restaurante.wifi_password;
   }
   if (data.restaurante?.wifi_name) {
     document.getElementById('popupWifiName').textContent = data.restaurante.wifi_name;
+    document.getElementById('printWifiName').textContent = data.restaurante.wifi_name;
   }
 
   const navMap = {};
