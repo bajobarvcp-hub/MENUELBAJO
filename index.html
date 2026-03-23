@@ -18,13 +18,13 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;over
 .palm{position:absolute;top:-10px;font-size:5rem;opacity:.07;line-height:1;}
 .palm.l{left:-10px;transform:rotate(15deg);}
 .palm.r{right:-10px;transform:rotate(-20deg) scaleX(-1);}
-.logo{font-family:'Playfair Display',serif;font-size:3.4rem;font-weight:700;color:#fff;letter-spacing:-1px;line-height:1;}
+.logo{font-family:'Playfair Display',serif;font-size:4rem;font-weight:700;color:#fff;letter-spacing:-1px;line-height:1;}
 .logo em{color:#fff;font-style:normal;}
 .logo-sub{font-size:.62rem;letter-spacing:.38em;color:#fff;opacity:.5;text-transform:uppercase;margin-top:5px;}
 
 /* ── BURBUJAS DE COLORES ─────────────────────────── */
-.bubbles{display:flex;justify-content:center;gap:10px;margin:16px 0 0;}
-.bubble{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.bubbles{display:flex;justify-content:center;gap:7px;margin:14px 0 0;}
+.bubble{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .bubble-blue  {background:#1e7bbf;}
 .bubble-red   {background:#cc2b2b;}
 .bubble-orange{background:#e07a10;}
@@ -157,21 +157,34 @@ const WIFI_NAME = 'El Bajo';
   <div class="logo">el <em>bajo</em></div>
   <div class="logo-sub">Beach &amp; Drinks</div>
   <div class="bubbles">
-    <!-- Olas -->
+    <!-- Ola -->
     <div class="bubble bubble-blue">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M2 12c1.5-2 3-3 4.5-3s3 2 4.5 2 3-2 4.5-2 3 1 4.5 3"/><path d="M2 17c1.5-2 3-3 4.5-3s3 2 4.5 2 3-2 4.5-2 3 1 4.5 3"/></svg>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round">
+        <path d="M2 8 Q6 4 12 8 Q18 12 22 8"/>
+        <path d="M2 14 Q6 10 12 14 Q18 18 22 14"/>
+        <path d="M2 20 Q6 16 12 20 Q18 24 22 20"/>
+      </svg>
     </div>
-    <!-- Copa -->
+    <!-- Copa cóctel -->
     <div class="bubble bubble-red">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 11v11"/><path d="M5 3l2 7h10l2-7H5z"/></svg>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><line x1="12" y1="11" x2="12" y2="22"/><path d="M5 3h14l-7 8-7-8z"/></svg>
     </div>
-    <!-- Bandeja -->
+    <!-- Campanita -->
     <div class="bubble bubble-orange">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="10" rx="9" ry="4"/><path d="M3 10c0 4.418 4.03 8 9 8s9-3.582 9-8"/><line x1="3" y1="14" x2="21" y2="14"/></svg>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
     </div>
-    <!-- Menú / hamburguesa -->
+    <!-- Hamburguesa -->
     <div class="bubble bubble-green">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff" stroke="none">
+        <!-- Pan de arriba (semicírculo) -->
+        <path d="M4 10 Q4 4 12 4 Q20 4 20 10 Z"/>
+        <!-- Lechuga / relleno verde -->
+        <rect x="3" y="11" width="18" height="2.5" rx="1.2" fill="#fff" opacity=".85"/>
+        <!-- Carne -->
+        <rect x="3" y="14" width="18" height="2" rx="1" fill="#fff" opacity=".7"/>
+        <!-- Pan de abajo -->
+        <rect x="3" y="16.5" width="18" height="3" rx="1.5" fill="#fff"/>
+      </svg>
     </div>
   </div>
 </header>
@@ -260,7 +273,7 @@ const WIFI_NAME = 'El Bajo';
   <div class="wifi-popup">
     <div class="wifi-popup-icon">📶</div>
     <div class="wifi-popup-title">Red WiFi</div>
-    <div class="wifi-popup-name" id="popupWifiName">El Bajo</div>
+    <div class="wifi-popup-name" id="popupWifiName">elbajobar</div>
     <div class="wifi-popup-pass-label">Contraseña</div>
     <div class="wifi-popup-pass" id="popupWifiPass">elbajocp20</div>
     <button class="wifi-close" onclick="document.getElementById('wifiOverlay').classList.remove('open')">Cerrar</button>
