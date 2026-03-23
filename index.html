@@ -57,7 +57,7 @@ main{padding-bottom:70px;}
 .review-author{font-size:.65rem;color:#aaa;font-style:italic;}
 .review-source{font-size:.58rem;color:#555;margin-top:2px;display:flex;align-items:center;gap:3px;}
 .google-dot{width:6px;height:6px;border-radius:50%;background:#4285F4;flex-shrink:0;}
-.gmaps-btn{display:flex;align-items:center;justify-content:center;gap:8px;margin:12px 14px 0;padding:11px;background:#0e0e0b;border:1px solid rgba(255,255,255,.15);border-radius:10px;color:#aaa;font-size:.78rem;text-decoration:none;font-family:'Nunito',sans-serif;font-weight:600;transition:border-color .2s,color .2s;}
+.gmaps-btn{display:flex;align-items:center;justify-content:center;gap:8px;margin:12px 14px 0;padding:11px;background:#0e0e0b;border:1px solid rgba(255,255,255,.15);border-radius:10px;color:#aaa;font-size:.78rem;text-decoration:none;font-family:'Nunito',sans-serif;font-weight:600;transition:border-color .2s,color .2s;cursor:pointer;}
 .gmaps-btn:hover{border-color:rgba(255,255,255,.4);color:#fff;}
 .g-logo{width:16px;height:16px;border-radius:3px;background:linear-gradient(135deg,#4285F4 25%,#34A853 25% 50%,#FBBC04 50% 75%,#EA4335 75%);flex-shrink:0;}
 footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid rgba(255,255,255,.08);}
@@ -157,9 +157,9 @@ const GMAPS_URL = 'https://search.google.com/local/writereview?placeid=ChIJq9vuJ
     <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">"Buenísimas las empanadas de bondiola. El Aperol Spritz también una delicia. Muy recomendable."</div><div class="review-author">Sofía L.</div><div class="review-source"><span class="google-dot"></span>Google</div></div>
     <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">"El salmón al roquefort es espectacular. Lugar con onda y muy bien ubicado. Ya una tradición cada verano."</div><div class="review-author">Pablo G.</div><div class="review-source"><span class="google-dot"></span>Google</div></div>
   </div>
-  <a class="gmaps-btn" id="gmapsBtn" href="https://maps.app.goo.gl/ZJMaUshf67LyyobN9" target="_blank" rel="noopener">
+  <a class="gmaps-btn" id="gmapsBtn" href="#" onclick="window.open(GMAPS_URL,'_blank');return false;" rel="noopener">
     <div class="g-logo"></div>
-    <span>Ver todas las reseñas en Google</span>
+    <span>Dejá tu reseña en Google</span>
   </a>
 </section>
 
@@ -184,7 +184,7 @@ const GMAPS_URL = 'https://search.google.com/local/writereview?placeid=ChIJq9vuJ
 <div class="social-float">
   <div class="sf-btn-wrap">
     <span class="sf-label">Dejá tu reseña</span>
-    <button class="sf-btn sf-rev" onclick="window.open('https://maps.app.goo.gl/ZJMaUshf67LyyobN9','_blank')" style="color:#E8C06A;font-size:1.3rem;">★</button>
+    <button class="sf-btn sf-rev" onclick="window.open(GMAPS_URL,'_blank')" style="color:#E8C06A;font-size:1.3rem;">★</button>
   </div>
   <div class="sf-btn-wrap">
     <span class="sf-label">Instagram</span>
