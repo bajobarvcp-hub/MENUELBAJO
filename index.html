@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>El Bajo — Beach & Drinks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080806;--bg2:#0e0e0b;--card:#131310;--gold:#C9A84C;--gold2:#E8C06A;--text:#ffffff;--muted:#9a948c;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;overflow-x:hidden;}
+.info-bar{background:#000;padding:12px 18px;display:flex;align-items:center;justify-content:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.1);}
+.ib-item{display:flex;align-items:center;gap:7px;font-size:.9rem;color:#fff;font-weight:600;}
+.wifi-block{display:flex;flex-direction:column;align-items:center;gap:6px;padding:16px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;margin:8px 14px;}
+.wifi-label-big{font-size:.9rem;color:#fff;text-transform:uppercase;letter-spacing:.15em;font-weight:600;display:flex;align-items:center;gap:6px;}
+.wifi-pass-big{font-size:2.6rem;font-weight:700;color:#fff;letter-spacing:.1em;font-family:'Playfair Display',serif;}
+.hd{background:#000;padding:20px;text-align:center;position:relative;overflow:hidden;}
+.hd::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% -10%,rgba(255,255,255,.04) 0%,transparent 65%);pointer-events:none;}
+.palm{position:absolute;top:-10px;font-size:5rem;opacity:.07;line-height:1;}
+.palm.l{left:-10px;transform:rotate(15deg);}
+.palm.r{right:-10px;transform:rotate(-20deg) scaleX(-1);}
+.logo{font-family:'Playfair Display',serif;font-size:3.4rem;font-weight:700;color:#fff;letter-spacing:-1px;line-height:1;}
+.logo em{color:#fff;font-style:normal;}
+.logo-sub{font-size:.62rem;letter-spacing:.38em;color:#fff;opacity:.5;text-transform:uppercase;margin-top:5px;}
+.bubbles{display:flex;justify-content:center;gap:8px;margin:12px 0 0;}
+.bubble{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);}
+.search-wrap{padding:10px 16px;background:var(--bg2);border-bottom:1px solid rgba(255,255,255,.06);}
+.search-input{width:100%;background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:22px;color:#fff;font-family:'Nunito',sans-serif;font-size:.85rem;padding:9px 16px 9px 38px;outline:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='%237a756e' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.099zm-5.44 1.398a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:13px center;}
+.search-input::placeholder{color:#6a645c;}
+.nav-wrap{position:sticky;top:0;z-index:100;background:rgba(8,8,6,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);overflow-x:auto;scrollbar-width:none;}
+.nav-wrap::-webkit-scrollbar{display:none;}
+.nav-bar{display:flex;padding:9px 14px;gap:7px;min-width:max-content;}
+.nb{background:transparent;border:1px solid rgba(255,255,255,.1);color:#aaa;border-radius:20px;padding:5px 13px;font-family:'Nunito',sans-serif;font-size:.76rem;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .2s;}
+.nb.on{background:#fff;color:#000;border-color:#fff;}
+main{padding-bottom:70px;}
+.sec{padding:28px 0 14px;border-bottom:1px solid rgba(255,255,255,.06);}
+.sh{padding:0 18px 14px;display:flex;align-items:center;gap:11px;}
+.si{width:36px;height:36px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.st{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#E8C06A;}
+.note{margin:2px 16px 10px;padding:9px 13px;background:rgba(255,255,255,.03);border-left:2px solid rgba(255,255,255,.2);border-radius:0 6px 6px 0;font-size:.75rem;color:#aaa;font-style:italic;}
+.il{padding:0 14px;}
+.mi{display:flex;align-items:flex-start;justify-content:space-between;padding:11px 13px;background:#131310;border-radius:10px;margin-bottom:7px;border:1px solid rgba(255,255,255,.05);gap:10px;transition:border-color .2s;}
+.mi.off{opacity:.35;}
+.ii{flex:1;min-width:0;}
+.in{font-weight:700;font-size:.88rem;color:#E8C06A;line-height:1.3;}
+.id{font-size:.75rem;color:#fff;font-weight:400;margin-top:4px;line-height:1.5;opacity:.8;}
+.ip{font-weight:700;font-size:.92rem;color:#fff;white-space:nowrap;flex-shrink:0;padding-top:1px;min-width:58px;text-align:right;}
+.ip.nh{color:#555;font-weight:400;font-size:.78rem;}
+.reviews-sec{padding:28px 0 24px;border-bottom:1px solid rgba(255,255,255,.06);}
+.reviews-grid{padding:0 14px;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;}
+@media(max-width:420px){.reviews-grid{grid-template-columns:1fr;}}
+.review-card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:12px 13px;}
+.review-stars{color:#fff;font-size:.9rem;margin-bottom:5px;}
+.review-text{font-size:.75rem;color:#fff;line-height:1.5;margin-bottom:6px;opacity:.8;}
+.review-author{font-size:.65rem;color:#aaa;font-style:italic;}
+.review-source{font-size:.58rem;color:#555;margin-top:2px;display:flex;align-items:center;gap:3px;}
+.google-dot{width:6px;height:6px;border-radius:50%;background:#4285F4;flex-shrink:0;}
+.gmaps-btn{display:flex;align-items:center;justify-content:center;gap:8px;margin:12px 14px 0;padding:11px;background:#0e0e0b;border:1px solid rgba(255,255,255,.15);border-radius:10px;color:#aaa;font-size:.78rem;text-decoration:none;font-family:'Nunito',sans-serif;font-weight:600;transition:border-color .2s,color .2s;}
+.gmaps-btn:hover{border-color:rgba(255,255,255,.4);color:#fff;}
+.g-logo{width:16px;height:16px;border-radius:3px;background:linear-gradient(135deg,#4285F4 25%,#34A853 25% 50%,#FBBC04 50% 75%,#EA4335 75%);flex-shrink:0;}
+footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid rgba(255,255,255,.08);}
+.fl{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:#fff;}
+.fsub{font-size:.58rem;letter-spacing:.38em;color:#aaa;text-transform:uppercase;margin:3px 0 14px;}
+.finfo{font-size:.77rem;color:#aaa;line-height:2.2;}
+.rights{margin-top:18px;font-size:.82rem;color:#fff;opacity:.4;font-family:'Nunito',sans-serif;font-weight:400;letter-spacing:.02em;text-transform:uppercase;line-height:1.5;}
+.social-float{position:fixed;bottom:80px;right:18px;display:flex;flex-direction:column;gap:10px;z-index:200;}
+.sf-btn-wrap{position:relative;display:flex;align-items:center;}
+.sf-btn{width:44px;height:44px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.5);transition:transform .2s;text-decoration:none;}
+.sf-btn:hover{transform:scale(1.1);}
+.sf-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+.sf-wa{background:#25D366;}
+.sf-rev{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);}
+.sf-label{position:absolute;right:52px;background:rgba(0,0,0,.85);color:#fff;font-size:.65rem;font-weight:700;padding:4px 9px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;border:1px solid rgba(255,255,255,.1);}
+.sf-btn-wrap:hover .sf-label{opacity:1;}
+.up{position:fixed;bottom:22px;right:18px;width:44px;height:44px;background:#fff;color:#000;border-radius:50%;border:none;font-size:1.2rem;font-weight:700;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(255,255,255,.2);transition:transform .2s;z-index:200;}
+.up.on{display:flex;}
+.up:hover{transform:scale(1.08);}
+.loading-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:14px;}
+.loading-logo{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;animation:pulse 1.5s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+#no-results{display:none;text-align:center;padding:28px;color:#6a645c;font-size:.85rem;}
+</style>
+</head>
+<body>
+
+<!--
+  ╔══════════════════════════════════════════╗
+  ║  ÚNICA LÍNEA A CONFIGURAR               ║
+  ║  Reemplazá con tu usuario y repo        ║
+  ╚══════════════════════════════════════════╝
+-->
+<script>
+const MENU_URL = '/menu.json';
+const GMAPS_URL = 'https://maps.app.goo.gl/ZJMaUshf67LyyobN9';
+</script>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="ib-item">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <span id="infoDir">Yrigoyen 900 · Villa Carlos Paz</span>
+  </div>
+</div>
+
+<!-- WIFI -->
+<div class="wifi-block">
+  <div class="wifi-label-big">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+    WiFi · Contraseña
+  </div>
+  <div class="wifi-pass-big" id="wifiPass">elbajocp20</div>
+</div>
+
+<!-- HEADER -->
+<header class="hd">
+  <div class="palm l">🌴</div>
+  <div class="palm r">🌴</div>
+  <div class="logo">el <em>bajo</em></div>
+  <div class="logo-sub">Beach &amp; Drinks</div>
+  <div class="bubbles">
+    <div class="bubble"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M2 12c1.5-2 3-3 4.5-3s3 2 4.5 2 3-2 4.5-2 3 1 4.5 3"/><path d="M2 17c1.5-2 3-3 4.5-3s3 2 4.5 2 3-2 4.5-2 3 1 4.5 3"/></svg></div>
+    <div class="bubble"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M8 22h8"/><path d="M12 11v11"/><path d="M5 3l2 7h10l2-7H5z"/></svg></div>
+    <div class="bubble"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4"/><path d="M8 12h8"/></svg></div>
+    <div class="bubble"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
+  </div>
+</header>
+
+<!-- SEARCH -->
+<div class="search-wrap">
+  <input class="search-input" type="text" id="searchInput" placeholder="Buscar sección..." oninput="doSearch(this.value)">
+</div>
+
+<!-- NAV (se genera dinámicamente) -->
+<div class="nav-wrap" id="nw">
+  <div class="nav-bar" id="nb"></div>
+</div>
+
+<!-- MAIN (se genera dinámicamente) -->
+<main id="mc">
+  <div class="loading-screen">
+    <div class="loading-logo">el bajo</div>
+    <div style="font-size:.82rem;color:#aaa">Cargando carta...</div>
+  </div>
+</main>
+
+<!-- RESEÑAS (estático) -->
+<section class="reviews-sec" id="reviews">
+  <div class="sh">
+    <div class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+    <h2 class="st">Reseñas</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">"Ambiente increíble, la picada playera es una obra de arte. Volvemos siempre que venimos a Carlos Paz."</div><div class="review-author">Marcela R.</div><div class="review-source"><span class="google-dot"></span>Google</div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">"El lomo El Bajo es lo mejor que probé en el verano. La atención impecable y la vista al lago, perfecta."</div><div class="review-author">Rodrigo M.</div><div class="review-source"><span class="google-dot"></span>Google</div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">"Buenísimas las empanadas de bondiola. El Aperol Spritz también una delicia. Muy recomendable."</div><div class="review-author">Sofía L.</div><div class="review-source"><span class="google-dot"></span>Google</div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">"El salmón al roquefort es espectacular. Lugar con onda y muy bien ubicado. Ya una tradición cada verano."</div><div class="review-author">Pablo G.</div><div class="review-source"><span class="google-dot"></span>Google</div></div>
+  </div>
+  <a class="gmaps-btn" id="gmapsBtn" href="https://maps.app.goo.gl/ZJMaUshf67LyyobN9" target="_blank" rel="noopener">
+    <div class="g-logo"></div>
+    <span>Ver todas las reseñas en Google</span>
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fl">el bajo</div>
+  <div class="fsub">Beach &amp; Drinks</div>
+  <div class="finfo" id="footerInfo">
+    <div style="display:flex;align-items:center;justify-content:center;gap:6px">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Yrigoyen 900 · Villa Carlos Paz
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin-top:4px">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+      WiFi · Contraseña: <strong style="color:#fff;margin-left:4px">elbajocp20</strong>
+    </div>
+  </div>
+  <div class="rights">La casa se reserva el derecho de admisión y permanencia en el local</div>
+</footer>
+
+<!-- BOTONES FLOTANTES -->
+<div class="social-float">
+  <div class="sf-btn-wrap">
+    <span class="sf-label">Dejá tu reseña</span>
+    <button class="sf-btn sf-rev" onclick="window.open('https://maps.app.goo.gl/ZJMaUshf67LyyobN9','_blank')" style="color:#E8C06A;font-size:1.3rem;">★</button>
+  </div>
+  <div class="sf-btn-wrap">
+    <span class="sf-label">Instagram</span>
+    <a href="https://www.instagram.com/elbajobar" target="_blank" rel="noopener" class="sf-btn sf-ig">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg>
+    </a>
+  </div>
+  <div class="sf-btn-wrap">
+    <span class="sf-label">WhatsApp</span>
+    <a href="https://wa.me/5403541599597" target="_blank" rel="noopener" class="sf-btn sf-wa">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+  </div>
+</div>
+
+<button class="up" id="upBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// ── RENDER ────────────────────────────────────────────
+function fmtPrecio(n) {
+  if (!n || n === 0) return '';
+  return '$' + Number(n).toLocaleString('es-AR');
+}
+
+function renderMenu(data) {
+  const mc = document.getElementById('mc');
+  const nb = document.getElementById('nb');
+  mc.innerHTML = '';
+  nb.innerHTML = '';
+
+  // Wifi desde JSON
+  const wp = document.getElementById('wifiPass');
+  if (wp && data.restaurante?.wifi_password) wp.textContent = data.restaurante.wifi_password;
+  const dir = document.getElementById('infoDir');
+  if (dir && data.restaurante?.direccion) dir.textContent = data.restaurante.direccion;
+
+  const navMap = {};
+
+  data.categorias.forEach(cat => {
+    // Botón nav
+    const btn = document.createElement('button');
+    btn.className = 'nb';
+    btn.textContent = cat.nombre;
+    btn.onclick = () => goTo(cat.id);
+    nb.appendChild(btn);
+    navMap[cat.id] = btn;
+
+    // Sección
+    const sec = document.createElement('section');
+    sec.className = 'sec';
+    sec.id = cat.id;
+
+    let html = `<div class="sh"><div class="si">${cat.emoji}</div><h2 class="st">${cat.nombre}</h2></div>`;
+    if (cat.nota) html += `<div class="note">${cat.nota}</div>`;
+    html += `<div class="il">`;
+
+    cat.items.forEach(item => {
+      const off = !item.disponible;
+      const precio = fmtPrecio(item.precio);
+      html += `<div class="mi${off ? ' off' : ''}">
+        <div class="ii">
+          <div class="in">${item.nombre}</div>
+          ${item.descripcion ? `<div class="id">${item.descripcion}</div>` : ''}
+        </div>
+        ${off
+          ? `<div class="ip nh">No hay</div>`
+          : precio ? `<div class="ip">${precio}</div>` : ''
+        }
+      </div>`;
+    });
+
+    html += `</div>`;
+    sec.innerHTML = html;
+    mc.appendChild(sec);
+  });
+
+  // Botón Reseñas en nav
+  const revBtn = document.createElement('button');
+  revBtn.className = 'nb';
+  revBtn.textContent = '⭐ Reseñas';
+  revBtn.onclick = () => document.getElementById('reviews').scrollIntoView({behavior:'smooth'});
+  nb.appendChild(revBtn);
+  navMap['reviews'] = revBtn;
+
+  // No results
+  const nr = document.createElement('div');
+  nr.id = 'no-results';
+  nr.style.cssText = 'display:none;text-align:center;padding:28px;color:#6a645c;font-size:.85rem;';
+  nr.textContent = 'No se encontraron resultados.';
+  mc.appendChild(nr);
+
+  // Intersection observer para nav highlight
+  const allSecs = document.querySelectorAll('.sec[id], .reviews-sec[id]');
+  allSecs.forEach(s => new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        document.querySelectorAll('.nb').forEach(b => b.classList.remove('on'));
+        const btn = navMap[e.target.id];
+        if (btn) {
+          btn.classList.add('on');
+          const nw = document.getElementById('nw');
+          nw.scrollLeft = btn.offsetLeft - nw.offsetWidth / 2 + btn.offsetWidth / 2;
+        }
+      }
+    });
+  }, { rootMargin: '-15% 0px -80% 0px', threshold: 0 }).observe(s));
+}
+
+// ── NAVEGACIÓN ────────────────────────────────────────
+function goTo(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const nh = document.getElementById('nw').offsetHeight + document.querySelector('.search-wrap').offsetHeight;
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - nh - 6, behavior: 'smooth' });
+}
+
+window.addEventListener('scroll', () => {
+  document.getElementById('upBtn').classList.toggle('on', window.scrollY > 400);
+});
+
+// ── BUSCADOR (solo secciones) ─────────────────────────
+function doSearch(q) {
+  q = q.toLowerCase().trim();
+  const sections = document.querySelectorAll('.sec');
+  const nr = document.getElementById('no-results');
+  const navBar = document.getElementById('nb');
+  if (!q) {
+    sections.forEach(s => s.style.display = '');
+    document.querySelectorAll('.mi').forEach(i => i.style.display = '');
+    if (nr) nr.style.display = 'none';
+    navBar.style.display = 'flex';
+    return;
+  }
+  navBar.style.display = 'none';
+  let any = false;
+  sections.forEach(s => {
+    const title = (s.querySelector('.st')?.textContent || '').toLowerCase();
+    const match = title.includes(q);
+    s.style.display = match ? '' : 'none';
+    if (match) { s.querySelectorAll('.mi').forEach(i => i.style.display = ''); any = true; }
+  });
+  if (nr) nr.style.display = any ? 'none' : 'block';
+}
+
+// ── CARGA DEL MENÚ ────────────────────────────────────
+async function init() {
+  try {
+    const res = await fetch(MENU_URL + '?v=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    renderMenu(data);
+  } catch(e) {
+    document.getElementById('mc').innerHTML = `
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:50vh;gap:12px;text-align:center;padding:20px">
+        <div style="font-size:2rem">⚠️</div>
+        <div style="color:#fff;font-size:.95rem">No se pudo cargar la carta</div>
+        <div style="color:#aaa;font-size:.78rem">${e.message}</div>
+        <button onclick="init()" style="margin-top:8px;background:#fff;color:#000;border:none;border-radius:8px;padding:9px 20px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.85rem;cursor:pointer">Reintentar</button>
+      </div>`;
+  }
+}
+
+init();
+</script>
+</body>
+</html>
