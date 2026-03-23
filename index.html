@@ -13,10 +13,7 @@ html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;overflow-x:hidden;}
 .info-bar{background:#000;padding:12px 18px;display:flex;align-items:center;justify-content:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.1);}
 .ib-item{display:flex;align-items:center;gap:7px;font-size:.9rem;color:#fff;font-weight:600;}
-.wifi-block{display:flex;flex-direction:column;align-items:center;gap:6px;padding:16px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;margin:8px 14px;}
-.wifi-label-big{font-size:.9rem;color:#fff;text-transform:uppercase;letter-spacing:.15em;font-weight:600;display:flex;align-items:center;gap:6px;}
-.wifi-pass-big{font-size:2.6rem;font-weight:700;color:#fff;letter-spacing:.1em;font-family:'Playfair Display',serif;}
-.hd{background:#000;padding:20px;text-align:center;position:relative;overflow:hidden;}
+.hd{background:#000;padding:24px 20px 20px;text-align:center;position:relative;overflow:hidden;}
 .hd::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% -10%,rgba(255,255,255,.04) 0%,transparent 65%);pointer-events:none;}
 .palm{position:absolute;top:-10px;font-size:5rem;opacity:.07;line-height:1;}
 .palm.l{left:-10px;transform:rotate(15deg);}
@@ -24,8 +21,15 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;over
 .logo{font-family:'Playfair Display',serif;font-size:3.4rem;font-weight:700;color:#fff;letter-spacing:-1px;line-height:1;}
 .logo em{color:#fff;font-style:normal;}
 .logo-sub{font-size:.62rem;letter-spacing:.38em;color:#fff;opacity:.5;text-transform:uppercase;margin-top:5px;}
-.bubbles{display:flex;justify-content:center;gap:8px;margin:12px 0 0;}
-.bubble{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);}
+
+/* ── BURBUJAS DE COLORES ─────────────────────────── */
+.bubbles{display:flex;justify-content:center;gap:10px;margin:16px 0 0;}
+.bubble{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.bubble-blue  {background:#1e7bbf;}
+.bubble-red   {background:#cc2b2b;}
+.bubble-orange{background:#e07a10;}
+.bubble-green {background:#4a8c3f;}
+
 .search-wrap{padding:10px 16px;background:var(--bg2);border-bottom:1px solid rgba(255,255,255,.06);}
 .search-input{width:100%;background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:22px;color:#fff;font-family:'Nunito',sans-serif;font-size:.85rem;padding:9px 16px 9px 38px;outline:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='%237a756e' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.099zm-5.44 1.398a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:13px center;}
 .search-input::placeholder{color:#6a645c;}
@@ -65,6 +69,8 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .fsub{font-size:.58rem;letter-spacing:.38em;color:#aaa;text-transform:uppercase;margin:3px 0 14px;}
 .finfo{font-size:.77rem;color:#aaa;line-height:2.2;}
 .rights{margin-top:18px;font-size:.82rem;color:#fff;opacity:.4;font-family:'Nunito',sans-serif;font-weight:400;letter-spacing:.02em;text-transform:uppercase;line-height:1.5;}
+
+/* ── BOTONES FLOTANTES ───────────────────────────── */
 .social-float{position:fixed;bottom:80px;right:18px;display:flex;flex-direction:column;gap:10px;z-index:200;}
 .sf-btn-wrap{position:relative;display:flex;align-items:center;}
 .sf-btn{width:44px;height:44px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.5);transition:transform .2s;text-decoration:none;}
@@ -72,6 +78,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .sf-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
 .sf-wa{background:#25D366;}
 .sf-rev{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);}
+.sf-wifi{background:rgba(30,123,191,.85);border:1px solid rgba(30,123,191,.5);}
 .sf-label{position:absolute;right:52px;background:rgba(0,0,0,.85);color:#fff;font-size:.65rem;font-weight:700;padding:4px 9px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;border:1px solid rgba(255,255,255,.1);}
 .sf-btn-wrap:hover .sf-label{opacity:1;}
 .up{position:fixed;bottom:22px;right:18px;width:44px;height:44px;background:#fff;color:#000;border-radius:50%;border:none;font-size:1.2rem;font-weight:700;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(255,255,255,.2);transition:transform .2s;z-index:200;}
@@ -82,159 +89,57 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 #no-results{display:none;text-align:center;padding:28px;color:#6a645c;font-size:.85rem;}
 
-/* ── BOTÓN IMPRIMIR (solo visible con ?print=1) ─────── */
+/* ── POPUP WIFI ──────────────────────────────────── */
+.wifi-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+.wifi-overlay.open{display:flex;}
+.wifi-popup{background:#131310;border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px 24px;text-align:center;width:min(300px,88vw);box-shadow:0 20px 60px rgba(0,0,0,.6);}
+.wifi-popup-icon{font-size:2.2rem;margin-bottom:10px;}
+.wifi-popup-title{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#aaa;margin-bottom:6px;}
+.wifi-popup-name{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;margin-bottom:16px;font-weight:700;}
+.wifi-popup-pass-label{font-size:.65rem;color:#aaa;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.wifi-popup-pass{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fff;letter-spacing:.08em;margin-bottom:20px;}
+.wifi-close{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:10px;padding:9px 24px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;transition:background .2s;}
+.wifi-close:hover{background:rgba(255,255,255,.16);}
+
+/* ── BOTÓN IMPRIMIR ──────────────────────────────── */
 .print-btn{display:none;position:fixed;top:14px;right:14px;z-index:999;background:#fff;color:#000;border:none;border-radius:10px;padding:9px 16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);align-items:center;gap:6px;}
 .print-btn.visible{display:flex;}
 
-/* ── COPIA EXACTA PARA IMPRESIÓN (SIN BORDES Y ESTILO ORIGINAL) ── */
-@media print {
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-    color-adjust: exact !important;
-  }
-
-  @page {
-    size: A4;
-    margin: 0; /* Clave para evitar bordes blancos */
-  }
-
-  /* 1. ELIMINAR INTERFAZ Y RELLENO */
-  .info-bar, .search-wrap, .nav-wrap, .social-float, .up, .print-btn, 
-  #no-results, .reviews-sec, .gmaps-btn, .palm, .bubbles {
-    display: none !important;
-  }
-
-  /* 2. FONDO NEGRO TOTAL */
-  html, body {
-    background-color: #080806 !important;
-    color: #ffffff !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100%;
-  }
-
-  /* 3. HEADER Y WIFI (PRIMERA PARTE DE LA HOJA) */
-  .hd {
-    background: #000 !important;
-    padding: 40px 0 20px !important;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    text-align: center;
-  }
-  .logo { color: #fff !important; font-size: 3.5rem !important; }
-  .logo em { color: #fff !important; font-style: normal; }
-  .logo-sub { color: rgba(255,255,255,0.5) !important; font-size: 0.8rem !important; }
-
-  .wifi-block {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.04) !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    margin: 20px auto !important;
-    padding: 20px !important;
-    width: 80%;
-    border-radius: 12px !important;
-  }
-  .wifi-label-big { color: #fff !important; }
-  .wifi-pass-big { color: #fff !important; font-size: 2.8rem !important; font-family: 'Playfair Display', serif !important; }
-
-  /* 4. SECCIONES (TÍTULOS A LA IZQUIERDA Y DORADOS) */
-  main { 
-    padding: 20px 0 !important;
-  }
-
-  .sec {
-    border: none !important;
-    padding: 20px 0 !important;
-    break-inside: auto;
-    /* Si quieres que el menú empiece SIEMPRE en una hoja nueva después del logo, activa la siguiente línea: */
-    /* break-before: page; */ 
-  }
-
-  .sh { 
-    padding: 0 30px 15px !important; 
-    text-align: left !important; /* Títulos a la izquierda como el original */
-  }
-
-  .st { 
-    color: #E8C06A !important; /* Dorado original */
-    font-size: 1.8rem !important; 
-    margin: 0 !important;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .si { display: none !important; } /* Limpieza de iconos */
-
-  /* 5. PLATOS EN 2 COLUMNAS PARA NO DEJAR HUECOS */
-  .il {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 15px;
-    padding: 0 30px !important;
-  }
-
-  .mi {
-    background: #131310 !important;
-    border: 1px solid rgba(255,255,255,0.05) !important;
-    padding: 12px !important;
-    break-inside: avoid;
-    display: flex !important;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .mi.off { display: none !important; }
-
-  .in { 
-    color: #E8C06A !important; /* Nombre plato en dorado */
-    font-size: 1rem !important; 
-    font-weight: 600 !important;
-  } 
-  
-  .id { 
-    color: #ffffff !important; /* Descripción en blanco */
-    opacity: 0.9 !important; 
-    font-size: 0.75rem !important; 
-    line-height: 1.4;
-  }
-
-  .ip { 
-    color: #ffffff !important; 
-    font-weight: 700 !important; 
-    margin-top: auto; 
-    padding-top: 5px;
-    text-align: right;
-  }
-
-  /* 6. PIE DE PÁGINA (UBICACIÓN Y DERECHOS) */
-  footer {
-    display: block !important;
-    background: #000 !important;
-    padding: 40px 30px !important;
-    border-top: 1px solid rgba(255,255,255,0.1) !important;
-    text-align: center;
-    break-inside: avoid;
-  }
-  .finfo { color: #fff !important; font-size: 0.9rem !important; }
-  .rights { color: rgba(255,255,255,0.4) !important; margin-top: 15px; font-size: 0.75rem !important; }
-  .fl, .fsub { display: none !important; }
+/* ── IMPRESIÓN ───────────────────────────────────── */
+@media print{
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  @page{size:A4;margin:0;}
+  .info-bar,.search-wrap,.nav-wrap,.social-float,.up,.print-btn,#no-results,.reviews-sec,.gmaps-btn,.palm,.bubbles,.wifi-overlay{display:none!important;}
+  html,body{background-color:#080806!important;color:#fff!important;margin:0!important;padding:0!important;}
+  .hd{background:#000!important;padding:40px 0 20px!important;text-align:center;}
+  .logo{color:#fff!important;font-size:3.5rem!important;}
+  .logo em{color:#fff!important;}
+  .logo-sub{color:rgba(255,255,255,.5)!important;font-size:.8rem!important;}
+  main{padding:20px 0!important;}
+  .sec{border:none!important;padding:20px 0!important;break-inside:auto;}
+  .sh{padding:0 30px 15px!important;}
+  .st{color:#E8C06A!important;font-size:1.8rem!important;}
+  .si{display:none!important;}
+  .il{display:grid;grid-template-columns:1fr 1fr;gap:15px;padding:0 30px!important;}
+  .mi{background:#131310!important;border:1px solid rgba(255,255,255,.05)!important;padding:12px!important;break-inside:avoid;display:flex!important;flex-direction:column;}
+  .mi.off{display:none!important;}
+  .in{color:#E8C06A!important;font-size:1rem!important;font-weight:600!important;}
+  .id{color:#fff!important;opacity:.9!important;font-size:.75rem!important;}
+  .ip{color:#fff!important;font-weight:700!important;margin-top:auto;padding-top:5px;text-align:right;}
+  footer{display:block!important;background:#000!important;padding:40px 30px!important;border-top:1px solid rgba(255,255,255,.1)!important;text-align:center;break-inside:avoid;}
+  .finfo{color:#fff!important;font-size:.9rem!important;}
+  .rights{color:rgba(255,255,255,.4)!important;margin-top:15px;font-size:.75rem!important;}
+  .fl,.fsub{display:none!important;}
 }
 </style>
 </head>
 <body>
 
-<!--
-  ╔══════════════════════════════════════════╗
-  ║  ÚNICA LÍNEA A CONFIGURAR               ║
-  ║  Reemplazá con tu usuario y repo        ║
-  ╚══════════════════════════════════════════╝
--->
 <script>
 const MENU_URL = '/menu.json';
 const GMAPS_URL = 'https://search.google.com/local/writereview?placeid=ChIJq9vuJGlmLZQRtPE0IJQyojQ';
+const WIFI_PASS = 'elbajocp20';
+const WIFI_NAME = 'El Bajo';
 </script>
 
 <!-- INFO BAR -->
@@ -245,15 +150,6 @@ const GMAPS_URL = 'https://search.google.com/local/writereview?placeid=ChIJq9vuJ
   </div>
 </div>
 
-<!-- WIFI -->
-<div class="wifi-block">
-  <div class="wifi-label-big">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-    WiFi · Contraseña
-  </div>
-  <div class="wifi-pass-big" id="wifiPass">elbajocp20</div>
-</div>
-
 <!-- HEADER -->
 <header class="hd">
   <div class="palm l">🌴</div>
@@ -261,10 +157,22 @@ const GMAPS_URL = 'https://search.google.com/local/writereview?placeid=ChIJq9vuJ
   <div class="logo">el <em>bajo</em></div>
   <div class="logo-sub">Beach &amp; Drinks</div>
   <div class="bubbles">
-    <div class="bubble"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M2 12c1.5-2 3-3 4.5-3s3 2 4.5 2 3-2 4.5-2 3 1 4.5 3"/><path d="M2 17c1.5-2 3-3 4.5-3s3 2 4.5 2 3-2 4.5-2 3 1 4.5 3"/></svg></div>
-    <div class="bubble"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M8 22h8"/><path d="M12 11v11"/><path d="M5 3l2 7h10l2-7H5z"/></svg></div>
-    <div class="bubble"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4"/><path d="M8 12h8"/></svg></div>
-    <div class="bubble"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
+    <!-- Olas -->
+    <div class="bubble bubble-blue">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M2 12c1.5-2 3-3 4.5-3s3 2 4.5 2 3-2 4.5-2 3 1 4.5 3"/><path d="M2 17c1.5-2 3-3 4.5-3s3 2 4.5 2 3-2 4.5-2 3 1 4.5 3"/></svg>
+    </div>
+    <!-- Copa -->
+    <div class="bubble bubble-red">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 11v11"/><path d="M5 3l2 7h10l2-7H5z"/></svg>
+    </div>
+    <!-- Bandeja -->
+    <div class="bubble bubble-orange">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="10" rx="9" ry="4"/><path d="M3 10c0 4.418 4.03 8 9 8s9-3.582 9-8"/><line x1="3" y1="14" x2="21" y2="14"/></svg>
+    </div>
+    <!-- Menú / hamburguesa -->
+    <div class="bubble bubble-green">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </div>
   </div>
 </header>
 
@@ -273,12 +181,12 @@ const GMAPS_URL = 'https://search.google.com/local/writereview?placeid=ChIJq9vuJ
   <input class="search-input" type="text" id="searchInput" placeholder="Buscar sección..." oninput="doSearch(this.value)">
 </div>
 
-<!-- NAV (se genera dinámicamente) -->
+<!-- NAV -->
 <div class="nav-wrap" id="nw">
   <div class="nav-bar" id="nb"></div>
 </div>
 
-<!-- MAIN (se genera dinámicamente) -->
+<!-- MAIN -->
 <main id="mc">
   <div class="loading-screen">
     <div class="loading-logo">el bajo</div>
@@ -286,7 +194,7 @@ const GMAPS_URL = 'https://search.google.com/local/writereview?placeid=ChIJq9vuJ
   </div>
 </main>
 
-<!-- RESEÑAS (estático) -->
+<!-- RESEÑAS -->
 <section class="reviews-sec" id="reviews">
   <div class="sh">
     <div class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
@@ -313,26 +221,32 @@ const GMAPS_URL = 'https://search.google.com/local/writereview?placeid=ChIJq9vuJ
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       Yrigoyen 900 · Villa Carlos Paz
     </div>
-    <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin-top:4px">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-      WiFi · Contraseña: <strong style="color:#fff;margin-left:4px">elbajocp20</strong>
-    </div>
   </div>
   <div class="rights">La casa se reserva el derecho de admisión y permanencia en el local</div>
 </footer>
 
 <!-- BOTONES FLOTANTES -->
 <div class="social-float">
+  <!-- WiFi -->
+  <div class="sf-btn-wrap">
+    <span class="sf-label">WiFi</span>
+    <button class="sf-btn sf-wifi" onclick="document.getElementById('wifiOverlay').classList.add('open')">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+    </button>
+  </div>
+  <!-- Reseña -->
   <div class="sf-btn-wrap">
     <span class="sf-label">Dejá tu reseña</span>
     <button class="sf-btn sf-rev" onclick="window.open(GMAPS_URL,'_blank')" style="color:#E8C06A;font-size:1.3rem;">★</button>
   </div>
+  <!-- Instagram -->
   <div class="sf-btn-wrap">
     <span class="sf-label">Instagram</span>
     <a href="https://www.instagram.com/elbajobar" target="_blank" rel="noopener" class="sf-btn sf-ig">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg>
     </a>
   </div>
+  <!-- WhatsApp -->
   <div class="sf-btn-wrap">
     <span class="sf-label">WhatsApp</span>
     <a href="https://wa.me/5403541599597" target="_blank" rel="noopener" class="sf-btn sf-wa">
@@ -341,13 +255,22 @@ const GMAPS_URL = 'https://search.google.com/local/writereview?placeid=ChIJq9vuJ
   </div>
 </div>
 
-<button class="up" id="upBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<!-- POPUP WIFI -->
+<div class="wifi-overlay" id="wifiOverlay" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="wifi-popup">
+    <div class="wifi-popup-icon">📶</div>
+    <div class="wifi-popup-title">Red WiFi</div>
+    <div class="wifi-popup-name" id="popupWifiName">El Bajo</div>
+    <div class="wifi-popup-pass-label">Contraseña</div>
+    <div class="wifi-popup-pass" id="popupWifiPass">elbajocp20</div>
+    <button class="wifi-close" onclick="document.getElementById('wifiOverlay').classList.remove('open')">Cerrar</button>
+  </div>
+</div>
 
-<!-- BOTÓN IMPRIMIR (solo visible con ?print=1) -->
+<button class="up" id="upBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <button class="print-btn" id="printBtn" onclick="window.print()">🖨️ Imprimir carta</button>
 
 <script>
-// ── RENDER ────────────────────────────────────────────
 function fmtPrecio(n) {
   if (!n || n === 0) return '';
   return '$' + Number(n).toLocaleString('es-AR');
@@ -359,16 +282,20 @@ function renderMenu(data) {
   mc.innerHTML = '';
   nb.innerHTML = '';
 
-  // Wifi desde JSON
-  const wp = document.getElementById('wifiPass');
-  if (wp && data.restaurante?.wifi_password) wp.textContent = data.restaurante.wifi_password;
   const dir = document.getElementById('infoDir');
   if (dir && data.restaurante?.direccion) dir.textContent = data.restaurante.direccion;
+
+  // Wifi desde JSON si existe
+  if (data.restaurante?.wifi_password) {
+    document.getElementById('popupWifiPass').textContent = data.restaurante.wifi_password;
+  }
+  if (data.restaurante?.wifi_name) {
+    document.getElementById('popupWifiName').textContent = data.restaurante.wifi_name;
+  }
 
   const navMap = {};
 
   data.categorias.forEach(cat => {
-    // Botón nav
     const btn = document.createElement('button');
     btn.className = 'nb';
     btn.textContent = cat.nombre;
@@ -376,7 +303,6 @@ function renderMenu(data) {
     nb.appendChild(btn);
     navMap[cat.id] = btn;
 
-    // Sección
     const sec = document.createElement('section');
     sec.className = 'sec';
     sec.id = cat.id;
@@ -393,10 +319,7 @@ function renderMenu(data) {
           <div class="in">${item.nombre}</div>
           ${item.descripcion ? `<div class="id">${item.descripcion}</div>` : ''}
         </div>
-        ${off
-          ? `<div class="ip nh">No hay</div>`
-          : precio ? `<div class="ip">${precio}</div>` : ''
-        }
+        ${off ? `<div class="ip nh">No hay</div>` : precio ? `<div class="ip">${precio}</div>` : ''}
       </div>`;
     });
 
@@ -405,7 +328,6 @@ function renderMenu(data) {
     mc.appendChild(sec);
   });
 
-  // Botón Reseñas en nav
   const revBtn = document.createElement('button');
   revBtn.className = 'nb';
   revBtn.textContent = '⭐ Reseñas';
@@ -413,14 +335,12 @@ function renderMenu(data) {
   nb.appendChild(revBtn);
   navMap['reviews'] = revBtn;
 
-  // No results
   const nr = document.createElement('div');
   nr.id = 'no-results';
   nr.style.cssText = 'display:none;text-align:center;padding:28px;color:#6a645c;font-size:.85rem;';
   nr.textContent = 'No se encontraron resultados.';
   mc.appendChild(nr);
 
-  // Intersection observer para nav highlight
   const allSecs = document.querySelectorAll('.sec[id], .reviews-sec[id]');
   allSecs.forEach(s => new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -437,7 +357,6 @@ function renderMenu(data) {
   }, { rootMargin: '-15% 0px -80% 0px', threshold: 0 }).observe(s));
 }
 
-// ── NAVEGACIÓN ────────────────────────────────────────
 function goTo(id) {
   const el = document.getElementById(id);
   if (!el) return;
@@ -449,7 +368,6 @@ window.addEventListener('scroll', () => {
   document.getElementById('upBtn').classList.toggle('on', window.scrollY > 400);
 });
 
-// ── BUSCADOR (solo secciones) ─────────────────────────
 function doSearch(q) {
   q = q.toLowerCase().trim();
   const sections = document.querySelectorAll('.sec');
@@ -473,7 +391,6 @@ function doSearch(q) {
   if (nr) nr.style.display = any ? 'none' : 'block';
 }
 
-// ── CARGA DEL MENÚ ────────────────────────────────────
 async function init() {
   try {
     const res = await fetch(MENU_URL + '?v=' + Date.now());
@@ -493,7 +410,6 @@ async function init() {
 
 init();
 
-// ── MODO IMPRESIÓN (solo con ?print=1) ───────────────
 if (new URLSearchParams(window.location.search).get('print') === '1') {
   document.getElementById('printBtn').classList.add('visible');
 }
