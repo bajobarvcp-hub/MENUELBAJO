@@ -107,13 +107,15 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
 /* ── WIFI SOLO EN IMPRESIÓN ─────────────────────── */
 .wifi-print{display:none;}
+.ubicacion-print{display:none;}
 @media print{
-  .wifi-print{display:flex!important;flex-direction:column;align-items:center;gap:4px;padding:14px;background:#111!important;border:1px solid rgba(255,255,255,.15)!important;border-radius:10px;margin:10px 30px 0;text-align:center;}
-  .wifi-print-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5)!important;}
-  .wifi-print-row{display:flex;gap:28px;align-items:center;}
-  .wifi-print-item{display:flex;flex-direction:column;align-items:center;gap:2px;}
-  .wifi-print-key{font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.45)!important;}
-  .wifi-print-val{font-family:'Playfair Display',serif!important;font-size:1rem!important;font-weight:700!important;color:#fff!important;letter-spacing:.05em;}
+  .ubicacion-print{display:block!important;font-family:'Playfair Display',serif!important;font-size:.85rem!important;color:rgba(255,255,255,.6)!important;letter-spacing:.15em;text-transform:uppercase;text-align:center;padding-top:30px;margin-bottom:-10px;}
+  .wifi-print{display:flex!important;flex-direction:column;align-items:center;gap:6px;padding:18px 20px;background:#111!important;border:1px solid rgba(255,255,255,.15)!important;border-radius:12px;margin:14px 30px 0;text-align:center;}
+  .wifi-print-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5)!important;margin-bottom:2px;}
+  .wifi-print-row{display:flex;gap:40px;align-items:center;}
+  .wifi-print-item{display:flex;flex-direction:column;align-items:center;gap:3px;}
+  .wifi-print-key{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.45)!important;}
+  .wifi-print-val{font-family:'Playfair Display',serif!important;font-size:1.4rem!important;font-weight:700!important;color:#fff!important;letter-spacing:.08em;}
 }
 
 @media print{
@@ -159,6 +161,9 @@ const WIFI_NAME = 'El Bajo';
     <span id="infoDir">Yrigoyen 900 · Villa Carlos Paz</span>
   </div>
 </div>
+
+<!-- UBICACIÓN SOLO IMPRESIÓN -->
+<div class="ubicacion-print" id="ubicacionPrint">Yrigoyen 900 · Villa Carlos Paz</div>
 
 <!-- HEADER -->
 <header class="hd">
@@ -323,7 +328,10 @@ function renderMenu(data) {
   nb.innerHTML = '';
 
   const dir = document.getElementById('infoDir');
-  if (dir && data.restaurante?.direccion) dir.textContent = data.restaurante.direccion;
+  if (dir && data.restaurante?.direccion) {
+    dir.textContent = data.restaurante.direccion;
+    document.getElementById('ubicacionPrint').textContent = data.restaurante.direccion;
+  }
 
   // Wifi desde JSON si existe
   if (data.restaurante?.wifi_password) {
