@@ -86,9 +86,8 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .print-btn{display:none;position:fixed;top:14px;right:14px;z-index:999;background:#fff;color:#000;border:none;border-radius:10px;padding:9px 16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);align-items:center;gap:6px;}
 .print-btn.visible{display:flex;}
 
-/* ── COPIA EXACTA PARA IMPRESIÓN (SIN ELEMENTOS INTERACTIVOS) ── */
+/* ── COPIA EXACTA PARA IMPRESIÓN (SIN BORDES Y ESTILO ORIGINAL) ── */
 @media print {
-  /* Forzado de colores para fondo negro y letras doradas */
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
@@ -97,10 +96,10 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   @page {
     size: A4;
-    margin: 0; /* Elimina bordes blancos de la impresora */
+    margin: 0; /* Clave para evitar bordes blancos */
   }
 
-  /* 1. OCULTAR LO QUE NO VA EN PAPEL */
+  /* 1. ELIMINAR INTERFAZ Y RELLENO */
   .info-bar, .search-wrap, .nav-wrap, .social-float, .up, .print-btn, 
   #no-results, .reviews-sec, .gmaps-btn, .palm, .bubbles {
     display: none !important;
@@ -115,71 +114,113 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     width: 100%;
   }
 
-  /* 3. HEADER Y WIFI (IDÉNTICO AL DIGITAL) */
+  /* 3. HEADER Y WIFI (PRIMERA PARTE DE LA HOJA) */
   .hd {
     background: #000 !important;
-    padding: 30px 0 10px !important;
+    padding: 40px 0 20px !important;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
   }
-  .logo { color: #fff !important; font-size: 3rem !important; }
+  .logo { color: #fff !important; font-size: 3.5rem !important; }
   .logo em { color: #fff !important; font-style: normal; }
-  .logo-sub { color: rgba(255,255,255,0.5) !important; font-size: 0.7rem !important; }
+  .logo-sub { color: rgba(255,255,255,0.5) !important; font-size: 0.8rem !important; }
 
   .wifi-block {
     display: flex !important;
+    flex-direction: column;
+    align-items: center;
     background: rgba(255, 255, 255, 0.04) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    margin: 10px 20px !important;
-    padding: 15px !important;
+    margin: 20px auto !important;
+    padding: 20px !important;
+    width: 80%;
     border-radius: 12px !important;
   }
-  .wifi-label-big { color: #fff !important; font-size: 0.8rem !important; }
-  .wifi-pass-big { color: #fff !important; font-size: 2.5rem !important; font-family: 'Playfair Display', serif !important; }
+  .wifi-label-big { color: #fff !important; }
+  .wifi-pass-big { color: #fff !important; font-size: 2.8rem !important; font-family: 'Playfair Display', serif !important; }
 
-  /* 4. SECCIONES EN DORADO */
-  main { padding: 10px 0 !important; }
-  .sec { border: none !important; padding: 15px 0 !important; break-inside: auto; }
-  .st { 
-    color: #E8C06A !important; 
-    font-size: 1.6rem !important; 
-    text-align: center; 
-    width: 100%; 
-    margin-bottom: 12px;
+  /* 4. SECCIONES (TÍTULOS A LA IZQUIERDA Y DORADOS) */
+  main { 
+    padding: 20px 0 !important;
   }
-  .si { display: none !important; } /* Quitamos iconos para limpiar el diseño impreso */
 
-  /* 5. PLATOS EN 2 COLUMNAS (DORADO Y BLANCO) */
+  .sec {
+    border: none !important;
+    padding: 20px 0 !important;
+    break-inside: auto;
+    /* Si quieres que el menú empiece SIEMPRE en una hoja nueva después del logo, activa la siguiente línea: */
+    /* break-before: page; */ 
+  }
+
+  .sh { 
+    padding: 0 30px 15px !important; 
+    text-align: left !important; /* Títulos a la izquierda como el original */
+  }
+
+  .st { 
+    color: #E8C06A !important; /* Dorado original */
+    font-size: 1.8rem !important; 
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .si { display: none !important; } /* Limpieza de iconos */
+
+  /* 5. PLATOS EN 2 COLUMNAS PARA NO DEJAR HUECOS */
   .il {
     display: grid;
     grid-template-columns: 1fr 1fr; 
-    gap: 12px;
-    padding: 0 20px !important;
+    gap: 15px;
+    padding: 0 30px !important;
   }
 
   .mi {
     background: #131310 !important;
     border: 1px solid rgba(255,255,255,0.05) !important;
-    padding: 10px !important;
-    break-inside: avoid; /* Evita que un plato se corte entre hojas */
+    padding: 12px !important;
+    break-inside: avoid;
     display: flex !important;
     flex-direction: column;
+    height: 100%;
   }
+  
   .mi.off { display: none !important; }
 
-  .in { color: #E8C06A !important; font-size: 0.9rem !important; margin-bottom: 3px; } 
-  .id { color: #ffffff !important; opacity: 1 !important; font-size: 0.75rem !important; line-height: 1.3; }
-  .ip { color: #ffffff !important; font-weight: 700 !important; margin-top: 6px; text-align: right; }
+  .in { 
+    color: #E8C06A !important; /* Nombre plato en dorado */
+    font-size: 1rem !important; 
+    font-weight: 600 !important;
+  } 
+  
+  .id { 
+    color: #ffffff !important; /* Descripción en blanco */
+    opacity: 0.9 !important; 
+    font-size: 0.75rem !important; 
+    line-height: 1.4;
+  }
 
-  /* 6. FOOTER (UBICACIÓN Y DERECHOS) */
+  .ip { 
+    color: #ffffff !important; 
+    font-weight: 700 !important; 
+    margin-top: auto; 
+    padding-top: 5px;
+    text-align: right;
+  }
+
+  /* 6. PIE DE PÁGINA (UBICACIÓN Y DERECHOS) */
   footer {
     display: block !important;
     background: #000 !important;
-    padding: 25px 20px !important;
+    padding: 40px 30px !important;
     border-top: 1px solid rgba(255,255,255,0.1) !important;
+    text-align: center;
+    break-inside: avoid;
   }
-  .finfo { color: #fff !important; font-size: 0.8rem !important; }
-  .rights { color: rgba(255,255,255,0.4) !important; margin-top: 10px; font-size: 0.7rem !important; }
-  .fl, .fsub { display: none !important; } /* Evitamos repetir logo al final */
+  .finfo { color: #fff !important; font-size: 0.9rem !important; }
+  .rights { color: rgba(255,255,255,0.4) !important; margin-top: 15px; font-size: 0.75rem !important; }
+  .fl, .fsub { display: none !important; }
 }
 </style>
 </head>
