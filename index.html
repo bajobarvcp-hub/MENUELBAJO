@@ -86,7 +86,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .print-btn{display:none;position:fixed;top:14px;right:14px;z-index:999;background:#fff;color:#000;border:none;border-radius:10px;padding:9px 16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);align-items:center;gap:6px;}
 .print-btn.visible{display:flex;}
 
-/* ── IMPRESIÓN: CALCO DIGITAL EXACTO A4 ────────────────────────── */
+/* ── IMPRESIÓN: CALCO DIGITAL COMPACTO A4 ────────────────────────── */
 @media print {
   /* Forzado de motor de color para fondos negros y dorados */
   * {
@@ -97,88 +97,86 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   @page {
     size: A4;
-    margin: 0; /* Maximizamos el uso de la hoja */
+    margin: 0.5cm; /* Margen mínimo para aprovechar toda la hoja */
   }
 
-  /* Ocultar elementos de interacción */
-  .info-bar, .search-wrap, .nav-wrap, .social-float, .up, .print-btn, #no-results {
+  /* 1. QUITAR INTERFAZ Y RESEÑAS */
+  .info-bar, .search-wrap, .nav-wrap, .social-float, .up, .print-btn, #no-results, .reviews-sec, .g-logo, .gmaps-btn {
     display: none !important;
   }
 
-  /* Fondo Negro General */
+  /* 2. FONDO NEGRO TOTAL */
   html, body {
     background-color: #080806 !important;
     color: #ffffff !important;
     margin: 0 !important;
     padding: 0 !important;
-    width: 100%;
   }
 
-  /* Header y WiFi: Idénticos a la imagen */
+  /* 3. HEADER Y WIFI COMPACTOS */
   .hd {
     background: #000 !important;
-    padding: 20px 0 !important;
+    padding: 15px 0 !important;
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
-  .logo { color: #fff !important; }
-  .logo em { color: #fff !important; }
-  .logo-sub { color: rgba(255,255,255,0.5) !important; }
-  .palm { display: none !important; }
+  .logo { color: #fff !important; font-size: 2.5rem !important; }
+  .logo-sub { color: rgba(255,255,255,0.5) !important; margin-top: 2px !important; }
+  .palm, .bubbles { display: none !important; } /* Quitamos palmas/iconos para ganar espacio */
 
   .wifi-block {
     display: flex !important;
     background: rgba(255, 255, 255, 0.04) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    margin: 8px 14px !important;
-    padding: 12px !important;
+    margin: 5px 14px !important;
+    padding: 10px !important;
   }
-  .wifi-pass-big { color: #fff !important; font-size: 2.2rem !important; }
+  .wifi-label-big { font-size: 0.7rem !important; }
+  .wifi-pass-big { color: #fff !important; font-size: 1.8rem !important; }
 
-  /* Secciones en Dorado */
-  .st { 
-    color: #E8C06A !important; 
-    font-size: 1.6rem !important;
-  }
-  .si svg { stroke: #E8C06A !important; }
-
-  /* Grilla de 2 columnas para aprovechar la hoja A4 */
-  .il {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 10px;
-    padding: 0 14px !important;
-  }
+  /* 4. SECCIONES Y PLATOS (DORADO Y BLANCO) */
+  main { padding: 0 !important; }
 
   .sec {
     border-bottom: 1px solid rgba(255,255,255,0.06) !important;
-    padding: 15px 0 !important;
-    break-inside: avoid; /* Evita que la sección se parta a la mitad */
+    padding: 10px 0 !important;
+    break-inside: auto !important; /* Permite que las secciones sigan una tras otra */
   }
 
-  /* Platos: Nombre Dorado / Descripción Blanca */
+  .sh { padding: 0 14px 8px !important; }
+  .st { color: #E8C06A !important; font-size: 1.4rem !important; } /* Título Sección Dorado */
+  .si { display: none !important; } /* Quitamos círculo de icono para compactar */
+
+  /* Grilla de 2 columnas para no dejar huecos blancos */
+  .il {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 8px;
+    padding: 0 14px !important;
+  }
+
   .mi {
     background: #131310 !important;
     border: 1px solid rgba(255,255,255,0.05) !important;
-    display: flex !important;
-    page-break-inside: avoid;
+    margin-bottom: 0 !important;
+    padding: 6px 10px !important;
+    break-inside: avoid; /* Evita que un plato se parta a la mitad */
   }
+  
   .mi.off { display: none !important; }
 
-  .in { color: #E8C06A !important; font-size: 0.9rem !important; } /* Nombre Dorado */
-  .id { color: #ffffff !important; opacity: 1 !important; font-size: 0.75rem !important; } /* Descripción Blanca */
-  .ip { color: #ffffff !important; font-weight: 700 !important; }
+  .in { color: #E8C06A !important; font-size: 0.85rem !important; } /* Nombre Plato Dorado */
+  .id { color: #ffffff !important; opacity: 0.9 !important; font-size: 0.7rem !important; line-height: 1.2 !important; } /* Descripción Blanca */
+  .ip { color: #ffffff !important; font-size: 0.85rem !important; }
 
-  /* Ajuste de Footer para evitar hojas extras */
-  
-  
+  /* 5. FOOTER AL FINAL */
   footer {
     display: block !important;
     background: #000 !important;
-    padding: 20px !important;
-    break-inside: avoid; /* Mantiene el derecho de admisión pegado a la info */
+    padding: 15px !important;
+    border-top: 1px solid rgba(255,255,255,0.1) !important;
   }
-  .finfo, .rights { color: #aaa !important; }
-  .rights { margin-top: 10px; font-size: 0.7rem !important; }
+  .finfo, .rights { color: #aaa !important; font-size: 0.7rem !important; line-height: 1.5 !important; }
+  .fl, .fsub { display: none !important; } /* Quitamos logo repetido en footer para ahorrar hoja */
 }
 </style>
 </head>
