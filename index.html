@@ -105,28 +105,32 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .print-btn{display:none;position:fixed;top:14px;right:14px;z-index:999;background:#fff;color:#000;border:none;border-radius:10px;padding:9px 16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);align-items:center;gap:6px;}
 .print-btn.visible{display:flex;}
 
-/* ── WIFI SOLO EN IMPRESIÓN ─────────────────────── */
+/* ── WIFI Y UBICACION SOLO EN IMPRESIÓN ─────────── */
 .wifi-print{display:none;}
 .ubicacion-print{display:none;}
-@media print{
-  .ubicacion-print{display:block!important;font-family:'Playfair Display',serif!important;font-size:.85rem!important;color:rgba(255,255,255,.6)!important;letter-spacing:.15em;text-transform:uppercase;text-align:center;padding-top:30px;margin-bottom:-10px;}
-  .wifi-print{display:flex!important;flex-direction:column;align-items:center;gap:6px;padding:18px 20px;background:#111!important;border:1px solid rgba(255,255,255,.15)!important;border-radius:12px;margin:14px 30px 0;text-align:center;}
-  .wifi-print-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5)!important;margin-bottom:2px;}
-  .wifi-print-row{display:flex;gap:40px;align-items:center;}
-  .wifi-print-item{display:flex;flex-direction:column;align-items:center;gap:3px;}
-  .wifi-print-key{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.45)!important;}
-  .wifi-print-val{font-family:'Playfair Display',serif!important;font-size:1.4rem!important;font-weight:700!important;color:#fff!important;letter-spacing:.08em;}
-}
 
 @media print{
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
   @page{size:A4;margin:0;}
   .info-bar,.search-wrap,.nav-wrap,.social-float,.up,.print-btn,#no-results,.reviews-sec,.gmaps-btn,.palm,.bubbles,.wifi-overlay{display:none!important;}
   html,body{background-color:#080806!important;color:#fff!important;margin:0!important;padding:0!important;}
-  .hd{background:#000!important;padding:40px 0 20px!important;text-align:center;}
+
+  /* ubicación encima del título */
+  .ubicacion-print{display:block!important;font-family:'Playfair Display',serif!important;font-size:.8rem!important;color:rgba(255,255,255,.55)!important;letter-spacing:.18em;text-transform:uppercase;text-align:center;padding-top:28px;}
+
+  .hd{background:#000!important;padding:8px 0 20px!important;text-align:center;}
   .logo{color:#fff!important;font-size:3.5rem!important;}
   .logo em{color:#fff!important;}
   .logo-sub{color:rgba(255,255,255,.5)!important;font-size:.8rem!important;}
+
+  /* bloque wifi con icono grande */
+  .wifi-print{display:flex!important;flex-direction:row;align-items:center;justify-content:center;gap:20px;padding:16px 24px;background:#111!important;border:1px solid rgba(255,255,255,.15)!important;border-radius:12px;margin:14px 30px 0;}
+  .wifi-print-icon{flex-shrink:0;}
+  .wifi-print-row{display:flex;gap:32px;align-items:center;}
+  .wifi-print-item{display:flex;flex-direction:column;align-items:center;gap:3px;}
+  .wifi-print-key{font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.45)!important;}
+  .wifi-print-val{font-family:'Playfair Display',serif!important;font-size:1.5rem!important;font-weight:700!important;color:#fff!important;letter-spacing:.06em;}
+
   main{padding:20px 0!important;}
   .sec{border:none!important;padding:20px 0!important;break-inside:auto;}
   .sh{padding:0 30px 15px!important;}
@@ -206,7 +210,14 @@ const WIFI_NAME = 'El Bajo';
 
 <!-- WIFI SOLO IMPRESIÓN -->
 <div class="wifi-print">
-  <div class="wifi-print-label">WiFi</div>
+  <div class="wifi-print-icon">
+    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+      <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+      <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+      <line x1="12" y1="20" x2="12.01" y2="20" stroke-width="3"/>
+    </svg>
+  </div>
   <div class="wifi-print-row">
     <div class="wifi-print-item">
       <span class="wifi-print-key">Red</span>
