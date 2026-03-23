@@ -86,10 +86,9 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .print-btn{display:none;position:fixed;top:14px;right:14px;z-index:999;background:#fff;color:#000;border:none;border-radius:10px;padding:9px 16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);align-items:center;gap:6px;}
 .print-btn.visible{display:flex;}
 
-/* ── IMPRESIÓN: CALCO DIGITAL COMPACTO A4 ────────────────────────── */
-/* ── IMPRESIÓN: CALCO DIGITAL TOTAL SIN BORDES ───────────────────── */
+/* ── COPIA EXACTA PARA IMPRESIÓN (SIN ELEMENTOS INTERACTIVOS) ── */
 @media print {
-  /* Forzado de color para que el navegador no ahorre tinta */
+  /* Forzado de colores para fondo negro y letras doradas */
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
@@ -98,120 +97,89 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   @page {
     size: A4;
-    margin: 0; /* Elimina el margen físico de la hoja */
+    margin: 0; /* Elimina bordes blancos de la impresora */
   }
 
-  /* 1. OCULTAR ELEMENTOS INNECESARIOS */
-  .info-bar, .search-wrap, .nav-wrap, .social-float, .up, .print-btn, #no-results, .reviews-sec, .gmaps-btn {
+  /* 1. OCULTAR LO QUE NO VA EN PAPEL */
+  .info-bar, .search-wrap, .nav-wrap, .social-float, .up, .print-btn, 
+  #no-results, .reviews-sec, .gmaps-btn, .palm, .bubbles {
     display: none !important;
   }
 
-  /* 2. FONDO NEGRO INFINITO (SIN BORDES BLANCOS) */
+  /* 2. FONDO NEGRO TOTAL */
   html, body {
-    background-color: #080806 !important; /* Color de fondo original */
+    background-color: #080806 !important;
     color: #ffffff !important;
     margin: 0 !important;
     padding: 0 !important;
     width: 100%;
-    height: 100%;
   }
 
-  /* 3. HEADER Y WIFI (ESTILO IMAGEN) */
+  /* 3. HEADER Y WIFI (IDÉNTICO AL DIGITAL) */
   .hd {
     background: #000 !important;
-    padding: 30px 0 15px !important;
+    padding: 30px 0 10px !important;
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
   .logo { color: #fff !important; font-size: 3rem !important; }
-  .logo-sub { color: rgba(255,255,255,0.5) !important; text-transform: uppercase; }
-  .palm, .bubbles { display: none !important; }
+  .logo em { color: #fff !important; font-style: normal; }
+  .logo-sub { color: rgba(255,255,255,0.5) !important; font-size: 0.7rem !important; }
 
   .wifi-block {
     display: flex !important;
-    flex-direction: column;
-    align-items: center;
     background: rgba(255, 255, 255, 0.04) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
     margin: 10px 20px !important;
     padding: 15px !important;
     border-radius: 12px !important;
   }
-  .wifi-label-big { color: #fff !important; font-size: 0.8rem !important; letter-spacing: 0.2em; }
-  .wifi-pass-big { color: #fff !important; font-size: 2.4rem !important; font-family: 'Playfair Display', serif !important; }
+  .wifi-label-big { color: #fff !important; font-size: 0.8rem !important; }
+  .wifi-pass-big { color: #fff !important; font-size: 2.5rem !important; font-family: 'Playfair Display', serif !important; }
 
   /* 4. SECCIONES EN DORADO */
   main { padding: 10px 0 !important; }
-  
-  .sec {
-    border: none !important;
-    padding: 15px 0 !important;
-    break-inside: auto !important;
-  }
-
+  .sec { border: none !important; padding: 15px 0 !important; break-inside: auto; }
   .st { 
-    color: #E8C06A !important; /* Dorado original */
-    font-size: 1.6rem !important;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 10px;
+    color: #E8C06A !important; 
+    font-size: 1.6rem !important; 
+    text-align: center; 
+    width: 100%; 
+    margin-bottom: 12px;
   }
-  .si { display: none !important; } /* Quitamos iconos para evitar espacios */
+  .si { display: none !important; } /* Quitamos iconos para limpiar el diseño impreso */
 
-  /* 5. PLATOS (NOMBRE DORADO / DESCRIPCIÓN BLANCA) */
+  /* 5. PLATOS EN 2 COLUMNAS (DORADO Y BLANCO) */
   .il {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas para no dejar blancos */
-    gap: 15px;
+    grid-template-columns: 1fr 1fr; 
+    gap: 12px;
     padding: 0 20px !important;
   }
 
   .mi {
-    background: #131310 !important; /* Color card original */
+    background: #131310 !important;
     border: 1px solid rgba(255,255,255,0.05) !important;
     padding: 10px !important;
-    margin: 0 !important;
-    break-inside: avoid;
+    break-inside: avoid; /* Evita que un plato se corte entre hojas */
     display: flex !important;
     flex-direction: column;
   }
-  
   .mi.off { display: none !important; }
 
-  .in { 
-    color: #E8C06A !important; /* Nombre en dorado */
-    font-size: 0.95rem !important;
-    margin-bottom: 4px;
-  } 
-  
-  .id { 
-    color: #ffffff !important; /* Descripción en blanco */
-    opacity: 1 !important; 
-    font-size: 0.75rem !important;
-    line-height: 1.3;
-  }
+  .in { color: #E8C06A !important; font-size: 0.9rem !important; margin-bottom: 3px; } 
+  .id { color: #ffffff !important; opacity: 1 !important; font-size: 0.75rem !important; line-height: 1.3; }
+  .ip { color: #ffffff !important; font-weight: 700 !important; margin-top: 6px; text-align: right; }
 
-  .ip { 
-    color: #ffffff !important; 
-    font-size: 0.95rem !important;
-    margin-top: 5px;
-    text-align: right;
-  }
-
-  /* 6. PIE DE PÁGINA (UBICACIÓN Y DERECHOS) */
+  /* 6. FOOTER (UBICACIÓN Y DERECHOS) */
   footer {
     display: block !important;
     background: #000 !important;
     padding: 25px 20px !important;
     border-top: 1px solid rgba(255,255,255,0.1) !important;
-    text-align: center;
   }
   .finfo { color: #fff !important; font-size: 0.8rem !important; }
-  .rights { 
-    color: rgba(255,255,255,0.5) !important; 
-    font-size: 0.7rem !important;
-    margin-top: 10px;
-  }
-  .fl, .fsub { display: none !important; }
+  .rights { color: rgba(255,255,255,0.4) !important; margin-top: 10px; font-size: 0.7rem !important; }
+  .fl, .fsub { display: none !important; } /* Evitamos repetir logo al final */
 }
 </style>
 </head>
