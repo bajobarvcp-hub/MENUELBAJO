@@ -14,9 +14,9 @@
       "items": [
         {
           "id": "ent1",
-          "nombre": "Porción de Rabas a la Romana",
+          "nombre": "Porción de Rabas a la Romana LOLL",
           "descripcion": "Acompañada con salsa tártara",
-          "precio": 25500,
+          "precio": 25000,
           "disponible": true
         },
         {
