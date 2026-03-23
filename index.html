@@ -12,7 +12,7 @@
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;overflow-x:hidden;}
 .info-bar{background:#000;padding:12px 18px;display:flex;align-items:center;justify-content:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.1);}
-.ib-item{display:flex;align-items:center;gap:7px;font-size:.9rem;color:#fff;font-weight:600;}
+.ib-item{display:flex;align-items:center;gap:7px;font-size:.9rem;color:#fff;font-weight:600;font-family:'Playfair Display',serif;letter-spacing:.02em;}
 .hd{background:#000;padding:24px 20px 20px;text-align:center;position:relative;overflow:hidden;}
 .hd::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% -10%,rgba(255,255,255,.04) 0%,transparent 65%);pointer-events:none;}
 .palm{position:absolute;top:-10px;font-size:5rem;opacity:.07;line-height:1;}
@@ -271,7 +271,9 @@ const WIFI_NAME = 'El Bajo';
 <!-- POPUP WIFI -->
 <div class="wifi-overlay" id="wifiOverlay" onclick="if(event.target===this)this.classList.remove('open')">
   <div class="wifi-popup">
-    <div class="wifi-popup-icon">📶</div>
+    <div class="wifi-popup-icon">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20" stroke-width="3"/></svg>
+    </div>
     <div class="wifi-popup-title">Red WiFi</div>
     <div class="wifi-popup-name" id="popupWifiName">elbajobar</div>
     <div class="wifi-popup-pass-label">Contraseña</div>
