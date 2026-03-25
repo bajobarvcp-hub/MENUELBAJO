@@ -52,59 +52,60 @@ main{padding-bottom:70px;}
 .ip{font-weight:700;font-size:.92rem;color:#fff;white-space:nowrap;flex-shrink:0;padding-top:1px;min-width:58px;text-align:right;}
 .ip.nh{color:#555;font-weight:400;font-size:.78rem;}
 
-/* ── BRAND IMAGES (CON VOLUMEN EXTRA) ──────────────── */
+/* ── BRAND IMAGES (AJUSTE FINAL PARA EL BAJO) ──────────────── */
 .brand-strip {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 35px; /* Más espacio para que los logos grandes respiren */
-  padding: 30px 18px;
+  gap: 20px;
+  /* Reducimos el padding al mínimo para que no haya aire entre secciones */
+  padding: 5px 0; 
   width: 100%;
+  overflow: hidden; /* Evita que logos gigantes rompan el ancho del celu */
 }
 
 .brand-strip img {
-  height: 75px !important; /* Tamaño base para todos */
   width: auto !important;
   object-fit: contain;
   transition: transform .2s ease;
-}
-/* 1. TAMAÑO GIGANTE PARA LOS VINOS (Tribu y Casillero) */
-.brand-strip img[src*="TRIBU"], 
-.brand-strip img[src*="CASILLERO"]
- {
-  height: 600px !important; /* El tamaño máximo que querías */
- width: auto !important;
-  object-fit: contain;
+  display: block;
+  /* Margen negativo arriba y abajo para "succionar" el espacio sobrante */
+  margin: -15px auto !important; 
 }
 
-/* 2. TAMAÑO ESPECIAL PARA TRIVENTO Y BORGHETTI */
+/* 1. VINOS (Tribu y Casillero) - Vistosos pero controlados */
+.brand-strip img[src*="TRIBU"], 
+.brand-strip img[src*="CASILLERO"] {
+  height: 250px !important; /* 600px es mucho para un celu, 250px es gigante y entra bien */
+  max-width: 85% !important; /* No permite que se salga de los bordes del teléfono */
+  margin: -40px auto !important; /* Margen negativo agresivo para que no ocupen media pantalla de aire */
+}
+
+/* 2. TRIVENTO Y BORGHETTI */
 .brand-strip img[src*="TRIVENTO"], 
 .brand-strip img[src*="borghetti"],
 .brand-strip img[src*="BORGHETTI"] {
-  height: 240px !important; /* Un poco más chicos que los anteriores para que no se pisen */
-  width: auto !important;
-  object-fit: contain;
+  height: 180px !important;
+  max-width: 75% !important;
+  margin: -30px auto !important;
 }
 
-/* 3. TAMAÑO PARA BRANCA */
+/* 3. BRANCA */
 .brand-strip img[src*="BRANCA"], 
 .brand-strip img[src*="branca"] {
-  height: 300px !important; 
-  width: auto !important;
-  object-fit: contain;
+  height: 160px !important;
+  max-width: 70% !important;
+  margin: -25px auto !important;
 }
 
-/* 4. RESTO DE LOGOS (Imperial, Speed, etc.) */
-.brand-strip img {
-  height: 115px !important;
-  width: auto !important;
-  object-fit: contain;
-}
-
+/* 4. RESTO (Imperial, Speed, etc.) */
+.brand-strip img:not([src*="TRIBU"]):not([src*="CASILLERO"]):not([src*="TRIVENTO"]):not([src*="BORGHETTI"]):not([src*="BRANCA"]) {
+  height: 90px !important;
+  margin: -10px auto !important;
 }
 
 .brand-strip img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* ── PAYMENT LOGOS ────────────────────────────────── */
