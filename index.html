@@ -68,20 +68,44 @@ main{padding-bottom:70px;}
   object-fit: contain;
   transition: transform .2s ease;
 }
-/* 1. LOS MÁS GRANDES (190px) para compensar que son flacos */
+/* 1. TAMAÑO GIGANTE PARA LOS VINOS (Tribu y Casillero) */
 .brand-strip img[src*="TRIBU"], 
-.brand-strip img[src*="TRIVENTO"], 
-.brand-strip img[src*="CASILLERO"], 
-.brand-strip img[src*="borghetti"] {
-  height: 190px !important; 
+.brand-strip img[src*="CASILLERO"],
+ {
+  height: 190px !important; /* El tamaño máximo que querías */
   max-width: 320px !important;
+  margin: 15px 0;
+}
+
+/* 2. TAMAÑO ESPECIAL PARA TRIVENTO Y BORGHETTI */
+.brand-strip img[src*="TRIVENTO"], 
+.brand-strip img[src*="borghetti"],
+.brand-strip img[src*="BORGHETTI"] {
+  height: 140px !important; /* Un poco más chicos que los anteriores para que no se pisen */
+  max-width: 280px !important;
   margin: 10px 0;
+}
+
+/* 3. TAMAÑO PARA BRANCA */
+.brand-strip img[src*="BRANCA"], 
+.brand-strip img[src*="branca"] {
+  height: 120px !important; 
+  max-width: 250px !important;
+  margin: 10px 0;
+}
+
+/* 4. RESTO DE LOGOS (Imperial, Speed, etc.) */
+.brand-strip img {
+  height: 80px !important;
+  width: auto !important;
+  object-fit: contain;
+}
 }
 
 /* 2. BRANCA (120px) */
 .brand-strip img[src*="BRANCA"], 
 .brand-strip img[src*="branca"] {
-  height: 120px !important; 
+  height: 190px !important; 
   max-width: 250px !important;
   margin: 10px 0;
 }
