@@ -83,9 +83,26 @@ main{padding-bottom:70px;}
 }
 
 /* ── PAYMENT LOGOS ────────────────────────────────── */
-.payment-strip{display:flex;justify-content:center;align-items:center;gap:28px;padding:18px 0 22px;flex-wrap:wrap;}
-.payment-strip img{height:40px;width:auto;object-fit:contain;opacity:0.65;filter:brightness(0) invert(1);transition:opacity .2s;}
-.payment-strip img:hover{opacity:0.9;}
+.payment-strip{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:28px;
+  padding:18px 0 22px;
+  flex-wrap:wrap;
+}
+.payment-strip img{
+  height:40px; /* Podés subirlo a 50px si las ves muy chicas */
+  width:auto;
+  object-fit:contain;
+  opacity: 1; /* Para que brillen bien */
+  /* BORRÁ ESTA LÍNEA DE ABAJO EN TU CÓDIGO: */
+  /* filter: brightness(0) invert(1); */
+  transition: transform .2s;
+}
+.payment-strip img:hover{
+  transform: scale(1.1);
+}
 
 .reviews-sec{padding:28px 0 24px;border-bottom:1px solid rgba(255,255,255,.06);}
 .reviews-grid{padding:0 14px;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;}
