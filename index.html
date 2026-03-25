@@ -52,26 +52,34 @@ main{padding-bottom:70px;}
 .ip{font-weight:700;font-size:.92rem;color:#fff;white-space:nowrap;flex-shrink:0;padding-top:1px;min-width:58px;text-align:right;}
 .ip.nh{color:#555;font-weight:400;font-size:.78rem;}
 
-/* ── BRAND IMAGES ─────────────────────────────────── */
+/* ── BRAND IMAGES (AJUSTE FINAL) ─────────────────────────────────── */
 .brand-strip {
   display: flex;
-  justify-content: center; /* Centra las imágenes horizontalmente */
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 10px 18px;
-  width: 100%; /* Asegura que el contenedor use todo el ancho para centrar */
+  gap: 25px; /* Espacio entre logos */
+  padding: 20px 18px;
+  width: 100%;
 }
 
 .brand-strip img {
-  height: 60px; /* Ajusté un poco el tamaño para que luzcan mejor */
+  /* Tamaño grande para que impacten como el de Imperial */
+  height: 65px; 
   width: auto;
   object-fit: contain;
-  /* Eliminamos el filter: brightness(0) invert(1) para que se vean en color */
-  transition: transform .2s;
+  opacity: 1;
+  filter: none; /* Por defecto a color (Tribu, Borghetti, Imperial, etc.) */
+  transition: all .2s ease;
+}
+
+/* --- CLASE PARA CASILLERO Y TRIVENTO (BLANCO Y NEGRO) --- */
+.brand-strip img.bnw {
+  filter: brightness(0) invert(1); /* Efecto blanco */
+  opacity: 0.7;
 }
 
 .brand-strip img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 /* Estilo para los logos de pago en el footer (si también los quieres con color) */
