@@ -71,12 +71,19 @@ main{padding-bottom:70px;}
 
 /* ── AJUSTES INDIVIDUALES (Modificá acá uno por uno) ── */
 
-/* 1. FERNET BRANCA */
+/* 1. FERNET BRANCA - AJUSTE DE ESPACIOS CERRADOS */
 .brand-strip img[src*="BRANCA"], .brand-strip img[src*="branca"] {
-  height: 280px !important;    /* Tamaño imponente */
-  margin-bottom: -20px !important; 
+  height: 280px !important;    /* Mantenemos el tamaño imponente */
+  
+  /* --- CAMBIOS CLAVE PARA ACHICAR ESPACIOS --- */
+  margin-top: -35px !important;    /* 'Pega' el logo al título de la sección */
+  margin-bottom: -50px !important; /* 'Pega' el logo a la lista de productos de abajo */
+  
+  /* Aseguramos que se comporte como un bloque centrado */
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
-
 /* 2. BORGHETTI */
 .brand-strip img[src*="BORGHETTI"], .brand-strip img[src*="borghetti"] {
   height: 280px !important;    /* Tamaño imponente */
@@ -85,14 +92,14 @@ main{padding-bottom:70px;}
 
 /* 3. CASILLERO DEL DIABLO */
 .brand-strip img[src*="CASILLERO"], .brand-strip img[src*="casillero"] {
-  height: 160px !important; 
+  height: 200px !important; 
   margin-bottom: 35px !important; /* Más espacio con el título de abajo */
   margin-top: 15px !important;
 }
 
 /* 4. TRIBU */
 .brand-strip img[src*="TRIBU"], .brand-strip img[src*="tribu"] {
-  height: 220px !important;
+  height: 240px !important;
   margin-bottom: -10px !important;
 }
 
@@ -110,13 +117,13 @@ main{padding-bottom:70px;}
 
 /* 7. SPEED */
 .brand-strip img[src*="SPEED"], .brand-strip img[src*="speed"] {
-  height: 130px !important;
+  height: 140px !important;
   margin-bottom: 25px !important; /* Espacio con el menú */
 }
 
 /* 8. SERNOVA */
 .brand-strip img[src*="SERNOVA"], .brand-strip img[src*="sernova"] {
-  height: 140px !important;
+  height: 120px !important;
   margin-bottom: 25px !important; /* Espacio con el menú */
 }
 /* ── PAYMENT LOGOS ────────────────────────────────── */
