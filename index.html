@@ -73,8 +73,8 @@ main{padding-bottom:70px;}
 .brand-strip img[src*="CASILLERO"]
  {
   height: 600px !important; /* El tamaño máximo que querías */
-  max-width: 320px !important;
-  margin: 15px 0;
+ width: auto !important;
+  object-fit: contain;
 }
 
 /* 2. TAMAÑO ESPECIAL PARA TRIVENTO Y BORGHETTI */
@@ -82,14 +82,14 @@ main{padding-bottom:70px;}
 .brand-strip img[src*="borghetti"],
 .brand-strip img[src*="BORGHETTI"] {
   height: 240px !important; /* Un poco más chicos que los anteriores para que no se pisen */
-  max-width: 280px !important;
-  margin: 10px 0;
+  width: auto !important;
+  object-fit: contain;
 }
 
 /* 3. TAMAÑO PARA BRANCA */
 .brand-strip img[src*="BRANCA"], 
 .brand-strip img[src*="branca"] {
-  height: 200px !important; 
+  height: 300px !important; 
   width: auto !important;
   object-fit: contain;
 }
