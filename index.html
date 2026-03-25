@@ -53,10 +53,34 @@ main{padding-bottom:70px;}
 .ip.nh{color:#555;font-weight:400;font-size:.78rem;}
 
 /* ── BRAND IMAGES ─────────────────────────────────── */
-.brand-strip{display:flex;justify-content:center;align-items:center;gap:24px;padding:16px 18px 6px;flex-wrap:wrap;}
-.brand-strip img{height:44px;width:auto;object-fit:contain;opacity:0.55;filter:brightness(0) invert(1);transition:opacity .2s;}
-.brand-strip img:hover{opacity:0.85;}
-.brand-strip.bottom{padding:6px 18px 16px;}
+.brand-strip {
+  display: flex;
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  align-items: center;
+  gap: 20px;
+  padding: 10px 18px;
+  width: 100%; /* Asegura que el contenedor use todo el ancho para centrar */
+}
+
+.brand-strip img {
+  height: 60px; /* Ajusté un poco el tamaño para que luzcan mejor */
+  width: auto;
+  object-fit: contain;
+  /* Eliminamos el filter: brightness(0) invert(1) para que se vean en color */
+  transition: transform .2s;
+}
+
+.brand-strip img:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para los logos de pago en el footer (si también los quieres con color) */
+.payment-strip img {
+  height: 35px;
+  width: auto;
+  filter: none; /* Quita el filtro blanco para ver Visa/Mastercard en color */
+  opacity: 1;
+}
 
 /* ── PAYMENT LOGOS ────────────────────────────────── */
 .payment-strip{display:flex;justify-content:center;align-items:center;gap:28px;padding:18px 0 22px;flex-wrap:wrap;}
@@ -379,15 +403,21 @@ function renderMenu(data) {
     sec.className = 'sec';
     sec.id = cat.id;
 
-    let html = `<div class="sh"><div class="si">${cat.emoji}</div><h2 class="st">${cat.nombre}</h2></div>`;
-    if (cat.nota) html += `<div class="note">${cat.nota}</div>`;
+    // --- INICIO DEL CAMBIO ---
+    let html = ''; 
 
-    // ── Imágenes ARRIBA ──────────────────────────────
+    // 1. Imágenes ARRIBA (Aparecen antes que el título)
     const brandsArriba = BRAND_IMAGES[cat.id]?.arriba || [];
     if (brandsArriba.length > 0) {
       html += brandStrip(brandsArriba);
     }
 
+    // 2. Título de la sección
+    html += `<div class="sh"><div class="si">${cat.emoji}</div><h2 class="st">${cat.nombre}</h2></div>`;
+    
+    if (cat.nota) html += `<div class="note">${cat.nota}</div>`;
+
+    // 3. Ítems (Platos/Bebidas)
     html += `<div class="il">`;
     cat.items.forEach(item => {
       const off = !item.disponible;
@@ -402,7 +432,7 @@ function renderMenu(data) {
     });
     html += `</div>`;
 
-    // ── Imágenes ABAJO ───────────────────────────────
+    // 4. Imágenes ABAJO
     const brandsAbajo = BRAND_IMAGES[cat.id]?.abajo || [];
     if (brandsAbajo.length > 0) {
       html += brandStrip(brandsAbajo, 'bottom');
@@ -411,7 +441,7 @@ function renderMenu(data) {
     sec.innerHTML = html;
     mc.appendChild(sec);
   });
-
+  // --- FIN DEL CAMBIO ---
   const revBtn = document.createElement('button');
   revBtn.className = 'nb';
   revBtn.textContent = '⭐ Reseñas';
