@@ -52,35 +52,34 @@ main{padding-bottom:70px;}
 .ip{font-weight:700;font-size:.92rem;color:#fff;white-space:nowrap;flex-shrink:0;padding-top:1px;min-width:58px;text-align:right;}
 .ip.nh{color:#555;font-weight:400;font-size:.78rem;}
 
-/* ── BRAND IMAGES (AJUSTE FINAL) ─────────────────────────────────── */
+/* ── BRAND IMAGES (TAMAÑO GRANDE Y UNIFORME) ──────────────── */
 .brand-strip {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centrado horizontal */
   align-items: center;
-  gap: 25px; /* Espacio entre logos */
-  padding: 20px 18px;
-  width: 100%;
+  gap: 30px; /* Más espacio entre logos para que no se amontonen */
+  padding: 25px 18px; /* Más aire arriba y abajo */
+  width: 100%; /* Asegura el centrado */
 }
 
 .brand-strip img {
-  /* Tamaño grande para que impacten como el de Imperial */
-  height: 65px; 
-  width: auto;
-  object-fit: contain;
-  opacity: 1;
-  filter: none; /* Por defecto a color (Tribu, Borghetti, Imperial, etc.) */
-  transition: all .2s ease;
+  /* Usamos !important para ganarle a cualquier otra medida vieja */
+  height: 85px !important; /* Aumentamos el tamaño considerablemente */
+  width: auto !important; /* Mantiene la proporción */
+  max-width: 190px !important; /* Espacio para logos largos como Casillero */
+  object-fit: contain; /* Asegura que la imagen no se corte */
+  
+  /* Eliminamos los filtros de colores viejos */
+  opacity: 1 !important; /* Opacidad total para todas */
+  filter: none !important; /* Sin filtros, se ven los PNG originales */
+  transition: transform .2s ease; /* Transición suave para el zoom */
 }
 
-/* --- CLASE PARA CASILLERO Y TRIVENTO (BLANCO Y NEGRO) --- */
-.brand-strip img.bnw {
-  filter: brightness(0) invert(1); /* Efecto blanco */
-  opacity: 0.7;
-}
-
+/* Efecto hover general para todas las imágenes (opcional) */
 .brand-strip img:hover {
-  transform: scale(1.08);
+  transform: scale(1.08); /* Pequeño zoom al pasar el mouse */
 }
+
 
 /* Estilo para los logos de pago en el footer (si también los quieres con color) */
 .payment-strip img {
