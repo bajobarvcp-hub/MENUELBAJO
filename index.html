@@ -68,15 +68,23 @@ main{padding-bottom:70px;}
   object-fit: contain;
   transition: transform .2s ease;
 }
-
-/* --- LOGOS CON VOLUMEN EXTRA --- */
-/* Esta regla busca imágenes que en su nombre tengan estas palabras y las agranda */
+/* 1. LOS MÁS GRANDES (190px) para compensar que son flacos */
 .brand-strip img[src*="TRIBU"], 
 .brand-strip img[src*="TRIVENTO"], 
 .brand-strip img[src*="CASILLERO"], 
 .brand-strip img[src*="borghetti"] {
-  height: 150px !important; /* Les damos mucho más alto para compensar lo 'flacos' que son */
-  max-width: 270px !important;
+  height: 190px !important; 
+  max-width: 320px !important;
+  margin: 10px 0;
+}
+
+/* 2. BRANCA (120px) */
+.brand-strip img[src*="BRANCA"], 
+.brand-strip img[src*="branca"] {
+  height: 120px !important; 
+  max-width: 250px !important;
+  margin: 10px 0;
+}
 }
 
 .brand-strip img:hover {
@@ -88,12 +96,12 @@ main{padding-bottom:70px;}
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:30px;
+  gap:27px;
   padding:20px 0 24px;
   flex-wrap:wrap;
 }
 .payment-strip img{
-  height:40px; /* Podés subirlo a 50px si las ves muy chicas */
+  height:60px; /* Podés subirlo a 50px si las ves muy chicas */
   width:auto;
   object-fit:contain;
   opacity: 1; /* Para que brillen bien */
