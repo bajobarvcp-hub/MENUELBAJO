@@ -52,41 +52,35 @@ main{padding-bottom:70px;}
 .ip{font-weight:700;font-size:.92rem;color:#fff;white-space:nowrap;flex-shrink:0;padding-top:1px;min-width:58px;text-align:right;}
 .ip.nh{color:#555;font-weight:400;font-size:.78rem;}
 
-/* ── BRAND IMAGES (TAMAÑO GRANDE Y UNIFORME) ──────────────── */
+/* ── BRAND IMAGES (CON VOLUMEN EXTRA) ──────────────── */
 .brand-strip {
   display: flex;
-  justify-content: center; /* Centrado horizontal */
+  justify-content: center;
   align-items: center;
-  gap: 30px; /* Más espacio entre logos para que no se amontonen */
-  padding: 25px 18px; /* Más aire arriba y abajo */
-  width: 100%; /* Asegura el centrado */
+  gap: 35px; /* Más espacio para que los logos grandes respiren */
+  padding: 30px 18px;
+  width: 100%;
 }
 
 .brand-strip img {
-  /* Usamos !important para ganarle a cualquier otra medida vieja */
-  height: 85px !important; /* Aumentamos el tamaño considerablemente */
-  width: auto !important; /* Mantiene la proporción */
-  max-width: 190px !important; /* Espacio para logos largos como Casillero */
-  object-fit: contain; /* Asegura que la imagen no se corte */
-  
-  /* Eliminamos los filtros de colores viejos */
-  opacity: 1 !important; /* Opacidad total para todas */
-  filter: none !important; /* Sin filtros, se ven los PNG originales */
-  transition: transform .2s ease; /* Transición suave para el zoom */
+  height: 75px !important; /* Tamaño base para todos */
+  width: auto !important;
+  object-fit: contain;
+  transition: transform .2s ease;
 }
 
-/* Efecto hover general para todas las imágenes (opcional) */
+/* --- LOGOS CON VOLUMEN EXTRA --- */
+/* Esta regla busca imágenes que en su nombre tengan estas palabras y las agranda */
+.brand-strip img[src*="TRIBU"], 
+.brand-strip img[src*="TRIVENTO"], 
+.brand-strip img[src*="CASILLERO"], 
+.brand-strip img[src*="borghetti"] {
+  height: 110px !important; /* Les damos mucho más alto para compensar lo 'flacos' que son */
+  max-width: 220px !important;
+}
+
 .brand-strip img:hover {
-  transform: scale(1.08); /* Pequeño zoom al pasar el mouse */
-}
-
-
-/* Estilo para los logos de pago en el footer (si también los quieres con color) */
-.payment-strip img {
-  height: 35px;
-  width: auto;
-  filter: none; /* Quita el filtro blanco para ver Visa/Mastercard en color */
-  opacity: 1;
+  transform: scale(1.1);
 }
 
 /* ── PAYMENT LOGOS ────────────────────────────────── */
