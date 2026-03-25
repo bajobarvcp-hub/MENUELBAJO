@@ -52,13 +52,13 @@ main{padding-bottom:70px;}
 .ip{font-weight:700;font-size:.92rem;color:#fff;white-space:nowrap;flex-shrink:0;padding-top:1px;min-width:58px;text-align:right;}
 .ip.nh{color:#555;font-weight:400;font-size:.78rem;}
 
-/* ── BRAND IMAGES (AJUSTE DE IMPACTO Y ESPACIADO) ──────────────── */
+/* ── CONFIGURACIÓN BASE PARA TODOS LOS LOGOS ── */
 .brand-strip {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 10px 0; /* Un poco de aire base */
+  padding: 10px 0;
   width: 100%;
 }
 
@@ -66,42 +66,58 @@ main{padding-bottom:70px;}
   width: auto !important;
   object-fit: contain;
   display: block;
-  margin: 0 auto !important;
+  margin: 0 auto !important; /* Centrado */
 }
 
-/* 1. LOS GIGANTES: BORGHETTI Y BRANCA (Impacto total) */
-.brand-strip img[src*="borghetti"], 
-.brand-strip img[src*="BORGHETTI"],
-.brand-strip img[src*="BRANCA"],
-.brand-strip img[src*="branca"] {
-  height: 300px !important; /* Los más grandes de la carta */
-  max-width: 90% !important;
-  margin-top: -10px !important;    /* Los subimos para que no se alejen del título */
-  margin-bottom: -20px !important; /* Los pegamos un poco a la lista */
+/* ── AJUSTES INDIVIDUALES (Modificá acá uno por uno) ── */
+
+/* 1. FERNET BRANCA */
+.brand-strip img[src*="BRANCA"], .brand-strip img[src*="branca"] {
+  height: 280px !important;    /* Tamaño imponente */
+  margin-bottom: -20px !important; 
 }
 
-/* 2. CON ESPACIO HACIA ABAJO: IMPERIAL, SERNOVA, SPEED Y CASILLERO */
-/* Agregamos un margen inferior positivo para "empujar" el título que sigue */
-.brand-strip img[src*="IMPERIAL"],
-.brand-strip img[src*="sernova"],
-.brand-strip img[src*="SPEED"],
-.brand-strip img[src*="CASILLERO"],
-.brand-strip img[src*="casillero"] {
-  height: 140px !important; /* Tamaño vistoso pero menor a los licores */
-  margin-bottom: 25px !important; /* ESTO genera el espacio con lo que sigue */
-  margin-top: 10px !important;
+/* 2. BORGHETTI */
+.brand-strip img[src*="BORGHETTI"], .brand-strip img[src*="borghetti"] {
+  height: 280px !important;    /* Tamaño imponente */
+  margin-bottom: -20px !important;
 }
 
-/* 3. VINOS (TRIBU Y TRIVENTO) */
-.brand-strip img[src*="TRIBU"], 
-.brand-strip img[src*="TRIVENTO"] {
-  height: 240px !important;
-  margin-bottom: -15px !important;
+/* 3. CASILLERO DEL DIABLO */
+.brand-strip img[src*="CASILLERO"], .brand-strip img[src*="casillero"] {
+  height: 160px !important; 
+  margin-bottom: 35px !important; /* Más espacio con el título de abajo */
+  margin-top: 15px !important;
 }
 
-/* 4. RESTO DE LOGOS (Si hubiera otros) */
-.brand-strip img:not([src*="TRIBU"]):not([src*="CASILLERO"]):not([src*="TRIVENTO"]):not([src*="BORGHETTI"]):not([src*="BRANCA"]):not([src*="IMPERIAL"]):not([src*="SPEED"]):not([src*="sernova"]) {
-  height: 90px !important;
+/* 4. TRIBU */
+.brand-strip img[src*="TRIBU"], .brand-strip img[src*="tribu"] {
+  height: 220px !important;
+  margin-bottom: -10px !important;
+}
+
+/* 5. TRIVENTO */
+.brand-strip img[src*="TRIVENTO"], .brand-strip img[src*="trivento"] {
+  height: 200px !important;
+  margin-bottom: -10px !important;
+}
+
+/* 6. IMPERIAL */
+.brand-strip img[src*="IMPERIAL"], .brand-strip img[src*="imperial"] {
+  height: 140px !important;
+  margin-bottom: 25px !important; /* Espacio con el menú */
+}
+
+/* 7. SPEED */
+.brand-strip img[src*="SPEED"], .brand-strip img[src*="speed"] {
+  height: 130px !important;
+  margin-bottom: 25px !important; /* Espacio con el menú */
+}
+
+/* 8. SERNOVA */
+.brand-strip img[src*="SERNOVA"], .brand-strip img[src*="sernova"] {
+  height: 140px !important;
+  margin-bottom: 25px !important; /* Espacio con el menú */
 }
 /* ── PAYMENT LOGOS ────────────────────────────────── */
 .payment-strip{
