@@ -1536,63 +1536,6 @@
       ]
     },
     {
-      "id": "smoothies",
-      "emoji": "🥤",
-      "nombre": "Smoothies",
-      "nota": null,
-      "items": [
-        {
-          "id": "sm1",
-          "nombre": "1 · Cool Mango",
-          "descripcion": "Mango · Durazno · Frutilla — Rico en vitaminas C y E",
-          "precio": 0,
-          "disponible": true
-        },
-        {
-          "id": "sm2",
-          "nombre": "2 · Ananá Groove",
-          "descripcion": "Ananá · Banana · Durazno — Rico en vitamina C y potasio",
-          "precio": 0,
-          "disponible": true
-        },
-        {
-          "id": "sm3",
-          "nombre": "3 · Passion Blend",
-          "descripcion": "Maracuyá · Ananá · Durazno — Rico en nutrientes",
-          "precio": 0,
-          "disponible": true
-        },
-        {
-          "id": "sm4",
-          "nombre": "4 · Vita Light",
-          "descripcion": "Durazno · Ananá · Frutilla — Rico en vitaminas C, E, B1 y B6",
-          "precio": 0,
-          "disponible": true
-        },
-        {
-          "id": "sm5",
-          "nombre": "5 · Power Mix",
-          "descripcion": "Granada · Frutilla · Banana — Rico en vitamina B6 y potasio",
-          "precio": 0,
-          "disponible": true
-        },
-        {
-          "id": "sm6",
-          "nombre": "6 · The Sublime",
-          "descripcion": "Kiwi · Ananá · Durazno — Rico en sales minerales",
-          "precio": 0,
-          "disponible": true
-        },
-        {
-          "id": "sm7",
-          "nombre": "7 · Blue Sunset",
-          "descripcion": "Arándano · Frutilla · Banana — Alto contenido de vitamina C y minerales",
-          "precio": 0,
-          "disponible": true
-        }
-      ]
-    },
-    {
       "id": "sin-alcohol",
       "emoji": "🥤",
       "nombre": "Bebidas Sin Alcohol",
@@ -1673,6 +1616,63 @@
           "nombre": "Golden 473cc sin alcohol",
           "descripcion": "",
           "precio": 6500,
+          "disponible": true
+        }
+      ]
+    },
+    {
+      "id": "smoothies",
+      "emoji": "🥤",
+      "nombre": "Smoothies",
+      "nota": null,
+      "items": [
+        {
+          "id": "sm1",
+          "nombre": "1 · Cool Mango",
+          "descripcion": "Mango · Durazno · Frutilla — Rico en vitaminas C y E",
+          "precio": 0,
+          "disponible": true
+        },
+        {
+          "id": "sm2",
+          "nombre": "2 · Ananá Groove",
+          "descripcion": "Ananá · Banana · Durazno — Rico en vitamina C y potasio",
+          "precio": 0,
+          "disponible": true
+        },
+        {
+          "id": "sm3",
+          "nombre": "3 · Passion Blend",
+          "descripcion": "Maracuyá · Ananá · Durazno — Rico en nutrientes",
+          "precio": 0,
+          "disponible": true
+        },
+        {
+          "id": "sm4",
+          "nombre": "4 · Vita Light",
+          "descripcion": "Durazno · Ananá · Frutilla — Rico en vitaminas C, E, B1 y B6",
+          "precio": 0,
+          "disponible": true
+        },
+        {
+          "id": "sm5",
+          "nombre": "5 · Power Mix",
+          "descripcion": "Granada · Frutilla · Banana — Rico en vitamina B6 y potasio",
+          "precio": 0,
+          "disponible": true
+        },
+        {
+          "id": "sm6",
+          "nombre": "6 · The Sublime",
+          "descripcion": "Kiwi · Ananá · Durazno — Rico en sales minerales",
+          "precio": 0,
+          "disponible": true
+        },
+        {
+          "id": "sm7",
+          "nombre": "7 · Blue Sunset",
+          "descripcion": "Arándano · Frutilla · Banana — Alto contenido de vitamina C y minerales",
+          "precio": 0,
           "disponible": true
         }
       ]
