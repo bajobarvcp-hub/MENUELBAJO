@@ -8,7 +8,6 @@
   "categorias": [
     {
       "id": "entradas",
-      "emoji": "🍟",
       "nombre": "Entradas",
       "nota": null,
       "items": [
@@ -58,7 +57,6 @@
     },
     {
       "id": "empanadas",
-      "emoji": "🥟",
       "nombre": "Empanadas",
       "nota": null,
       "items": [
@@ -108,7 +106,6 @@
     },
     {
       "id": "picadas",
-      "emoji": "🧀",
       "nombre": "Picadas",
       "nota": null,
       "items": [
@@ -137,7 +134,6 @@
     },
     {
       "id": "chef",
-      "emoji": "👨‍🍳",
       "nombre": "Sugerencias del Chef",
       "nota": null,
       "items": [
@@ -194,7 +190,6 @@
     },
     {
       "id": "pastas",
-      "emoji": "🍝",
       "nombre": "Pastas Caseras",
       "nota": null,
       "items": [
@@ -244,7 +239,6 @@
     },
     {
       "id": "ensaladas",
-      "emoji": "🥗",
       "nombre": "Ensaladas",
       "nota": null,
       "items": [
@@ -280,7 +274,6 @@
     },
     {
       "id": "minutas",
-      "emoji": "🥩",
       "nombre": "Minutas",
       "nota": "Guarnición: Papas Fritas · Rúcula y Parmesano · Lechuga, Tomate y Cebolla",
       "items": [
@@ -309,7 +302,6 @@
     },
     {
       "id": "sandwiches",
-      "emoji": "🥪",
       "nombre": "Sándwiches",
       "nota": "Todos incluyen papas fritas",
       "items": [
@@ -408,7 +400,6 @@
     },
     {
       "id": "pizzas",
-      "emoji": "🍕",
       "nombre": "Pizzas",
       "nota": null,
       "items": [
@@ -521,7 +512,6 @@
     },
     {
       "id": "vinos",
-      "emoji": "🍷",
       "nombre": "Vinos",
       "nota": null,
       "items": [
@@ -620,7 +610,6 @@
     },
     {
       "id": "vinos-organicos",
-      "emoji": "🌿",
       "nombre": "Vinos Orgánicos",
       "nota": null,
       "items": [
@@ -663,7 +652,6 @@
     },
     {
       "id": "espumantes",
-      "emoji": "🥂",
       "nombre": "Espumantes",
       "nota": null,
       "items": [
@@ -713,7 +701,6 @@
     },
     {
       "id": "cervezas",
-      "emoji": "🍺",
       "nombre": "Cervezas",
       "nota": null,
       "items": [
@@ -805,7 +792,6 @@
     },
     {
       "id": "chopp",
-      "emoji": "🍻",
       "nombre": "Chopp",
       "nota": null,
       "items": [
@@ -841,7 +827,6 @@
     },
     {
       "id": "whiskies",
-      "emoji": "🥃",
       "nombre": "Whiskies",
       "nota": null,
       "items": [
@@ -891,7 +876,6 @@
     },
     {
       "id": "tragos",
-      "emoji": "🍹",
       "nombre": "Tragos Directos",
       "nota": null,
       "items": [
@@ -983,7 +967,6 @@
     },
     {
       "id": "tragos-batidos",
-      "emoji": "🍸",
       "nombre": "Tragos Batidos",
       "nota": null,
       "items": [
@@ -1153,7 +1136,6 @@
     },
     {
       "id": "tragos-frozen",
-      "emoji": "🧊",
       "nombre": "Tragos Frozen",
       "nota": null,
       "items": [
@@ -1203,7 +1185,6 @@
     },
     {
       "id": "tragos-speed",
-      "emoji": "⚡",
       "nombre": "Tragos con Speed",
       "nota": null,
       "items": [
@@ -1310,7 +1291,6 @@
     },
     {
       "id": "cafeteria",
-      "emoji": "☕",
       "nombre": "Cafetería",
       "nota": null,
       "items": [
@@ -1451,7 +1431,6 @@
     },
     {
       "id": "desayunos",
-      "emoji": "🍳",
       "nombre": "Desayunos y Meriendas",
       "nota": null,
       "items": [
@@ -1480,7 +1459,6 @@
     },
     {
       "id": "postres",
-      "emoji": "🍮",
       "nombre": "Postres",
       "nota": null,
       "items": [
@@ -1537,7 +1515,6 @@
     },
     {
       "id": "sin-alcohol",
-      "emoji": "🥤",
       "nombre": "Bebidas Sin Alcohol",
       "nota": null,
       "items": [
@@ -1622,7 +1599,6 @@
     },
     {
       "id": "smoothies",
-      "emoji": "🥤",
       "nombre": "Smoothies",
       "nota": null,
       "items": [
