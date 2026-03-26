@@ -290,6 +290,13 @@
           "descripcion": "Ternera o suprema de pollo",
           "precio": 25000,
           "disponible": true
+        },
+        {
+          "id": "new_1774558733161_1",
+          "nombre": "Guarniciones",
+          "descripcion": "Papas Fritas , Rúcula y parmesano o Lechuga, Tomate y Rúcula ",
+          "precio": 0,
+          "disponible": true
         }
       ]
     },
