@@ -462,13 +462,6 @@
           "disponible": true
         },
         {
-          "id": "piz10",
-          "nombre": "Pizza Combinada",
-          "descripcion": "Dos variedades de pizza a elección",
-          "precio": 28500,
-          "disponible": true
-        },
-        {
           "id": "piz11",
           "nombre": "Muzzarella",
           "descripcion": "Tomate, muzzarella y aceitunas",
@@ -501,6 +494,13 @@
           "nombre": "Fugazzetta",
           "descripcion": "Tomate, muzzarella, cebolla salteada y aceitunas",
           "precio": 27000,
+          "disponible": true
+        },
+        {
+          "id": "piz10",
+          "nombre": "Pizza Combinada",
+          "descripcion": "Dos variedades de pizza a elección",
+          "precio": 28500,
           "disponible": true
         }
       ]
