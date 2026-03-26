@@ -1058,7 +1058,6 @@
     },
     {
       "id": "tragos-tonica",
-      "emoji": "🫧",
       "nombre": "Tragos con Tónica",
       "nota": null,
       "items": [
@@ -1241,7 +1240,6 @@
     },
     {
       "id": "medidas",
-      "emoji": "🫗",
       "nombre": "Medidas",
       "nota": null,
       "items": [
