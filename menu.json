@@ -196,7 +196,7 @@
       "id": "pastas",
       "emoji": "🍝",
       "nombre": "Pastas Caseras",
-      "nota": "Salsas: Fileto · Rosa · Bolognesa",
+      "nota": null,
       "items": [
         {
           "id": "pas1",
@@ -231,6 +231,13 @@
           "nombre": "Sorrentino Ojo de Bife al Horno",
           "descripcion": "Ojo de bife braseado en vegetales, caldo y vino blanco, al horno con crema de roquefort",
           "precio": 28000,
+          "disponible": true
+        },
+        {
+          "id": "new_1774559084770_2",
+          "nombre": "Salsas",
+          "descripcion": " Fileto · Rosa · Bolognesa",
+          "precio": 0,
           "disponible": true
         }
       ]
