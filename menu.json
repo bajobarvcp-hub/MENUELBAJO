@@ -1531,8 +1531,8 @@
     {
       "id": "smoothies",
       "emoji": "🥤",
-      "nombre": "Smoothie",
-      "nota": "Sin conservantes ni aditivos artificiales",
+      "nombre": "Smoothies",
+      "nota": null,
       "items": [
         {
           "id": "sm1",
@@ -1622,7 +1622,7 @@
         {
           "id": "sal5",
           "nombre": "Licuados",
-          "descripcion": "Licuados de Frutas Naturales",
+          "descripcion": "",
           "precio": 6700,
           "disponible": true
         },
