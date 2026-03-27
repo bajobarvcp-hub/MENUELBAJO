@@ -275,7 +275,7 @@
     {
       "id": "minutas",
       "nombre": "Minutas",
-      "nota": "Guarnición: Papas Fritas · Rúcula y Parmesano · Lechuga, Tomate y Cebolla",
+      "nota": null,
       "items": [
         {
           "id": "min1",
