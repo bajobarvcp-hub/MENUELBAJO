@@ -21,17 +21,12 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;over
 .logo{font-family:'Playfair Display',serif;font-size:4rem;font-weight:700;color:#fff;letter-spacing:-1px;line-height:1;}
 .logo em{color:#fff;font-style:normal;}
 .logo-sub{font-size:.62rem;letter-spacing:.38em;color:#fff;opacity:.5;text-transform:uppercase;margin-top:5px;}
-
 .bubbles{display:flex;justify-content:center;gap:7px;margin:14px 0 0;}
 .bubble{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .bubble-blue  {background:#1e7bbf;}
 .bubble-red   {background:#cc2b2b;}
 .bubble-orange{background:#e07a10;}
 .bubble-green {background:#4a8c3f;}
-
-.search-wrap{padding:10px 16px;background:var(--bg2);border-bottom:1px solid rgba(255,255,255,.06);}
-.search-input{width:100%;background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:22px;color:#fff;font-family:'Nunito',sans-serif;font-size:.85rem;padding:9px 16px 9px 38px;outline:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='%237a756e' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.099zm-5.44 1.398a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:13px center;}
-.search-input::placeholder{color:#6a645c;}
 .nav-wrap{position:sticky;top:0;z-index:100;background:rgba(8,8,6,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);overflow-x:auto;scrollbar-width:none;}
 .nav-wrap::-webkit-scrollbar{display:none;}
 .nav-bar{display:flex;padding:9px 14px;gap:7px;min-width:max-content;}
@@ -39,8 +34,8 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;over
 .nb.on{background:#fff;color:#000;border-color:#fff;}
 main{padding-bottom:70px;}
 .sec{padding:28px 0 14px;border-bottom:1px solid rgba(255,255,255,.06);}
-.sh{padding:0 18px 14px;display:flex;align-items:center;gap:11px;}
-.si{width:36px;height:36px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+/* Sin .si, título a la izquierda */
+.sh{padding:0 18px 14px;}
 .st{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#E8C06A;}
 .note{margin:2px 16px 10px;padding:9px 13px;background:rgba(255,255,255,.03);border-left:2px solid rgba(255,255,255,.2);border-radius:0 6px 6px 0;font-size:.75rem;color:#aaa;font-style:italic;}
 .il{padding:0 14px;}
@@ -51,103 +46,19 @@ main{padding-bottom:70px;}
 .id{font-size:.75rem;color:#fff;font-weight:400;margin-top:4px;line-height:1.5;opacity:.8;}
 .ip{font-weight:700;font-size:.92rem;color:#fff;white-space:nowrap;flex-shrink:0;padding-top:1px;min-width:58px;text-align:right;}
 .ip.nh{color:#555;font-weight:400;font-size:.78rem;}
-
-/* ── CONFIGURACIÓN BASE PARA TODOS LOS LOGOS ── */
-.brand-strip {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 10px 0;
-  width: 100%;
-}
-
-.brand-strip img {
-  width: auto !important;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto !important; /* Centrado */
-}
-
-/* ── AJUSTES INDIVIDUALES (Modificá acá uno por uno) ── */
-
-/* 1. FERNET BRANCA - AJUSTE DE ESPACIOS CERRADOS */
-.brand-strip img[src*="BRANCA"], .brand-strip img[src*="branca"] {
-  height: 280px !important;    /* Mantenemos el tamaño imponente */
-  
-  /* --- CAMBIOS CLAVE PARA ACHICAR ESPACIOS --- */
-  margin-top: -35px !important;    /* 'Pega' el logo al título de la sección */
-  margin-bottom: -50px !important; /* 'Pega' el logo a la lista de productos de abajo */
-  
-  /* Aseguramos que se comporte como un bloque centrado */
-  display: block;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-/* 2. BORGHETTI */
-.brand-strip img[src*="BORGHETTI"], .brand-strip img[src*="borghetti"] {
-  height: 280px !important;    /* Tamaño imponente */
-  margin-bottom: -10px !important;
-}
-
-/* 3. CASILLERO DEL DIABLO */
-.brand-strip img[src*="CASILLERO"], .brand-strip img[src*="casillero"] {
-  height: 250px !important; 
-  margin-bottom: 35px !important; /* Más espacio con el título de abajo */
-  margin-top: 15px !important;
-}
-
-/* 4. TRIBU */
-.brand-strip img[src*="TRIBU"], .brand-strip img[src*="tribu"] {
-  height: 270px !important;
-  margin-bottom: -10px !important;
-}
-
-/* 5. TRIVENTO */
-.brand-strip img[src*="TRIVENTO"], .brand-strip img[src*="trivento"] {
-  height: 200px !important;
-  margin-bottom: -10px !important;
-}
-
-/* 6. IMPERIAL */
-.brand-strip img[src*="IMPERIAL"], .brand-strip img[src*="imperial"] {
-  height: 140px !important;
-  margin-bottom: 25px !important; /* Espacio con el menú */
-}
-
-/* 7. SPEED */
-.brand-strip img[src*="SPEED"], .brand-strip img[src*="speed"] {
-  height: 140px !important;
-  margin-bottom: 25px !important; /* Espacio con el menú */
-}
-
-/* 8. SERNOVA */
-.brand-strip img[src*="SERNOVA"], .brand-strip img[src*="sernova"] {
-  height: 120px !important;
-  margin-bottom: 25px !important; /* Espacio con el menú */
-}
-/* ── PAYMENT LOGOS ────────────────────────────────── */
-.payment-strip{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:27px;
-  padding:20px 0 24px;
-  flex-wrap:wrap;
-}
-.payment-strip img{
-  height:60px; /* Podés subirlo a 50px si las ves muy chicas */
-  width:auto;
-  object-fit:contain;
-  opacity: 1; /* Para que brillen bien */
-  /* BORRÁ ESTA LÍNEA DE ABAJO EN TU CÓDIGO: */
-  /* filter: brightness(0) invert(1); */
-  transition: transform .2s;
-}
-.payment-strip img:hover{
-  transform: scale(1.1);
-}
-
+.brand-strip{display:flex;justify-content:center;align-items:center;gap:20px;padding:10px 0;width:100%;}
+.brand-strip img{width:auto!important;object-fit:contain;display:block;margin:0 auto!important;}
+.brand-strip img[src*="BRANCA"],.brand-strip img[src*="branca"]{height:280px!important;margin-top:-35px!important;margin-bottom:-50px!important;display:block;margin-left:auto!important;margin-right:auto!important;}
+.brand-strip img[src*="BORGHETTI"],.brand-strip img[src*="borghetti"]{height:280px!important;margin-bottom:-10px!important;}
+.brand-strip img[src*="CASILLERO"],.brand-strip img[src*="casillero"]{height:250px!important;margin-bottom:35px!important;margin-top:15px!important;}
+.brand-strip img[src*="TRIBU"],.brand-strip img[src*="tribu"]{height:270px!important;margin-bottom:-10px!important;}
+.brand-strip img[src*="TRIVENTO"],.brand-strip img[src*="trivento"]{height:200px!important;margin-bottom:-10px!important;}
+.brand-strip img[src*="IMPERIAL"],.brand-strip img[src*="imperial"]{height:140px!important;margin-bottom:25px!important;}
+.brand-strip img[src*="SPEED"],.brand-strip img[src*="speed"]{height:140px!important;margin-bottom:25px!important;}
+.brand-strip img[src*="SERNOVA"],.brand-strip img[src*="sernova"]{height:120px!important;margin-bottom:25px!important;}
+.payment-strip{display:flex;justify-content:center;align-items:center;gap:27px;padding:20px 0 24px;flex-wrap:wrap;}
+.payment-strip img{height:60px;width:auto;object-fit:contain;opacity:1;transition:transform .2s;}
+.payment-strip img:hover{transform:scale(1.1);}
 .reviews-sec{padding:28px 0 24px;border-bottom:1px solid rgba(255,255,255,.06);}
 .reviews-grid{padding:0 14px;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;}
 @media(max-width:420px){.reviews-grid{grid-template-columns:1fr;}}
@@ -165,7 +76,6 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .fsub{font-size:.58rem;letter-spacing:.38em;color:#aaa;text-transform:uppercase;margin:3px 0 14px;}
 .finfo{font-size:.77rem;color:#aaa;line-height:2.2;}
 .rights{margin-top:18px;font-size:.82rem;color:#fff;opacity:.4;font-family:'Nunito',sans-serif;font-weight:400;letter-spacing:.02em;text-transform:uppercase;line-height:1.5;}
-
 .social-float{position:fixed;bottom:80px;right:18px;display:flex;flex-direction:column;gap:10px;z-index:200;}
 .sf-btn-wrap{position:relative;display:flex;align-items:center;}
 .sf-btn{width:44px;height:44px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.5);transition:transform .2s;text-decoration:none;}
@@ -183,7 +93,6 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .loading-logo{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;animation:pulse 1.5s ease-in-out infinite;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 #no-results{display:none;text-align:center;padding:28px;color:#6a645c;font-size:.85rem;}
-
 .wifi-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
 .wifi-overlay.open{display:flex;}
 .wifi-popup{background:#131310;border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px 24px;text-align:center;width:min(300px,88vw);box-shadow:0 20px 60px rgba(0,0,0,.6);}
@@ -194,10 +103,8 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .wifi-popup-pass{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fff;letter-spacing:.08em;margin-bottom:20px;}
 .wifi-close{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:10px;padding:9px 24px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;transition:background .2s;}
 .wifi-close:hover{background:rgba(255,255,255,.16);}
-
 .print-btn{display:none;position:fixed;top:14px;right:14px;z-index:999;background:#fff;color:#000;border:none;border-radius:10px;padding:9px 16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);align-items:center;gap:6px;}
 .print-btn.visible{display:flex;}
-
 .wifi-print{display:none;}
 .ubicacion-print{display:none;}
 @media print{
@@ -209,11 +116,10 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   .wifi-print-key{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.45)!important;}
   .wifi-print-val{font-family:'Playfair Display',serif!important;font-size:1.4rem!important;font-weight:700!important;color:#fff!important;letter-spacing:.08em;}
 }
-
 @media print{
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
   @page{size:A4;margin:0;}
-  .info-bar,.search-wrap,.nav-wrap,.social-float,.up,.print-btn,#no-results,.reviews-sec,.gmaps-btn,.palm,.bubbles,.wifi-overlay,.brand-strip,.payment-strip{display:none!important;}
+  .info-bar,.nav-wrap,.social-float,.up,.print-btn,#no-results,.reviews-sec,.gmaps-btn,.palm,.bubbles,.wifi-overlay,.brand-strip,.payment-strip{display:none!important;}
   html,body{background-color:#080806!important;color:#fff!important;margin:0!important;padding:0!important;}
   .hd{background:#000!important;padding:40px 0 20px!important;text-align:center;}
   .logo{color:#fff!important;font-size:3.5rem!important;}
@@ -223,7 +129,6 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   .sec{border:none!important;padding:20px 0!important;break-inside:auto;}
   .sh{padding:0 30px 15px!important;}
   .st{color:#E8C06A!important;font-size:1.8rem!important;}
-  .si{display:none!important;}
   .il{display:grid;grid-template-columns:1fr 1fr;gap:15px;padding:0 30px!important;}
   .mi{background:#131310!important;border:1px solid rgba(255,255,255,.05)!important;padding:12px!important;break-inside:avoid;display:flex!important;flex-direction:column;}
   .mi.off{display:none!important;}
@@ -245,16 +150,14 @@ const GMAPS_URL = 'https://search.google.com/local/writereview?placeid=ChIJq9vuJ
 const WIFI_PASS = 'elbajocp20';
 const WIFI_NAME = 'El Bajo';
 
-// Imágenes de marcas por sección
-// arriba: imagen(es) que aparecen ANTES de la lista de ítems
-// abajo:  imagen(es) que aparecen DESPUÉS de la lista de ítems
+// Borghetti movido a 'postres' (quitado de 'cafeteria')
 const BRAND_IMAGES = {
-  'vinos':         { arriba: ['/img/TRIBU.png'],      abajo: ['/img/TRIVENTO.png'] },
-  'espumantes':    { arriba: ['/img/CASILLERO.png'],  abajo: [] },
-  'cervezas':      { arriba: ['/img/imperial.png'],   abajo: [] },
-  'tragos-speed':  { arriba: ['/img/sernova.png', '/img/speed.png'], abajo: [] },
-  'tragos':        { arriba: ['/img/BRANCA.png'],     abajo: [] },
-  'cafeteria':     { arriba: ['/img/borghetti.png'],  abajo: [] },
+  'vinos':        { arriba: ['/img/TRIBU.png'],     abajo: ['/img/TRIVENTO.png'] },
+  'espumantes':   { arriba: ['/img/CASILLERO.png'], abajo: [] },
+  'cervezas':     { arriba: ['/img/imperial.png'],  abajo: [] },
+  'tragos-speed': { arriba: ['/img/sernova.png', '/img/speed.png'], abajo: [] },
+  'tragos':       { arriba: ['/img/BRANCA.png'],    abajo: [] },
+  'postres':      { arriba: ['/img/borghetti.png'], abajo: [] },
 };
 
 function brandStrip(imgs, extraClass = '') {
@@ -323,12 +226,7 @@ function brandStrip(imgs, extraClass = '') {
   </div>
 </div>
 
-<!-- SEARCH -->
-<div class="search-wrap">
-  <input class="search-input" type="text" id="searchInput" placeholder="Buscar sección..." oninput="doSearch(this.value)">
-</div>
-
-<!-- NAV -->
+<!-- NAV — sin barra de búsqueda -->
 <div class="nav-wrap" id="nw">
   <div class="nav-bar" id="nb"></div>
 </div>
@@ -344,7 +242,6 @@ function brandStrip(imgs, extraClass = '') {
 <!-- RESEÑAS -->
 <section class="reviews-sec" id="reviews">
   <div class="sh">
-    <div class="si"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
     <h2 class="st">Reseñas</h2>
   </div>
   <div class="reviews-grid">
@@ -369,13 +266,10 @@ function brandStrip(imgs, extraClass = '') {
       Yrigoyen 900 · Villa Carlos Paz
     </div>
   </div>
-
-  <!-- VISA Y MASTERCARD -->
   <div class="payment-strip">
     <img src="/img/visa.JPG"   alt="Visa">
     <img src="/img/master.JPG" alt="Mastercard">
   </div>
-
   <div class="rights">La casa se reserva el derecho de admisión y permanencia en el local</div>
 </footer>
 
@@ -463,21 +357,18 @@ function renderMenu(data) {
     sec.className = 'sec';
     sec.id = cat.id;
 
-    // --- INICIO DEL CAMBIO ---
-    let html = ''; 
+    let html = '';
 
-    // 1. Imágenes ARRIBA (Aparecen antes que el título)
+    // Imágenes ARRIBA
     const brandsArriba = BRAND_IMAGES[cat.id]?.arriba || [];
-    if (brandsArriba.length > 0) {
-      html += brandStrip(brandsArriba);
-    }
+    if (brandsArriba.length > 0) html += brandStrip(brandsArriba);
 
-    // 2. Título de la sección
-    html += `<div class="sh"><div class="si">${cat.emoji}</div><h2 class="st">${cat.nombre}</h2></div>`;
-    
+    // Título sin ícono emoji — alineado a la izquierda
+    html += `<div class="sh"><h2 class="st">${cat.nombre}</h2></div>`;
+
     if (cat.nota) html += `<div class="note">${cat.nota}</div>`;
 
-    // 3. Ítems (Platos/Bebidas)
+    // Ítems
     html += `<div class="il">`;
     cat.items.forEach(item => {
       const off = !item.disponible;
@@ -492,28 +383,20 @@ function renderMenu(data) {
     });
     html += `</div>`;
 
-    // 4. Imágenes ABAJO
+    // Imágenes ABAJO
     const brandsAbajo = BRAND_IMAGES[cat.id]?.abajo || [];
-    if (brandsAbajo.length > 0) {
-      html += brandStrip(brandsAbajo, 'bottom');
-    }
+    if (brandsAbajo.length > 0) html += brandStrip(brandsAbajo, 'bottom');
 
     sec.innerHTML = html;
     mc.appendChild(sec);
   });
-  // --- FIN DEL CAMBIO ---
+
   const revBtn = document.createElement('button');
   revBtn.className = 'nb';
   revBtn.textContent = '⭐ Reseñas';
   revBtn.onclick = () => document.getElementById('reviews').scrollIntoView({behavior:'smooth'});
   nb.appendChild(revBtn);
   navMap['reviews'] = revBtn;
-
-  const nr = document.createElement('div');
-  nr.id = 'no-results';
-  nr.style.cssText = 'display:none;text-align:center;padding:28px;color:#6a645c;font-size:.85rem;';
-  nr.textContent = 'No se encontraron resultados.';
-  mc.appendChild(nr);
 
   const allSecs = document.querySelectorAll('.sec[id], .reviews-sec[id]');
   allSecs.forEach(s => new IntersectionObserver(entries => {
@@ -534,36 +417,13 @@ function renderMenu(data) {
 function goTo(id) {
   const el = document.getElementById(id);
   if (!el) return;
-  const nh = document.getElementById('nw').offsetHeight + document.querySelector('.search-wrap').offsetHeight;
+  const nh = document.getElementById('nw').offsetHeight;
   window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - nh - 6, behavior: 'smooth' });
 }
 
 window.addEventListener('scroll', () => {
   document.getElementById('upBtn').classList.toggle('on', window.scrollY > 400);
 });
-
-function doSearch(q) {
-  q = q.toLowerCase().trim();
-  const sections = document.querySelectorAll('.sec');
-  const nr = document.getElementById('no-results');
-  const navBar = document.getElementById('nb');
-  if (!q) {
-    sections.forEach(s => s.style.display = '');
-    document.querySelectorAll('.mi').forEach(i => i.style.display = '');
-    if (nr) nr.style.display = 'none';
-    navBar.style.display = 'flex';
-    return;
-  }
-  navBar.style.display = 'none';
-  let any = false;
-  sections.forEach(s => {
-    const title = (s.querySelector('.st')?.textContent || '').toLowerCase();
-    const match = title.includes(q);
-    s.style.display = match ? '' : 'none';
-    if (match) { s.querySelectorAll('.mi').forEach(i => i.style.display = ''); any = true; }
-  });
-  if (nr) nr.style.display = any ? 'none' : 'block';
-}
 
 async function init() {
   try {
