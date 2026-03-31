@@ -101,6 +101,9 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .print-btn{display:none;position:fixed;top:14px;right:14px;z-index:999;background:#fff;color:#000;border:none;border-radius:10px;padding:9px 16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);align-items:center;gap:6px;}
 .print-btn.visible{display:flex;}
 
+/* Bloque WiFi — oculto en pantalla, solo se muestra al imprimir */
+.wifi-print { display: none; }
+
 /* ===================== IMPRESIÓN A4 ===================== */
 @media print {
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
@@ -136,36 +139,81 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   /* HEADER */
   .hd {
     background: #000 !important;
-    padding: 14px 0 12px !important;
+    padding: 16px 0 14px !important;
     text-align: center !important;
     border-bottom: 1px solid rgba(255,255,255,.15) !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 0 !important;
   }
   .logo {
     font-family: 'Playfair Display', serif !important;
-    font-size: 2.6rem !important;
+    font-size: 3.4rem !important;
     font-weight: 700 !important;
     color: #fff !important;
     line-height: 1 !important;
   }
   .logo em { color: #fff !important; }
   .logo-sub {
-    font-size: .55rem !important;
+    font-size: .7rem !important;
     letter-spacing: .38em !important;
-    color: rgba(255,255,255,.45) !important;
+    color: rgba(255,255,255,.55) !important;
     text-transform: uppercase !important;
-    margin-top: 3px !important;
+    margin-top: 4px !important;
   }
   .logo-img {
     display: flex !important;
     justify-content: center !important;
-    margin: 6px 0 0 !important;
+    margin: 8px 0 0 !important;
   }
   .logo-img img {
-    height: 38px !important;
+    height: 64px !important;
     width: auto !important;
     object-fit: contain !important;
   }
+
+  /* ── BLOQUE WIFI (solo visible al imprimir) ── */
+  .wifi-print {
+    display: block !important;
+    background: #0d0d0a !important;
+    border-top: 1px solid rgba(201,168,76,.25) !important;
+    border-bottom: 1px solid rgba(201,168,76,.25) !important;
+    text-align: center !important;
+    padding: 10px 0 13px !important;
+    margin-bottom: 10px !important;
+  }
+  .wifi-print-title {
+    font-size: 7pt !important;
+    letter-spacing: .25em !important;
+    text-transform: uppercase !important;
+    color: rgba(255,255,255,.4) !important;
+    margin-bottom: 7px !important;
+  }
+  .wifi-print-row {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 40px !important;
+    align-items: flex-start !important;
+  }
+  .wifi-print-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2px !important;
+  }
+  .wifi-print-label {
+    font-size: 6.5pt !important;
+    color: rgba(255,255,255,.45) !important;
+    text-transform: uppercase !important;
+    letter-spacing: .15em !important;
+  }
+  .wifi-print-value {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #E8C06A !important;
+    letter-spacing: .04em !important;
+    line-height: 1.2 !important;
+  }
+  /* ──────────────────────────────────────────── */
 
   /* SECCIONES */
   main {
@@ -200,14 +248,13 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     margin: 0 0 5px !important;
     padding: 5px 8px !important;
     background: rgba(255,255,255,.03) !important;
-    border-left: 2px solid rgba(255,255,255,.2) !important;
+    border-left: 2px solid rgba(255,255,255,.15) !important;
     border-radius: 0 4px 4px 0 !important;
     font-size: 7pt !important;
     color: #aaa !important;
     font-style: italic !important;
   }
 
-  /* Items — una sola columna dentro de cada sección (la columna ya viene del `columns` del main) */
   .il {
     padding: 0 !important;
     display: flex !important;
@@ -222,7 +269,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     padding: 5px 7px !important;
     background: #131310 !important;
     border-radius: 6px !important;
-    border: 1px solid rgba(255,255,255,.05) !important;
+    border: none !important;
     gap: 6px !important;
     break-inside: avoid !important;
   }
@@ -254,33 +301,32 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   }
   .ip.nh { display: none !important; }
 
-  /* Brand images — más pequeñas y compactas */
+  /* Brand images — GRANDES */
   .brand-strip {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 10px !important;
-    padding: 4px 0 !important;
+    gap: 14px !important;
+    padding: 6px 0 !important;
   }
   .brand-strip img { object-fit: contain !important; display: block !important; }
 
-  /* Sobreescribir tamaños de marcas para print */
   .brand-strip img[src*="BRANCA"],
-  .brand-strip img[src*="branca"]  { height: 70px !important; margin: -8px auto -12px !important; }
+  .brand-strip img[src*="branca"]   { height: 98px  !important; margin: -10px auto -16px !important; }
   .brand-strip img[src*="BORGHETTI"],
-  .brand-strip img[src*="borghetti"]{ height: 70px !important; margin-bottom: -4px !important; }
+  .brand-strip img[src*="borghetti"]{ height: 98px  !important; margin-bottom: -6px !important; }
   .brand-strip img[src*="CASILLERO"],
-  .brand-strip img[src*="casillero"]{ height: 64px !important; margin: 4px auto 8px !important; }
+  .brand-strip img[src*="casillero"]{ height: 90px  !important; margin: 6px auto 10px !important; }
   .brand-strip img[src*="TRIBU"],
-  .brand-strip img[src*="tribu"]    { height: 70px !important; margin-bottom: -4px !important; }
+  .brand-strip img[src*="tribu"]    { height: 98px  !important; margin-bottom: -6px !important; }
   .brand-strip img[src*="TRIVENTO"],
-  .brand-strip img[src*="trivento"] { height: 54px !important; margin-bottom: -3px !important; }
+  .brand-strip img[src*="trivento"] { height: 76px  !important; margin-bottom: -4px !important; }
   .brand-strip img[src*="IMPERIAL"],
-  .brand-strip img[src*="imperial"] { height: 42px !important; margin-bottom: 6px !important; }
+  .brand-strip img[src*="imperial"] { height: 60px  !important; margin-bottom: 8px !important; }
   .brand-strip img[src*="SPEED"],
-  .brand-strip img[src*="speed"]    { height: 42px !important; margin-bottom: 6px !important; }
+  .brand-strip img[src*="speed"]    { height: 60px  !important; margin-bottom: 8px !important; }
   .brand-strip img[src*="SERNOVA"],
-  .brand-strip img[src*="sernova"]  { height: 36px !important; margin-bottom: 6px !important; }
+  .brand-strip img[src*="sernova"]  { height: 52px  !important; margin-bottom: 8px !important; }
 
   /* FOOTER */
   footer {
@@ -340,7 +386,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 const MENU_URL = '/menu.json';
 const GMAPS_URL = 'https://search.google.com/local/writereview?placeid=ChIJq9vuJGlmLZQRtPE0IJQyojQ';
 const WIFI_PASS = 'elbajocp20';
-const WIFI_NAME = 'El Bajo';
+const WIFI_NAME = 'elbajobar';
 
 const BRAND_IMAGES = {
   'vinos':        { arriba: ['/img/TRIBU.png'],     abajo: ['/img/TRIVENTO.png'] },
@@ -379,6 +425,21 @@ function brandStrip(imgs, extraClass = '') {
     <img src="/img/LOGOINICIO.png" alt="El Bajo" loading="eager">
   </div>
 </header>
+
+<!-- WIFI PRINT — oculto en pantalla, visible solo al imprimir -->
+<div class="wifi-print">
+  <div class="wifi-print-title">📶 &nbsp; Red WiFi del local</div>
+  <div class="wifi-print-row">
+    <div class="wifi-print-item">
+      <span class="wifi-print-label">Red</span>
+      <span class="wifi-print-value">elbajobar</span>
+    </div>
+    <div class="wifi-print-item">
+      <span class="wifi-print-label">Contraseña</span>
+      <span class="wifi-print-value">elbajocp20</span>
+    </div>
+  </div>
+</div>
 
 <!-- NAV -->
 <div class="nav-wrap" id="nw">
