@@ -16,7 +16,7 @@
           "nombre": "Porción de Rabas a la Romana   ",
           "descripcion": "Acompañada con salsa tártara ",
           "precio": 25000,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "ent2",
