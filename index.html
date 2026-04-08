@@ -128,8 +128,8 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   .palm { display: none !important; }
 
   html, body {
-    background-color: #080806 !important;
-    color: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
     margin: 0 !important;
     padding: 0 !important;
     font-family: 'Nunito', sans-serif !important;
@@ -138,34 +138,34 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   /* HEADER */
   .hd {
-    background: #000 !important;
-    padding: 16px 0 14px !important;
+    background: #ffffff !important;
+    padding: 18px 0 16px !important;
     text-align: center !important;
-    border-bottom: 1px solid rgba(255,255,255,.15) !important;
+    border-bottom: 2px solid #C9A84C !important;
     margin-bottom: 0 !important;
   }
   .logo {
     font-family: 'Playfair Display', serif !important;
     font-size: 3.4rem !important;
     font-weight: 700 !important;
-    color: #fff !important;
+    color: #1a1a1a !important;
     line-height: 1 !important;
   }
-  .logo em { color: #fff !important; }
+  .logo em { color: #C9A84C !important; font-style: normal !important; }
   .logo-sub {
     font-size: .7rem !important;
     letter-spacing: .38em !important;
-    color: rgba(255,255,255,.55) !important;
+    color: #888 !important;
     text-transform: uppercase !important;
     margin-top: 4px !important;
   }
   .logo-img {
     display: flex !important;
     justify-content: center !important;
-    margin: 8px 0 0 !important;
+    margin: 10px 0 0 !important;
   }
   .logo-img img {
-    height: 64px !important;
+    height: 80px !important;          /* logo más grande */
     width: auto !important;
     object-fit: contain !important;
   }
@@ -173,24 +173,24 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   /* ── BLOQUE WIFI (solo visible al imprimir) ── */
   .wifi-print {
     display: block !important;
-    background: #0d0d0a !important;
-    border-top: 1px solid rgba(201,168,76,.25) !important;
-    border-bottom: 1px solid rgba(201,168,76,.25) !important;
+    background: #fffdf5 !important;
+    border-top: 1.5px solid #C9A84C !important;
+    border-bottom: 1.5px solid #C9A84C !important;
     text-align: center !important;
-    padding: 10px 0 13px !important;
-    margin-bottom: 10px !important;
+    padding: 13px 0 16px !important;
+    margin-bottom: 12px !important;
   }
   .wifi-print-title {
     font-size: 7pt !important;
-    letter-spacing: .25em !important;
+    letter-spacing: .28em !important;
     text-transform: uppercase !important;
-    color: rgba(255,255,255,.4) !important;
-    margin-bottom: 7px !important;
+    color: #999 !important;
+    margin-bottom: 9px !important;
   }
   .wifi-print-row {
     display: flex !important;
     justify-content: center !important;
-    gap: 40px !important;
+    gap: 52px !important;
     align-items: flex-start !important;
   }
   .wifi-print-item {
@@ -201,15 +201,15 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   }
   .wifi-print-label {
     font-size: 6.5pt !important;
-    color: rgba(255,255,255,.45) !important;
+    color: #999 !important;
     text-transform: uppercase !important;
-    letter-spacing: .15em !important;
+    letter-spacing: .18em !important;
   }
   .wifi-print-value {
     font-family: 'Playfair Display', serif !important;
-    font-size: 1.25rem !important;
+    font-size: 1.45rem !important;      /* valor WiFi más grande */
     font-weight: 700 !important;
-    color: #E8C06A !important;
+    color: #B8860B !important;          /* dorado oscuro legible en blanco */
     letter-spacing: .04em !important;
     line-height: 1.2 !important;
   }
@@ -233,25 +233,25 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   .sh {
     padding: 6px 0 5px !important;
-    border-bottom: 1px solid rgba(201,168,76,.35) !important;
+    border-bottom: 1.5px solid #C9A84C !important;
     margin-bottom: 5px !important;
   }
   .st {
     font-family: 'Playfair Display', serif !important;
     font-size: 1rem !important;
     font-weight: 700 !important;
-    color: #E8C06A !important;
+    color: #B8860B !important;
     line-height: 1.2 !important;
   }
 
   .note {
     margin: 0 0 5px !important;
     padding: 5px 8px !important;
-    background: rgba(255,255,255,.03) !important;
-    border-left: 2px solid rgba(255,255,255,.15) !important;
+    background: #fafafa !important;
+    border-left: 2px solid #C9A84C !important;
     border-radius: 0 4px 4px 0 !important;
     font-size: 7pt !important;
-    color: #aaa !important;
+    color: #666 !important;
     font-style: italic !important;
   }
 
@@ -267,7 +267,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     align-items: flex-start !important;
     justify-content: space-between !important;
     padding: 5px 7px !important;
-    background: #131310 !important;
+    background: #f9f7f2 !important;    /* crema muy suave */
     border-radius: 6px !important;
     border: none !important;
     gap: 6px !important;
@@ -281,19 +281,19 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   .in {
     font-weight: 700 !important;
     font-size: 7.5pt !important;
-    color: #E8C06A !important;
+    color: #B8860B !important;         /* nombre del ítem en dorado */
     line-height: 1.3 !important;
   }
   .id {
     font-size: 6.5pt !important;
-    color: rgba(255,255,255,.75) !important;
+    color: #444 !important;
     margin-top: 2px !important;
     line-height: 1.4 !important;
   }
   .ip {
     font-weight: 700 !important;
     font-size: 7.5pt !important;
-    color: #fff !important;
+    color: #1a1a1a !important;
     white-space: nowrap !important;
     flex-shrink: 0 !important;
     text-align: right !important;
@@ -306,53 +306,54 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 14px !important;
-    padding: 6px 0 !important;
+    gap: 18px !important;
+    padding: 8px 0 !important;
   }
   .brand-strip img { object-fit: contain !important; display: block !important; }
 
+  /* Tamaños aumentados ~20% respecto al original */
   .brand-strip img[src*="BRANCA"],
-  .brand-strip img[src*="branca"]   { height: 98px  !important; margin: -10px auto -16px !important; }
+  .brand-strip img[src*="branca"]   { height: 118px !important; margin: -12px auto -20px !important; }
   .brand-strip img[src*="BORGHETTI"],
-  .brand-strip img[src*="borghetti"]{ height: 98px  !important; margin-bottom: -6px !important; }
+  .brand-strip img[src*="borghetti"]{ height: 118px !important; margin-bottom: -8px !important; }
   .brand-strip img[src*="CASILLERO"],
-  .brand-strip img[src*="casillero"]{ height: 90px  !important; margin: 6px auto 10px !important; }
+  .brand-strip img[src*="casillero"]{ height: 110px !important; margin: 8px auto 12px !important; }
   .brand-strip img[src*="TRIBU"],
-  .brand-strip img[src*="tribu"]    { height: 98px  !important; margin-bottom: -6px !important; }
+  .brand-strip img[src*="tribu"]    { height: 118px !important; margin-bottom: -8px !important; }
   .brand-strip img[src*="TRIVENTO"],
-  .brand-strip img[src*="trivento"] { height: 76px  !important; margin-bottom: -4px !important; }
+  .brand-strip img[src*="trivento"] { height: 92px  !important; margin-bottom: -6px !important; }
   .brand-strip img[src*="IMPERIAL"],
-  .brand-strip img[src*="imperial"] { height: 60px  !important; margin-bottom: 8px !important; }
+  .brand-strip img[src*="imperial"] { height: 74px  !important; margin-bottom: 10px !important; }
   .brand-strip img[src*="SPEED"],
-  .brand-strip img[src*="speed"]    { height: 60px  !important; margin-bottom: 8px !important; }
+  .brand-strip img[src*="speed"]    { height: 74px  !important; margin-bottom: 10px !important; }
   .brand-strip img[src*="SERNOVA"],
-  .brand-strip img[src*="sernova"]  { height: 52px  !important; margin-bottom: 8px !important; }
+  .brand-strip img[src*="sernova"]  { height: 64px  !important; margin-bottom: 10px !important; }
 
   /* FOOTER */
   footer {
-    background: #000 !important;
-    padding: 12px 0 10px !important;
+    background: #ffffff !important;
+    padding: 14px 0 12px !important;
     text-align: center !important;
-    border-top: 1px solid rgba(255,255,255,.12) !important;
-    margin-top: 8px !important;
+    border-top: 2px solid #C9A84C !important;
+    margin-top: 10px !important;
     break-inside: avoid !important;
   }
   .fl {
     font-family: 'Playfair Display', serif !important;
     font-size: 1.3rem !important;
     font-weight: 700 !important;
-    color: #fff !important;
+    color: #1a1a1a !important;
   }
   .fsub {
     font-size: .5rem !important;
     letter-spacing: .3em !important;
-    color: #aaa !important;
+    color: #999 !important;
     text-transform: uppercase !important;
     margin: 2px 0 8px !important;
   }
   .finfo {
     font-size: 7pt !important;
-    color: #aaa !important;
+    color: #555 !important;
     line-height: 1.8 !important;
   }
   .payment-strip {
@@ -364,14 +365,14 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     flex-wrap: wrap !important;
   }
   .payment-strip img {
-    height: 30px !important;
+    height: 32px !important;
     width: auto !important;
     object-fit: contain !important;
     opacity: 1 !important;
   }
   .rights {
     font-size: 6pt !important;
-    color: rgba(255,255,255,.35) !important;
+    color: #bbb !important;
     text-transform: uppercase !important;
     letter-spacing: .04em !important;
     margin-top: 8px !important;
