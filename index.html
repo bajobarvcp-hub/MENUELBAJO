@@ -165,55 +165,56 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     margin: 10px 0 0 !important;
   }
   .logo-img img {
-    height: 80px !important;          /* logo más grande */
+    height: 80px !important;
     width: auto !important;
     object-fit: contain !important;
+    mix-blend-mode: multiply !important;
   }
 
-  /* ── BLOQUE WIFI (solo visible al imprimir) ── */
+  /* ── BLOQUE WIFI — vistoso y grande ── */
   .wifi-print {
     display: block !important;
     background: #fffdf5 !important;
-    border-top: 1.5px solid #C9A84C !important;
-    border-bottom: 1.5px solid #C9A84C !important;
+    border-top: 2px solid #C9A84C !important;
+    border-bottom: 2px solid #C9A84C !important;
     text-align: center !important;
-    padding: 13px 0 16px !important;
-    margin-bottom: 12px !important;
+    padding: 18px 0 22px !important;
+    margin-bottom: 14px !important;
   }
   .wifi-print-title {
-    font-size: 7pt !important;
-    letter-spacing: .28em !important;
+    font-size: 8.5pt !important;
+    letter-spacing: .35em !important;
     text-transform: uppercase !important;
-    color: #999 !important;
-    margin-bottom: 9px !important;
+    color: #aaa !important;
+    margin-bottom: 14px !important;
   }
   .wifi-print-row {
     display: flex !important;
     justify-content: center !important;
-    gap: 52px !important;
+    gap: 70px !important;
     align-items: flex-start !important;
   }
   .wifi-print-item {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 2px !important;
+    gap: 4px !important;
   }
   .wifi-print-label {
-    font-size: 6.5pt !important;
-    color: #999 !important;
+    font-size: 7.5pt !important;
+    color: #aaa !important;
     text-transform: uppercase !important;
-    letter-spacing: .18em !important;
+    letter-spacing: .22em !important;
   }
   .wifi-print-value {
     font-family: 'Playfair Display', serif !important;
-    font-size: 1.45rem !important;      /* valor WiFi más grande */
+    font-size: 2rem !important;
     font-weight: 700 !important;
-    color: #B8860B !important;          /* dorado oscuro legible en blanco */
+    color: #B8860B !important;
     letter-spacing: .04em !important;
     line-height: 1.2 !important;
   }
-  /* ──────────────────────────────────────────── */
+  /* ──────────────────────────────────── */
 
   /* SECCIONES */
   main {
@@ -238,7 +239,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   }
   .st {
     font-family: 'Playfair Display', serif !important;
-    font-size: 1.2rem !important;      /* secciones más grandes */
+    font-size: 1.2rem !important;
     font-weight: 700 !important;
     color: #B8860B !important;
     line-height: 1.2 !important;
@@ -267,7 +268,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     align-items: flex-start !important;
     justify-content: space-between !important;
     padding: 5px 7px !important;
-    background: #f9f7f2 !important;    /* crema muy suave */
+    background: #f9f7f2 !important;
     border-radius: 6px !important;
     border: none !important;
     gap: 6px !important;
@@ -280,19 +281,19 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   .in {
     font-weight: 700 !important;
-    font-size: 9pt !important;         /* nombre del plato más grande */
+    font-size: 9pt !important;
     color: #B8860B !important;
     line-height: 1.3 !important;
   }
   .id {
-    font-size: 7.5pt !important;       /* descripción más legible */
+    font-size: 7.5pt !important;
     color: #444 !important;
     margin-top: 2px !important;
     line-height: 1.4 !important;
   }
   .ip {
     font-weight: 700 !important;
-    font-size: 9pt !important;         /* precio acompaña al nombre */
+    font-size: 9pt !important;
     color: #1a1a1a !important;
     white-space: nowrap !important;
     flex-shrink: 0 !important;
@@ -301,22 +302,20 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   }
   .ip.nh { display: none !important; }
 
-  /* Brand images — fondo oscuro para que se vean sobre blanco */
+  /* Brand images — PNG pegados directo sobre blanco */
   .brand-strip {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 10px !important;
-    padding: 12px 10px !important;
-    background: #1a1a18 !important;        /* fondo oscuro contenedor */
-    border-radius: 8px !important;
+    gap: 18px !important;
+    padding: 10px 0 !important;
+    background: transparent !important;
   }
   .brand-strip img {
     object-fit: contain !important;
     display: block !important;
-    background: #1a1a18 !important;        /* fondo detrás de cada logo */
-    border-radius: 4px !important;
-    padding: 4px !important;
+    background: transparent !important;
+    mix-blend-mode: multiply !important;
   }
 
   .brand-strip img[src*="BRANCA"],
@@ -345,6 +344,20 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     margin-top: 10px !important;
     break-inside: avoid !important;
   }
+
+  /* Logo del bajo — grande, encima de las tarjetas */
+  footer .logo-img {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 auto 12px !important;
+  }
+  footer .logo-img img {
+    height: 110px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    mix-blend-mode: multiply !important;
+  }
+
   .fl {
     font-family: 'Playfair Display', serif !important;
     font-size: 1.3rem !important;
@@ -372,12 +385,12 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     flex-wrap: wrap !important;
   }
   .payment-strip img {
-    height: 52px !important;           /* Visa/Master más grandes */
+    height: 52px !important;
     width: auto !important;
     object-fit: contain !important;
+    mix-blend-mode: multiply !important;
     opacity: 1 !important;
   }
-  /* Texto debajo de medios de pago */
   .payment-label,
   .payment-strip + p,
   .payment-strip ~ p {
