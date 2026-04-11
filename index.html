@@ -101,136 +101,130 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .print-btn{display:none;position:fixed;top:14px;right:14px;z-index:999;background:#fff;color:#000;border:none;border-radius:10px;padding:9px 16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);align-items:center;gap:6px;}
 .print-btn.visible{display:flex;}
 
-/* Bloque WiFi — oculto en pantalla, solo se muestra al imprimir */
+/* WiFi print — oculto en pantalla */
 .wifi-print { display: none; }
-
+ 
 /* ===================== IMPRESIÓN A4 ===================== */
 @media print {
-
-  /* Forzar impresión de fondos y colores exactos */
+ 
+  /* Forzar colores exactos */
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    /* ── Anular TODOS los bordes heredados de pantalla ── */
-    border-color: transparent !important;
   }
-
+ 
+  /* Márgenes generosos arriba y abajo para tapar la URL/fecha/hora de Safari */
   @page {
     size: A4;
-    margin: 8mm 8mm 8mm 8mm;
-    @top-left      { content: none !important; }
-    @top-center    { content: none !important; }
-    @top-right     { content: none !important; }
-    @bottom-left   { content: none !important; }
-    @bottom-center { content: none !important; }
-    @bottom-right  { content: none !important; }
+    margin: 18mm 8mm 18mm 8mm;
   }
-
-  /* ── Ocultar todo lo interactivo ── */
+ 
+  /* ── Ocultar elementos de pantalla ── */
   .info-bar, .nav-wrap, .social-float, .up,
   .print-btn, .wifi-overlay, .reviews-sec,
-  .gmaps-btn, #no-results,
-  .palm { display: none !important; }
-
-  /* ════════════════════════════════════════
-     BASE — fondo negro en absolutamente todo
-     ════════════════════════════════════════ */
-  html, body, header, main, footer,
-  .hd, .sec, .sh, .il, .mi, .ii,
-  .wifi-print, .brand-strip, .payment-strip {
-    background: #111111 !important;
-    border-color: transparent !important;
-    outline: none !important;
-    box-shadow: none !important;
+  .gmaps-btn, #no-results, .palm,
+  .finfo svg {
+    display: none !important;
   }
-
+ 
+  /* ════════════════════════════════════
+     FONDO NEGRO EN TODO — anular bordes
+     ════════════════════════════════════ */
   html, body {
+    background: #111111 !important;
     color: #ffffff !important;
     margin: 0 !important;
     padding: 0 !important;
     font-family: 'Nunito', sans-serif !important;
     font-size: 9pt !important;
   }
-
-  /* ═══════════════ HEADER ═══════════════ */
+ 
+  /* Anular TODOS los bordes con rgba blanco que vienen del CSS de pantalla */
+  .mi,
+  .sec,
+  .review-card,
+  .gmaps-btn,
+  .note,
+  footer {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+ 
+  /* ════ HEADER ════ */
   .hd {
-    padding: 20px 0 18px !important;
+    background: #111111 !important;
+    padding: 14px 0 14px !important;
     text-align: center !important;
     border: none !important;
     border-bottom: 2px solid #C9A84C !important;
     margin: 0 !important;
-    overflow: visible !important;
   }
-
-  /* Eliminar el arco/gradiente blanco */
+  /* Eliminar arco/gradiente blanco */
   .hd::before {
     display: none !important;
     content: none !important;
     background: none !important;
   }
-
+ 
   .logo {
     font-family: 'Playfair Display', serif !important;
-    font-size: 5rem !important;
+    font-size: 4.5rem !important;
     font-weight: 700 !important;
     color: #ffffff !important;
     line-height: 1 !important;
   }
   .logo em { color: #ffffff !important; font-style: normal !important; }
-
+ 
   .logo-sub {
-    font-size: .85rem !important;
+    font-size: .8rem !important;
     letter-spacing: .38em !important;
     color: #ffffff !important;
     opacity: 1 !important;
     text-transform: uppercase !important;
-    margin-top: 6px !important;
+    margin-top: 5px !important;
   }
-
+ 
   .logo-img {
     display: flex !important;
     justify-content: center !important;
-    margin: 10px 0 0 !important;
+    margin: 8px 0 0 !important;
   }
   .logo-img img {
-    height: 80px !important;
+    height: 75px !important;
     width: auto !important;
     object-fit: contain !important;
-    mix-blend-mode: normal !important;
     background: transparent !important;
-    border: none !important;
   }
-
-  /* ═══════════════ BLOQUE WIFI ═══════════════ */
+ 
+  /* ════ WIFI ════ */
   .wifi-print {
     display: block !important;
-    border-top: none !important;
+    background: #111111 !important;
+    border: none !important;
     border-bottom: 2px solid #C9A84C !important;
     text-align: center !important;
-    padding: 14px 0 18px !important;
-    margin: 0 0 10px !important;
+    padding: 12px 0 16px !important;
+    margin: 0 0 8px !important;
   }
-
-  /* Ocultar emoji 📶 colapsando el nodo y reinyectando texto limpio */
+  /* Ocultar emoji 📶 con font-size:0, reinyectar texto limpio */
   .wifi-print-title {
     font-size: 0 !important;
-    letter-spacing: 0 !important;
-    margin-bottom: 10px !important;
     display: block !important;
+    margin-bottom: 10px !important;
   }
   .wifi-print-title::after {
     content: 'Red WiFi del local' !important;
-    font-size: 8pt !important;
+    font-size: 7.5pt !important;
     letter-spacing: .35em !important;
     text-transform: uppercase !important;
     color: #ffffff !important;
     display: block !important;
   }
-
   .wifi-print-icon,
   .wifi-print-time,
   .wifi-icon { display: none !important; }
-
+ 
   .wifi-print-row {
     display: flex !important;
     justify-content: center !important;
@@ -247,54 +241,55 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     font-size: 7pt !important;
     color: #aaaaaa !important;
     text-transform: uppercase !important;
-    letter-spacing: .22em !important;
+    letter-spacing: .2em !important;
   }
   .wifi-print-value {
     font-family: 'Playfair Display', serif !important;
-    font-size: 1.8rem !important;
+    font-size: 1.6rem !important;
     font-weight: 700 !important;
     color: #ffffff !important;
-    letter-spacing: .04em !important;
     line-height: 1.2 !important;
   }
-
-  /* ═══════════════ LAYOUT PRINCIPAL ═══════════════ */
+ 
+  /* ════ LAYOUT 2 COLUMNAS ════ */
   main {
     padding: 0 !important;
+    background: #111111 !important;
     columns: 2 !important;
     column-gap: 8mm !important;
     column-fill: auto !important;
   }
-
-  /* Cada sección completa: nunca se parte */
+ 
   .sec {
-    padding: 0 0 10px !important;
+    background: #111111 !important;
+    padding: 0 0 8px !important;
     border: none !important;
-    margin-bottom: 8px !important;
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
+    margin-bottom: 6px !important;
+    /* Evitar corte de sección entre columnas */
+    break-inside: avoid-column !important;
     display: inline-block !important;
     width: 100% !important;
   }
-
+ 
   .sh {
-    padding: 6px 0 5px !important;
+    background: #111111 !important;
+    padding: 5px 0 4px !important;
     border: none !important;
     border-bottom: 1.5px solid #C9A84C !important;
-    margin-bottom: 5px !important;
+    margin-bottom: 4px !important;
   }
-
+ 
   .st {
     font-family: 'Playfair Display', serif !important;
-    font-size: 1.5rem !important;
+    font-size: 1.4rem !important;
     font-weight: 700 !important;
     color: #C9A84C !important;
     line-height: 1.2 !important;
   }
-
+ 
   .note {
-    margin: 0 0 5px !important;
-    padding: 5px 8px !important;
+    margin: 0 0 4px !important;
+    padding: 4px 7px !important;
     background: #1a1a1a !important;
     border: none !important;
     border-left: 2px solid #C9A84C !important;
@@ -303,173 +298,171 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     color: #cccccc !important;
     font-style: italic !important;
   }
-
+ 
   .il {
     padding: 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 3px !important;
+    gap: 2px !important;
   }
-
-  /* Cada plato: si no entra completo, pasa a la columna/hoja siguiente */
+ 
+  /* ── Platos: nunca cortados, pasan enteros a siguiente columna/hoja ── */
   .mi {
     display: flex !important;
     align-items: flex-start !important;
     justify-content: space-between !important;
-    padding: 5px 7px !important;
-    background: #1c1c1c !important;
-    border-radius: 5px !important;
-    border: none !important;
+    padding: 5px 6px !important;
+    /* Fondo levemente distinto del negro base para dar profundidad */
+    background: #1b1b1b !important;
+    border-radius: 4px !important;
+    /* ─── CLAVE: sin ningún border, ni siquiera transparente ─── */
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
     gap: 6px !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
-    margin-bottom: 0 !important;
   }
-
+ 
   .mi.off { display: none !important; }
-
   .ii { flex: 1; min-width: 0; }
-
+ 
   .in {
     font-weight: 700 !important;
-    font-size: 9.5pt !important;
+    font-size: 9pt !important;
     color: #ffffff !important;
     line-height: 1.3 !important;
   }
   .id {
-    font-size: 8pt !important;
+    font-size: 7.5pt !important;
     color: #bbbbbb !important;
-    margin-top: 2px !important;
-    line-height: 1.4 !important;
     opacity: 1 !important;
+    margin-top: 2px !important;
+    line-height: 1.35 !important;
   }
   .ip {
     font-weight: 700 !important;
-    font-size: 9pt !important;
+    font-size: 8.5pt !important;
     color: #ffffff !important;
     white-space: nowrap !important;
     flex-shrink: 0 !important;
     text-align: right !important;
-    padding-top: 1px !important;
     min-width: auto !important;
   }
   .ip.nh { display: none !important; }
-
-  /* ═══════════════ BRAND IMAGES ═══════════════
-     Sin ningún fondo — los PNG flotan sobre negro
-     ════════════════════════════════════════════ */
+ 
+  /* ════ BRAND IMAGES — PNG sin fondo, sobre negro ════ */
   .brand-strip {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 14px !important;
-    padding: 10px 0 !important;
+    gap: 12px !important;
+    padding: 8px 0 !important;
+    /* SIN background — el negro del body es suficiente */
     background: transparent !important;
     border: none !important;
     border-radius: 0 !important;
-    margin: 4px 0 !important;
-    /* Evitar que el strip se separe de su sección */
+    margin: 3px 0 !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
+    width: 100% !important;
   }
   .brand-strip img {
     object-fit: contain !important;
     display: block !important;
     background: transparent !important;
-    mix-blend-mode: normal !important;
     border: none !important;
     box-shadow: none !important;
   }
-
-  /* Tamaños para impresión A4 */
+ 
+  /* Alturas para impresión A4 */
   .brand-strip img[src*="BRANCA"],
-  .brand-strip img[src*="branca"]    { height: 100px !important; margin: -10px auto -16px !important; }
+  .brand-strip img[src*="branca"]    { height: 90px  !important; margin: -8px auto -14px !important; }
   .brand-strip img[src*="BORGHETTI"],
-  .brand-strip img[src*="borghetti"] { height: 100px !important; margin-bottom: -6px !important; }
+  .brand-strip img[src*="borghetti"] { height: 90px  !important; margin-bottom: -5px !important; }
   .brand-strip img[src*="CASILLERO"],
-  .brand-strip img[src*="casillero"] { height: 90px  !important; margin: 6px auto 10px !important; }
+  .brand-strip img[src*="casillero"] { height: 82px  !important; margin: 5px auto 8px !important; }
   .brand-strip img[src*="TRIBU"],
-  .brand-strip img[src*="tribu"]     { height: 100px !important; margin-bottom: -6px !important; }
+  .brand-strip img[src*="tribu"]     { height: 90px  !important; margin-bottom: -5px !important; }
   .brand-strip img[src*="TRIVENTO"],
-  .brand-strip img[src*="trivento"]  { height: 78px  !important; margin-bottom: -4px !important; }
+  .brand-strip img[src*="trivento"]  { height: 70px  !important; margin-bottom: -3px !important; }
   .brand-strip img[src*="IMPERIAL"],
-  .brand-strip img[src*="imperial"]  { height: 64px  !important; margin-bottom: 8px  !important; }
+  .brand-strip img[src*="imperial"]  { height: 58px  !important; margin-bottom: 6px  !important; }
   .brand-strip img[src*="SPEED"],
-  .brand-strip img[src*="speed"]     { height: 64px  !important; margin-bottom: 8px  !important; }
+  .brand-strip img[src*="speed"]     { height: 58px  !important; margin-bottom: 6px  !important; }
   .brand-strip img[src*="SERNOVA"],
-  .brand-strip img[src*="sernova"]   { height: 56px  !important; margin-bottom: 8px  !important; }
-
-  /* ═══════════════ FOOTER ═══════════════ */
+  .brand-strip img[src*="sernova"]   { height: 50px  !important; margin-bottom: 6px  !important; }
+ 
+  /* ════ FOOTER ════ */
   footer {
-    padding: 14px 0 12px !important;
+    background: #111111 !important;
+    padding: 12px 0 10px !important;
     text-align: center !important;
     border: none !important;
     border-top: 2px solid #C9A84C !important;
-    margin-top: 10px !important;
+    margin-top: 8px !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
-
+ 
   footer .logo-img {
     display: flex !important;
     justify-content: center !important;
-    margin: 0 auto 10px !important;
+    margin: 0 auto 8px !important;
   }
   footer .logo-img img {
-    height: 90px !important;
+    height: 80px !important;
     width: auto !important;
     object-fit: contain !important;
-    mix-blend-mode: normal !important;
     background: transparent !important;
     border: none !important;
   }
-
-  .finfo svg { display: none !important; }
-
-  /* ── Nombre del bar: grande, como corresponde ── */
+ 
+  /* Nombre del bar — grande */
   .fl {
     font-family: 'Playfair Display', serif !important;
-    font-size: 3rem !important;          /* ← tamaño aumentado */
+    font-size: 3rem !important;
     font-weight: 700 !important;
     color: #ffffff !important;
     line-height: 1 !important;
     margin-bottom: 4px !important;
   }
   .fsub {
-    font-size: .6rem !important;
+    font-size: .55rem !important;
     letter-spacing: .3em !important;
     color: #aaaaaa !important;
     text-transform: uppercase !important;
-    margin: 4px 0 12px !important;
+    margin: 3px 0 10px !important;
   }
   .finfo {
     font-size: 7pt !important;
     color: #aaaaaa !important;
     line-height: 1.8 !important;
   }
-
+ 
   .payment-strip {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 14px !important;
-    padding: 8px 0 10px !important;
+    gap: 12px !important;
+    padding: 8px 0 !important;
     flex-wrap: wrap !important;
     background: transparent !important;
     border: none !important;
   }
   .payment-strip img {
-    height: 44px !important;
+    height: 40px !important;
     width: auto !important;
     object-fit: contain !important;
-    mix-blend-mode: normal !important;
     background: transparent !important;
     border: none !important;
     opacity: 1 !important;
   }
-
+ 
   .rights {
-    font-size: 6.5pt !important;
+    font-size: 6pt !important;
     color: #aaaaaa !important;
     opacity: 1 !important;
     text-transform: uppercase !important;
