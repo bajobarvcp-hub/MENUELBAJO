@@ -108,36 +108,29 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 @media print {
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
 
-  @page{
+  @page {
     size: A4;
-    margin: 6mm 8mm 2mm 8mm;
-
-    /* ── Eliminar encabezado/pie de página del navegador (URL, fecha, hora, nº pág.) ── */
-    @top-left   { content: none !important; }
-    @top-center { content: none !important; }
-    @top-right  { content: none !important; }
-    @bottom-left   { content: none !important; }
+    margin: 8mm 8mm 8mm 8mm;
+    /* Eliminar URL, fecha, hora y nº de página del navegador */
+    @top-left    { content: none !important; }
+    @top-center  { content: none !important; }
+    @top-right   { content: none !important; }
+    @bottom-left { content: none !important; }
     @bottom-center { content: none !important; }
     @bottom-right  { content: none !important; }
   }
 
-  /* Ocultar todo lo interactivo */
-  .info-bar,
-  .nav-wrap,
-  .social-float,
-  .up,
-  .print-btn,
-  .wifi-overlay,
-  .reviews-sec,
-  .gmaps-btn,
-  #no-results { display: none !important; }
+  /* ── Ocultar todo lo interactivo ── */
+  .info-bar, .nav-wrap, .social-float, .up,
+  .print-btn, .wifi-overlay, .reviews-sec,
+  .gmaps-btn, #no-results { display: none !important; }
 
-  /* Palmeras decorativas — fuera */
+  /* Palmeras */
   .palm { display: none !important; }
 
-  /* ── BASE: fondo negro, texto blanco ── */
+  /* ── BASE: fondo negro total, sin bordes blancos ── */
   html, body {
-    background-color: #111111 !important;
+    background: #111111 !important;
     color: #ffffff !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -145,29 +138,41 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     font-size: 9pt !important;
   }
 
-  /* HEADER */
+  /* ═══════════════ HEADER ═══════════════ */
   .hd {
     background: #111111 !important;
-    padding: 18px 0 16px !important;
+    padding: 20px 0 18px !important;
     text-align: center !important;
-    border-bottom: 2px solid #C9A84C !important;
-    margin-bottom: 0 !important;
+    border: none !important;           /* sin bordes */
+    margin: 0 !important;
+    overflow: visible !important;
   }
+
+  /* Quitar el arco/gradiente blanco del ::before */
+  .hd::before {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+  }
+
   .logo {
     font-family: 'Playfair Display', serif !important;
-    font-size: 6rem !important;
+    font-size: 5rem !important;
     font-weight: 700 !important;
     color: #ffffff !important;
     line-height: 1 !important;
   }
   .logo em { color: #ffffff !important; font-style: normal !important; }
+
   .logo-sub {
-    font-size: .9rem !important;
+    font-size: .85rem !important;
     letter-spacing: .38em !important;
     color: #ffffff !important;
+    opacity: 1 !important;
     text-transform: uppercase !important;
-    margin-top: 4px !important;
+    margin-top: 6px !important;
   }
+
   .logo-img {
     display: flex !important;
     justify-content: center !important;
@@ -177,29 +182,47 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     height: 80px !important;
     width: auto !important;
     object-fit: contain !important;
-    mix-blend-mode: normal !important; /* normal sobre negro → PNG con transparencia se ve perfecto */
+    mix-blend-mode: normal !important;
     background: transparent !important;
   }
 
-  /* ── BLOQUE WIFI ── */
+  /* Separador dorado bajo el header */
+  .hd {
+    border-bottom: 2px solid #C9A84C !important;
+    padding-bottom: 18px !important;
+  }
+
+  /* ═══════════════ BLOQUE WIFI ═══════════════ */
   .wifi-print {
     display: block !important;
-    background: #1a1a1a !important;
-    border-top: 2px solid #C9A84C !important;
+    background: #111111 !important;
+    border-top: none !important;
     border-bottom: 2px solid #C9A84C !important;
     text-align: center !important;
-    padding: 18px 0 22px !important;
-    margin-bottom: 14px !important;
+    padding: 14px 0 18px !important;
+    margin: 0 0 10px !important;
   }
+
+  /* Título WiFi sin emoji: el emoji 📶 está en el HTML como texto,
+     lo hacemos invisible con font-size 0 y mostramos solo el texto mediante
+     una técnica de override de contenido a nivel de línea */
   .wifi-print-title {
-    font-size: 8.5pt !important;
+    font-size: 0 !important;           /* oculta todo el nodo incluido el emoji */
+    letter-spacing: 0 !important;
+    margin-bottom: 10px !important;
+    display: block !important;
+  }
+  /* Re-inyectamos solo el texto limpio vía ::after */
+  .wifi-print-title::after {
+    content: 'Red WiFi del local' !important;
+    font-size: 8pt !important;
     letter-spacing: .35em !important;
     text-transform: uppercase !important;
     color: #ffffff !important;
-    margin-bottom: 14px !important;
+    display: block !important;
   }
 
-  /* Icono WiFi y hora — ocultos */
+  /* Ocultar icono/hora si los hay */
   .wifi-print-icon,
   .wifi-print-time,
   .wifi-icon { display: none !important; }
@@ -207,86 +230,78 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   .wifi-print-row {
     display: flex !important;
     justify-content: center !important;
-    gap: 70px !important;
+    gap: 60px !important;
     align-items: flex-start !important;
   }
   .wifi-print-item {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 4px !important;
+    gap: 3px !important;
   }
   .wifi-print-label {
-    font-size: 7.5pt !important;
-    color: #cccccc !important;
+    font-size: 7pt !important;
+    color: #aaaaaa !important;
     text-transform: uppercase !important;
     letter-spacing: .22em !important;
   }
   .wifi-print-value {
     font-family: 'Playfair Display', serif !important;
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
     font-weight: 700 !important;
     color: #ffffff !important;
     letter-spacing: .04em !important;
     line-height: 1.2 !important;
   }
 
-  /* SECCIONES */
+  /* ═══════════════ LAYOUT PRINCIPAL (2 columnas) ═══════════════ */
   main {
     padding: 0 !important;
-    columns: 2;
-    column-gap: 10mm;
     background: #111111 !important;
+    /* Columnas: evita cortar secciones */
+    columns: 2 !important;
+    column-gap: 8mm !important;
+    column-fill: auto !important;
   }
 
+  /* Cada sección completa jamás se parte en mitad */
   .sec {
-    padding: 0 0 8px !important;
-    border-bottom: none !important;
-    break-inside: avoid-column;
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 6px;
     background: #111111 !important;
+    padding: 0 0 10px !important;
+    border: none !important;
+    margin-bottom: 8px !important;
+    /* Forzar que la sección entera quede en una misma columna/página */
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    display: inline-block !important;   /* requerido para que break-inside funcione en columnas */
+    width: 100% !important;
   }
 
   .sh {
     padding: 6px 0 5px !important;
+    border: none !important;
     border-bottom: 1.5px solid #C9A84C !important;
     margin-bottom: 5px !important;
     background: #111111 !important;
   }
+
   .st {
     font-family: 'Playfair Display', serif !important;
-    font-size: 1.7rem !important;
+    font-size: 1.5rem !important;
     font-weight: 700 !important;
-    color: #C9A84C !important;   /* ← SOLO DORADO en títulos de sección */
+    color: #C9A84C !important;          /* ← SOLO DORADO aquí */
     line-height: 1.2 !important;
-  }
-
-  /* Subtítulos, párrafos y textos sueltos dentro de secciones */
-  .sec-sub,
-  .sec-subtitle,
-  .sec > p,
-  .sec > span {
-    color: #ffffff !important;
-  }
-
-  /* Aviso de admisión / permanencia */
-  .admision-note,
-  .permanencia-note,
-  [class*="admision"],
-  [class*="permanencia"] {
-    color: #ffffff !important;
   }
 
   .note {
     margin: 0 0 5px !important;
     padding: 5px 8px !important;
-    background: #1e1e1e !important;
+    background: #1a1a1a !important;
+    border: none !important;            /* sin borde blanco */
     border-left: 2px solid #C9A84C !important;
     border-radius: 0 4px 4px 0 !important;
     font-size: 7pt !important;
-    color: #dddddd !important;
+    color: #cccccc !important;
     font-style: italic !important;
   }
 
@@ -297,15 +312,15 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     gap: 3px !important;
   }
 
-  /* ── Cada ítem NO se corta entre páginas ── */
+  /* ── Cada plato: nunca se corta, si no entra pasa a la siguiente hoja ── */
   .mi {
     display: flex !important;
     align-items: flex-start !important;
     justify-content: space-between !important;
     padding: 5px 7px !important;
-    background: #1c1c1c !important;   /* gris muy oscuro para distinguir del fondo */
-    border-radius: 6px !important;
-    border: none !important;
+    background: #1c1c1c !important;
+    border-radius: 5px !important;
+    border: none !important;            /* sin borde blanco */
     gap: 6px !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
@@ -317,15 +332,16 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   .in {
     font-weight: 700 !important;
-    font-size: 10.5pt !important;
+    font-size: 9.5pt !important;
     color: #ffffff !important;
     line-height: 1.3 !important;
   }
   .id {
-    font-size: 8.5pt !important;
-    color: #cccccc !important;
+    font-size: 8pt !important;
+    color: #bbbbbb !important;
     margin-top: 2px !important;
     line-height: 1.4 !important;
+    opacity: 1 !important;
   }
   .ip {
     font-weight: 700 !important;
@@ -335,114 +351,124 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     flex-shrink: 0 !important;
     text-align: right !important;
     padding-top: 1px !important;
+    min-width: auto !important;
   }
   .ip.nh { display: none !important; }
 
-  /* ── Brand images — fondo negro → logos PNG se ven perfectos ── */
+  /* ═══════════════ BRAND IMAGES — sin fondo, PNG puro ═══════════════ */
   .brand-strip {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 18px !important;
-    padding: 14px 16px !important;
-    background: #1a1a1a !important;   /* oscuro para que los logos destaquen */
-    border-radius: 8px !important;
-    margin: 6px 0 !important;
+    gap: 14px !important;
+    padding: 10px 0 !important;
+    background: transparent !important;  /* ← SIN fondo negro */
+    border-radius: 0 !important;
+    margin: 4px 0 !important;
+    border: none !important;
   }
   .brand-strip img {
     object-fit: contain !important;
     display: block !important;
     background: transparent !important;
-    mix-blend-mode: normal !important;  /* normal sobre oscuro → transparencia real del PNG */
+    mix-blend-mode: normal !important;
+    border: none !important;
   }
 
+  /* Tamaños de cada logo (reducidos para impresión A4) */
   .brand-strip img[src*="BRANCA"],
-  .brand-strip img[src*="branca"]   { height: 118px !important; margin: -12px auto -20px !important; }
+  .brand-strip img[src*="branca"]    { height: 100px !important; margin: -10px auto -16px !important; }
   .brand-strip img[src*="BORGHETTI"],
-  .brand-strip img[src*="borghetti"]{ height: 118px !important; margin-bottom: -8px !important; }
+  .brand-strip img[src*="borghetti"] { height: 100px !important; margin-bottom: -6px !important; }
   .brand-strip img[src*="CASILLERO"],
-  .brand-strip img[src*="casillero"]{ height: 110px !important; margin: 8px auto 12px !important; }
+  .brand-strip img[src*="casillero"] { height: 90px  !important; margin: 6px auto 10px !important; }
   .brand-strip img[src*="TRIBU"],
-  .brand-strip img[src*="tribu"]    { height: 118px !important; margin-bottom: -8px !important; }
+  .brand-strip img[src*="tribu"]     { height: 100px !important; margin-bottom: -6px !important; }
   .brand-strip img[src*="TRIVENTO"],
-  .brand-strip img[src*="trivento"] { height: 92px  !important; margin-bottom: -6px !important; }
+  .brand-strip img[src*="trivento"]  { height: 78px  !important; margin-bottom: -4px !important; }
   .brand-strip img[src*="IMPERIAL"],
-  .brand-strip img[src*="imperial"] { height: 74px  !important; margin-bottom: 10px !important; }
+  .brand-strip img[src*="imperial"]  { height: 64px  !important; margin-bottom: 8px  !important; }
   .brand-strip img[src*="SPEED"],
-  .brand-strip img[src*="speed"]    { height: 74px  !important; margin-bottom: 10px !important; }
+  .brand-strip img[src*="speed"]     { height: 64px  !important; margin-bottom: 8px  !important; }
   .brand-strip img[src*="SERNOVA"],
-  .brand-strip img[src*="sernova"]  { height: 64px  !important; margin-bottom: 10px !important; }
+  .brand-strip img[src*="sernova"]   { height: 56px  !important; margin-bottom: 8px  !important; }
 
-  /* FOOTER */
+  /* ═══════════════ FOOTER ═══════════════ */
   footer {
     background: #111111 !important;
     padding: 14px 0 12px !important;
     text-align: center !important;
+    border: none !important;            /* sin borde blanco */
     border-top: 2px solid #C9A84C !important;
     margin-top: 10px !important;
     break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
 
   footer .logo-img {
     display: flex !important;
     justify-content: center !important;
-    margin: 0 auto 12px !important;
+    margin: 0 auto 10px !important;
   }
   footer .logo-img img {
-    height: 110px !important;
+    height: 90px !important;
     width: auto !important;
     object-fit: contain !important;
-    mix-blend-mode: normal !important;  /* normal sobre negro → PNG con transparencia perfecto */
+    mix-blend-mode: normal !important;
     background: transparent !important;
+    border: none !important;
   }
+
+  /* Ocultar SVG de ubicación en footer (tiene stroke blanco que puede verse raro) */
+  .finfo svg { display: none !important; }
 
   .fl {
     font-family: 'Playfair Display', serif !important;
-    font-size: 1.3rem !important;
+    font-size: 1.2rem !important;
     font-weight: 700 !important;
     color: #ffffff !important;
   }
   .fsub {
     font-size: .5rem !important;
     letter-spacing: .3em !important;
-    color: #cccccc !important;
+    color: #aaaaaa !important;
     text-transform: uppercase !important;
     margin: 2px 0 8px !important;
   }
   .finfo {
     font-size: 7pt !important;
-    color: #cccccc !important;
+    color: #aaaaaa !important;
     line-height: 1.8 !important;
   }
+
   .payment-strip {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 16px !important;
+    gap: 14px !important;
     padding: 8px 0 10px !important;
     flex-wrap: wrap !important;
+    background: transparent !important;
+    border: none !important;
   }
   .payment-strip img {
-    height: 52px !important;
+    height: 44px !important;
     width: auto !important;
     object-fit: contain !important;
-    mix-blend-mode: normal !important;  /* normal sobre negro → logos de pago visibles */
+    mix-blend-mode: normal !important;
     background: transparent !important;
+    border: none !important;
     opacity: 1 !important;
   }
-  .payment-label,
-  .payment-strip + p,
-  .payment-strip ~ p {
-    font-size: 8.5pt !important;
-    color: #cccccc !important;
-    margin-top: 4px !important;
-  }
+
   .rights {
-    font-size: 6pt !important;
-    color: #888888 !important;
+    font-size: 6.5pt !important;
+    color: #aaaaaa !important;
+    opacity: 1 !important;
     text-transform: uppercase !important;
     letter-spacing: .04em !important;
     margin-top: 8px !important;
+    line-height: 1.5 !important;
   }
 }
 /* ====================================================== */
