@@ -135,9 +135,10 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   /* Palmeras decorativas — fuera */
   .palm { display: none !important; }
 
+  /* ── BASE: fondo negro, texto blanco ── */
   html, body {
-    background-color: #ffffff !important;
-    color: #1a1a1a !important;
+    background-color: #111111 !important;
+    color: #ffffff !important;
     margin: 0 !important;
     padding: 0 !important;
     font-family: 'Nunito', sans-serif !important;
@@ -146,7 +147,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   /* HEADER */
   .hd {
-    background: #ffffff !important;
+    background: #111111 !important;
     padding: 18px 0 16px !important;
     text-align: center !important;
     border-bottom: 2px solid #C9A84C !important;
@@ -156,14 +157,14 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     font-family: 'Playfair Display', serif !important;
     font-size: 6rem !important;
     font-weight: 700 !important;
-    color: #1a1a1a !important;   /* ← negro */
+    color: #ffffff !important;
     line-height: 1 !important;
   }
-  .logo em { color: #1a1a1a !important; font-style: normal !important; } /* ← negro */
+  .logo em { color: #ffffff !important; font-style: normal !important; }
   .logo-sub {
     font-size: .9rem !important;
     letter-spacing: .38em !important;
-    color: #1a1a1a !important;   /* ← negro */
+    color: #ffffff !important;
     text-transform: uppercase !important;
     margin-top: 4px !important;
   }
@@ -176,13 +177,14 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     height: 80px !important;
     width: auto !important;
     object-fit: contain !important;
-    mix-blend-mode: multiply !important;
+    mix-blend-mode: normal !important; /* normal sobre negro → PNG con transparencia se ve perfecto */
+    background: transparent !important;
   }
 
-  /* ── BLOQUE WIFI — vistoso y grande ── */
+  /* ── BLOQUE WIFI ── */
   .wifi-print {
     display: block !important;
-    background: #fffdf5 !important;
+    background: #1a1a1a !important;
     border-top: 2px solid #C9A84C !important;
     border-bottom: 2px solid #C9A84C !important;
     text-align: center !important;
@@ -193,7 +195,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     font-size: 8.5pt !important;
     letter-spacing: .35em !important;
     text-transform: uppercase !important;
-    color: #1a1a1a !important;   /* ← negro */
+    color: #ffffff !important;
     margin-bottom: 14px !important;
   }
 
@@ -216,7 +218,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   }
   .wifi-print-label {
     font-size: 7.5pt !important;
-    color: #1a1a1a !important;   /* ← negro */
+    color: #cccccc !important;
     text-transform: uppercase !important;
     letter-spacing: .22em !important;
   }
@@ -224,17 +226,17 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     font-family: 'Playfair Display', serif !important;
     font-size: 2rem !important;
     font-weight: 700 !important;
-    color: #1a1a1a !important;   /* ← negro */
+    color: #ffffff !important;
     letter-spacing: .04em !important;
     line-height: 1.2 !important;
   }
-  /* ──────────────────────────────────── */
 
   /* SECCIONES */
   main {
     padding: 0 !important;
     columns: 2;
     column-gap: 10mm;
+    background: #111111 !important;
   }
 
   .sec {
@@ -244,27 +246,29 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     display: inline-block;
     width: 100%;
     margin-bottom: 6px;
+    background: #111111 !important;
   }
 
   .sh {
     padding: 6px 0 5px !important;
     border-bottom: 1.5px solid #C9A84C !important;
     margin-bottom: 5px !important;
+    background: #111111 !important;
   }
   .st {
     font-family: 'Playfair Display', serif !important;
     font-size: 1.7rem !important;
     font-weight: 700 !important;
-    color: #C9A84C !important;   /* ← dorado solo en títulos de sección */
+    color: #C9A84C !important;   /* ← SOLO DORADO en títulos de sección */
     line-height: 1.2 !important;
   }
 
-  /* Subtítulo de sección (ej: "Beach and Drinks", "Ubicación", aviso de admisión) */
+  /* Subtítulos, párrafos y textos sueltos dentro de secciones */
   .sec-sub,
   .sec-subtitle,
   .sec > p,
   .sec > span {
-    color: #1a1a1a !important;   /* ← negro */
+    color: #ffffff !important;
   }
 
   /* Aviso de admisión / permanencia */
@@ -272,17 +276,17 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   .permanencia-note,
   [class*="admision"],
   [class*="permanencia"] {
-    color: #1a1a1a !important;   /* ← negro */
+    color: #ffffff !important;
   }
 
   .note {
     margin: 0 0 5px !important;
     padding: 5px 8px !important;
-    background: #fafafa !important;
+    background: #1e1e1e !important;
     border-left: 2px solid #C9A84C !important;
     border-radius: 0 4px 4px 0 !important;
     font-size: 7pt !important;
-    color: #1a1a1a !important;   /* ← negro */
+    color: #dddddd !important;
     font-style: italic !important;
   }
 
@@ -299,12 +303,12 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     align-items: flex-start !important;
     justify-content: space-between !important;
     padding: 5px 7px !important;
-    background: #f9f7f2 !important;
+    background: #1c1c1c !important;   /* gris muy oscuro para distinguir del fondo */
     border-radius: 6px !important;
     border: none !important;
     gap: 6px !important;
-    break-inside: avoid !important;   /* ya existía */
-    page-break-inside: avoid !important; /* compatibilidad extra */
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
 
   .mi.off { display: none !important; }
@@ -314,19 +318,19 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   .in {
     font-weight: 700 !important;
     font-size: 10.5pt !important;
-    color: #1a1a1a !important;   /* ← negro */
+    color: #ffffff !important;
     line-height: 1.3 !important;
   }
   .id {
     font-size: 8.5pt !important;
-    color: #1a1a1a !important;   /* ← negro */
+    color: #cccccc !important;
     margin-top: 2px !important;
     line-height: 1.4 !important;
   }
   .ip {
     font-weight: 700 !important;
     font-size: 9pt !important;
-    color: #1a1a1a !important;   /* ← negro */
+    color: #ffffff !important;
     white-space: nowrap !important;
     flex-shrink: 0 !important;
     text-align: right !important;
@@ -334,14 +338,14 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   }
   .ip.nh { display: none !important; }
 
-  /* ── Brand images — fondo transparente (sin banda negra) ── */
+  /* ── Brand images — fondo negro → logos PNG se ven perfectos ── */
   .brand-strip {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     gap: 18px !important;
     padding: 14px 16px !important;
-    background: transparent !important;  /* ← sin fondo negro */
+    background: #1a1a1a !important;   /* oscuro para que los logos destaquen */
     border-radius: 8px !important;
     margin: 6px 0 !important;
   }
@@ -349,7 +353,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     object-fit: contain !important;
     display: block !important;
     background: transparent !important;
-    mix-blend-mode: multiply !important; /* ← mezcla con fondo blanco → logos sin fondo */
+    mix-blend-mode: normal !important;  /* normal sobre oscuro → transparencia real del PNG */
   }
 
   .brand-strip img[src*="BRANCA"],
@@ -371,7 +375,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   /* FOOTER */
   footer {
-    background: #ffffff !important;
+    background: #111111 !important;
     padding: 14px 0 12px !important;
     text-align: center !important;
     border-top: 2px solid #C9A84C !important;
@@ -379,7 +383,6 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     break-inside: avoid !important;
   }
 
-  /* Logo del pie — sin fondo negro, sobre blanco */
   footer .logo-img {
     display: flex !important;
     justify-content: center !important;
@@ -389,7 +392,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     height: 110px !important;
     width: auto !important;
     object-fit: contain !important;
-    mix-blend-mode: multiply !important; /* ← sin fondo negro */
+    mix-blend-mode: normal !important;  /* normal sobre negro → PNG con transparencia perfecto */
     background: transparent !important;
   }
 
@@ -397,18 +400,18 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     font-family: 'Playfair Display', serif !important;
     font-size: 1.3rem !important;
     font-weight: 700 !important;
-    color: #1a1a1a !important;   /* ← negro */
+    color: #ffffff !important;
   }
   .fsub {
     font-size: .5rem !important;
     letter-spacing: .3em !important;
-    color: #1a1a1a !important;   /* ← negro */
+    color: #cccccc !important;
     text-transform: uppercase !important;
     margin: 2px 0 8px !important;
   }
   .finfo {
     font-size: 7pt !important;
-    color: #1a1a1a !important;   /* ← negro */
+    color: #cccccc !important;
     line-height: 1.8 !important;
   }
   .payment-strip {
@@ -423,7 +426,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     height: 52px !important;
     width: auto !important;
     object-fit: contain !important;
-    mix-blend-mode: multiply !important; /* ← sin fondo negro */
+    mix-blend-mode: normal !important;  /* normal sobre negro → logos de pago visibles */
     background: transparent !important;
     opacity: 1 !important;
   }
@@ -431,12 +434,12 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   .payment-strip + p,
   .payment-strip ~ p {
     font-size: 8.5pt !important;
-    color: #1a1a1a !important;   /* ← negro */
+    color: #cccccc !important;
     margin-top: 4px !important;
   }
   .rights {
     font-size: 6pt !important;
-    color: #1a1a1a !important;   /* ← negro */
+    color: #888888 !important;
     text-transform: uppercase !important;
     letter-spacing: .04em !important;
     margin-top: 8px !important;
