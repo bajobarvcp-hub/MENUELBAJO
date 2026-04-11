@@ -106,16 +106,22 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
 /* ===================== IMPRESIÓN A4 ===================== */
 @media print {
-  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+
+  /* Forzar impresión de fondos y colores exactos */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    /* ── Anular TODOS los bordes heredados de pantalla ── */
+    border-color: transparent !important;
+  }
 
   @page {
     size: A4;
     margin: 8mm 8mm 8mm 8mm;
-    /* Eliminar URL, fecha, hora y nº de página del navegador */
-    @top-left    { content: none !important; }
-    @top-center  { content: none !important; }
-    @top-right   { content: none !important; }
-    @bottom-left { content: none !important; }
+    @top-left      { content: none !important; }
+    @top-center    { content: none !important; }
+    @top-right     { content: none !important; }
+    @bottom-left   { content: none !important; }
     @bottom-center { content: none !important; }
     @bottom-right  { content: none !important; }
   }
@@ -123,14 +129,22 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   /* ── Ocultar todo lo interactivo ── */
   .info-bar, .nav-wrap, .social-float, .up,
   .print-btn, .wifi-overlay, .reviews-sec,
-  .gmaps-btn, #no-results { display: none !important; }
-
-  /* Palmeras */
+  .gmaps-btn, #no-results,
   .palm { display: none !important; }
 
-  /* ── BASE: fondo negro total, sin bordes blancos ── */
-  html, body {
+  /* ════════════════════════════════════════
+     BASE — fondo negro en absolutamente todo
+     ════════════════════════════════════════ */
+  html, body, header, main, footer,
+  .hd, .sec, .sh, .il, .mi, .ii,
+  .wifi-print, .brand-strip, .payment-strip {
     background: #111111 !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  html, body {
     color: #ffffff !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -140,15 +154,15 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   /* ═══════════════ HEADER ═══════════════ */
   .hd {
-    background: #111111 !important;
     padding: 20px 0 18px !important;
     text-align: center !important;
-    border: none !important;           /* sin bordes */
+    border: none !important;
+    border-bottom: 2px solid #C9A84C !important;
     margin: 0 !important;
     overflow: visible !important;
   }
 
-  /* Quitar el arco/gradiente blanco del ::before */
+  /* Eliminar el arco/gradiente blanco */
   .hd::before {
     display: none !important;
     content: none !important;
@@ -184,18 +198,12 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     object-fit: contain !important;
     mix-blend-mode: normal !important;
     background: transparent !important;
-  }
-
-  /* Separador dorado bajo el header */
-  .hd {
-    border-bottom: 2px solid #C9A84C !important;
-    padding-bottom: 18px !important;
+    border: none !important;
   }
 
   /* ═══════════════ BLOQUE WIFI ═══════════════ */
   .wifi-print {
     display: block !important;
-    background: #111111 !important;
     border-top: none !important;
     border-bottom: 2px solid #C9A84C !important;
     text-align: center !important;
@@ -203,16 +211,13 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     margin: 0 0 10px !important;
   }
 
-  /* Título WiFi sin emoji: el emoji 📶 está en el HTML como texto,
-     lo hacemos invisible con font-size 0 y mostramos solo el texto mediante
-     una técnica de override de contenido a nivel de línea */
+  /* Ocultar emoji 📶 colapsando el nodo y reinyectando texto limpio */
   .wifi-print-title {
-    font-size: 0 !important;           /* oculta todo el nodo incluido el emoji */
+    font-size: 0 !important;
     letter-spacing: 0 !important;
     margin-bottom: 10px !important;
     display: block !important;
   }
-  /* Re-inyectamos solo el texto limpio vía ::after */
   .wifi-print-title::after {
     content: 'Red WiFi del local' !important;
     font-size: 8pt !important;
@@ -222,7 +227,6 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     display: block !important;
   }
 
-  /* Ocultar icono/hora si los hay */
   .wifi-print-icon,
   .wifi-print-time,
   .wifi-icon { display: none !important; }
@@ -254,26 +258,22 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     line-height: 1.2 !important;
   }
 
-  /* ═══════════════ LAYOUT PRINCIPAL (2 columnas) ═══════════════ */
+  /* ═══════════════ LAYOUT PRINCIPAL ═══════════════ */
   main {
     padding: 0 !important;
-    background: #111111 !important;
-    /* Columnas: evita cortar secciones */
     columns: 2 !important;
     column-gap: 8mm !important;
     column-fill: auto !important;
   }
 
-  /* Cada sección completa jamás se parte en mitad */
+  /* Cada sección completa: nunca se parte */
   .sec {
-    background: #111111 !important;
     padding: 0 0 10px !important;
     border: none !important;
     margin-bottom: 8px !important;
-    /* Forzar que la sección entera quede en una misma columna/página */
     break-inside: avoid !important;
     page-break-inside: avoid !important;
-    display: inline-block !important;   /* requerido para que break-inside funcione en columnas */
+    display: inline-block !important;
     width: 100% !important;
   }
 
@@ -282,14 +282,13 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     border: none !important;
     border-bottom: 1.5px solid #C9A84C !important;
     margin-bottom: 5px !important;
-    background: #111111 !important;
   }
 
   .st {
     font-family: 'Playfair Display', serif !important;
     font-size: 1.5rem !important;
     font-weight: 700 !important;
-    color: #C9A84C !important;          /* ← SOLO DORADO aquí */
+    color: #C9A84C !important;
     line-height: 1.2 !important;
   }
 
@@ -297,7 +296,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     margin: 0 0 5px !important;
     padding: 5px 8px !important;
     background: #1a1a1a !important;
-    border: none !important;            /* sin borde blanco */
+    border: none !important;
     border-left: 2px solid #C9A84C !important;
     border-radius: 0 4px 4px 0 !important;
     font-size: 7pt !important;
@@ -312,7 +311,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     gap: 3px !important;
   }
 
-  /* ── Cada plato: nunca se corta, si no entra pasa a la siguiente hoja ── */
+  /* Cada plato: si no entra completo, pasa a la columna/hoja siguiente */
   .mi {
     display: flex !important;
     align-items: flex-start !important;
@@ -320,10 +319,11 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     padding: 5px 7px !important;
     background: #1c1c1c !important;
     border-radius: 5px !important;
-    border: none !important;            /* sin borde blanco */
+    border: none !important;
     gap: 6px !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
+    margin-bottom: 0 !important;
   }
 
   .mi.off { display: none !important; }
@@ -355,17 +355,22 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   }
   .ip.nh { display: none !important; }
 
-  /* ═══════════════ BRAND IMAGES — sin fondo, PNG puro ═══════════════ */
+  /* ═══════════════ BRAND IMAGES ═══════════════
+     Sin ningún fondo — los PNG flotan sobre negro
+     ════════════════════════════════════════════ */
   .brand-strip {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     gap: 14px !important;
     padding: 10px 0 !important;
-    background: transparent !important;  /* ← SIN fondo negro */
+    background: transparent !important;
+    border: none !important;
     border-radius: 0 !important;
     margin: 4px 0 !important;
-    border: none !important;
+    /* Evitar que el strip se separe de su sección */
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
   .brand-strip img {
     object-fit: contain !important;
@@ -373,9 +378,10 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     background: transparent !important;
     mix-blend-mode: normal !important;
     border: none !important;
+    box-shadow: none !important;
   }
 
-  /* Tamaños de cada logo (reducidos para impresión A4) */
+  /* Tamaños para impresión A4 */
   .brand-strip img[src*="BRANCA"],
   .brand-strip img[src*="branca"]    { height: 100px !important; margin: -10px auto -16px !important; }
   .brand-strip img[src*="BORGHETTI"],
@@ -395,10 +401,9 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   /* ═══════════════ FOOTER ═══════════════ */
   footer {
-    background: #111111 !important;
     padding: 14px 0 12px !important;
     text-align: center !important;
-    border: none !important;            /* sin borde blanco */
+    border: none !important;
     border-top: 2px solid #C9A84C !important;
     margin-top: 10px !important;
     break-inside: avoid !important;
@@ -419,21 +424,23 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     border: none !important;
   }
 
-  /* Ocultar SVG de ubicación en footer (tiene stroke blanco que puede verse raro) */
   .finfo svg { display: none !important; }
 
+  /* ── Nombre del bar: grande, como corresponde ── */
   .fl {
     font-family: 'Playfair Display', serif !important;
-    font-size: 1.2rem !important;
+    font-size: 3rem !important;          /* ← tamaño aumentado */
     font-weight: 700 !important;
     color: #ffffff !important;
+    line-height: 1 !important;
+    margin-bottom: 4px !important;
   }
   .fsub {
-    font-size: .5rem !important;
+    font-size: .6rem !important;
     letter-spacing: .3em !important;
     color: #aaaaaa !important;
     text-transform: uppercase !important;
-    margin: 2px 0 8px !important;
+    margin: 4px 0 12px !important;
   }
   .finfo {
     font-size: 7pt !important;
