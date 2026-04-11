@@ -107,19 +107,16 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 /* ===================== IMPRESIÓN A4 ===================== */
 @media print {
  
-  /* Forzar colores exactos */
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
  
-  /* Márgenes generosos arriba y abajo para tapar la URL/fecha/hora de Safari */
   @page {
     size: A4;
     margin: 18mm 8mm 18mm 8mm;
   }
  
-  /* ── Ocultar elementos de pantalla ── */
   .info-bar, .nav-wrap, .social-float, .up,
   .print-btn, .wifi-overlay, .reviews-sec,
   .gmaps-btn, #no-results, .palm,
@@ -127,9 +124,6 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     display: none !important;
   }
  
-  /* ════════════════════════════════════
-     FONDO NEGRO EN TODO — anular bordes
-     ════════════════════════════════════ */
   html, body {
     background: #111111 !important;
     color: #ffffff !important;
@@ -139,13 +133,8 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     font-size: 9pt !important;
   }
  
-  /* Anular TODOS los bordes con rgba blanco que vienen del CSS de pantalla */
-  .mi,
-  .sec,
-  .review-card,
-  .gmaps-btn,
-  .note,
-  footer {
+  /* Anular todos los bordes rgba del CSS de pantalla */
+  .mi, .sec, .review-card, .gmaps-btn, .note, footer {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
@@ -154,22 +143,22 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   /* ════ HEADER ════ */
   .hd {
     background: #111111 !important;
-    padding: 14px 0 14px !important;
+    padding: 16px 0 16px !important;
     text-align: center !important;
     border: none !important;
     border-bottom: 2px solid #C9A84C !important;
     margin: 0 !important;
   }
-  /* Eliminar arco/gradiente blanco */
   .hd::before {
     display: none !important;
     content: none !important;
     background: none !important;
   }
  
+  /* ── TÍTULO MÁS GRANDE ── */
   .logo {
     font-family: 'Playfair Display', serif !important;
-    font-size: 4.5rem !important;
+    font-size: 6rem !important;
     font-weight: 700 !important;
     color: #ffffff !important;
     line-height: 1 !important;
@@ -177,21 +166,21 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   .logo em { color: #ffffff !important; font-style: normal !important; }
  
   .logo-sub {
-    font-size: .8rem !important;
+    font-size: .95rem !important;
     letter-spacing: .38em !important;
     color: #ffffff !important;
     opacity: 1 !important;
     text-transform: uppercase !important;
-    margin-top: 5px !important;
+    margin-top: 7px !important;
   }
  
   .logo-img {
     display: flex !important;
     justify-content: center !important;
-    margin: 8px 0 0 !important;
+    margin: 10px 0 0 !important;
   }
   .logo-img img {
-    height: 75px !important;
+    height: 85px !important;
     width: auto !important;
     object-fit: contain !important;
     background: transparent !important;
@@ -207,7 +196,6 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     padding: 12px 0 16px !important;
     margin: 0 0 8px !important;
   }
-  /* Ocultar emoji 📶 con font-size:0, reinyectar texto limpio */
   .wifi-print-title {
     font-size: 0 !important;
     display: block !important;
@@ -221,10 +209,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     color: #ffffff !important;
     display: block !important;
   }
-  .wifi-print-icon,
-  .wifi-print-time,
-  .wifi-icon { display: none !important; }
- 
+  .wifi-print-icon, .wifi-print-time, .wifi-icon { display: none !important; }
   .wifi-print-row {
     display: flex !important;
     justify-content: center !important;
@@ -253,19 +238,19 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
  
   /* ════ LAYOUT 2 COLUMNAS ════ */
   main {
-    padding: 0 !important;
+    padding: 0 4mm !important;
     background: #111111 !important;
     columns: 2 !important;
     column-gap: 8mm !important;
     column-fill: auto !important;
   }
  
+  /* ── PADDING LATERAL EN SECCIONES: separadas de los bordes ── */
   .sec {
     background: #111111 !important;
-    padding: 0 0 8px !important;
+    padding: 4px 4px 10px !important;
     border: none !important;
-    margin-bottom: 6px !important;
-    /* Evitar corte de sección entre columnas */
+    margin-bottom: 8px !important;
     break-inside: avoid-column !important;
     display: inline-block !important;
     width: 100% !important;
@@ -273,10 +258,10 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
  
   .sh {
     background: #111111 !important;
-    padding: 5px 0 4px !important;
+    padding: 5px 2px 4px !important;
     border: none !important;
     border-bottom: 1.5px solid #C9A84C !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 5px !important;
   }
  
   .st {
@@ -288,8 +273,8 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   }
  
   .note {
-    margin: 0 0 4px !important;
-    padding: 4px 7px !important;
+    margin: 0 0 5px !important;
+    padding: 4px 8px !important;
     background: #1a1a1a !important;
     border: none !important;
     border-left: 2px solid #C9A84C !important;
@@ -303,19 +288,17 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     padding: 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 2px !important;
+    gap: 3px !important;
   }
  
-  /* ── Platos: nunca cortados, pasan enteros a siguiente columna/hoja ── */
+  /* ── PLATOS: padding cómodo, sin bordes ── */
   .mi {
     display: flex !important;
     align-items: flex-start !important;
     justify-content: space-between !important;
-    padding: 5px 6px !important;
-    /* Fondo levemente distinto del negro base para dar profundidad */
+    padding: 6px 8px !important;
     background: #1b1b1b !important;
-    border-radius: 4px !important;
-    /* ─── CLAVE: sin ningún border, ni siquiera transparente ─── */
+    border-radius: 5px !important;
     border-width: 0 !important;
     border-style: none !important;
     border-color: transparent !important;
@@ -353,18 +336,20 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   }
   .ip.nh { display: none !important; }
  
-  /* ════ BRAND IMAGES — PNG sin fondo, sobre negro ════ */
+  /* ════ BRAND IMAGES ════
+     Hardcodeadas por nombre para que el browser las encuentre
+     aunque el JS las inyecte tarde. Sin fondo, PNG sobre negro.
+     ══════════════════════ */
   .brand-strip {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     gap: 12px !important;
-    padding: 8px 0 !important;
-    /* SIN background — el negro del body es suficiente */
-    background: transparent !important;
+    padding: 10px 0 !important;
+    background: #111111 !important;
     border: none !important;
     border-radius: 0 !important;
-    margin: 3px 0 !important;
+    margin: 4px 0 !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
     width: 100% !important;
@@ -375,30 +360,41 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
+    /* altura base: se sobreescribe por nombre abajo */
+    height: 70px !important;
+    width: auto !important;
+    max-width: 100% !important;
   }
  
-  /* Alturas para impresión A4 */
-  .brand-strip img[src*="BRANCA"],
-  .brand-strip img[src*="branca"]    { height: 90px  !important; margin: -8px auto -14px !important; }
-  .brand-strip img[src*="BORGHETTI"],
-  .brand-strip img[src*="borghetti"] { height: 90px  !important; margin-bottom: -5px !important; }
-  .brand-strip img[src*="CASILLERO"],
-  .brand-strip img[src*="casillero"] { height: 82px  !important; margin: 5px auto 8px !important; }
-  .brand-strip img[src*="TRIBU"],
-  .brand-strip img[src*="tribu"]     { height: 90px  !important; margin-bottom: -5px !important; }
-  .brand-strip img[src*="TRIVENTO"],
-  .brand-strip img[src*="trivento"]  { height: 70px  !important; margin-bottom: -3px !important; }
-  .brand-strip img[src*="IMPERIAL"],
-  .brand-strip img[src*="imperial"]  { height: 58px  !important; margin-bottom: 6px  !important; }
-  .brand-strip img[src*="SPEED"],
-  .brand-strip img[src*="speed"]     { height: 58px  !important; margin-bottom: 6px  !important; }
-  .brand-strip img[src*="SERNOVA"],
-  .brand-strip img[src*="sernova"]   { height: 50px  !important; margin-bottom: 6px  !important; }
+  /* Cada logo por nombre de archivo — tamaños ajustados para A4 */
+  .brand-strip img[alt="TRIBU"],
+  .brand-strip img[src$="TRIBU.png"]        { height: 95px !important; margin-bottom: -5px !important; }
+ 
+  .brand-strip img[alt="TRIVENTO"],
+  .brand-strip img[src$="TRIVENTO.png"]     { height: 75px !important; margin-bottom: -3px !important; }
+ 
+  .brand-strip img[alt="CASILLERO"],
+  .brand-strip img[src$="CASILLERO.png"]    { height: 88px !important; margin: 6px auto 10px !important; }
+ 
+  .brand-strip img[alt="imperial"],
+  .brand-strip img[src$="imperial.png"]     { height: 62px !important; margin-bottom: 8px !important; }
+ 
+  .brand-strip img[alt="sernova"],
+  .brand-strip img[src$="sernova.png"]      { height: 52px !important; margin-bottom: 8px !important; }
+ 
+  .brand-strip img[alt="speed"],
+  .brand-strip img[src$="speed.png"]        { height: 62px !important; margin-bottom: 8px !important; }
+ 
+  .brand-strip img[alt="BRANCA"],
+  .brand-strip img[src$="BRANCA.png"]       { height: 95px !important; margin: -8px auto -14px !important; }
+ 
+  .brand-strip img[alt="borghetti"],
+  .brand-strip img[src$="borghetti.png"]    { height: 95px !important; margin-bottom: -5px !important; }
  
   /* ════ FOOTER ════ */
   footer {
     background: #111111 !important;
-    padding: 12px 0 10px !important;
+    padding: 14px 8mm 12px !important;
     text-align: center !important;
     border: none !important;
     border-top: 2px solid #C9A84C !important;
@@ -420,7 +416,6 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     border: none !important;
   }
  
-  /* Nombre del bar — grande */
   .fl {
     font-family: 'Playfair Display', serif !important;
     font-size: 3rem !important;
