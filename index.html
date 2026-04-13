@@ -114,7 +114,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   @page {
     size: A4;
-    margin: 18mm 8mm 18mm 8mm;
+    margin: 0 !important;
   }
 
   .info-bar, .nav-wrap, .social-float, .up,
@@ -249,17 +249,26 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     padding: 2px 4px 4px !important;
     border: none !important;
     margin-bottom: 3px !important;
+    /* libre para cortarse entre ítems */
     break-inside: auto !important;
+    page-break-inside: auto !important;
     display: block !important;
     width: 100% !important;
   }
 
+  /* ── Encabezado de sección: nunca queda solo al pie ── */
   .sh {
     background: #111111 !important;
     padding: 3px 2px 3px !important;
     border: none !important;
     border-bottom: 1.5px solid #C9A84C !important;
     margin-bottom: 3px !important;
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+    -webkit-column-break-after: avoid !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
   }
 
   .st {
@@ -268,6 +277,9 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     font-weight: 700 !important;
     color: #C9A84C !important;
     line-height: 1.2 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
   }
 
   .note {
@@ -280,18 +292,22 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     font-size: 7pt !important;
     color: #cccccc !important;
     font-style: italic !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
   }
 
-  /* ── Lista de ítems: libre para cortarse entre platos ── */
+  /* ── Lista de ítems: libre para cortarse ENTRE platos ── */
   .il {
     padding: 0 !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 2px !important;
-    /* sin break-inside: el contenedor se puede cortar libremente entre ítems */
+    break-inside: auto !important;
+    page-break-inside: auto !important;
   }
 
-  /* ── Ítem individual: nunca se corta a la mitad ── */
+  /* ── Ítem individual: NUNCA se corta a la mitad ── */
   .mi {
     display: flex !important;
     align-items: flex-start !important;
@@ -305,7 +321,6 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     outline: none !important;
     box-shadow: none !important;
     gap: 6px !important;
-    /* ── Protección de corte ── */
     break-inside: avoid !important;
     page-break-inside: avoid !important;
     -webkit-column-break-inside: avoid !important;
@@ -313,26 +328,37 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   .mi.off { display: none !important; }
 
-  /* ── Contenedor de texto: libre para cortarse ── */
+  /* ── Contenedor de texto: sin restricciones propias ── */
   .ii {
-    flex: 1;
-    min-width: 0;
-    /* sin break-inside: no interfiere con la protección del .mi padre */
+    flex: 1 !important;
+    min-width: 0 !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
   }
 
+  /* ── Nombre del plato: no se corta ── */
   .in {
     font-weight: 700 !important;
     font-size: 9pt !important;
     color: #ffffff !important;
     line-height: 1.3 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
   }
+
+  /* ── Descripción del plato: no se corta ── */
   .id {
     font-size: 7.5pt !important;
     color: #bbbbbb !important;
     opacity: 1 !important;
     margin-top: 2px !important;
     line-height: 1.35 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
   }
+
   .ip {
     font-weight: 700 !important;
     font-size: 8.5pt !important;
@@ -357,6 +383,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     break-before: avoid !important;
     break-after: avoid !important;
     page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
     margin: 4px 0 !important;
     border-top: 1px solid rgba(201,168,76,0.4) !important;
     border-bottom: 1px solid rgba(201,168,76,0.4) !important;
@@ -408,6 +435,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     margin-top: 8px !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
   }
 
   footer .logo-img {
