@@ -103,55 +103,27 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
 /* WiFi print — oculto en pantalla */
 .wifi-print { display: none; }
- 
+
 /* ===================== IMPRESIÓN A4 ===================== */
 @media print {
- 
+
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-  }
-
-  /* ── FIX PRINCIPAL: brand-strip debe ser hijo directo de main ── */
-  main > .brand-strip {
-    column-span: all !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 12px !important;
-    padding: 10px 0 !important;
-    background: #111111 !important;
-    width: 100% !important;
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-    margin: 4px 0 !important;
-    border: none !important;
-    border-radius: 0 !important;
-  }
-
-  main > .brand-strip img {
-    display: block !important;
-    object-fit: contain !important;
-    background: transparent !important;
-    height: 70px !important;
-    width: auto !important;
-    max-width: 100% !important;
-    border: none !important;
-    box-shadow: none !important;
   }
 
   @page {
     size: A4;
     margin: 18mm 8mm 18mm 8mm;
   }
- 
+
   .info-bar, .nav-wrap, .social-float, .up,
   .print-btn, .wifi-overlay, .reviews-sec,
   .gmaps-btn, #no-results, .palm,
   .finfo svg {
     display: none !important;
   }
- 
+
   html, body {
     background: #111111 !important;
     color: #ffffff !important;
@@ -160,14 +132,13 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     font-family: 'Nunito', sans-serif !important;
     font-size: 9pt !important;
   }
- 
-  /* Anular todos los bordes rgba del CSS de pantalla */
+
   .mi, .sec, .review-card, .gmaps-btn, .note, footer {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
   }
- 
+
   /* ════ HEADER ════ */
   .hd {
     background: #111111 !important;
@@ -182,8 +153,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     content: none !important;
     background: none !important;
   }
- 
-  /* ── TÍTULO MÁS GRANDE ── */
+
   .logo {
     font-family: 'Playfair Display', serif !important;
     font-size: 6rem !important;
@@ -192,7 +162,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     line-height: 1 !important;
   }
   .logo em { color: #ffffff !important; font-style: normal !important; }
- 
+
   .logo-sub {
     font-size: .95rem !important;
     letter-spacing: .38em !important;
@@ -201,7 +171,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     text-transform: uppercase !important;
     margin-top: 7px !important;
   }
- 
+
   .logo-img {
     display: flex !important;
     justify-content: center !important;
@@ -213,7 +183,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     object-fit: contain !important;
     background: transparent !important;
   }
- 
+
   /* ════ WIFI ════ */
   .wifi-print {
     display: block !important;
@@ -263,7 +233,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     color: #ffffff !important;
     line-height: 1.2 !important;
   }
- 
+
   /* ════ LAYOUT 2 COLUMNAS ════ */
   main {
     padding: 0 4mm !important;
@@ -272,7 +242,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     column-gap: 8mm !important;
     column-fill: auto !important;
   }
- 
+
   .sec {
     background: #111111 !important;
     padding: 4px 4px 10px !important;
@@ -282,7 +252,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     display: inline-block !important;
     width: 100% !important;
   }
- 
+
   .sh {
     background: #111111 !important;
     padding: 5px 2px 4px !important;
@@ -290,7 +260,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     border-bottom: 1.5px solid #C9A84C !important;
     margin-bottom: 5px !important;
   }
- 
+
   .st {
     font-family: 'Playfair Display', serif !important;
     font-size: 1.4rem !important;
@@ -298,7 +268,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     color: #C9A84C !important;
     line-height: 1.2 !important;
   }
- 
+
   .note {
     margin: 0 0 5px !important;
     padding: 4px 8px !important;
@@ -310,15 +280,14 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     color: #cccccc !important;
     font-style: italic !important;
   }
- 
+
   .il {
     padding: 0 !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 3px !important;
   }
- 
-  /* ── PLATOS ── */
+
   .mi {
     display: flex !important;
     align-items: flex-start !important;
@@ -335,10 +304,10 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
- 
+
   .mi.off { display: none !important; }
   .ii { flex: 1; min-width: 0; }
- 
+
   .in {
     font-weight: 700 !important;
     font-size: 9pt !important;
@@ -362,32 +331,58 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     min-width: auto !important;
   }
   .ip.nh { display: none !important; }
- 
-  /* ════ BRAND IMAGES — tamaños por logo ════ */
-  main > .brand-strip img[alt="TRIBU"],
-  main > .brand-strip img[src$="TRIBU.png"]        { height: 95px !important; margin-bottom: -5px !important; }
- 
-  main > .brand-strip img[alt="TRIVENTO"],
-  main > .brand-strip img[src$="TRIVENTO.png"]     { height: 75px !important; margin-bottom: -3px !important; }
- 
-  main > .brand-strip img[alt="CASILLERO"],
-  main > .brand-strip img[src$="CASILLERO.png"]    { height: 88px !important; margin: 6px auto 10px !important; }
- 
-  main > .brand-strip img[alt="imperial"],
-  main > .brand-strip img[src$="imperial.png"]     { height: 62px !important; margin-bottom: 8px !important; }
- 
-  main > .brand-strip img[alt="sernova"],
-  main > .brand-strip img[src$="sernova.png"]      { height: 52px !important; margin-bottom: 8px !important; }
- 
-  main > .brand-strip img[alt="speed"],
-  main > .brand-strip img[src$="speed.png"]        { height: 62px !important; margin-bottom: 8px !important; }
- 
-  main > .brand-strip img[alt="BRANCA"],
-  main > .brand-strip img[src$="BRANCA.png"]       { height: 95px !important; margin: -8px auto -14px !important; }
- 
-  main > .brand-strip img[alt="borghetti"],
-  main > .brand-strip img[src$="borghetti.png"]    { height: 95px !important; margin-bottom: -5px !important; }
- 
+
+  /* ════ BRAND IMAGES — hijos directos de main ════ */
+  main > .brand-strip {
+    column-span: all !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px 0 !important;
+    background: #111111 !important;
+    width: 100% !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    margin: 4px 0 !important;
+    border: none !important;
+  }
+
+  main > .brand-strip img {
+    display: block !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    height: 70px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  main > .brand-strip img[src*="TRIBU"],
+  main > .brand-strip img[src*="tribu"]     { height: 95px !important; margin-bottom: -5px !important; }
+
+  main > .brand-strip img[src*="TRIVENTO"],
+  main > .brand-strip img[src*="trivento"]  { height: 75px !important; margin-bottom: -3px !important; }
+
+  main > .brand-strip img[src*="CASILLERO"],
+  main > .brand-strip img[src*="casillero"] { height: 88px !important; margin: 6px auto 10px !important; }
+
+  main > .brand-strip img[src*="imperial"],
+  main > .brand-strip img[src*="IMPERIAL"]  { height: 62px !important; margin-bottom: 8px !important; }
+
+  main > .brand-strip img[src*="sernova"],
+  main > .brand-strip img[src*="SERNOVA"]   { height: 52px !important; margin-bottom: 8px !important; }
+
+  main > .brand-strip img[src*="speed"],
+  main > .brand-strip img[src*="SPEED"]     { height: 62px !important; margin-bottom: 8px !important; }
+
+  main > .brand-strip img[src*="BRANCA"],
+  main > .brand-strip img[src*="branca"]    { height: 95px !important; margin: -8px auto -14px !important; }
+
+  main > .brand-strip img[src*="borghetti"],
+  main > .brand-strip img[src*="BORGHETTI"] { height: 95px !important; margin-bottom: -5px !important; }
+
   /* ════ FOOTER ════ */
   footer {
     background: #111111 !important;
@@ -399,7 +394,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
- 
+
   footer .logo-img {
     display: flex !important;
     justify-content: center !important;
@@ -412,7 +407,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     background: transparent !important;
     border: none !important;
   }
- 
+
   .fl {
     font-family: 'Playfair Display', serif !important;
     font-size: 3rem !important;
@@ -433,7 +428,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     color: #aaaaaa !important;
     line-height: 1.8 !important;
   }
- 
+
   .payment-strip {
     display: flex !important;
     justify-content: center !important;
@@ -452,7 +447,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     border: none !important;
     opacity: 1 !important;
   }
- 
+
   .rights {
     font-size: 6pt !important;
     color: #aaaaaa !important;
@@ -483,13 +478,18 @@ const BRAND_IMAGES = {
   'postres':      { arriba: ['/img/borghetti.png'], abajo: [] },
 };
 
-function brandStrip(imgs, extraClass = '') {
-  if (!imgs || imgs.length === 0) return '';
-  const tags = imgs.map(src => {
-    const name = src.split('/').pop().replace(/\.\w+$/, '');
-    return `<img src="${src}" alt="${name}" loading="lazy">`;
-  }).join('');
-  return `<div class="brand-strip ${extraClass}">${tags}</div>`;
+// ── Crea un div.brand-strip como elemento DOM (no innerHTML) ──
+function makeBrandStrip(imgs) {
+  const strip = document.createElement('div');
+  strip.className = 'brand-strip';
+  imgs.forEach(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = src.split('/').pop().replace(/\.\w+$/, '');
+    img.loading = 'lazy';
+    strip.appendChild(img);
+  });
+  return strip;
 }
 </script>
 
@@ -651,19 +651,20 @@ function renderMenu(data) {
     nb.appendChild(btn);
     navMap[cat.id] = btn;
 
+    // ── BRAND ARRIBA: hijo directo de main (ANTES del sec) ──
+    const brandsArriba = BRAND_IMAGES[cat.id]?.arriba || [];
+    if (brandsArriba.length > 0) {
+      mc.appendChild(makeBrandStrip(brandsArriba));
+    }
+
+    // ── SECCIÓN ──
     const sec = document.createElement('section');
     sec.className = 'sec';
     sec.id = cat.id;
 
     let html = '';
-
-    const brandsArriba = BRAND_IMAGES[cat.id]?.arriba || [];
-    if (brandsArriba.length > 0) html += brandStrip(brandsArriba);
-
     html += `<div class="sh"><h2 class="st">${cat.nombre}</h2></div>`;
-
     if (cat.nota) html += `<div class="note">${cat.nota}</div>`;
-
     html += `<div class="il">`;
     cat.items.forEach(item => {
       const off = !item.disponible;
@@ -677,12 +678,14 @@ function renderMenu(data) {
       </div>`;
     });
     html += `</div>`;
-
-    const brandsAbajo = BRAND_IMAGES[cat.id]?.abajo || [];
-    if (brandsAbajo.length > 0) html += brandStrip(brandsAbajo, 'bottom');
-
     sec.innerHTML = html;
     mc.appendChild(sec);
+
+    // ── BRAND ABAJO: hijo directo de main (DESPUÉS del sec) ──
+    const brandsAbajo = BRAND_IMAGES[cat.id]?.abajo || [];
+    if (brandsAbajo.length > 0) {
+      mc.appendChild(makeBrandStrip(brandsAbajo));
+    }
   });
 
   const revBtn = document.createElement('button');
