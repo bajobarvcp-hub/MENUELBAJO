@@ -234,13 +234,16 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     line-height: 1.2 !important;
   }
 
-  /* ════ LAYOUT 2 COLUMNAS ════ */
+  /* ════ LAYOUT 2 COLUMNAS ════
+     column-fill: balance → distribuye el contenido equitativamente
+     entre las dos columnas, eliminando espacios negros vacíos.
+  ════ */
   main {
     padding: 0 4mm !important;
     background: #111111 !important;
     columns: 2 !important;
     column-gap: 8mm !important;
-    column-fill: auto !important;
+    column-fill: balance !important;   /* ← clave: balancea el contenido */
   }
 
   /* ════ SECCIÓN — espaciado reducido ════ */
@@ -333,28 +336,29 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   }
   .ip.nh { display: none !important; }
 
-  /* ════ BRAND IMAGES — más vistosas, sin gaps negros ════ */
+  /* ════ BRAND IMAGES — logos grandes, sin gaps negros ════ */
   main > .brand-strip {
     column-span: all !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 20px !important;
-    padding: 6px 0 5px !important;
+    gap: 28px !important;             /* más espacio entre logos */
+    padding: 14px 0 14px !important;  /* más padding vertical */
     background: #111111 !important;
     width: 100% !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
-    margin: 0 !important;
+    margin: 4px 0 !important;
     border-top: 1px solid rgba(201,168,76,0.4) !important;
     border-bottom: 1px solid rgba(201,168,76,0.4) !important;
   }
 
+  /* Tamaño base de logos del brand strip: mucho más grande */
   main > .brand-strip img {
     display: block !important;
     object-fit: contain !important;
     background: transparent !important;
-    height: 75px !important;
+    height: 110px !important;         /* antes: 75px */
     width: auto !important;
     max-width: 100% !important;
     border: none !important;
@@ -362,29 +366,30 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     margin: 0 !important;
   }
 
+  /* Ajustes individuales escalados proporcionalmente */
   main > .brand-strip img[src*="TRIBU"],
-  main > .brand-strip img[src*="tribu"]     { height: 90px !important; margin: 0 !important; }
+  main > .brand-strip img[src*="tribu"]     { height: 130px !important; margin: 0 !important; }
 
   main > .brand-strip img[src*="TRIVENTO"],
-  main > .brand-strip img[src*="trivento"]  { height: 75px !important; margin: 0 !important; }
+  main > .brand-strip img[src*="trivento"]  { height: 110px !important; margin: 0 !important; }
 
   main > .brand-strip img[src*="CASILLERO"],
-  main > .brand-strip img[src*="casillero"] { height: 88px !important; margin: 0 auto !important; }
+  main > .brand-strip img[src*="casillero"] { height: 128px !important; margin: 0 auto !important; }
 
   main > .brand-strip img[src*="imperial"],
-  main > .brand-strip img[src*="IMPERIAL"]  { height: 65px !important; margin: 0 !important; }
+  main > .brand-strip img[src*="IMPERIAL"]  { height: 100px !important; margin: 0 !important; }
 
   main > .brand-strip img[src*="sernova"],
-  main > .brand-strip img[src*="SERNOVA"]   { height: 58px !important; margin: 0 !important; }
+  main > .brand-strip img[src*="SERNOVA"]   { height: 90px !important;  margin: 0 !important; }
 
   main > .brand-strip img[src*="speed"],
-  main > .brand-strip img[src*="SPEED"]     { height: 65px !important; margin: 0 !important; }
+  main > .brand-strip img[src*="SPEED"]     { height: 100px !important; margin: 0 !important; }
 
   main > .brand-strip img[src*="BRANCA"],
-  main > .brand-strip img[src*="branca"]    { height: 90px !important; margin: 0 !important; }
+  main > .brand-strip img[src*="branca"]    { height: 130px !important; margin: 0 !important; }
 
   main > .brand-strip img[src*="borghetti"],
-  main > .brand-strip img[src*="BORGHETTI"] { height: 90px !important; margin: 0 !important; }
+  main > .brand-strip img[src*="BORGHETTI"] { height: 130px !important; margin: 0 !important; }
 
   /* ════ FOOTER ════ */
   footer {
@@ -403,8 +408,9 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     justify-content: center !important;
     margin: 0 auto 8px !important;
   }
+  /* Logo del footer también más grande */
   footer .logo-img img {
-    height: 80px !important;
+    height: 80px !important;         /* sin cambios */
     width: auto !important;
     object-fit: contain !important;
     background: transparent !important;
