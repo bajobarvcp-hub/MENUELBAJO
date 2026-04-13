@@ -282,13 +282,16 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     font-style: italic !important;
   }
 
+  /* ── Lista de ítems: libre para cortarse entre platos ── */
   .il {
     padding: 0 !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 2px !important;
+    /* sin break-inside: el contenedor se puede cortar libremente entre ítems */
   }
 
+  /* ── Ítem individual: nunca se corta a la mitad ── */
   .mi {
     display: flex !important;
     align-items: flex-start !important;
@@ -302,12 +305,20 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     outline: none !important;
     box-shadow: none !important;
     gap: 6px !important;
+    /* ── Protección de corte ── */
     break-inside: avoid !important;
     page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
   }
 
   .mi.off { display: none !important; }
-  .ii { flex: 1; min-width: 0; }
+
+  /* ── Contenedor de texto: libre para cortarse ── */
+  .ii {
+    flex: 1;
+    min-width: 0;
+    /* sin break-inside: no interfiere con la protección del .mi padre */
+  }
 
   .in {
     font-weight: 700 !important;
@@ -343,20 +354,19 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     padding: 14px 0 14px !important;
     background: #111111 !important;
     width: 100% !important;
-    break-before: avoid !important;   /* no cortar página justo antes */
-    break-after: avoid !important;    /* no dejar negro justo después */
+    break-before: avoid !important;
+    break-after: avoid !important;
     page-break-inside: avoid !important;
     margin: 4px 0 !important;
     border-top: 1px solid rgba(201,168,76,0.4) !important;
     border-bottom: 1px solid rgba(201,168,76,0.4) !important;
   }
 
-  /* Tamaño base de logos del brand strip: mucho más grande */
   main > .brand-strip img {
     display: block !important;
     object-fit: contain !important;
     background: transparent !important;
-    height: 110px !important;         /* antes: 75px */
+    height: 110px !important;
     width: auto !important;
     max-width: 100% !important;
     border: none !important;
@@ -364,7 +374,6 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     margin: 0 !important;
   }
 
-  /* Ajustes individuales escalados proporcionalmente */
   main > .brand-strip img[src*="TRIBU"],
   main > .brand-strip img[src*="tribu"]     { height: 130px !important; margin: 0 !important; }
 
@@ -406,9 +415,8 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     justify-content: center !important;
     margin: 0 auto 8px !important;
   }
-  /* Logo del footer también más grande */
   footer .logo-img img {
-    height: 80px !important;         /* sin cambios */
+    height: 80px !important;
     width: auto !important;
     object-fit: contain !important;
     background: transparent !important;
