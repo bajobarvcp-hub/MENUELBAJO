@@ -103,27 +103,27 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
 /* WiFi print — oculto en pantalla */
 .wifi-print { display: none; }
-
-/* ===================== IMPRESIÓN A4 ===================== */
+ 
+/* ===================== IMPRESION A4 ===================== */
 @media print {
-
+ 
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
-
+ 
   @page {
     size: A4;
     margin: 0 !important;
   }
-
+ 
   .info-bar, .nav-wrap, .social-float, .up,
   .print-btn, .wifi-overlay, .reviews-sec,
   .gmaps-btn, #no-results, .palm,
   .finfo svg {
     display: none !important;
   }
-
+ 
   html, body {
     background: #111111 !important;
     color: #ffffff !important;
@@ -132,14 +132,14 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     font-family: 'Nunito', sans-serif !important;
     font-size: 9pt !important;
   }
-
+ 
   .mi, .sec, .review-card, .gmaps-btn, .note, footer {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
   }
-
-  /* ════ HEADER ════ */
+ 
+  /* HEADER con margen superior para evitar el clip */
   .hd {
     background: #111111 !important;
     padding: 16px 0 16px !important;
@@ -147,13 +147,14 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     border: none !important;
     border-bottom: 2px solid #C9A84C !important;
     margin: 0 !important;
+    margin-top: 28mm !important;
   }
   .hd::before {
     display: none !important;
     content: none !important;
     background: none !important;
   }
-
+ 
   .logo {
     font-family: 'Playfair Display', serif !important;
     font-size: 6rem !important;
@@ -162,7 +163,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     line-height: 1 !important;
   }
   .logo em { color: #ffffff !important; font-style: normal !important; }
-
+ 
   .logo-sub {
     font-size: .95rem !important;
     letter-spacing: .38em !important;
@@ -171,7 +172,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     text-transform: uppercase !important;
     margin-top: 7px !important;
   }
-
+ 
   .logo-img {
     display: flex !important;
     justify-content: center !important;
@@ -183,25 +184,25 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     object-fit: contain !important;
     background: transparent !important;
   }
-
-  /* ════ WIFI ════ */
+ 
+  /* WIFI: nombre de red y contrasena muy grandes */
   .wifi-print {
     display: block !important;
     background: #111111 !important;
     border: none !important;
     border-bottom: 2px solid #C9A84C !important;
     text-align: center !important;
-    padding: 12px 0 16px !important;
+    padding: 16px 0 20px !important;
     margin: 0 0 8px !important;
   }
   .wifi-print-title {
     font-size: 0 !important;
     display: block !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 14px !important;
   }
   .wifi-print-title::after {
     content: 'Red WiFi del local' !important;
-    font-size: 7.5pt !important;
+    font-size: 8pt !important;
     letter-spacing: .35em !important;
     text-transform: uppercase !important;
     color: #ffffff !important;
@@ -218,23 +219,25 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 3px !important;
+    gap: 4px !important;
   }
   .wifi-print-label {
-    font-size: 7pt !important;
+    font-size: 7.5pt !important;
     color: #aaaaaa !important;
     text-transform: uppercase !important;
     letter-spacing: .2em !important;
   }
+  /* *** CAMBIO PRINCIPAL: fuente grande para nombre y contrasena *** */
   .wifi-print-value {
     font-family: 'Playfair Display', serif !important;
-    font-size: 1.6rem !important;
+    font-size: 2.8rem !important;
     font-weight: 700 !important;
     color: #ffffff !important;
-    line-height: 1.2 !important;
+    line-height: 1.15 !important;
+    letter-spacing: .04em !important;
   }
-
-  /* ════ LAYOUT 2 COLUMNAS ════ */
+ 
+  /* LAYOUT 2 COLUMNAS */
   main {
     padding: 0 4mm !important;
     background: #111111 !important;
@@ -242,21 +245,18 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     column-gap: 8mm !important;
     column-fill: auto !important;
   }
-
-  /* ════ SECCIÓN ════ */
+ 
   .sec {
     background: #111111 !important;
     padding: 2px 4px 4px !important;
     border: none !important;
     margin-bottom: 3px !important;
-    /* libre para cortarse entre ítems */
     break-inside: auto !important;
     page-break-inside: auto !important;
     display: block !important;
     width: 100% !important;
   }
-
-  /* ── Encabezado de sección: nunca queda solo al pie ── */
+ 
   .sh {
     background: #111111 !important;
     padding: 3px 2px 3px !important;
@@ -270,7 +270,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     page-break-inside: avoid !important;
     -webkit-column-break-inside: avoid !important;
   }
-
+ 
   .st {
     font-family: 'Playfair Display', serif !important;
     font-size: 1.4rem !important;
@@ -281,7 +281,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     page-break-inside: avoid !important;
     -webkit-column-break-inside: avoid !important;
   }
-
+ 
   .note {
     margin: 0 0 4px !important;
     padding: 3px 8px !important;
@@ -296,8 +296,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     page-break-inside: avoid !important;
     -webkit-column-break-inside: avoid !important;
   }
-
-  /* ── Lista de ítems: libre para cortarse ENTRE platos ── */
+ 
   .il {
     padding: 0 !important;
     display: flex !important;
@@ -306,8 +305,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     break-inside: auto !important;
     page-break-inside: auto !important;
   }
-
-  /* ── Ítem individual: NUNCA se corta a la mitad ── */
+ 
   .mi {
     display: flex !important;
     align-items: flex-start !important;
@@ -325,18 +323,16 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     page-break-inside: avoid !important;
     -webkit-column-break-inside: avoid !important;
   }
-
+ 
   .mi.off { display: none !important; }
-
-  /* ── Contenedor de texto: sin restricciones propias ── */
+ 
   .ii {
     flex: 1 !important;
     min-width: 0 !important;
     break-inside: auto !important;
     page-break-inside: auto !important;
   }
-
-  /* ── Nombre del plato: no se corta ── */
+ 
   .in {
     font-weight: 700 !important;
     font-size: 9pt !important;
@@ -346,8 +342,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     page-break-inside: avoid !important;
     -webkit-column-break-inside: avoid !important;
   }
-
-  /* ── Descripción del plato: no se corta ── */
+ 
   .id {
     font-size: 7.5pt !important;
     color: #bbbbbb !important;
@@ -358,7 +353,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     page-break-inside: avoid !important;
     -webkit-column-break-inside: avoid !important;
   }
-
+ 
   .ip {
     font-weight: 700 !important;
     font-size: 8.5pt !important;
@@ -369,8 +364,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     min-width: auto !important;
   }
   .ip.nh { display: none !important; }
-
-  /* ════ BRAND IMAGES — logos grandes, sin gaps negros ════ */
+ 
   main > .brand-strip {
     column-span: all !important;
     display: flex !important;
@@ -388,7 +382,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     border-top: 1px solid rgba(201,168,76,0.4) !important;
     border-bottom: 1px solid rgba(201,168,76,0.4) !important;
   }
-
+ 
   main > .brand-strip img {
     display: block !important;
     object-fit: contain !important;
@@ -400,32 +394,24 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     box-shadow: none !important;
     margin: 0 !important;
   }
-
+ 
   main > .brand-strip img[src*="TRIBU"],
   main > .brand-strip img[src*="tribu"]     { height: 160px !important; margin: 0 !important; }
-
   main > .brand-strip img[src*="TRIVENTO"],
   main > .brand-strip img[src*="trivento"]  { height: 140px !important; margin: 0 !important; }
-
   main > .brand-strip img[src*="CASILLERO"],
   main > .brand-strip img[src*="casillero"] { height: 140px !important; margin: 0 auto !important; }
-
   main > .brand-strip img[src*="imperial"],
   main > .brand-strip img[src*="IMPERIAL"]  { height: 100px !important; margin: 0 !important; }
-
   main > .brand-strip img[src*="sernova"],
-  main > .brand-strip img[src*="SERNOVA"]   { height: 120px !important;  margin: 0 !important; }
-
+  main > .brand-strip img[src*="SERNOVA"]   { height: 120px !important; margin: 0 !important; }
   main > .brand-strip img[src*="speed"],
   main > .brand-strip img[src*="SPEED"]     { height: 110px !important; margin: 0 !important; }
-
   main > .brand-strip img[src*="BRANCA"],
   main > .brand-strip img[src*="branca"]    { height: 200px !important; margin: 0 !important; }
-
   main > .brand-strip img[src*="borghetti"],
   main > .brand-strip img[src*="BORGHETTI"] { height: 160px !important; margin: 0 !important; }
-
-  /* ════ FOOTER ════ */
+ 
   footer {
     background: #111111 !important;
     padding: 14px 8mm 12px !important;
@@ -437,7 +423,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     page-break-inside: avoid !important;
     -webkit-column-break-inside: avoid !important;
   }
-
+ 
   footer .logo-img {
     display: flex !important;
     justify-content: center !important;
@@ -450,7 +436,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     background: transparent !important;
     border: none !important;
   }
-
+ 
   .fl {
     font-family: 'Playfair Display', serif !important;
     font-size: 3rem !important;
@@ -471,7 +457,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     color: #aaaaaa !important;
     line-height: 1.8 !important;
   }
-
+ 
   .payment-strip {
     display: flex !important;
     justify-content: center !important;
@@ -490,7 +476,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     border: none !important;
     opacity: 1 !important;
   }
-
+ 
   .rights {
     font-size: 6pt !important;
     color: #aaaaaa !important;
@@ -501,7 +487,6 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     line-height: 1.5 !important;
   }
 }
-/* ====================================================== */
 </style>
 </head>
 <body>
