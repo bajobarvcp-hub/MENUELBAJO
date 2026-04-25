@@ -89,6 +89,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 #no-results{display:none;text-align:center;padding:28px;color:#6a645c;font-size:.85rem;}
 .wifi-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+.wifi-print{display:none;}
 .wifi-overlay.open{display:flex;}
 .wifi-popup{background:#131310;border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px 24px;text-align:center;width:min(300px,88vw);box-shadow:0 20px 60px rgba(0,0,0,.6);}
 .wifi-popup-icon{font-size:2.2rem;margin-bottom:10px;}
@@ -121,7 +122,6 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   .info-bar, .nav-wrap, .social-float, .up,
   .print-btn, .wifi-overlay, .reviews-sec,
   .gmaps-btn, #no-results, .palm,
-  .wifi-print,
   .finfo svg {
     display: none !important;
   }
@@ -135,9 +135,12 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     font-size: 8.5pt !important;
   }
 
-  /* Padding interno del cuerpo: aire respecto al borde sin huecos blancos */
+  /* Padding interno del cuerpo:                                               */
+  /*  - 14mm arriba: zona oscura para que el broche del portamenú no tape el  */
+  /*    título "el bajo".                                                      */
+  /*  - laterales y pie: aire normal sin bordes blancos.                       */
   body {
-    padding: 7mm 6mm !important;
+    padding: 14mm 6mm 7mm !important;
   }
 
   .mi, .sec, .review-card, .gmaps-btn, .note, footer {
@@ -191,6 +194,59 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     background: transparent !important;
   }
 
+  /* ============== BLOQUE WIFI (sólo impresión) ============== */
+  .wifi-print {
+    display: block !important;
+    background: #111111 !important;
+    border: none !important;
+    border-bottom: 1.5px solid #C9A84C !important;
+    text-align: center !important;
+    padding: 8px 0 10px !important;
+    margin: 0 0 6px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  .wifi-print-title {
+    font-size: 0 !important;
+    display: block !important;
+    margin-bottom: 7px !important;
+  }
+  .wifi-print-title::after {
+    content: 'Red WiFi del local' !important;
+    font-size: 7pt !important;
+    letter-spacing: .35em !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important;
+    display: block !important;
+  }
+  .wifi-print-icon, .wifi-print-time, .wifi-icon { display: none !important; }
+  .wifi-print-row {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 38px !important;
+    align-items: flex-start !important;
+  }
+  .wifi-print-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2px !important;
+  }
+  .wifi-print-label {
+    font-size: 6.5pt !important;
+    color: #aaaaaa !important;
+    text-transform: uppercase !important;
+    letter-spacing: .2em !important;
+  }
+  .wifi-print-value {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1.1 !important;
+    letter-spacing: .04em !important;
+  }
+
   /* ============== MAIN: 2 COLUMNAS ESTILO PDF ============== */
   main {
     padding: 0 !important;
@@ -204,9 +260,11 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     background: #111111 !important;
     padding: 0 !important;
     border: none !important;
-    margin: 0 0 3px !important;
-    break-inside: auto !important;
-    page-break-inside: auto !important;
+    margin: 0 0 4px !important;
+    /* Mantener la sección entera junta — no partir entre hojas/columnas */
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
     display: block !important;
     width: 100% !important;
   }
@@ -253,6 +311,9 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   .il {
     padding: 0 !important;
     display: block !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
   }
 
   .mi {
@@ -327,7 +388,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     display: block !important;
     object-fit: contain !important;
     background: transparent !important;
-    height: 60px !important;
+    height: 80px !important;
     width: auto !important;
     max-width: 100% !important;
     border: none !important;
@@ -337,21 +398,21 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   /* Tamaños por marca, ajustados para columna estrecha (~95mm) */
   main > .brand-strip img[src*="TRIBU"],
-  main > .brand-strip img[src*="tribu"]     { height: 78px !important; }
+  main > .brand-strip img[src*="tribu"]     { height: 105px !important; }
   main > .brand-strip img[src*="TRIVENTO"],
-  main > .brand-strip img[src*="trivento"]  { height: 70px !important; }
+  main > .brand-strip img[src*="trivento"]  { height: 92px !important; }
   main > .brand-strip img[src*="CASILLERO"],
-  main > .brand-strip img[src*="casillero"] { height: 78px !important; }
+  main > .brand-strip img[src*="casillero"] { height: 105px !important; }
   main > .brand-strip img[src*="imperial"],
-  main > .brand-strip img[src*="IMPERIAL"]  { height: 60px !important; }
+  main > .brand-strip img[src*="IMPERIAL"]  { height: 80px !important; }
   main > .brand-strip img[src*="sernova"],
-  main > .brand-strip img[src*="SERNOVA"]   { height: 55px !important; }
+  main > .brand-strip img[src*="SERNOVA"]   { height: 75px !important; }
   main > .brand-strip img[src*="speed"],
-  main > .brand-strip img[src*="SPEED"]     { height: 55px !important; }
+  main > .brand-strip img[src*="SPEED"]     { height: 75px !important; }
   main > .brand-strip img[src*="BRANCA"],
-  main > .brand-strip img[src*="branca"]    { height: 95px !important; }
+  main > .brand-strip img[src*="branca"]    { height: 130px !important; }
   main > .brand-strip img[src*="borghetti"],
-  main > .brand-strip img[src*="BORGHETTI"] { height: 80px !important; }
+  main > .brand-strip img[src*="BORGHETTI"] { height: 108px !important; }
 
   /* ============== FOOTER COMPACTO ============== */
   footer {
@@ -481,6 +542,21 @@ function makeBrandStrip(imgs) {
     <img src="/img/LOGOINICIO.png" alt="El Bajo" loading="eager">
   </div>
 </header>
+
+<!-- WIFI PRINT — oculto en pantalla, visible solo al imprimir -->
+<div class="wifi-print">
+  <div class="wifi-print-title">📶 &nbsp; Red WiFi del local</div>
+  <div class="wifi-print-row">
+    <div class="wifi-print-item">
+      <span class="wifi-print-label">Red</span>
+      <span class="wifi-print-value">elbajobar</span>
+    </div>
+    <div class="wifi-print-item">
+      <span class="wifi-print-label">Contraseña</span>
+      <span class="wifi-print-value">elbajocp20</span>
+    </div>
+  </div>
+</div>
 
 <!-- NAV -->
 <div class="nav-wrap" id="nw">
