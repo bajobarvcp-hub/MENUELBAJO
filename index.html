@@ -117,7 +117,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   .info-bar, .nav-wrap, .social-float, .up,
   .print-btn, .wifi-overlay, .reviews-sec,
   .gmaps-btn, #no-results, .palm,
-  .finfo svg, .wifi-print {
+  .finfo svg {
     display: none !important;
   }
 
@@ -181,6 +181,57 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     width: auto !important;
     object-fit: contain !important;
     background: transparent !important;
+  }
+
+  /* ── WIFI PRINT — visible solo en impresión, debajo del título ── */
+  .wifi-print {
+    display: block !important;
+    background: #111111 !important;
+    border: none !important;
+    border-bottom: 1.5px solid #C9A84C !important;
+    text-align: center !important;
+    padding: 10px 0 12px !important;
+    margin: 0 0 6px !important;
+  }
+  .wifi-print-title {
+    font-size: 0 !important;
+    display: block !important;
+    margin-bottom: 8px !important;
+  }
+  .wifi-print-title::after {
+    content: 'Red WiFi del local' !important;
+    font-size: 7.5pt !important;
+    letter-spacing: .35em !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important;
+    display: block !important;
+  }
+  .wifi-print-icon, .wifi-print-time, .wifi-icon { display: none !important; }
+  .wifi-print-row {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 50px !important;
+    align-items: flex-start !important;
+  }
+  .wifi-print-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 3px !important;
+  }
+  .wifi-print-label {
+    font-size: 7pt !important;
+    color: #aaaaaa !important;
+    text-transform: uppercase !important;
+    letter-spacing: .2em !important;
+  }
+  .wifi-print-value {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1.15 !important;
+    letter-spacing: .04em !important;
   }
 
   /* ── MAIN: 2 columnas balanceadas, sin saltos forzados ── */
@@ -490,6 +541,21 @@ function makeBrandStrip(imgs) {
     <img src="/img/LOGOINICIO.png" alt="El Bajo" loading="eager">
   </div>
 </header>
+
+<!-- WIFI PRINT — oculto en pantalla, visible solo al imprimir -->
+<div class="wifi-print">
+  <div class="wifi-print-title">📶 &nbsp; Red WiFi del local</div>
+  <div class="wifi-print-row">
+    <div class="wifi-print-item">
+      <span class="wifi-print-label">Red</span>
+      <span class="wifi-print-value">elbajobar</span>
+    </div>
+    <div class="wifi-print-item">
+      <span class="wifi-print-label">Contraseña</span>
+      <span class="wifi-print-value">elbajocp20</span>
+    </div>
+  </div>
+</div>
 
 <!-- NAV -->
 <div class="nav-wrap" id="nw">
