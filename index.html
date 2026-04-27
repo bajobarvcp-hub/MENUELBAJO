@@ -114,7 +114,10 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   @page {
     size: A4;
-    margin: 0 !important;
+    /* Margen aplicado a CADA página A4 (no solo la primera).
+       El margen superior de 12mm deja espacio para el ganchito/clip
+       de la carta plastificada, en todas las páginas. */
+    margin: 12mm 6mm 7mm 6mm !important;
   }
 
   .info-bar, .nav-wrap, .social-float, .up,
@@ -133,7 +136,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   }
 
   html { padding: 0 !important; }
-  body { padding: 12mm 6mm 7mm !important; }
+  body { padding: 0 !important; }
 
   .mi, .sec, .review-card, .gmaps-btn, .note, footer {
     border: none !important;
