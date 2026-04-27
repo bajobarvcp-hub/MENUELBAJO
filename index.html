@@ -101,6 +101,9 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 .print-btn{display:none;position:fixed;top:14px;right:14px;z-index:999;background:#fff;color:#000;border:none;border-radius:10px;padding:9px 16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);align-items:center;gap:6px;}
 .print-btn.visible{display:flex;}
 
+/* ===================== WIFI PRINT — OCULTO EN PANTALLA ===================== */
+.wifi-print { display: none !important; }
+
 /* ===================== IMPRESION A4 ===================== */
 @media print {
 
@@ -181,6 +184,8 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     width: auto !important;
     object-fit: contain !important;
     background: transparent !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   /* ── WIFI PRINT — visible solo en impresión, debajo del título ── */
@@ -369,6 +374,8 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     column-span: none !important;
     -webkit-column-span: none !important;
     display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
     justify-content: center !important;
     align-items: center !important;
     gap: 14px !important;
@@ -385,6 +392,8 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   main .brand-strip img,
   main > .brand-strip img {
     display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
     object-fit: contain !important;
     background: transparent !important;
     height: 85px !important;
@@ -393,6 +402,8 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     border: none !important;
     box-shadow: none !important;
     margin: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
   /* Tamaños específicos por marca - un poco más grandes */
@@ -437,6 +448,8 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     object-fit: contain !important;
     background: transparent !important;
     border: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .fl {
@@ -477,6 +490,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     background: transparent !important;
     border: none !important;
     opacity: 1 !important;
+    visibility: visible !important;
   }
 
   .rights {
@@ -509,6 +523,8 @@ const BRAND_IMAGES = {
 };
 
 // ── Crea un div.brand-strip como elemento DOM (no innerHTML) ──
+// FIX: loading="eager" (antes "lazy") para que las imágenes carguen siempre,
+// incluso si están fuera del viewport al imprimir.
 function makeBrandStrip(imgs) {
   const strip = document.createElement('div');
   strip.className = 'brand-strip';
@@ -516,7 +532,8 @@ function makeBrandStrip(imgs) {
     const img = document.createElement('img');
     img.src = src;
     img.alt = src.split('/').pop().replace(/\.\w+$/, '');
-    img.loading = 'lazy';
+    img.loading = 'eager';
+    img.decoding = 'sync';
     strip.appendChild(img);
   });
   return strip;
@@ -645,7 +662,7 @@ function makeBrandStrip(imgs) {
 </div>
 
 <button class="up" id="upBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-<button class="print-btn" id="printBtn" onclick="window.print()">🖨️ Imprimir carta</button>
+<button class="print-btn" id="printBtn" onclick="handlePrint()">🖨️ Imprimir carta</button>
 
 <script>
 function fmtPrecio(n) {
@@ -752,6 +769,35 @@ window.addEventListener('scroll', () => {
   document.getElementById('upBtn').classList.toggle('on', window.scrollY > 400);
 });
 
+// ── FIX IMPRESIÓN: esperar a que TODAS las imágenes estén cargadas
+// antes de abrir el diálogo de impresión, para que los logos brand
+// no salgan vacíos.
+function waitForAllImages() {
+  const imgs = Array.from(document.images);
+  const pending = imgs.filter(img => !img.complete || img.naturalWidth === 0);
+  if (pending.length === 0) return Promise.resolve();
+  return Promise.all(pending.map(img => new Promise(res => {
+    img.addEventListener('load',  res, { once: true });
+    img.addEventListener('error', res, { once: true });
+    // failsafe por si una imagen queda colgada
+    setTimeout(res, 4000);
+  })));
+}
+
+async function handlePrint() {
+  const btn = document.getElementById('printBtn');
+  const original = btn.innerHTML;
+  btn.innerHTML = '⏳ Preparando...';
+  btn.disabled = true;
+  try {
+    await waitForAllImages();
+  } finally {
+    btn.innerHTML = original;
+    btn.disabled = false;
+    window.print();
+  }
+}
+
 async function init() {
   try {
     const res = await fetch(MENU_URL + '?v=' + Date.now());
@@ -770,6 +816,15 @@ async function init() {
 }
 
 init();
+
+// Fallback: si alguien dispara Ctrl+P o el menú nativo del navegador,
+// también esperamos las imágenes antes de imprimir.
+window.addEventListener('beforeprint', () => {
+  // No es asíncrono, pero al menos forzamos un decode síncrono donde se pueda.
+  document.querySelectorAll('img').forEach(img => {
+    if (img.decode) img.decode().catch(() => {});
+  });
+});
 
 if (new URLSearchParams(window.location.search).get('print') === '1') {
   document.getElementById('printBtn').classList.add('visible');
