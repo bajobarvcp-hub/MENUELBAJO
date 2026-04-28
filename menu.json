@@ -177,7 +177,7 @@
           "nombre": "Lenguado",
           "descripcion": "A la crema de puerro, acompañado de papas rústicas",
           "precio": 27000,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "che7",
@@ -722,8 +722,8 @@
           "id": "cer3",
           "nombre": "Imperial Stout 1 Lt",
           "descripcion": "",
-          "precio": 0,
-          "disponible": false
+          "precio": 11500,
+          "disponible": true
         },
         {
           "id": "cer4",
