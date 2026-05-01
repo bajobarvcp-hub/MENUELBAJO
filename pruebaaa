@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>El Bajo — Beach & Drinks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080806;--bg2:#0e0e0b;--card:#131310;--gold:#C9A84C;--gold2:#E8C06A;--text:#ffffff;--muted:#9a948c;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;overflow-x:hidden;}
+.info-bar{background:#000;padding:12px 18px;display:flex;align-items:center;justify-content:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.1);}
+.ib-item{display:flex;align-items:center;gap:7px;font-size:.9rem;color:#fff;font-weight:600;font-family:'Playfair Display',serif;letter-spacing:.02em;}
+.hd{background:#000;padding:24px 20px 20px;text-align:center;position:relative;overflow:hidden;}
+.hd::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% -10%,rgba(255,255,255,.04) 0%,transparent 65%);pointer-events:none;}
+.palm{position:absolute;top:-10px;font-size:5rem;opacity:.07;line-height:1;}
+.palm.l{left:-10px;transform:rotate(15deg);}
+.palm.r{right:-10px;transform:rotate(-20deg) scaleX(-1);}
+.logo{font-family:'Playfair Display',serif;font-size:4rem;font-weight:700;color:#fff;letter-spacing:-1px;line-height:1;}
+.logo em{color:#fff;font-style:normal;}
+.logo-sub{font-size:.62rem;letter-spacing:.38em;color:#fff;opacity:.5;text-transform:uppercase;margin-top:5px;}
+.logo-img{display:flex;justify-content:center;margin:2px 0 0;}
+.logo-img img{height:50px;width:auto;object-fit:contain;}
+.nav-wrap{position:sticky;top:0;z-index:100;background:rgba(8,8,6,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);overflow-x:auto;scrollbar-width:none;}
+.nav-wrap::-webkit-scrollbar{display:none;}
+.nav-bar{display:flex;padding:9px 14px;gap:7px;min-width:max-content;}
+.nb{background:transparent;border:1px solid rgba(255,255,255,.1);color:#aaa;border-radius:20px;padding:5px 13px;font-family:'Nunito',sans-serif;font-size:.76rem;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .2s;}
+.nb.on{background:#fff;color:#000;border-color:#fff;}
+main{padding-bottom:70px;}
+.sec{padding:28px 0 14px;border-bottom:1px solid rgba(255,255,255,.06);}
+.sh{padding:0 18px 14px;}
+.st{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#E8C06A;}
+.note{margin:2px 16px 10px;padding:9px 13px;background:rgba(255,255,255,.03);border-left:2px solid rgba(255,255,255,.2);border-radius:0 6px 6px 0;font-size:.75rem;color:#aaa;font-style:italic;}
+.il{padding:0 14px;}
+.mi{display:flex;align-items:flex-start;justify-content:space-between;padding:11px 13px;background:#131310;border-radius:10px;margin-bottom:7px;border:1px solid rgba(255,255,255,.05);gap:10px;transition:border-color .2s;}
+.mi.off{opacity:.35;}
+.ii{flex:1;min-width:0;}
+.in{font-weight:700;font-size:.88rem;color:#E8C06A;line-height:1.3;}
+.id{font-size:.75rem;color:#fff;font-weight:400;margin-top:4px;line-height:1.5;opacity:.8;}
+.ip{font-weight:700;font-size:.92rem;color:#fff;white-space:nowrap;flex-shrink:0;padding-top:1px;min-width:58px;text-align:right;}
+.ip.nh{color:#555;font-weight:400;font-size:.78rem;}
+.brand-strip{display:flex;justify-content:center;align-items:center;gap:20px;padding:10px 0;width:100%;}
+.brand-strip img{width:auto!important;object-fit:contain;display:block;margin:0 auto!important;}
+.brand-strip img[src*="BRANCA"],.brand-strip img[src*="branca"]{height:280px!important;margin-top:-35px!important;margin-bottom:-50px!important;display:block;margin-left:auto!important;margin-right:auto!important;}
+.brand-strip img[src*="BORGHETTI"],.brand-strip img[src*="borghetti"]{height:280px!important;margin-bottom:-10px!important;}
+.brand-strip img[src*="CASILLERO"],.brand-strip img[src*="casillero"]{height:250px!important;margin-bottom:35px!important;margin-top:15px!important;}
+.brand-strip img[src*="TRIBU"],.brand-strip img[src*="tribu"]{height:270px!important;margin-bottom:-10px!important;}
+.brand-strip img[src*="TRIVENTO"],.brand-strip img[src*="trivento"]{height:200px!important;margin-bottom:-10px!important;}
+.brand-strip img[src*="IMPERIAL"],.brand-strip img[src*="imperial"]{height:140px!important;margin-bottom:25px!important;}
+.brand-strip img[src*="SPEED"],.brand-strip img[src*="speed"]{height:140px!important;margin-bottom:25px!important;}
+.brand-strip img[src*="SERNOVA"],.brand-strip img[src*="sernova"]{height:120px!important;margin-bottom:25px!important;}
+.payment-strip{display:flex;justify-content:center;align-items:center;gap:27px;padding:20px 0 24px;flex-wrap:wrap;}
+.payment-strip img{height:60px;width:auto;object-fit:contain;opacity:1;transition:transform .2s;}
+.payment-strip img:hover{transform:scale(1.1);}
+.reviews-sec{padding:28px 0 24px;border-bottom:1px solid rgba(255,255,255,.06);}
+.reviews-grid{padding:0 14px;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;}
+@media(max-width:420px){.reviews-grid{grid-template-columns:1fr;}}
+.review-card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:12px 13px;}
+.review-stars{color:#fff;font-size:.9rem;margin-bottom:5px;}
+.review-text{font-size:.75rem;color:#fff;line-height:1.5;margin-bottom:6px;opacity:.8;}
+.review-author{font-size:.65rem;color:#aaa;font-style:italic;}
+.review-source{font-size:.58rem;color:#555;margin-top:2px;display:flex;align-items:center;gap:3px;}
+.google-dot{width:6px;height:6px;border-radius:50%;background:#4285F4;flex-shrink:0;}
+.gmaps-btn{display:flex;align-items:center;justify-content:center;gap:8px;margin:12px 14px 0;padding:11px;background:#0e0e0b;border:1px solid rgba(255,255,255,.15);border-radius:10px;color:#aaa;font-size:.78rem;text-decoration:none;font-family:'Nunito',sans-serif;font-weight:600;transition:border-color .2s,color .2s;cursor:pointer;}
+.gmaps-btn:hover{border-color:rgba(255,255,255,.4);color:#fff;}
+.g-logo{width:16px;height:16px;border-radius:3px;background:linear-gradient(135deg,#4285F4 25%,#34A853 25% 50%,#FBBC04 50% 75%,#EA4335 75%);flex-shrink:0;}
+footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid rgba(255,255,255,.08);}
+.fl{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:#fff;}
+.fsub{font-size:.58rem;letter-spacing:.38em;color:#aaa;text-transform:uppercase;margin:3px 0 14px;}
+.finfo{font-size:.77rem;color:#aaa;line-height:2.2;}
+.rights{margin-top:18px;font-size:.82rem;color:#fff;opacity:.4;font-family:'Nunito',sans-serif;font-weight:400;letter-spacing:.02em;text-transform:uppercase;line-height:1.5;}
+.social-float{position:fixed;bottom:80px;right:18px;display:flex;flex-direction:column;gap:10px;z-index:200;}
+.sf-btn-wrap{position:relative;display:flex;align-items:center;}
+.sf-btn{width:44px;height:44px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.5);transition:transform .2s;text-decoration:none;}
+.sf-btn:hover{transform:scale(1.1);}
+.sf-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+.sf-wa{background:#25D366;}
+.sf-rev{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);}
+.sf-wifi{background:rgba(30,123,191,.85);border:1px solid rgba(30,123,191,.5);}
+.sf-label{position:absolute;right:52px;background:rgba(0,0,0,.85);color:#fff;font-size:.65rem;font-weight:700;padding:4px 9px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;border:1px solid rgba(255,255,255,.1);}
+.sf-btn-wrap:hover .sf-label{opacity:1;}
+.up{position:fixed;bottom:22px;right:18px;width:44px;height:44px;background:#fff;color:#000;border-radius:50%;border:none;font-size:1.2rem;font-weight:700;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(255,255,255,.2);transition:transform .2s;z-index:200;}
+.up.on{display:flex;}
+.up:hover{transform:scale(1.08);}
+.loading-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:14px;}
+.loading-logo{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;animation:pulse 1.5s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+#no-results{display:none;text-align:center;padding:28px;color:#6a645c;font-size:.85rem;}
+.wifi-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+.wifi-overlay.open{display:flex;}
+.wifi-popup{background:#131310;border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px 24px;text-align:center;width:min(300px,88vw);box-shadow:0 20px 60px rgba(0,0,0,.6);}
+.wifi-popup-icon{font-size:2.2rem;margin-bottom:10px;}
+.wifi-popup-title{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#aaa;margin-bottom:6px;}
+.wifi-popup-name{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;margin-bottom:16px;font-weight:700;}
+.wifi-popup-pass-label{font-size:.65rem;color:#aaa;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.wifi-popup-pass{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fff;letter-spacing:.08em;margin-bottom:20px;}
+.wifi-close{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:10px;padding:9px 24px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;transition:background .2s;}
+.wifi-close:hover{background:rgba(255,255,255,.16);}
+.print-btn{display:none;position:fixed;top:14px;right:14px;z-index:999;background:#fff;color:#000;border:none;border-radius:10px;padding:9px 16px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.5);align-items:center;gap:6px;}
+.print-btn.visible{display:flex;}
+
+/* ===================== WIFI PRINT — OCULTO EN PANTALLA ===================== */
+.wifi-print { display: none !important; }
+
+/* ===================== IMPRESION A4 ===================== */
+@media print {
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    size: A4;
+    /* Margen superior solo en hojas 2 en adelante → "bajan un poquito"
+       el inicio de las secciones, sin afectar la página 1.
+       Pintamos esa franja con margin-boxes + background-color para que
+       NO se vea blanca al imprimir en "Predeterminado". */
+    margin: 8mm 0 0 0 !important;
+    background-color: #111111 !important;
+
+    /* Margin-boxes que cubren TODA la franja superior de la página
+       (esquinas + lados + centro). Se rellenan con #111 para tapar
+       el color del papel en esa zona. */
+    @top-left-corner  { content: " "; background-color: #111111 !important; }
+    @top-left         { content: " "; background-color: #111111 !important; }
+    @top-center       { content: " "; background-color: #111111 !important; }
+    @top-right        { content: " "; background-color: #111111 !important; }
+    @top-right-corner { content: " "; background-color: #111111 !important; }
+  }
+
+  /* Página 1 queda exactamente igual: sin margen de @page,
+     el espacio del ganchito viene del padding del body (12mm). */
+  @page :first {
+    margin: 0 !important;
+    background-color: #111111 !important;
+  }
+
+  .info-bar, .nav-wrap, .social-float, .up,
+  .print-btn, .wifi-overlay, .reviews-sec,
+  .gmaps-btn, #no-results, .palm,
+  .finfo svg {
+    display: none !important;
+  }
+
+  html, body {
+    background: #111111 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 7.8pt !important;
+  }
+
+  html { padding: 0 !important; }
+
+  /* ── MÁRGENES IMPLÍCITOS ──────────────────────────────────────────
+     Al estar en el body como padding (no en @page), se aplican
+     incluso cuando el diálogo del navegador dice "sin márgenes".
+     12 mm arriba  → espacio para el ganchito/clip de la carta.
+     6 mm a los lados y 7 mm abajo → respiración visual.
+  ──────────────────────────────────────────────────────────────── */
+  body { padding: 12mm 6mm 7mm 6mm !important; }
+
+  .mi, .sec, .review-card, .gmaps-btn, .note, footer {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* ── HEADER compacto ── */
+  .hd {
+    background: #111111 !important;
+    padding: 6px 0 8px !important;
+    text-align: center !important;
+    border: none !important;
+    border-bottom: 1.5px solid #C9A84C !important;
+    margin: 0 0 4px !important;
+  }
+  .hd::before {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+  }
+
+  .logo {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 3.4rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1 !important;
+  }
+  .logo em { color: #ffffff !important; font-style: normal !important; }
+
+  .logo-sub {
+    font-size: .68rem !important;
+    letter-spacing: .38em !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    text-transform: uppercase !important;
+    margin-top: 4px !important;
+  }
+
+  .logo-img {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 4px 0 0 !important;
+  }
+  .logo-img img {
+    height: 50px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* ── WIFI PRINT — visible solo en impresión, debajo del título ── */
+  .wifi-print {
+    display: block !important;
+    background: #111111 !important;
+    border: none !important;
+    border-bottom: 1.5px solid #C9A84C !important;
+    text-align: center !important;
+    padding: 10px 0 12px !important;
+    margin: 0 0 6px !important;
+  }
+  .wifi-print-title {
+    font-size: 0 !important;
+    display: block !important;
+    margin-bottom: 8px !important;
+  }
+  .wifi-print-title::after {
+    content: 'Red WiFi del local' !important;
+    font-size: 7.5pt !important;
+    letter-spacing: .35em !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important;
+    display: block !important;
+  }
+  .wifi-print-icon, .wifi-print-time, .wifi-icon { display: none !important; }
+  .wifi-print-row {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 50px !important;
+    align-items: flex-start !important;
+  }
+  .wifi-print-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 3px !important;
+  }
+  .wifi-print-label {
+    font-size: 7pt !important;
+    color: #aaaaaa !important;
+    text-transform: uppercase !important;
+    letter-spacing: .2em !important;
+  }
+  .wifi-print-value {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1.15 !important;
+    letter-spacing: .04em !important;
+  }
+
+  /* ── MAIN: 2 columnas balanceadas, sin saltos forzados ── */
+  main {
+    padding: 0 !important;
+    background: #111111 !important;
+    columns: 2 !important;
+    column-gap: 4mm !important;
+    column-fill: balance !important;
+  }
+
+  .sec {
+    background: #111111 !important;
+    padding: 1px 2px 2px !important;
+    border: none !important;
+    margin-bottom: 2px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .sh {
+    background: #111111 !important;
+    padding: 2px 2px !important;
+    border: none !important;
+    border-bottom: 1.2px solid #C9A84C !important;
+    margin-bottom: 2px !important;
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+    -webkit-column-break-after: avoid !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+  }
+
+  .st {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    color: #C9A84C !important;
+    line-height: 1.2 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+  }
+
+  .note {
+    margin: 0 0 2px !important;
+    padding: 2px 6px !important;
+    background: #1a1a1a !important;
+    border: none !important;
+    border-left: 2px solid #C9A84C !important;
+    border-radius: 0 3px 3px 0 !important;
+    font-size: 6pt !important;
+    color: #cccccc !important;
+    font-style: italic !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+  }
+
+  .il {
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5px !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  .mi {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    padding: 2.5px 5px !important;
+    background: #1b1b1b !important;
+    border-radius: 4px !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+    gap: 5px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+  }
+
+  .mi.off { display: none !important; }
+
+  .ii {
+    flex: 1 !important;
+    min-width: 0 !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  .in {
+    font-weight: 700 !important;
+    font-size: 7.8pt !important;
+    color: #ffffff !important;
+    line-height: 1.25 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+  }
+
+  .id {
+    font-size: 6.5pt !important;
+    color: #bbbbbb !important;
+    opacity: 1 !important;
+    margin-top: 1px !important;
+    line-height: 1.3 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+  }
+
+  .ip {
+    font-weight: 700 !important;
+    font-size: 7.5pt !important;
+    color: #ffffff !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    text-align: right !important;
+    min-width: auto !important;
+  }
+  .ip.nh { display: none !important; }
+
+  /* ── BRAND-STRIPS integrados en columnas (NO column-span: all) ── */
+  main .brand-strip,
+  main > .brand-strip {
+    column-span: none !important;
+    -webkit-column-span: none !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 14px !important;
+    padding: 6px 0 !important;
+    background: #111111 !important;
+    width: 100% !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+    margin: 3px 0 !important;
+    border: none !important;
+  }
+
+  main .brand-strip img,
+  main > .brand-strip img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    height: 85px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Tamaños específicos por marca - un poco más grandes */
+  main .brand-strip img[src*="TRIBU"],
+  main .brand-strip img[src*="tribu"]     { height: 190px !important; margin: 0 !important; }
+  main .brand-strip img[src*="TRIVENTO"],
+  main .brand-strip img[src*="trivento"]  { height: 105px !important; margin: 0 !important; }
+  main .brand-strip img[src*="CASILLERO"],
+  main .brand-strip img[src*="casillero"] { height: 150px !important; margin: 0 auto !important; }
+  main .brand-strip img[src*="imperial"],
+  main .brand-strip img[src*="IMPERIAL"]  { height: 80px !important; margin: 0 !important; }
+  main .brand-strip img[src*="sernova"],
+  main .brand-strip img[src*="SERNOVA"]   { height: 90px !important; margin: 0 !important; }
+  main .brand-strip img[src*="speed"],
+  main .brand-strip img[src*="SPEED"]     { height: 85px !important; margin: 0 !important; }
+  main .brand-strip img[src*="BRANCA"],
+  main .brand-strip img[src*="branca"]    { height: 160px !important; margin: 0 !important; }
+  main .brand-strip img[src*="borghetti"],
+  main .brand-strip img[src*="BORGHETTI"] { height: 130px !important; margin: 0 !important; }
+
+  /* ── FOOTER compacto ── */
+  footer {
+    background: #111111 !important;
+    padding: 8px 4mm 6px !important;
+    text-align: center !important;
+    border: none !important;
+    border-top: 1.5px solid #C9A84C !important;
+    margin-top: 4px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+  }
+
+  footer .logo-img {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 auto 4px !important;
+  }
+  footer .logo-img img {
+    height: 60px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    border: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .fl {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 3.4rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1 !important;
+    margin-bottom: 4px !important;
+  }
+  .fsub {
+    font-size: .68rem !important;
+    letter-spacing: .38em !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    margin: 4px 0 10px !important;
+  }
+  .finfo {
+    font-size: 8.5pt !important;
+    color: #aaaaaa !important;
+    line-height: 1.6 !important;
+  }
+
+  .payment-strip {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 16px !important;
+    padding: 6px 0 !important;
+    flex-wrap: wrap !important;
+    background: transparent !important;
+    border: none !important;
+  }
+  .payment-strip img {
+    height: 44px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    border: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .rights {
+    font-size: 7.5pt !important;
+    color: #aaaaaa !important;
+    opacity: 1 !important;
+    text-transform: uppercase !important;
+    letter-spacing: .04em !important;
+    margin-top: 6px !important;
+    line-height: 1.4 !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<script>
+const MENU_URL = '/menu.json';
+const GMAPS_URL = 'https://search.google.com/local/writereview?placeid=ChIJq9vuJGlmLZQRtPE0IJQyojQ';
+const WIFI_PASS = 'elbajocp20';
+const WIFI_NAME = 'elbajobar';
+
+const BRAND_IMAGES = {
+  'vinos':        { arriba: ['/img/TRIBU.png'],     abajo: ['/img/TRIVENTO.png'] },
+  'espumantes':   { arriba: ['/img/CASILLERO.png'], abajo: [] },
+  'cervezas':     { arriba: ['/img/imperial.png'],  abajo: [] },
+  'tragos-speed': { arriba: ['/img/sernova.png', '/img/speed.png'], abajo: [] },
+  'tragos':       { arriba: ['/img/BRANCA.png'],    abajo: [] },
+  'postres':      { arriba: ['/img/borghetti.png'], abajo: [] },
+};
+
+function makeBrandStrip(imgs) {
+  const strip = document.createElement('div');
+  strip.className = 'brand-strip';
+  imgs.forEach(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = src.split('/').pop().replace(/\.\w+$/, '');
+    img.loading = 'eager';
+    img.decoding = 'sync';
+    strip.appendChild(img);
+  });
+  return strip;
+}
+</script>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <div class="ib-item">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <span id="infoDir">Yrigoyen 900 · Villa Carlos Paz</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="hd">
+  <div class="palm l">🌴</div>
+  <div class="palm r">🌴</div>
+  <div class="logo">el <em>bajo</em></div>
+  <div class="logo-sub">Beach &amp; Drinks</div>
+  <div class="logo-img">
+    <img src="/img/LOGOINICIO.png" alt="El Bajo" loading="eager">
+  </div>
+</header>
+
+<!-- WIFI PRINT — oculto en pantalla, visible solo al imprimir -->
+<div class="wifi-print">
+  <div class="wifi-print-title">📶 &nbsp; Red WiFi del local</div>
+  <div class="wifi-print-row">
+    <div class="wifi-print-item">
+      <span class="wifi-print-label">Red</span>
+      <span class="wifi-print-value">elbajobar</span>
+    </div>
+    <div class="wifi-print-item">
+      <span class="wifi-print-label">Contraseña</span>
+      <span class="wifi-print-value">elbajocp20</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav-wrap" id="nw">
+  <div class="nav-bar" id="nb"></div>
+</div>
+
+<!-- MAIN -->
+<main id="mc">
+  <div class="loading-screen">
+    <div class="loading-logo">el bajo</div>
+    <div style="font-size:.82rem;color:#aaa">Cargando carta...</div>
+  </div>
+</main>
+
+<!-- RESEÑAS -->
+<section class="reviews-sec" id="reviews">
+  <div class="sh">
+    <h2 class="st">Reseñas</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">"Ambiente increíble, la picada playera es una obra de arte. Volvemos siempre que venimos a Carlos Paz."</div><div class="review-author">Marcela R.</div><div class="review-source"><span class="google-dot"></span>Google</div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">"El lomo El Bajo es lo mejor que probé en el verano. La atención impecable y la vista al lago, perfecta."</div><div class="review-author">Rodrigo M.</div><div class="review-source"><span class="google-dot"></span>Google</div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">"Buenísimas las empanadas de bondiola. El Aperol Spritz también una delicia. Muy recomendable."</div><div class="review-author">Sofía L.</div><div class="review-source"><span class="google-dot"></span>Google</div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">"El salmón al roquefort es espectacular. Lugar con onda y muy bien ubicado. Ya una tradición cada verano."</div><div class="review-author">Pablo G.</div><div class="review-source"><span class="google-dot"></span>Google</div></div>
+  </div>
+  <a class="gmaps-btn" id="gmapsBtn" href="#" onclick="window.open(GMAPS_URL,'_blank');return false;" rel="noopener">
+    <div class="g-logo"></div>
+    <span>Dejá tu reseña en Google</span>
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fl">el bajo</div>
+  <div class="fsub">Beach &amp; Drinks</div>
+  <div class="finfo" id="footerInfo">
+    <div style="display:flex;align-items:center;justify-content:center;gap:6px">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Yrigoyen 900 · Villa Carlos Paz
+    </div>
+  </div>
+  <div class="payment-strip">
+    <img src="/img/visa.JPG"   alt="Visa">
+    <img src="/img/master.JPG" alt="Mastercard">
+  </div>
+  <div class="rights">La casa se reserva el derecho de admisión y permanencia en el local</div>
+</footer>
+
+<!-- BOTONES FLOTANTES -->
+<div class="social-float">
+  <div class="sf-btn-wrap">
+    <span class="sf-label">WiFi</span>
+    <button class="sf-btn sf-wifi" onclick="document.getElementById('wifiOverlay').classList.add('open')">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+    </button>
+  </div>
+  <div class="sf-btn-wrap">
+    <span class="sf-label">Dejá tu reseña</span>
+    <button class="sf-btn sf-rev" onclick="window.open(GMAPS_URL,'_blank')" style="color:#E8C06A;font-size:1.3rem;">★</button>
+  </div>
+  <div class="sf-btn-wrap">
+    <span class="sf-label">Instagram</span>
+    <a href="https://www.instagram.com/elbajobar" target="_blank" rel="noopener" class="sf-btn sf-ig">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg>
+    </a>
+  </div>
+  <div class="sf-btn-wrap">
+    <span class="sf-label">WhatsApp</span>
+    <a href="https://wa.me/5403541599597" target="_blank" rel="noopener" class="sf-btn sf-wa">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- POPUP WIFI -->
+<div class="wifi-overlay" id="wifiOverlay" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="wifi-popup">
+    <div class="wifi-popup-icon">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20" stroke-width="3"/></svg>
+    </div>
+    <div class="wifi-popup-title">Red WiFi</div>
+    <div class="wifi-popup-name" id="popupWifiName">elbajobar</div>
+    <div class="wifi-popup-pass-label">Contraseña</div>
+    <div class="wifi-popup-pass" id="popupWifiPass">elbajocp20</div>
+    <button class="wifi-close" onclick="document.getElementById('wifiOverlay').classList.remove('open')">Cerrar</button>
+  </div>
+</div>
+
+<button class="up" id="upBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<button class="print-btn" id="printBtn" onclick="handlePrint()">🖨️ Imprimir carta</button>
+
+<script>
+function fmtPrecio(n) {
+  if (!n || n === 0) return '';
+  return '$' + Number(n).toLocaleString('es-AR');
+}
+
+function renderMenu(data) {
+  const mc = document.getElementById('mc');
+  const nb = document.getElementById('nb');
+  mc.innerHTML = '';
+  nb.innerHTML = '';
+
+  const dir = document.getElementById('infoDir');
+  if (dir && data.restaurante?.direccion) {
+    dir.textContent = data.restaurante.direccion;
+  }
+
+  if (data.restaurante?.wifi_password) {
+    document.getElementById('popupWifiPass').textContent = data.restaurante.wifi_password;
+  }
+  if (data.restaurante?.wifi_name) {
+    document.getElementById('popupWifiName').textContent = data.restaurante.wifi_name;
+  }
+
+  const navMap = {};
+
+  data.categorias.forEach(cat => {
+    const btn = document.createElement('button');
+    btn.className = 'nb';
+    btn.textContent = cat.nombre;
+    btn.onclick = () => goTo(cat.id);
+    nb.appendChild(btn);
+    navMap[cat.id] = btn;
+
+    const brandsArriba = BRAND_IMAGES[cat.id]?.arriba || [];
+    if (brandsArriba.length > 0) {
+      mc.appendChild(makeBrandStrip(brandsArriba));
+    }
+
+    const sec = document.createElement('section');
+    sec.className = 'sec';
+    sec.id = cat.id;
+
+    let html = '';
+    html += `<div class="sh"><h2 class="st">${cat.nombre}</h2></div>`;
+    if (cat.nota) html += `<div class="note">${cat.nota}</div>`;
+    html += `<div class="il">`;
+    cat.items.forEach(item => {
+      const off = !item.disponible;
+      const precio = fmtPrecio(item.precio);
+      html += `<div class="mi${off ? ' off' : ''}">
+        <div class="ii">
+          <div class="in">${item.nombre}</div>
+          ${item.descripcion ? `<div class="id">${item.descripcion}</div>` : ''}
+        </div>
+        ${off ? `<div class="ip nh">No hay</div>` : precio ? `<div class="ip">${precio}</div>` : ''}
+      </div>`;
+    });
+    html += `</div>`;
+    sec.innerHTML = html;
+    mc.appendChild(sec);
+
+    const brandsAbajo = BRAND_IMAGES[cat.id]?.abajo || [];
+    if (brandsAbajo.length > 0) {
+      mc.appendChild(makeBrandStrip(brandsAbajo));
+    }
+  });
+
+  const revBtn = document.createElement('button');
+  revBtn.className = 'nb';
+  revBtn.textContent = '⭐ Reseñas';
+  revBtn.onclick = () => document.getElementById('reviews').scrollIntoView({behavior:'smooth'});
+  nb.appendChild(revBtn);
+  navMap['reviews'] = revBtn;
+
+  const allSecs = document.querySelectorAll('.sec[id], .reviews-sec[id]');
+  allSecs.forEach(s => new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        document.querySelectorAll('.nb').forEach(b => b.classList.remove('on'));
+        const btn = navMap[e.target.id];
+        if (btn) {
+          btn.classList.add('on');
+          const nw = document.getElementById('nw');
+          nw.scrollLeft = btn.offsetLeft - nw.offsetWidth / 2 + btn.offsetWidth / 2;
+        }
+      }
+    });
+  }, { rootMargin: '-15% 0px -80% 0px', threshold: 0 }).observe(s));
+}
+
+function goTo(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const nh = document.getElementById('nw').offsetHeight;
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - nh - 6, behavior: 'smooth' });
+}
+
+window.addEventListener('scroll', () => {
+  document.getElementById('upBtn').classList.toggle('on', window.scrollY > 400);
+});
+
+function waitForAllImages() {
+  const imgs = Array.from(document.images);
+  const pending = imgs.filter(img => !img.complete || img.naturalWidth === 0);
+  if (pending.length === 0) return Promise.resolve();
+  return Promise.all(pending.map(img => new Promise(res => {
+    img.addEventListener('load',  res, { once: true });
+    img.addEventListener('error', res, { once: true });
+    setTimeout(res, 4000);
+  })));
+}
+
+async function handlePrint() {
+  const btn = document.getElementById('printBtn');
+  const original = btn.innerHTML;
+  btn.innerHTML = '⏳ Preparando...';
+  btn.disabled = true;
+  try {
+    await waitForAllImages();
+  } finally {
+    btn.innerHTML = original;
+    btn.disabled = false;
+    window.print();
+  }
+}
+
+async function init() {
+  try {
+    const res = await fetch(MENU_URL + '?v=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    renderMenu(data);
+  } catch(e) {
+    document.getElementById('mc').innerHTML = `
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:50vh;gap:12px;text-align:center;padding:20px">
+        <div style="font-size:2rem">⚠️</div>
+        <div style="color:#fff;font-size:.95rem">No se pudo cargar la carta</div>
+        <div style="color:#aaa;font-size:.78rem">${e.message}</div>
+        <button onclick="init()" style="margin-top:8px;background:#fff;color:#000;border:none;border-radius:8px;padding:9px 20px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.85rem;cursor:pointer">Reintentar</button>
+      </div>`;
+  }
+}
+
+init();
+
+window.addEventListener('beforeprint', () => {
+  document.querySelectorAll('img').forEach(img => {
+    if (img.decode) img.decode().catch(() => {});
+  });
+});
+
+if (new URLSearchParams(window.location.search).get('print') === '1') {
+  document.getElementById('printBtn').classList.add('visible');
+}
+</script>
+</body>
+</html>
