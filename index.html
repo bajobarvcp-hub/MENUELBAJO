@@ -116,14 +116,26 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     size: A4;
     /* Margen superior solo en hojas 2 en adelante → "bajan un poquito"
        el inicio de las secciones, sin afectar la página 1.
-       El fondo oscuro lo pinta html, así que NO aparecen franjas blancas. */
+       Pintamos esa franja con margin-boxes + background-color para que
+       NO se vea blanca al imprimir en "Predeterminado". */
     margin: 8mm 0 0 0 !important;
+    background-color: #111111 !important;
+
+    /* Margin-boxes que cubren TODA la franja superior de la página
+       (esquinas + lados + centro). Se rellenan con #111 para tapar
+       el color del papel en esa zona. */
+    @top-left-corner  { content: " "; background-color: #111111 !important; }
+    @top-left         { content: " "; background-color: #111111 !important; }
+    @top-center       { content: " "; background-color: #111111 !important; }
+    @top-right        { content: " "; background-color: #111111 !important; }
+    @top-right-corner { content: " "; background-color: #111111 !important; }
   }
 
   /* Página 1 queda exactamente igual: sin margen de @page,
      el espacio del ganchito viene del padding del body (12mm). */
   @page :first {
     margin: 0 !important;
+    background-color: #111111 !important;
   }
 
   .info-bar, .nav-wrap, .social-float, .up,
@@ -424,11 +436,11 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   /* Tamaños específicos por marca - un poco más grandes */
   main .brand-strip img[src*="TRIBU"],
-  main .brand-strip img[src*="tribu"]     { height: 160px !important; margin: 0 !important; }
+  main .brand-strip img[src*="tribu"]     { height: 190px !important; margin: 0 !important; }
   main .brand-strip img[src*="TRIVENTO"],
   main .brand-strip img[src*="trivento"]  { height: 105px !important; margin: 0 !important; }
   main .brand-strip img[src*="CASILLERO"],
-  main .brand-strip img[src*="casillero"] { height: 130px !important; margin: 0 auto !important; }
+  main .brand-strip img[src*="casillero"] { height: 150px !important; margin: 0 auto !important; }
   main .brand-strip img[src*="imperial"],
   main .brand-strip img[src*="IMPERIAL"]  { height: 80px !important; margin: 0 !important; }
   main .brand-strip img[src*="sernova"],
