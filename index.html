@@ -304,7 +304,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   .st {
     font-family: 'Playfair Display', serif !important;
-    font-size: 1.05rem !important;
+    font-size: 1.3rem !important;
     font-weight: 700 !important;
     color: #C9A84C !important;
     line-height: 1.2 !important;
@@ -432,6 +432,10 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     margin: 0 !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+    /* Convertimos los logos blancos en silueta negra para que sean
+       legibles sobre fondo blanco al imprimir. */
+    filter: brightness(0) !important;
+    -webkit-filter: brightness(0) !important;
   }
 
   /* Tamaños específicos por marca - un poco más grandes */
@@ -450,7 +454,7 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   main .brand-strip img[src*="BRANCA"],
   main .brand-strip img[src*="branca"]    { height: 160px !important; margin: 0 !important; }
   main .brand-strip img[src*="borghetti"],
-  main .brand-strip img[src*="BORGHETTI"] { height: 130px !important; margin: 0 !important; }
+  main .brand-strip img[src*="BORGHETTI"] { height: 180px !important; margin: 0 !important; }
 
   /* ── FOOTER compacto ── */
   footer {
