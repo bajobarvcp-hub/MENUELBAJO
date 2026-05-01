@@ -432,17 +432,27 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     margin: 0 !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    /* Convertimos los logos blancos en silueta negra para que sean
-       legibles sobre fondo blanco al imprimir. */
-    filter: brightness(0) !important;
-    -webkit-filter: brightness(0) !important;
   }
 
   /* Tamaños específicos por marca - un poco más grandes */
+  /* TRIBU, TRIVENTO, BRANCA → vienen en blanco, los pasamos a silueta negra
+     para que sean legibles sobre el fondo blanco al imprimir. */
   main .brand-strip img[src*="TRIBU"],
-  main .brand-strip img[src*="tribu"]     { height: 190px !important; margin: 0 !important; }
+  main .brand-strip img[src*="tribu"]     {
+    height: 190px !important; margin: 0 !important;
+    filter: brightness(0) !important; -webkit-filter: brightness(0) !important;
+  }
   main .brand-strip img[src*="TRIVENTO"],
-  main .brand-strip img[src*="trivento"]  { height: 105px !important; margin: 0 !important; }
+  main .brand-strip img[src*="trivento"]  {
+    height: 105px !important; margin: 0 !important;
+    filter: brightness(0) !important; -webkit-filter: brightness(0) !important;
+  }
+  main .brand-strip img[src*="BRANCA"],
+  main .brand-strip img[src*="branca"]    {
+    height: 160px !important; margin: 0 !important;
+    filter: brightness(0) !important; -webkit-filter: brightness(0) !important;
+  }
+  /* CASILLERO, IMPERIAL, SERNOVA, SPEED, BORGHETTI → conservan colores originales */
   main .brand-strip img[src*="CASILLERO"],
   main .brand-strip img[src*="casillero"] { height: 150px !important; margin: 0 auto !important; }
   main .brand-strip img[src*="imperial"],
@@ -451,8 +461,6 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   main .brand-strip img[src*="SERNOVA"]   { height: 90px !important; margin: 0 !important; }
   main .brand-strip img[src*="speed"],
   main .brand-strip img[src*="SPEED"]     { height: 85px !important; margin: 0 !important; }
-  main .brand-strip img[src*="BRANCA"],
-  main .brand-strip img[src*="branca"]    { height: 160px !important; margin: 0 !important; }
   main .brand-strip img[src*="borghetti"],
   main .brand-strip img[src*="BORGHETTI"] { height: 180px !important; margin: 0 !important; }
 
