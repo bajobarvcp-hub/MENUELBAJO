@@ -127,18 +127,25 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
     display: none !important;
   }
 
-  html, body {
+  /* El background en html (no en body) actúa como "canvas" y rellena
+     TODA la página incluyendo las franjas de @page — sin recuadros blancos.
+     Con print-color-adjust: exact el navegador lo respeta en impresión. */
+  html {
+    background: #111111 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  body {
     background: #111111 !important;
     color: #ffffff !important;
     margin: 0 !important;
+    padding: 0 !important;
     font-family: 'Nunito', sans-serif !important;
     font-size: 7.8pt !important;
   }
-
-  html { padding: 0 !important; }
-
-  /* Los márgenes viven en @page para repetirse en cada hoja impresa. */
-  body { padding: 0 !important; }
 
   .mi, .sec, .review-card, .gmaps-btn, .note, footer {
     border: none !important;
