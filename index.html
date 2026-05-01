@@ -114,9 +114,15 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   @page {
     size: A4;
-    /* Margen en cero: el espacio real viene del padding del body,
-       así funciona incluso si el usuario elige "sin márgenes"
-       en el diálogo de impresión del navegador. */
+    /* Margen superior solo en hojas 2 en adelante → "bajan un poquito"
+       el inicio de las secciones, sin afectar la página 1.
+       El fondo oscuro lo pinta html, así que NO aparecen franjas blancas. */
+    margin: 8mm 0 0 0 !important;
+  }
+
+  /* Página 1 queda exactamente igual: sin margen de @page,
+     el espacio del ganchito viene del padding del body (12mm). */
+  @page :first {
     margin: 0 !important;
   }
 
