@@ -114,10 +114,10 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
 
   @page {
     size: A4;
-    /* Margen aplicado a CADA página A4 (no solo la primera).
-       El margen superior de 12mm deja espacio para el ganchito/clip
-       de la carta plastificada, en todas las páginas. */
-    margin: 12mm 6mm 7mm 6mm !important;
+    /* Margen en cero: el espacio real viene del padding del body,
+       así funciona incluso si el usuario elige "sin márgenes"
+       en el diálogo de impresión del navegador. */
+    margin: 0 !important;
   }
 
   .info-bar, .nav-wrap, .social-float, .up,
@@ -136,7 +136,14 @@ footer{background:#000;padding:28px 20px;text-align:center;border-top:1px solid 
   }
 
   html { padding: 0 !important; }
-  body { padding: 0 !important; }
+
+  /* ── MÁRGENES IMPLÍCITOS ──────────────────────────────────────────
+     Al estar en el body como padding (no en @page), se aplican
+     incluso cuando el diálogo del navegador dice "sin márgenes".
+     12 mm arriba  → espacio para el ganchito/clip de la carta.
+     6 mm a los lados y 7 mm abajo → respiración visual.
+  ──────────────────────────────────────────────────────────────── */
+  body { padding: 12mm 6mm 7mm 6mm !important; }
 
   .mi, .sec, .review-card, .gmaps-btn, .note, footer {
     border: none !important;
@@ -525,9 +532,6 @@ const BRAND_IMAGES = {
   'postres':      { arriba: ['/img/borghetti.png'], abajo: [] },
 };
 
-// ── Crea un div.brand-strip como elemento DOM (no innerHTML) ──
-// FIX: loading="eager" (antes "lazy") para que las imágenes carguen siempre,
-// incluso si están fuera del viewport al imprimir.
 function makeBrandStrip(imgs) {
   const strip = document.createElement('div');
   strip.className = 'brand-strip';
@@ -701,13 +705,11 @@ function renderMenu(data) {
     nb.appendChild(btn);
     navMap[cat.id] = btn;
 
-    // ── BRAND ARRIBA: hijo directo de main (ANTES del sec) ──
     const brandsArriba = BRAND_IMAGES[cat.id]?.arriba || [];
     if (brandsArriba.length > 0) {
       mc.appendChild(makeBrandStrip(brandsArriba));
     }
 
-    // ── SECCIÓN ──
     const sec = document.createElement('section');
     sec.className = 'sec';
     sec.id = cat.id;
@@ -731,7 +733,6 @@ function renderMenu(data) {
     sec.innerHTML = html;
     mc.appendChild(sec);
 
-    // ── BRAND ABAJO: hijo directo de main (DESPUÉS del sec) ──
     const brandsAbajo = BRAND_IMAGES[cat.id]?.abajo || [];
     if (brandsAbajo.length > 0) {
       mc.appendChild(makeBrandStrip(brandsAbajo));
@@ -772,9 +773,6 @@ window.addEventListener('scroll', () => {
   document.getElementById('upBtn').classList.toggle('on', window.scrollY > 400);
 });
 
-// ── FIX IMPRESIÓN: esperar a que TODAS las imágenes estén cargadas
-// antes de abrir el diálogo de impresión, para que los logos brand
-// no salgan vacíos.
 function waitForAllImages() {
   const imgs = Array.from(document.images);
   const pending = imgs.filter(img => !img.complete || img.naturalWidth === 0);
@@ -782,7 +780,6 @@ function waitForAllImages() {
   return Promise.all(pending.map(img => new Promise(res => {
     img.addEventListener('load',  res, { once: true });
     img.addEventListener('error', res, { once: true });
-    // failsafe por si una imagen queda colgada
     setTimeout(res, 4000);
   })));
 }
@@ -820,10 +817,7 @@ async function init() {
 
 init();
 
-// Fallback: si alguien dispara Ctrl+P o el menú nativo del navegador,
-// también esperamos las imágenes antes de imprimir.
 window.addEventListener('beforeprint', () => {
-  // No es asíncrono, pero al menos forzamos un decode síncrono donde se pueda.
   document.querySelectorAll('img').forEach(img => {
     if (img.decode) img.decode().catch(() => {});
   });
