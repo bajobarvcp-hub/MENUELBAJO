@@ -539,14 +539,14 @@
         {
           "id": "vin4",
           "nombre": "Casillero del Diablo 3/4",
-          "descripcion": "Malbec · Red Blend · Rosado · Chardonnay",
+          "descripcion": "Malbec · Red Blend · Rosado · ",
           "precio": 20000,
           "disponible": true
         },
         {
           "id": "vin5",
           "nombre": "Trivento Private Reserve 3/4",
-          "descripcion": "Malbec",
+          "descripcion": "Malbec . Chardonnay",
           "precio": 22000,
           "disponible": true
         },
