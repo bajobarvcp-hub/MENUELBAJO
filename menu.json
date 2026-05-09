@@ -15,7 +15,7 @@
           "id": "ent1",
           "nombre": "Porción de Rabas a la Romana   ",
           "descripcion": "Acompañada con salsa tártara ",
-          "precio": 25000,
+          "precio": 25500,
           "disponible": true
         },
         {
@@ -596,7 +596,7 @@
           "id": "vin12",
           "nombre": "Sexy Fish 3/4",
           "descripcion": "Cabernet Franc · Malbec",
-          "precio": 13200,
+          "precio": 15000,
           "disponible": true
         },
         {
@@ -799,21 +799,21 @@
           "id": "cho2",
           "nombre": "Amstel 500cc",
           "descripcion": "",
-          "precio": 7400,
+          "precio": 7500,
           "disponible": false
         },
         {
           "id": "cho3",
           "nombre": "Warsteiner 250cc",
           "descripcion": "",
-          "precio": 0,
+          "precio": 5500,
           "disponible": false
         },
         {
           "id": "cho4",
           "nombre": "Warsteiner 500cc",
           "descripcion": "",
-          "precio": 0,
+          "precio": 8800,
           "disponible": false
         }
       ]
@@ -823,13 +823,6 @@
       "nombre": "Whiskies",
       "nota": null,
       "items": [
-        {
-          "id": "whi1",
-          "nombre": "Johnnie Walker Red Label",
-          "descripcion": "",
-          "precio": 8500,
-          "disponible": true
-        },
         {
           "id": "whi2",
           "nombre": "J&B",
@@ -842,6 +835,13 @@
           "nombre": "Jim Beam",
           "descripcion": "",
           "precio": 12500,
+          "disponible": true
+        },
+        {
+          "id": "whi1",
+          "nombre": "Johnnie Walker Red Label",
+          "descripcion": "",
+          "precio": 8500,
           "disponible": true
         },
         {
@@ -1030,7 +1030,7 @@
           "id": "tb10",
           "nombre": "Punt e Mes Julep",
           "descripcion": "Punt e Mes, Pomelo Rosado, Azúcar, Menta y Limón",
-          "precio": 10100,
+          "precio": 10500,
           "disponible": true
         },
         {
@@ -1044,7 +1044,7 @@
           "id": "tb12",
           "nombre": "Jagermeister Julep",
           "descripcion": "Jagermeister, menta, azúcar negra, Pomelo rosado y ramita de menta",
-          "precio": 15000,
+          "precio": 13000,
           "disponible": true
         }
       ]
@@ -1087,13 +1087,6 @@
           "nombre": "Brighton Tonic",
           "descripcion": "Gin Brighton, Tónica y Limón",
           "precio": 10000,
-          "disponible": true
-        },
-        {
-          "id": "tt6",
-          "nombre": "Larios Clásico",
-          "descripcion": "Gin Larios, Tónica y Limón",
-          "precio": 10100,
           "disponible": true
         },
         {
@@ -1577,13 +1570,6 @@
           "nombre": "SPEED Zero",
           "descripcion": "",
           "precio": 3300,
-          "disponible": true
-        },
-        {
-          "id": "sal11",
-          "nombre": "Golden 473cc sin alcohol",
-          "descripcion": "",
-          "precio": 6500,
           "disponible": true
         }
       ]
