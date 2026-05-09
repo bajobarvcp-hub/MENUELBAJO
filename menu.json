@@ -180,6 +180,13 @@
           "disponible": false
         },
         {
+          "id": "new_1778365034324_1",
+          "nombre": "Lenguado Rebozado",
+          "descripcion": "Lenguado rebozado, acompañado de papas cuña y salsa brava.",
+          "precio": 27000,
+          "disponible": true
+        },
+        {
           "id": "che7",
           "nombre": "Guiso de Lenteja",
           "descripcion": "Chorizo colorado, chorizo de cerdo, carne vacuna, panceta ahumada, lentejas cocidas en salsa",
