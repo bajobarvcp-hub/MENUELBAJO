@@ -173,13 +173,6 @@
           "disponible": true
         },
         {
-          "id": "che6",
-          "nombre": "Lenguado",
-          "descripcion": "A la crema de puerro, acompañado de papas rústicas",
-          "precio": 27000,
-          "disponible": false
-        },
-        {
           "id": "new_1778365034324_1",
           "nombre": "Lenguado Rebozado",
           "descripcion": "Lenguado rebozado, acompañado de papas cuña y salsa brava.",
