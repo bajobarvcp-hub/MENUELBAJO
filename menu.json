@@ -598,13 +598,6 @@
           "descripcion": "Cabernet Franc · Malbec",
           "precio": 15000,
           "disponible": true
-        },
-        {
-          "id": "vin13",
-          "nombre": "Fabre Classic 3/4",
-          "descripcion": "Malbec",
-          "precio": 17300,
-          "disponible": true
         }
       ]
     },
