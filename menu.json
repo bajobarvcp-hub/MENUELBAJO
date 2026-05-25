@@ -184,7 +184,7 @@
           "nombre": "Guiso de Lenteja",
           "descripcion": "Chorizo colorado, chorizo de cerdo, carne vacuna, panceta ahumada, lentejas cocidas en salsa",
           "precio": 23000,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "new_1779633409117_1",
