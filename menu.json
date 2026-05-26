@@ -100,7 +100,7 @@
           "nombre": "Tucumana",
           "descripcion": "",
           "precio": 4100,
-          "disponible": false
+          "disponible": true
         }
       ]
     },
