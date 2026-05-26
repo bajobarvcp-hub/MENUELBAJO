@@ -142,7 +142,7 @@
           "nombre": "Salmón al Roquefort",
           "descripcion": "Salmón al grill con crema roquefort sobre vegetales grillados",
           "precio": 33000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "che2",
@@ -359,14 +359,14 @@
           "nombre": "Lomo Completo",
           "descripcion": "Bife de lomo, lechuga, tomate, jamón, queso, huevo y mayonesa casera",
           "precio": 22000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "san9",
           "nombre": "Lomo El Bajo",
           "descripcion": "Bife de lomo, jamón, queso, huevo, panceta ahumada, pimientos asados y mayonesa casera",
           "precio": 24000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "san10",
@@ -590,13 +590,6 @@
           "nombre": "Norton Mil Rosas 3/4",
           "descripcion": "",
           "precio": 9000,
-          "disponible": true
-        },
-        {
-          "id": "vin12",
-          "nombre": "Sexy Fish 3/4",
-          "descripcion": "Cabernet Franc · Malbec",
-          "precio": 15000,
           "disponible": true
         }
       ]
