@@ -185,13 +185,6 @@
           "descripcion": "Chorizo colorado, chorizo de cerdo, carne vacuna, panceta ahumada, lentejas cocidas en salsa",
           "precio": 23000,
           "disponible": false
-        },
-        {
-          "id": "new_1779633409117_1",
-          "nombre": "Ravioli Caprese Fritos con crema de vegetales",
-          "descripcion": "",
-          "precio": 27000,
-          "disponible": true
         }
       ]
     },
@@ -366,14 +359,14 @@
           "nombre": "Lomo Completo",
           "descripcion": "Bife de lomo, lechuga, tomate, jamón, queso, huevo y mayonesa casera",
           "precio": 22000,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "san9",
           "nombre": "Lomo El Bajo",
           "descripcion": "Bife de lomo, jamón, queso, huevo, panceta ahumada, pimientos asados y mayonesa casera",
           "precio": 24000,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "san10",
