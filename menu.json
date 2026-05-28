@@ -656,13 +656,6 @@
           "disponible": true
         },
         {
-          "id": "esp3",
-          "nombre": "Gambei 750cc",
-          "descripcion": "Brut Rosé",
-          "precio": 13700,
-          "disponible": true
-        },
-        {
           "id": "esp4",
           "nombre": "Norton Cosecha Especial 750cc",
           "descripcion": "Extra Brut",
