@@ -680,84 +680,84 @@
           "id": "cer1",
           "nombre": "Imperial Lager 473cc",
           "descripcion": "",
-          "precio": 6500,
+          "precio": 7000,
           "disponible": true
         },
         {
           "id": "cer2",
           "nombre": "Imperial Lager 1 Lt",
           "descripcion": "",
-          "precio": 11000,
+          "precio": 11900,
           "disponible": true
         },
         {
           "id": "cer3",
           "nombre": "Imperial Stout 1 Lt",
           "descripcion": "",
-          "precio": 11500,
+          "precio": 12400,
           "disponible": true
         },
         {
           "id": "cer4",
           "nombre": "Imperial Stout / Amstel 473cc",
           "descripcion": "",
-          "precio": 6700,
+          "precio": 7200,
           "disponible": true
         },
         {
           "id": "cer5",
           "nombre": "Imperial Roja 473cc",
           "descripcion": "",
-          "precio": 6700,
+          "precio": 7200,
           "disponible": true
         },
         {
           "id": "cer6",
           "nombre": "Imperial IPA / APA 473cc",
           "descripcion": "",
-          "precio": 6700,
+          "precio": 7200,
           "disponible": true
         },
         {
           "id": "cer7",
           "nombre": "Imperial IPA / APA 1 Lt",
           "descripcion": "",
-          "precio": 11500,
+          "precio": 12400,
           "disponible": true
         },
         {
           "id": "cer8",
           "nombre": "Blue Moon 473cc",
           "descripcion": "",
-          "precio": 8500,
+          "precio": 9200,
           "disponible": true
         },
         {
           "id": "cer9",
           "nombre": "Heineken 1 Lt",
           "descripcion": "",
-          "precio": 14500,
+          "precio": 15700,
           "disponible": true
         },
         {
           "id": "cer10",
           "nombre": "Heineken S/alcohol · Miller 473cc",
           "descripcion": "",
-          "precio": 8500,
+          "precio": 9200,
           "disponible": true
         },
         {
           "id": "cer11",
           "nombre": "Miller 330cc",
           "descripcion": "",
-          "precio": 7100,
+          "precio": 7700,
           "disponible": true
         },
         {
           "id": "cer12",
           "nombre": "Miller 1 Lt",
           "descripcion": "",
-          "precio": 12500,
+          "precio": 13500,
           "disponible": true
         }
       ]
