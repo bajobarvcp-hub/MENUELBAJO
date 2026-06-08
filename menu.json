@@ -185,13 +185,6 @@
           "descripcion": "Chorizo colorado, chorizo de cerdo, carne vacuna, panceta ahumada, lentejas cocidas en salsa",
           "precio": 23000,
           "disponible": true
-        },
-        {
-          "id": "new_1780751446664_1",
-          "nombre": "Ñoquis de Papa con Ragout de Lomo",
-          "descripcion": "",
-          "precio": 28000,
-          "disponible": true
         }
       ]
     },
@@ -232,6 +225,13 @@
           "id": "pas5",
           "nombre": "Sorrentino Ojo de Bife al Horno",
           "descripcion": "Ojo de bife braseado en vegetales, caldo y vino blanco, al horno con crema de roquefort",
+          "precio": 28000,
+          "disponible": true
+        },
+        {
+          "id": "new_1780938252093_1",
+          "nombre": "Ñoquis de Papa con Ragout de Lomo",
+          "descripcion": "",
           "precio": 28000,
           "disponible": true
         },
