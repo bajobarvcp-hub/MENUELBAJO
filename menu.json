@@ -1492,28 +1492,28 @@
           "id": "sal1",
           "nombre": "Gaseosa 350cc",
           "descripcion": "",
-          "precio": 4000,
+          "precio": 4200,
           "disponible": true
         },
         {
           "id": "sal2",
           "nombre": "Gaseosa 500cc",
           "descripcion": "",
-          "precio": 4900,
+          "precio": 5500,
           "disponible": true
         },
         {
           "id": "sal3",
           "nombre": "Agua Saborizada 500cc",
           "descripcion": "",
-          "precio": 4900,
+          "precio": 5500,
           "disponible": true
         },
         {
           "id": "sal4",
           "nombre": "Agua con o sin Gas 500cc",
           "descripcion": "",
-          "precio": 4700,
+          "precio": 5000,
           "disponible": true
         },
         {
