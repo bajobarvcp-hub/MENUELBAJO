@@ -188,9 +188,9 @@
         },
         {
           "id": "new_1781364590078_1",
-          "nombre": "Menu Locro/Guiso de lenteja",
-          "descripcion": "Incluye empanada Tucumana, Locro o guiso de lenteja y copa de vino o gaseosa",
-          "precio": 29000,
+          "nombre": "Locro ",
+          "descripcion": "Chorizo colorado, pechito de cerdo. carne vacuna, panceta ahumada, bondiola de cerdo, mondongo, porotos alubia, maiz blanco y zapallo.",
+          "precio": 23000,
           "disponible": true
         }
       ]
