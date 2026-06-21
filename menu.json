@@ -188,16 +188,9 @@
         },
         {
           "id": "new_1781364590078_1",
-          "nombre": "Menú Locro",
-          "descripcion": "Entrada: empanada tucumana frita. Principal: Locro. Bebida incluida: copa de vino o gaseosa.",
-          "precio": 29000,
-          "disponible": true
-        },
-        {
-          "id": "new_1782056881761_1",
-          "nombre": "Menú día del Padre ",
-          "descripcion": "Entrada: empanada tucumana frita. Principal: Entraña al malbec con papas españolas. Incluye copa de vino o gaseosa.",
-          "precio": 37000,
+          "nombre": " Locro",
+          "descripcion": "",
+          "precio": 23000,
           "disponible": true
         }
       ]
