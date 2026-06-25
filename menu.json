@@ -89,8 +89,8 @@
           "disponible": true
         },
         {
-          "id": "emp5",
-          "nombre": "Vegetariana",
+          "id": "new_1782402138488_1",
+          "nombre": "Pollo Salada",
           "descripcion": "",
           "precio": 4500,
           "disponible": true
@@ -98,6 +98,13 @@
         {
           "id": "emp6",
           "nombre": "Tucumana",
+          "descripcion": "",
+          "precio": 4500,
+          "disponible": true
+        },
+        {
+          "id": "emp5",
+          "nombre": "Vegetariana",
           "descripcion": "",
           "precio": 4500,
           "disponible": true
