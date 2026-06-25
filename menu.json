@@ -148,14 +148,14 @@
           "id": "che1",
           "nombre": "Salmón al Roquefort",
           "descripcion": "Salmón al grill con crema roquefort sobre vegetales grillados",
-          "precio": 33000,
+          "precio": 35000,
           "disponible": true
         },
         {
           "id": "che2",
           "nombre": "Entraña a la Pimienta",
           "descripcion": "Entraña con crema de pimienta negra, acompañada de ensalada de rúcula y parmesano",
-          "precio": 32500,
+          "precio": 33000,
           "disponible": true
         },
         {
@@ -274,7 +274,7 @@
           "id": "ens2",
           "nombre": "Ensalada de Mar",
           "descripcion": "Colchón de rúcula y lechuga, langostinos rebozados, tomate y panceta ahumada",
-          "precio": 21500,
+          "precio": 25000,
           "disponible": true
         },
         {
@@ -330,7 +330,7 @@
           "id": "san1",
           "nombre": "Tostado",
           "descripcion": "Pan de miga, jamón cocido, queso tybo y mayonesa",
-          "precio": 12000,
+          "precio": 13000,
           "disponible": true
         },
         {
