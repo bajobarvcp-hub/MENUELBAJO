@@ -71,42 +71,42 @@
           "id": "emp2",
           "nombre": "Bondiola",
           "descripcion": "",
-          "precio": 4500,
+          "precio": 4900,
           "disponible": true
         },
         {
           "id": "emp3",
           "nombre": "Carne al Malbec",
           "descripcion": "",
-          "precio": 4500,
+          "precio": 4900,
           "disponible": true
         },
         {
           "id": "emp4",
           "nombre": "Pollo Agridulce",
           "descripcion": "",
-          "precio": 4500,
+          "precio": 4000,
           "disponible": true
         },
         {
           "id": "new_1782402138488_1",
           "nombre": "Pollo Salada",
           "descripcion": "",
-          "precio": 4500,
+          "precio": 4000,
           "disponible": true
         },
         {
           "id": "emp6",
           "nombre": "Tucumana",
           "descripcion": "",
-          "precio": 4500,
+          "precio": 4900,
           "disponible": true
         },
         {
           "id": "emp5",
           "nombre": "Vegetariana",
           "descripcion": "",
-          "precio": 4500,
+          "precio": 4900,
           "disponible": true
         }
       ]
