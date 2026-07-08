@@ -617,8 +617,8 @@
     },
     {
       "id": "vinos-organicos",
-      "nombre": "Vinos Orgánicos",
-      "nota": "BODEGA ARAUJO",
+      "nombre": "Vinos Orgánicos ( Bodega Araujo )",
+      "nota": null,
       "items": [
         {
           "id": "vo1",
