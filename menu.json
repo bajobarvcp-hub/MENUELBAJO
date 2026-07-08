@@ -538,14 +538,14 @@
       "items": [
         {
           "id": "vin1",
-          "nombre": "Tribu 3/4",
+          "nombre": "Tribu 3/4 ( Bodega Trivento )",
           "descripcion": "Malbec · Blanco Dulce",
           "precio": 12500,
           "disponible": true
         },
         {
           "id": "vin2",
-          "nombre": "Finjamos Demencia 3/4",
+          "nombre": "Finjamos Demencia 3/4 ( Bodega Trivento )",
           "descripcion": "Malbec · Blanco Dulce · Corte de Tintas",
           "precio": 15000,
           "disponible": true
