@@ -21,7 +21,7 @@
         {
           "id": "ent2",
           "nombre": "Ceviche de Langostinos",
-          "descripcion": "",
+          "descripcion": "Acompañado con pan de pizza.",
           "precio": 17000,
           "disponible": true
         },
