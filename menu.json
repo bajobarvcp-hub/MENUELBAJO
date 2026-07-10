@@ -317,7 +317,7 @@
           "nombre": "Milanesa a la Napolitana",
           "descripcion": "Ternera o suprema de pollo",
           "precio": 25000,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "new_1774558733161_1",
