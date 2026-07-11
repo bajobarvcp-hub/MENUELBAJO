@@ -19,13 +19,6 @@
           "disponible": true
         },
         {
-          "id": "new_1783601259032_1",
-          "nombre": "Gambas al Ajillo",
-          "descripcion": "Acompañado con pan de pizza.",
-          "precio": 23000,
-          "disponible": true
-        },
-        {
           "id": "ent2",
           "nombre": "Ceviche de Langostinos",
           "descripcion": "Acompañado con pan de pizza.",
@@ -307,7 +300,7 @@
       "items": [
         {
           "id": "min1",
-          "nombre": "Suprema de Pollo",
+          "nombre": "Milanesa de Ternera ó Suprema de Pollo",
           "descripcion": "",
           "precio": 20000,
           "disponible": true
@@ -317,7 +310,7 @@
           "nombre": "Milanesa a la Napolitana",
           "descripcion": "Ternera o suprema de pollo",
           "precio": 25000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "new_1774558733161_1",
