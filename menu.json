@@ -163,7 +163,7 @@
           "nombre": "Entraña a la Pimienta",
           "descripcion": "Entraña con crema de pimienta negra, acompañada de ensalada de rúcula y parmesano",
           "precio": 33000,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "che3",
