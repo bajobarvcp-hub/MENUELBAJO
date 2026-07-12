@@ -19,6 +19,13 @@
           "disponible": true
         },
         {
+          "id": "new_1783873506290_1",
+          "nombre": "Gambas al Ajillo.",
+          "descripcion": "Acompañado con pan de pizza.",
+          "precio": 23000,
+          "disponible": true
+        },
+        {
           "id": "ent2",
           "nombre": "Ceviche de Langostinos",
           "descripcion": "Acompañado con pan de pizza.",
@@ -51,13 +58,6 @@
           "nombre": "Papas Fritas con Cheddar",
           "descripcion": "",
           "precio": 12000,
-          "disponible": true
-        },
-        {
-          "id": "new_1783873506290_1",
-          "nombre": "Gambas al Ajillo.",
-          "descripcion": "Acompañado con pan de pizza.",
-          "precio": 23000,
           "disponible": true
         }
       ]
