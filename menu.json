@@ -52,6 +52,13 @@
           "descripcion": "",
           "precio": 12000,
           "disponible": true
+        },
+        {
+          "id": "new_1783952270477_1",
+          "nombre": "Gambas al Ajillo",
+          "descripcion": "Acompañado de pan de pizza.",
+          "precio": 0,
+          "disponible": true
         }
       ]
     },
