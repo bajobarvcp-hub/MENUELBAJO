@@ -19,13 +19,6 @@
           "disponible": true
         },
         {
-          "id": "new_1783873506290_1",
-          "nombre": "Gambas al Ajillo.",
-          "descripcion": "Acompañado con pan de pizza.",
-          "precio": 23000,
-          "disponible": false
-        },
-        {
           "id": "ent2",
           "nombre": "Ceviche de Langostinos",
           "descripcion": "Acompañado con pan de pizza.",
@@ -163,7 +156,7 @@
           "nombre": "Entraña a la Pimienta",
           "descripcion": "Entraña con crema de pimienta negra, acompañada de ensalada de rúcula y parmesano",
           "precio": 33000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "che3",
