@@ -240,7 +240,7 @@
           "nombre": "Lasagna",
           "descripcion": "Jamón, queso, bolognesa, acelga y salsa fileto",
           "precio": 27000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "pas5",
