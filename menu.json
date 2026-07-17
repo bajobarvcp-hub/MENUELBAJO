@@ -254,7 +254,7 @@
           "nombre": "Ñoquis de Papa con Ragú",
           "descripcion": "",
           "precio": 28000,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "new_1774559084770_2",
