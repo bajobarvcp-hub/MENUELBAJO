@@ -191,7 +191,7 @@
           "nombre": "Lenguado Rebozado",
           "descripcion": "Lenguado rebozado, acompañado de papas cuña y salsa brava.",
           "precio": 27000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "che7",
