@@ -177,7 +177,7 @@
           "nombre": "Merluza a los 4 Quesos",
           "descripcion": "Acompañada de chips de batata",
           "precio": 21000,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "che5",
