@@ -1493,14 +1493,14 @@
           "nombre": "Ensalada de Frutas",
           "descripcion": "",
           "precio": 6700,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "pos7",
           "nombre": "Macedonia",
           "descripcion": "",
           "precio": 9400,
-          "disponible": false
+          "disponible": true
         }
       ]
     },
