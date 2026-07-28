@@ -1458,7 +1458,7 @@
           "nombre": "Copa de Tiramisú Borghetti",
           "descripcion": "",
           "precio": 8500,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "pos2",
