@@ -478,7 +478,7 @@
           "nombre": "Vegetariana",
           "descripcion": "Tomate, muzzarella, vegetales grillados y aceitunas",
           "precio": 28500,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "piz8",
