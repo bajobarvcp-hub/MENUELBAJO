@@ -485,7 +485,7 @@
           "nombre": "Palmitos",
           "descripcion": "Tomate, muzzarella, palmitos, salsa golf y aceitunas",
           "precio": 28500,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "piz9",
