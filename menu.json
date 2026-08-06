@@ -834,42 +834,42 @@
           "id": "whi2",
           "nombre": "J&B",
           "descripcion": "",
-          "precio": 8500,
+          "precio": 9000,
           "disponible": true
         },
         {
           "id": "whi3",
           "nombre": "Jim Beam",
           "descripcion": "",
-          "precio": 12500,
+          "precio": 11500,
           "disponible": true
         },
         {
           "id": "whi1",
           "nombre": "Johnnie Walker Red Label",
           "descripcion": "",
-          "precio": 8500,
+          "precio": 9500,
           "disponible": true
         },
         {
           "id": "whi4",
           "nombre": "Johnnie Walker Black Label",
           "descripcion": "",
-          "precio": 13500,
+          "precio": 16000,
           "disponible": true
         },
         {
           "id": "whi5",
           "nombre": "Johnnie Walker Double Black",
           "descripcion": "",
-          "precio": 18500,
+          "precio": 19000,
           "disponible": true
         },
         {
           "id": "whi6",
           "nombre": "Chivas Regal",
           "descripcion": "",
-          "precio": 19500,
+          "precio": 19000,
           "disponible": true
         }
       ]
@@ -1065,21 +1065,21 @@
           "id": "tt1",
           "nombre": "Beefeater Tonic",
           "descripcion": "Gin Beefeater, Tónica y Limón",
-          "precio": 11600,
+          "precio": 12600,
           "disponible": true
         },
         {
           "id": "tt2",
           "nombre": "Tanqueray Tonic",
           "descripcion": "Gin Tanqueray, Tónica y Limón",
-          "precio": 12100,
+          "precio": 13000,
           "disponible": true
         },
         {
           "id": "tt3",
           "nombre": "Bulldog Gin Tonic",
           "descripcion": "Gin Bulldog, Tónica y Rodaja de Limón",
-          "precio": 15800,
+          "precio": 15000,
           "disponible": true
         },
         {
@@ -1513,21 +1513,21 @@
           "id": "sal1",
           "nombre": "Gaseosa 350cc",
           "descripcion": "",
-          "precio": 4200,
+          "precio": 4300,
           "disponible": true
         },
         {
           "id": "sal2",
           "nombre": "Gaseosa 500cc",
           "descripcion": "",
-          "precio": 5500,
+          "precio": 5600,
           "disponible": true
         },
         {
           "id": "sal3",
           "nombre": "Agua Saborizada 500cc",
           "descripcion": "",
-          "precio": 5500,
+          "precio": 5600,
           "disponible": true
         },
         {
