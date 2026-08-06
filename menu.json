@@ -631,21 +631,21 @@
           "id": "vo1",
           "nombre": "Laurita 3/4",
           "descripcion": "Rosado",
-          "precio": 18500,
+          "precio": 19000,
           "disponible": true
         },
         {
           "id": "vo2",
           "nombre": "Cask 3/4",
           "descripcion": "Malbec",
-          "precio": 22000,
+          "precio": 22500,
           "disponible": true
         },
         {
           "id": "vo3",
           "nombre": "Cask 3/4",
           "descripcion": "Chardonnay",
-          "precio": 22000,
+          "precio": 22500,
           "disponible": true
         },
         {
@@ -659,7 +659,7 @@
           "id": "vo5",
           "nombre": "Nucha 3/4",
           "descripcion": "Malbec",
-          "precio": 28000,
+          "precio": 28500,
           "disponible": true
         }
       ]
