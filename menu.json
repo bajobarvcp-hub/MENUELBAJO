@@ -415,7 +415,7 @@
           "nombre": "Vegetariano",
           "descripcion": "Pan árabe, vegetales grillados y gratinado con queso provolone (pimientos, cebolla, zanahorias, zapallito, berenjena) y rúcula",
           "precio": 19000,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "san13",
@@ -478,7 +478,7 @@
           "nombre": "Vegetariana",
           "descripcion": "Tomate, muzzarella, vegetales grillados y aceitunas",
           "precio": 28500,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "piz8",
