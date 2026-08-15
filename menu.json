@@ -1472,7 +1472,7 @@
           "nombre": "Brownie",
           "descripcion": "Tibio con Helado de Crema Americana",
           "precio": 12100,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "pos4",
