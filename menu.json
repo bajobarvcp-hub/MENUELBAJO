@@ -380,7 +380,7 @@
           "nombre": "Burger de Lomo",
           "descripcion": "Medallón de lomo 200g, cebolla caramelizada, cheddar, panceta y mayonesa casera",
           "precio": 22000,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "san8",
