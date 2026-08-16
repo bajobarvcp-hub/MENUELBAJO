@@ -387,14 +387,14 @@
           "nombre": "Lomo Completo",
           "descripcion": "Bife de lomo, lechuga, tomate, jamón, queso, huevo y mayonesa casera",
           "precio": 22000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "san9",
           "nombre": "Lomo El Bajo",
           "descripcion": "Bife de lomo, jamón, queso, huevo, panceta ahumada, pimientos asados y mayonesa casera",
           "precio": 24000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "san10",
