@@ -307,7 +307,14 @@
       "items": [
         {
           "id": "min1",
-          "nombre": "Milanesa de Ternera ó Suprema de Pollo",
+          "nombre": "Milanesa de Ternera ",
+          "descripcion": "",
+          "precio": 20000,
+          "disponible": true
+        },
+        {
+          "id": "new_1786982291072_2",
+          "nombre": "Suprema de Pollo",
           "descripcion": "",
           "precio": 20000,
           "disponible": true
@@ -315,7 +322,14 @@
         {
           "id": "min2",
           "nombre": "Milanesa a la Napolitana",
-          "descripcion": "Ternera o suprema de pollo",
+          "descripcion": "Milanesa de Ternera con salsa de tomate, jamón, muzzarella y orégano",
+          "precio": 25000,
+          "disponible": true
+        },
+        {
+          "id": "new_1786981747203_1",
+          "nombre": "Suprema de  Pollo Napolitana ",
+          "descripcion": "Suprema de Pollo con salsa de tomate, jamón, muzzarella y orégano",
           "precio": 25000,
           "disponible": true
         },
