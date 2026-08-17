@@ -205,7 +205,7 @@
           "nombre": "Menú Locro ",
           "descripcion": "Entrada: empanada tucumana. Principal: Locro. Incluye: copa de vino ó gaseosa.",
           "precio": 29000,
-          "disponible": false
+          "disponible": true
         }
       ]
     },
