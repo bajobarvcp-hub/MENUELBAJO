@@ -1386,7 +1386,7 @@
         {
           "id": "caf13",
           "nombre": "Submarino",
-          "descripcion": "",
+          "descripcion": "Leche, chocolate aguila y ralladura de chocolate ",
           "precio": 6500,
           "disponible": true
         },
@@ -1400,7 +1400,7 @@
         {
           "id": "caf15",
           "nombre": "Té Saborizado",
-          "descripcion": "",
+          "descripcion": "A elección.",
           "precio": 3200,
           "disponible": true
         },
@@ -1414,14 +1414,14 @@
         {
           "id": "caf17",
           "nombre": "Alfajor",
-          "descripcion": "",
+          "descripcion": "Maicena con dulce de leche (Hornet)",
           "precio": 5600,
           "disponible": true
         },
         {
           "id": "caf18",
           "nombre": "Mafalda",
-          "descripcion": "",
+          "descripcion": "Medialuna con jamón y queso",
           "precio": 3300,
           "disponible": true
         },
