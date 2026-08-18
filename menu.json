@@ -1351,28 +1351,28 @@
         {
           "id": "caf8",
           "nombre": "Cappuccino Jarro",
-          "descripcion": "",
+          "descripcion": "Café, crema de leche batida, canela y chocolate rallado ",
           "precio": 4900,
           "disponible": true
         },
         {
           "id": "caf9",
           "nombre": "Cappuccino Doble",
-          "descripcion": "",
+          "descripcion": "Café, crema de leche batida, canela y chocolate rallado",
           "precio": 8100,
           "disponible": true
         },
         {
           "id": "caf10",
           "nombre": "Irlandés Jarro",
-          "descripcion": "",
+          "descripcion": "Café, media medida de whiskey, crema de leche batida, canela y chocolate rallado ",
           "precio": 5300,
           "disponible": true
         },
         {
           "id": "caf11",
           "nombre": "Irlandés Doble",
-          "descripcion": "",
+          "descripcion": "Café, medida de whiskey, crema de leche batida, canela y chocolate rallado ",
           "precio": 8500,
           "disponible": true
         },
