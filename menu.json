@@ -1323,14 +1323,14 @@
         {
           "id": "caf4",
           "nombre": "Café con Leche",
-          "descripcion": "",
+          "descripcion": "Café con crema batida",
           "precio": 4800,
           "disponible": true
         },
         {
           "id": "caf5",
           "nombre": "Café con Crema Jarro",
-          "descripcion": "",
+          "descripcion": "Café con crema batida",
           "precio": 4800,
           "disponible": true
         },
@@ -1365,14 +1365,14 @@
         {
           "id": "caf10",
           "nombre": "Irlandés Jarro",
-          "descripcion": "Café, media medida de whiskey, crema de leche batida, canela y chocolate rallado ",
+          "descripcion": "Café, whiskey, crema de leche batida, canela y chocolate rallado ",
           "precio": 5300,
           "disponible": true
         },
         {
           "id": "caf11",
           "nombre": "Irlandés Doble",
-          "descripcion": "Café, medida de whiskey, crema de leche batida, canela y chocolate rallado ",
+          "descripcion": "Café, whiskey, crema de leche batida, canela y chocolate rallado ",
           "precio": 8500,
           "disponible": true
         },
