@@ -14,7 +14,7 @@
         {
           "id": "ent1",
           "nombre": "Porción de Rabas a la Romana   ",
-          "descripcion": "Acompañada con salsa tártara ",
+          "descripcion": "Acompañada de salsa tártara ",
           "precio": 25500,
           "disponible": true
         },
@@ -35,7 +35,7 @@
         {
           "id": "ent3",
           "nombre": "Tiras de Calamar",
-          "descripcion": "Acompañada con salsa tártara",
+          "descripcion": "Acompañada de salsa tártara",
           "precio": 17000,
           "disponible": true
         },
