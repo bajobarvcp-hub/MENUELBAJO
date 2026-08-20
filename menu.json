@@ -626,13 +626,6 @@
           "descripcion": "Cabernet",
           "precio": 15000,
           "disponible": true
-        },
-        {
-          "id": "vin11",
-          "nombre": "Norton Mil Rosas 3/4",
-          "descripcion": "",
-          "precio": 9000,
-          "disponible": true
         }
       ]
     },
