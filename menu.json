@@ -726,17 +726,17 @@
           "disponible": true
         },
         {
+          "id": "cer4",
+          "nombre": "Imperial Stout 473cc",
+          "descripcion": "",
+          "precio": 7200,
+          "disponible": true
+        },
+        {
           "id": "cer3",
           "nombre": "Imperial Stout 1 Lt",
           "descripcion": "",
           "precio": 12400,
-          "disponible": true
-        },
-        {
-          "id": "cer4",
-          "nombre": "Imperial Stout / Amstel 473cc",
-          "descripcion": "",
-          "precio": 7200,
           "disponible": true
         },
         {
@@ -1323,7 +1323,7 @@
         {
           "id": "caf4",
           "nombre": "Café con Leche",
-          "descripcion": "Café con crema batida",
+          "descripcion": "",
           "precio": 4800,
           "disponible": true
         },
@@ -1337,7 +1337,7 @@
         {
           "id": "caf6",
           "nombre": "Café con Crema Doble",
-          "descripcion": "",
+          "descripcion": "Café con crema batida",
           "precio": 6800,
           "disponible": true
         },
