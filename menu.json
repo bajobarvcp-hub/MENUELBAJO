@@ -768,17 +768,24 @@
           "disponible": true
         },
         {
-          "id": "cer9",
-          "nombre": "Heineken 1 Lt",
+          "id": "new_1787327961106_1",
+          "nombre": "Heineken 473cc",
           "descripcion": "",
-          "precio": 15700,
+          "precio": 9200,
           "disponible": true
         },
         {
           "id": "cer10",
-          "nombre": "Heineken S/alcohol ",
+          "nombre": "Heineken S/alcohol 473cc",
           "descripcion": "",
           "precio": 9200,
+          "disponible": true
+        },
+        {
+          "id": "cer9",
+          "nombre": "Heineken 1 Lt",
+          "descripcion": "",
+          "precio": 15700,
           "disponible": true
         },
         {
