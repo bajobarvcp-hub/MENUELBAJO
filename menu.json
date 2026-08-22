@@ -1553,28 +1553,28 @@
       "items": [
         {
           "id": "sal1",
-          "nombre": "Gaseosa 350cc",
+          "nombre": "Gaseosa 350cc (linea Pepsi)",
           "descripcion": "",
           "precio": 4300,
           "disponible": true
         },
         {
           "id": "sal2",
-          "nombre": "Gaseosa 500cc",
+          "nombre": "Gaseosa 500cc (linea Pepsi)",
           "descripcion": "",
           "precio": 5600,
           "disponible": true
         },
         {
           "id": "sal3",
-          "nombre": "Agua Saborizada 500cc",
+          "nombre": "Agua Saborizada Levite 500cc ",
           "descripcion": "",
           "precio": 5600,
           "disponible": true
         },
         {
           "id": "sal4",
-          "nombre": "Agua con o sin Gas 500cc",
+          "nombre": "Agua con o sin Gas 500cc (Villavicencio)",
           "descripcion": "",
           "precio": 5000,
           "disponible": true
