@@ -1176,28 +1176,28 @@
         {
           "id": "tf1",
           "nombre": "Borghetti Frozen",
-          "descripcion": "Licor de Café Borghetti, helado Americana y Chocolate Águila",
+          "descripcion": "Licor de Café Borghetti, Helado Americana y Chocolate Águila",
           "precio": 11600,
           "disponible": true
         },
         {
           "id": "tf2",
           "nombre": "Baileys Black",
-          "descripcion": "Baileys, Havana 3 años, helado Americana y Chocolate Águila",
+          "descripcion": "Baileys, Havana 3 años, Helado Americana y Chocolate Águila",
           "precio": 11600,
           "disponible": true
         },
         {
           "id": "tf3",
           "nombre": "Excelente",
-          "descripcion": "Baileys, licor de Menta, helado Americana y Chocolate Águila",
+          "descripcion": "Baileys, licor de Menta, Helado Americana y Chocolate Águila",
           "precio": 11600,
           "disponible": true
         },
         {
           "id": "tf4",
           "nombre": "Sudáfrica",
-          "descripcion": "Vodka Sernova, Baileys, Licor de Café Borghetti, helado de Dulce de Leche",
+          "descripcion": "Vodka Sernova, Baileys, Licor de Café Borghetti, Helado de Dulce de Leche",
           "precio": 11600,
           "disponible": true
         },
