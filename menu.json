@@ -1449,14 +1449,14 @@
         {
           "id": "caf18",
           "nombre": "Mafalda",
-          "descripcion": "Medialuna con jamón y queso",
+          "descripcion": "Medialuna caliente con jamón y queso",
           "precio": 3300,
           "disponible": true
         },
         {
           "id": "caf19",
           "nombre": "Porción de Torta",
-          "descripcion": "",
+          "descripcion": "A elección.",
           "precio": 12100,
           "disponible": true
         }
