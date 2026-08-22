@@ -40,6 +40,13 @@
           "disponible": true
         },
         {
+          "id": "new_1787407996689_1",
+          "nombre": "Fish and Chip ",
+          "descripcion": "Acompañado de batatas baston con mayonesa de verdeo ",
+          "precio": 17000,
+          "disponible": true
+        },
+        {
           "id": "ent4",
           "nombre": "Porción de Papas Fritas",
           "descripcion": "",
