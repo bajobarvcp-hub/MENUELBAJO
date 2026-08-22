@@ -945,14 +945,14 @@
         {
           "id": "tra4",
           "nombre": "Aperol Spritz",
-          "descripcion": "Aperol, Espumante, dash de soda y media rodaja de naranja",
+          "descripcion": "Aperol, Espumante, dash de soda y rodaja de naranja",
           "precio": 10900,
           "disponible": true
         },
         {
           "id": "tra5",
           "nombre": "Jarra Spritz",
-          "descripcion": "Aperol, jugo de Naranja y rodajas de Naranjas frescas",
+          "descripcion": "Aperol, jugo de Naranja y rodaja de Naranjas frescas",
           "precio": 23000,
           "disponible": true
         },
@@ -973,7 +973,7 @@
         {
           "id": "tra8",
           "nombre": "Carpano Cup",
-          "descripcion": "Vermut Carpano Rosso, Gin, Gaseosa Lima Limón y Twist de Pepino",
+          "descripcion": "Vermut Carpano Rosso, Gin Blu, Gaseosa Lima Limón y Twist de Pepino",
           "precio": 10500,
           "disponible": true
         },
@@ -994,7 +994,7 @@
         {
           "id": "tra11",
           "nombre": "Cynar Pomelo",
-          "descripcion": "Cynar 70, jugo o gaseosa de Pomelo y Rodaja Pomelo",
+          "descripcion": "Cynar 70, gaseosa de Pomelo y Rodaja Pomelo fresco",
           "precio": 9200,
           "disponible": true
         },
@@ -1064,7 +1064,7 @@
         {
           "id": "tb8",
           "nombre": "Gancia Batido",
-          "descripcion": "Gancia y limón",
+          "descripcion": "Gancia, Azúcar y Limón",
           "precio": 8500,
           "disponible": true
         },
