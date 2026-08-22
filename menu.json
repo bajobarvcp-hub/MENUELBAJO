@@ -1626,7 +1626,7 @@
     {
       "id": "smoothies",
       "nombre": "Smoothies",
-      "nota": "Preparados con jugo de naranja artificial. ",
+      "nota": "Preparados con jugo de naranja artificial con azúcar.",
       "items": [
         {
           "id": "sm1",
