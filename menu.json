@@ -1358,14 +1358,14 @@
         {
           "id": "caf5",
           "nombre": "Café con Crema Jarro",
-          "descripcion": "Café con crema batida",
+          "descripcion": "Café con crema de leche batida",
           "precio": 4800,
           "disponible": true
         },
         {
           "id": "caf6",
           "nombre": "Café con Crema Doble",
-          "descripcion": "Café con crema batida",
+          "descripcion": "Café con crema de leche batida",
           "precio": 6800,
           "disponible": true
         },
