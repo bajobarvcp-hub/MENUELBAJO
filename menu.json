@@ -1120,14 +1120,14 @@
         {
           "id": "tt3",
           "nombre": "Bulldog Gin Tonic",
-          "descripcion": "Gin Bulldog, Tónica y Rodaja de Limón",
+          "descripcion": "Gin Bulldog, Tónica y Limón",
           "precio": 15000,
           "disponible": true
         },
         {
           "id": "tt4",
           "nombre": "Blu Gin Tonic",
-          "descripcion": "Spirito Blu Gin, Tónica, Piel de Limón",
+          "descripcion": "Spirito Blu Gin, Tónica y Limón",
           "precio": 11600,
           "disponible": true
         },
