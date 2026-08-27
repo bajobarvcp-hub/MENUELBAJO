@@ -1270,6 +1270,13 @@
           "descripcion": "",
           "precio": 13000,
           "disponible": true
+        },
+        {
+          "id": "new_1787851551218_2",
+          "nombre": "Sernova Candy Glow c/  Speed",
+          "descripcion": "",
+          "precio": 8500,
+          "disponible": true
         }
       ]
     },
