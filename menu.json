@@ -1251,6 +1251,13 @@
           "disponible": true
         },
         {
+          "id": "new_1787851455862_1",
+          "nombre": "Sernova Ice Pop c/ Speed ",
+          "descripcion": "",
+          "precio": 8500,
+          "disponible": true
+        },
+        {
           "id": "ts6",
           "nombre": "Absolut c/ Speed",
           "descripcion": "",
@@ -1262,13 +1269,6 @@
           "nombre": "Jagermeister c/ Speed",
           "descripcion": "",
           "precio": 13000,
-          "disponible": true
-        },
-        {
-          "id": "new_1787851455862_1",
-          "nombre": "Sernova Ice Pop c/ Speed ",
-          "descripcion": "",
-          "precio": 8500,
           "disponible": true
         }
       ]
