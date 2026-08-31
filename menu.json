@@ -257,6 +257,13 @@
           "disponible": true
         },
         {
+          "id": "new_1788212307976_3",
+          "nombre": "Panzottis de Salmón",
+          "descripcion": "Salmón y puerro, con crema de hierbas",
+          "precio": 28000,
+          "disponible": true
+        },
+        {
           "id": "pas5",
           "nombre": "Sorrentino Ojo de Bife al Horno",
           "descripcion": "Ojo de bife braseado en vegetales, caldo y vino blanco, al horno con crema de roquefort",
@@ -275,13 +282,6 @@
           "nombre": "Salsas",
           "descripcion": " Fileto · Rosa · Bolognesa · Crema de hierbas",
           "precio": 0,
-          "disponible": true
-        },
-        {
-          "id": "new_1788212307976_3",
-          "nombre": "Panzottis de Salmón",
-          "descripcion": "Salmón y puerro, con crema de hierbas",
-          "precio": 28000,
           "disponible": true
         }
       ]
