@@ -19,6 +19,13 @@
           "disponible": true
         },
         {
+          "id": "new_1788210517312_1",
+          "nombre": "Provoleta",
+          "descripcion": "250Grs. de provoleta, con rúcula y jamón crudo",
+          "precio": 0,
+          "disponible": true
+        },
+        {
           "id": "new_1783952270477_1",
           "nombre": "Gambas al Ajillo",
           "descripcion": "Acompañado de pan de pizza.",
