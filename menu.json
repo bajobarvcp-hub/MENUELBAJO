@@ -22,14 +22,14 @@
           "id": "new_1788210517312_1",
           "nombre": "Provoleta",
           "descripcion": "250Grs. de provoleta, con rúcula y jamón crudo",
-          "precio": 0,
+          "precio": 20000,
           "disponible": true
         },
         {
           "id": "new_1788210569211_2",
           "nombre": "Bastones de Muzzarella",
           "descripcion": "Cuatro unidades de bastones de Muzzarella, acompañados con salsa brava",
-          "precio": 0,
+          "precio": 18000,
           "disponible": true
         },
         {
