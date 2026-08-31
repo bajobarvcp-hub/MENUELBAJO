@@ -261,7 +261,7 @@
           "nombre": "Panzottis de Salmón",
           "descripcion": "Salmón y puerro, con crema de hierbas",
           "precio": 28000,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "pas5",
