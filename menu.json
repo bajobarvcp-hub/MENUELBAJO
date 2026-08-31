@@ -23,14 +23,7 @@
           "nombre": "Gambas al Ajillo",
           "descripcion": "Acompañado de pan de pizza.",
           "precio": 23000,
-          "disponible": false
-        },
-        {
-          "id": "ent2",
-          "nombre": "Ceviche de Langostinos",
-          "descripcion": "Acompañado de pan de pizza.",
-          "precio": 17000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "ent3",
@@ -140,7 +133,7 @@
         {
           "id": "pic2",
           "nombre": "Picada Playera",
-          "descripcion": "Rabas, bastones de trucha, langostinos rebozados, ceviche de langostinos, cazuela de salsa tártara y papas fritas",
+          "descripcion": "Rabas, bastones de trucha, langostinos rebozados, bastones de lenguado rebozado, cazuela de salsa tártara y papas fritas",
           "precio": 54000,
           "disponible": true
         },
