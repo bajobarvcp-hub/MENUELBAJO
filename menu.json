@@ -26,6 +26,13 @@
           "disponible": true
         },
         {
+          "id": "new_1788210569211_2",
+          "nombre": "Bastones de Muzzarella",
+          "descripcion": "Cuatro unidades de bastones de Muzzarella, acompañados con salsa brava",
+          "precio": 0,
+          "disponible": true
+        },
+        {
           "id": "new_1783952270477_1",
           "nombre": "Gambas al Ajillo",
           "descripcion": "Acompañado de pan de pizza.",
@@ -266,7 +273,14 @@
         {
           "id": "new_1774559084770_2",
           "nombre": "Salsas",
-          "descripcion": " Fileto · Rosa · Bolognesa",
+          "descripcion": " Fileto · Rosa · Bolognesa · Crema de hierbas",
+          "precio": 0,
+          "disponible": true
+        },
+        {
+          "id": "new_1788212307976_3",
+          "nombre": "Panzottis de Salmón",
+          "descripcion": "Salmón y puerro, con crema de hierbas",
           "precio": 0,
           "disponible": true
         }
