@@ -142,7 +142,7 @@
           "nombre": "Picada Playera",
           "descripcion": "Rabas, bastones de trucha, langostinos rebozados, ceviche de langostinos, cazuela de salsa tártara y papas fritas",
           "precio": 54000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "pic3",
