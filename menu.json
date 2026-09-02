@@ -170,7 +170,7 @@
           "nombre": "Salmón al Roquefort",
           "descripcion": "Salmón al grill con crema roquefort sobre vegetales grillados",
           "precio": 36500,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "che2",
