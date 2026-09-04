@@ -950,6 +950,13 @@
           "disponible": true
         },
         {
+          "id": "new_1788534925129_1",
+          "nombre": "Gancia ",
+          "descripcion": "Americano Gancia, soda o 7up con rodaja de limón",
+          "precio": 8500,
+          "disponible": true
+        },
+        {
           "id": "tra4",
           "nombre": "Aperol Spritz",
           "descripcion": "Aperol, Espumante, dash de soda y rodaja de naranja",
@@ -1010,13 +1017,6 @@
           "nombre": "Jarra Americano",
           "descripcion": "Americano Gancia, gaseosa Pomelo, Rodajas de Pomelo rosado fresco y Menta",
           "precio": 19000,
-          "disponible": true
-        },
-        {
-          "id": "new_1788534925129_1",
-          "nombre": "Gancia ",
-          "descripcion": "Americano Gancia, soda o 7up con rodaja de limón",
-          "precio": 8500,
           "disponible": true
         }
       ]
