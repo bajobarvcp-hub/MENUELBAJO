@@ -261,7 +261,7 @@
           "nombre": "Raviolon de Salmón",
           "descripcion": "Salmón y puerro, con crema de hierbas",
           "precio": 28000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "pas5",
