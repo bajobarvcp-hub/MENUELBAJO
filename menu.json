@@ -219,7 +219,7 @@
           "nombre": "  Menú de Patel de Cordero Patagonico",
           "descripcion": "Cordero patagonico y calabaza caramelizada. Incluye copa de vino (blaco ó tinto)",
           "precio": 29000,
-          "disponible": true
+          "disponible": false
         }
       ]
     },
