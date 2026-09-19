@@ -216,10 +216,10 @@
         },
         {
           "id": "new_1781364590078_1",
-          "nombre": "Menú Locro ",
-          "descripcion": "Entrada: empanada tucumana. Principal: Locro. Incluye: copa de vino ó gaseosa.",
-          "precio": 29000,
-          "disponible": false
+          "nombre": "  Menú de Patel de Cordero",
+          "descripcion": "Carne de coderero desmenuzada con puré de calabaza caramelizada. Icluye copa de vino (blaco ó tinto)",
+          "precio": 30000,
+          "disponible": true
         }
       ]
     },
