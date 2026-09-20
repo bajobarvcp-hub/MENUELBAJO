@@ -303,7 +303,7 @@
           "nombre": "Ensalada de Mar",
           "descripcion": "Colchón de rúcula y lechuga, langostinos rebozados, tomate y panceta ahumada",
           "precio": 25000,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "ens3",
