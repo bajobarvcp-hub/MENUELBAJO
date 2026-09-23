@@ -679,14 +679,7 @@
         {
           "id": "vo2",
           "nombre": "Cask 3/4",
-          "descripcion": "Malbec",
-          "precio": 22500,
-          "disponible": true
-        },
-        {
-          "id": "vo3",
-          "nombre": "Cask 3/4",
-          "descripcion": "Chardonnay",
+          "descripcion": "Malbec · Chardonnay",
           "precio": 22500,
           "disponible": true
         },
