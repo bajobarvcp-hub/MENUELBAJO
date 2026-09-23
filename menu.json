@@ -206,13 +206,6 @@
           "descripcion": "Chorizo colorado, chorizo de cerdo, carne vacuna, panceta ahumada, lentejas cocidas en salsa",
           "precio": 23000,
           "disponible": true
-        },
-        {
-          "id": "new_1781364590078_1",
-          "nombre": "  Menú de Patel de Cordero Patagonico",
-          "descripcion": "Cordero patagonico y calabaza caramelizada. Incluye copa de vino (blaco ó tinto)",
-          "precio": 29000,
-          "disponible": false
         }
       ]
     },
