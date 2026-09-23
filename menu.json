@@ -633,6 +633,34 @@
           "descripcion": "Cabernet",
           "precio": 15000,
           "disponible": true
+        },
+        {
+          "id": "new_1790173176352_1",
+          "nombre": "Finca Magnolia",
+          "descripcion": "Malbec · Syrah · Cabernet Sauvignon · Blend de Blancas · Bonarda Rosé · Blanco Dulce",
+          "precio": 0,
+          "disponible": false
+        },
+        {
+          "id": "new_1790173407849_2",
+          "nombre": "Finca Magnolia Reserva",
+          "descripcion": "Malbec · Cabernet Sauvignon",
+          "precio": 0,
+          "disponible": false
+        },
+        {
+          "id": "new_1790173446668_3",
+          "nombre": "Alta Magnolia",
+          "descripcion": "Malbec · Syrah",
+          "precio": 0,
+          "disponible": false
+        },
+        {
+          "id": "new_1790173478395_4",
+          "nombre": "Los Helechos",
+          "descripcion": "Malbec de Malbecs · Malbec Reserva · Cabernet Sauvignon Reseva",
+          "precio": 0,
+          "disponible": false
         }
       ]
     },
@@ -710,6 +738,20 @@
           "descripcion": "Brut Nature",
           "precio": 18500,
           "disponible": true
+        },
+        {
+          "id": "new_1790173583913_5",
+          "nombre": "Dilema",
+          "descripcion": "Blanco Dulce · Rosado Dulce",
+          "precio": 0,
+          "disponible": false
+        },
+        {
+          "id": "new_1790173585737_6",
+          "nombre": "Finca Magnolia",
+          "descripcion": "Pinot Noir Extra Brut ",
+          "precio": 0,
+          "disponible": false
         }
       ]
     },
