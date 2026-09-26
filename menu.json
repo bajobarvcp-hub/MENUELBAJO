@@ -701,8 +701,8 @@
           "id": "new_1790173583913_5",
           "nombre": "Dilema",
           "descripcion": "Blanco Dulce · Rosado Dulce",
-          "precio": 0,
-          "disponible": false
+          "precio": 13500,
+          "disponible": true
         },
         {
           "id": "new_1790173585737_6",
