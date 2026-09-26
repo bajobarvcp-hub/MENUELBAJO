@@ -568,29 +568,29 @@
           "id": "new_1790173176352_1",
           "nombre": "Finca Magnolia",
           "descripcion": "Malbec · Syrah · Cabernet Sauvignon · Blend de Blancas · Bonarda Rosé · Blanco Dulce",
-          "precio": 18000,
-          "disponible": true
+          "precio": 0,
+          "disponible": false
         },
         {
           "id": "new_1790173407849_2",
           "nombre": "Finca Magnolia Negra Reserva",
           "descripcion": "Malbec · Cabernet Sauvignon",
-          "precio": 22200,
-          "disponible": true
+          "precio": 0,
+          "disponible": false
         },
         {
           "id": "new_1790173446668_3",
           "nombre": "Alta Magnolia",
           "descripcion": "Malbec Syrah",
-          "precio": 28000,
-          "disponible": true
+          "precio": 0,
+          "disponible": false
         },
         {
           "id": "new_1790173478395_4",
           "nombre": "Los Helechos",
           "descripcion": "Malbec de Malbecs · Malbec Reserva · Cabernet Sauvignon Reseva",
-          "precio": 35000,
-          "disponible": true
+          "precio": 0,
+          "disponible": false
         },
         {
           "id": "vin1",
@@ -701,8 +701,8 @@
           "id": "new_1790173583913_5",
           "nombre": "Dilema",
           "descripcion": "Blanco Dulce · Rosado Dulce",
-          "precio": 13500,
-          "disponible": true
+          "precio": 0,
+          "disponible": false
         },
         {
           "id": "new_1790173585737_6",
