@@ -673,28 +673,28 @@
           "id": "vo1",
           "nombre": "Laurita 3/4",
           "descripcion": "Rosado",
-          "precio": 19000,
+          "precio": 15600,
           "disponible": true
         },
         {
           "id": "vo2",
           "nombre": "Cask 3/4",
           "descripcion": "Malbec · Chardonnay",
-          "precio": 22500,
+          "precio": 18500,
           "disponible": true
         },
         {
           "id": "vo4",
           "nombre": "Mimi 3/4",
           "descripcion": "Bi Varietal Malbec Merlot",
-          "precio": 25500,
+          "precio": 21200,
           "disponible": true
         },
         {
           "id": "vo5",
           "nombre": "Nucha 3/4",
           "descripcion": "Malbec",
-          "precio": 28500,
+          "precio": 23700,
           "disponible": true
         }
       ]
