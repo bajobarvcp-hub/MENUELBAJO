@@ -631,7 +631,7 @@
           "id": "vin5",
           "nombre": "Trivento Private Reserve 3/4",
           "descripcion": "Malbec .",
-          "precio": 22000,
+          "precio": 23000,
           "disponible": true
         },
         {
@@ -729,7 +729,7 @@
           "id": "esp2",
           "nombre": "Trivento Cuveé Exceptionnelle 750cc",
           "descripcion": "Brut Nature",
-          "precio": 22500,
+          "precio": 23000,
           "disponible": true
         },
         {
