@@ -215,13 +215,6 @@
       "nota": null,
       "items": [
         {
-          "id": "pas1",
-          "nombre": "Ravioli Capresse Frito",
-          "descripcion": "",
-          "precio": 25000,
-          "disponible": true
-        },
-        {
           "id": "pas2",
           "nombre": "Sorrentinos de Jamón y Queso",
           "descripcion": "",
