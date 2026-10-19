@@ -86,7 +86,7 @@
           "nombre": "Jamón y Queso",
           "descripcion": "",
           "precio": 4000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "emp2",
