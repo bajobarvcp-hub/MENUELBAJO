@@ -170,7 +170,7 @@
           "nombre": "Entraña a la Pimienta",
           "descripcion": "Entraña con crema de pimienta negra, acompañada de ensalada de rúcula y parmesano",
           "precio": 33000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "che3",
@@ -205,7 +205,7 @@
           "nombre": "Guiso de Lenteja",
           "descripcion": "Chorizo colorado, chorizo de cerdo, carne vacuna, panceta ahumada, lentejas cocidas en salsa",
           "precio": 23000,
-          "disponible": true
+          "disponible": false
         }
       ]
     },
