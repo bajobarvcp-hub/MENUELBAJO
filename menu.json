@@ -142,7 +142,7 @@
           "nombre": "Picada Playera",
           "descripcion": "Rabas a la romana, bastones de salmón, langostinos y lenguado rebozados, cazuela de salsa tártara y papas fritas",
           "precio": 54000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "pic3",
