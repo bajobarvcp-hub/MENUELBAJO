@@ -449,105 +449,105 @@
           "id": "piz1",
           "nombre": "El Bajo",
           "descripcion": "Tomate, muzzarella, queso azul, panceta ahumada, morrones y aceitunas",
-          "precio": 28500,
+          "precio": 32000,
           "disponible": true
         },
         {
           "id": "piz2",
           "nombre": "Pollo BBQ",
           "descripcion": "Tomate, muzzarella, dados de pollo salteados en salsa BBQ, morrones y aceitunas",
-          "precio": 28500,
+          "precio": 32000,
           "disponible": true
         },
         {
           "id": "piz3",
           "nombre": "Mediterránea",
           "descripcion": "Tomate, muzzarella, salteado de champiñones con panceta ahumada y aceitunas",
-          "precio": 28500,
+          "precio": 32000,
           "disponible": true
         },
         {
           "id": "piz4",
           "nombre": "4 Quesos",
           "descripcion": "Tomate, muzzarella, provolone, reggianito, queso azul y aceitunas",
-          "precio": 28500,
+          "precio": 32000,
           "disponible": true
         },
         {
           "id": "piz5",
           "nombre": "Siciliana",
           "descripcion": "Tomate, muzzarella, tomate, anchoas, champiñones y aceitunas",
-          "precio": 28500,
+          "precio": 32000,
           "disponible": true
         },
         {
           "id": "piz6",
           "nombre": "Hawaiana",
           "descripcion": "Tomate, muzzarella, jamón cocido, ananá, azúcar negra y aceitunas",
-          "precio": 28500,
+          "precio": 32000,
           "disponible": true
         },
         {
           "id": "piz7",
           "nombre": "Vegetariana",
           "descripcion": "Tomate, muzzarella, vegetales grillados y aceitunas",
-          "precio": 28500,
+          "precio": 32000,
           "disponible": true
         },
         {
           "id": "piz8",
           "nombre": "Palmitos",
           "descripcion": "Tomate, muzzarella, palmitos, salsa golf y aceitunas",
-          "precio": 28500,
+          "precio": 32000,
           "disponible": true
         },
         {
           "id": "piz9",
           "nombre": "Rúcula",
           "descripcion": "Tomate, muzzarella, rúcula, jamón crudo, queso parmesano y aceitunas",
-          "precio": 28500,
+          "precio": 32000,
           "disponible": true
         },
         {
           "id": "piz11",
           "nombre": "Muzzarella",
           "descripcion": "Tomate, muzzarella y aceitunas",
-          "precio": 23000,
+          "precio": 26000,
           "disponible": true
         },
         {
           "id": "piz12",
           "nombre": "Especial",
           "descripcion": "Tomate, muzzarella, jamón cocido, morrones y aceitunas",
-          "precio": 27000,
+          "precio": 30000,
           "disponible": true
         },
         {
           "id": "piz13",
           "nombre": "Napolitana",
           "descripcion": "Tomate, muzzarella, tomate fresco, provenzal y aceitunas",
-          "precio": 27000,
+          "precio": 30000,
           "disponible": true
         },
         {
           "id": "piz14",
           "nombre": "Provolone",
           "descripcion": "Tomate, muzzarella, queso provolone gratinado y aceitunas",
-          "precio": 27000,
+          "precio": 30000,
           "disponible": true
         },
         {
           "id": "piz15",
           "nombre": "Fugazzetta",
           "descripcion": "Tomate, muzzarella, cebolla salteada y aceitunas",
-          "precio": 27000,
+          "precio": 30000,
           "disponible": true
         },
         {
           "id": "piz10",
           "nombre": "Pizza Combinada",
           "descripcion": "Dos variedades de pizza a elección",
-          "precio": 28500,
+          "precio": 32000,
           "disponible": true
         }
       ]
