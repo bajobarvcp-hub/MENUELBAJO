@@ -21,14 +21,14 @@
         {
           "id": "new_1788210517312_1",
           "nombre": "Provoleta",
-          "descripcion": "250Grs. de provoleta, con rúcula y jamón crudo",
+          "descripcion": "250 grs de provoleta con rúcula, jamón crudo y mermelada de tomate.",
           "precio": 20000,
           "disponible": true
         },
         {
           "id": "new_1788210569211_2",
           "nombre": "Bastones de Muzzarella",
-          "descripcion": "Cuatro unidades de bastones de Muzzarella, acompañados con salsa brava",
+          "descripcion": "Cuatro unidades de bastones de Muzzarella, acompañados con salsa brava.",
           "precio": 18000,
           "disponible": true
         },
@@ -42,7 +42,7 @@
         {
           "id": "ent3",
           "nombre": "Tiras de Calamar",
-          "descripcion": "Acompañada de salsa tártara",
+          "descripcion": "Acompañada de salsa tártara.",
           "precio": 19000,
           "disponible": true
         },
@@ -63,7 +63,7 @@
         {
           "id": "ent5",
           "nombre": "Papas Fritas Gratinadas",
-          "descripcion": "Con muzzarella y panceta ahumada",
+          "descripcion": "Con muzzarella y panceta ahumada.",
           "precio": 12000,
           "disponible": true
         },
