@@ -23,7 +23,7 @@
           "nombre": "Provoleta",
           "descripcion": "250 grs de provoleta con rúcula, jamón crudo y mermelada de tomate.",
           "precio": 20000,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "new_1788210569211_2",
