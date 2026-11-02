@@ -23,7 +23,7 @@
           "nombre": "Provoleta",
           "descripcion": "250 grs de provoleta con rúcula, jamón crudo y mermelada de tomate.",
           "precio": 20000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "new_1788210569211_2",
@@ -37,7 +37,7 @@
           "nombre": "Gambas al Ajillo",
           "descripcion": "Acompañado de pan de pizza.",
           "precio": 23000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "ent3",
