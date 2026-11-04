@@ -85,7 +85,7 @@
           "id": "emp1",
           "nombre": "Jamón y Queso",
           "descripcion": "",
-          "precio": 4000,
+          "precio": 4100,
           "disponible": true
         },
         {
@@ -106,7 +106,7 @@
           "id": "new_1782402138488_1",
           "nombre": "Pollo Salada",
           "descripcion": "",
-          "precio": 4000,
+          "precio": 4100,
           "disponible": true
         },
         {
@@ -351,21 +351,21 @@
           "id": "san1",
           "nombre": "Tostado",
           "descripcion": "Pan de miga, jamón cocido, queso tybo y mayonesa",
-          "precio": 13000,
+          "precio": 14000,
           "disponible": true
         },
         {
           "id": "san2",
           "nombre": "Tostado de Baguetín",
           "descripcion": "Jamón cocido y queso tybo",
-          "precio": 13000,
+          "precio": 14000,
           "disponible": true
         },
         {
           "id": "san3",
           "nombre": "Tostado El Bajo",
           "descripcion": "Pan de campo, jamón, queso y mayonesa",
-          "precio": 16000,
+          "precio": 17000,
           "disponible": true
         },
         {
@@ -435,7 +435,7 @@
           "id": "san13",
           "nombre": "Sándwich de Mila/Suprema",
           "descripcion": "Milanesa de ternera o suprema de pollo, lechuga, tomate, jamón, queso, huevo y mayonesa casera",
-          "precio": 21500,
+          "precio": 22000,
           "disponible": true
         }
       ]
