@@ -867,17 +867,17 @@
       "items": [
         {
           "id": "cho1",
-          "nombre": "Amstel 250cc",
+          "nombre": "Imperial Lager 250cc",
           "descripcion": "",
-          "precio": 4600,
-          "disponible": false
+          "precio": 4800,
+          "disponible": true
         },
         {
           "id": "cho2",
-          "nombre": "Amstel 500cc",
+          "nombre": "Imperial Lager 500cc",
           "descripcion": "",
-          "precio": 7500,
-          "disponible": false
+          "precio": 8500,
+          "disponible": true
         },
         {
           "id": "cho3",
