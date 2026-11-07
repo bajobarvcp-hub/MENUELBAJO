@@ -870,14 +870,14 @@
           "nombre": "Imperial Lager 250cc",
           "descripcion": "",
           "precio": 4800,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "cho2",
           "nombre": "Imperial Lager 500cc",
           "descripcion": "",
           "precio": 8500,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "cho3",
