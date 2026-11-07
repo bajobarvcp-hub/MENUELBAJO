@@ -877,7 +877,7 @@
           "nombre": "Imperial Lager 500cc",
           "descripcion": "",
           "precio": 8500,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "cho3",
