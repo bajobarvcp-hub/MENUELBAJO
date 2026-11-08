@@ -1682,7 +1682,7 @@
           "nombre": "1 · Cool Mango",
           "descripcion": "Mango · Durazno · Frutilla — Rico en vitaminas C y E",
           "precio": 0,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "sm2",
