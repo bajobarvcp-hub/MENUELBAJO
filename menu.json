@@ -870,7 +870,7 @@
           "nombre": "Imperial Lager 250cc",
           "descripcion": "",
           "precio": 4800,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "cho2",
