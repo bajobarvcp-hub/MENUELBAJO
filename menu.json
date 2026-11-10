@@ -121,7 +121,7 @@
           "nombre": "Vegetariana",
           "descripcion": "",
           "precio": 4900,
-          "disponible": false
+          "disponible": true
         }
       ]
     },
