@@ -506,7 +506,7 @@
           "nombre": "Rúcula",
           "descripcion": "Tomate, muzzarella, rúcula, jamón crudo, queso parmesano y aceitunas",
           "precio": 32000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "piz11",
