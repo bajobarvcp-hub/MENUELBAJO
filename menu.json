@@ -1696,7 +1696,7 @@
           "nombre": "4 · Vita Light",
           "descripcion": "Durazno · Ananá · Frutilla — Rico en vitaminas C, E, B1 y B6",
           "precio": 0,
-          "disponible": true
+          "disponible": false
         },
         {
           "id": "sm5",
