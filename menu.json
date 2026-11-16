@@ -647,13 +647,6 @@
           "descripcion": "Malbec · Cabernet Franc",
           "precio": 30000,
           "disponible": true
-        },
-        {
-          "id": "vin10",
-          "nombre": "Norton Select 3/4",
-          "descripcion": "Cabernet",
-          "precio": 15000,
-          "disponible": true
         }
       ]
     },
