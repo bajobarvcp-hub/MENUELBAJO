@@ -859,6 +859,20 @@
       "nota": null,
       "items": [
         {
+          "id": "cho3",
+          "nombre": "Warsteiner 250cc",
+          "descripcion": "",
+          "precio": 5500,
+          "disponible": true
+        },
+        {
+          "id": "cho4",
+          "nombre": "Warsteiner 500cc",
+          "descripcion": "",
+          "precio": 8800,
+          "disponible": true
+        },
+        {
           "id": "cho1",
           "nombre": "Imperial Lager 250cc",
           "descripcion": "",
@@ -870,20 +884,6 @@
           "nombre": "Imperial Lager 500cc",
           "descripcion": "",
           "precio": 8500,
-          "disponible": false
-        },
-        {
-          "id": "cho3",
-          "nombre": "Warsteiner 250cc",
-          "descripcion": "",
-          "precio": 5500,
-          "disponible": false
-        },
-        {
-          "id": "cho4",
-          "nombre": "Warsteiner 500cc",
-          "descripcion": "",
-          "precio": 8800,
           "disponible": false
         }
       ]
