@@ -218,35 +218,35 @@
           "id": "pas2",
           "nombre": "Sorrentinos de Jamón y Queso",
           "descripcion": "",
-          "precio": 25000,
+          "precio": 27000,
           "disponible": true
         },
         {
           "id": "pas3",
           "nombre": "Panzottis de Calabaza y Mozzarella",
           "descripcion": "",
-          "precio": 25000,
+          "precio": 28000,
           "disponible": true
         },
         {
           "id": "pas4",
           "nombre": "Lasagna",
           "descripcion": "Jamón, queso, bolognesa, acelga y salsa fileto",
-          "precio": 27000,
+          "precio": 30000,
           "disponible": true
         },
         {
           "id": "new_1788212307976_3",
           "nombre": "Raviolon de Salmón",
           "descripcion": "Salmón y puerro, con crema de hierbas",
-          "precio": 28000,
+          "precio": 31000,
           "disponible": true
         },
         {
           "id": "pas5",
           "nombre": "Sorrentino Ojo de Bife al Horno",
           "descripcion": "Ojo de bife braseado en vegetales, caldo y vino blanco, al horno con crema de roquefort",
-          "precio": 28000,
+          "precio": 31000,
           "disponible": true
         },
         {
