@@ -134,21 +134,21 @@
           "id": "pic1",
           "nombre": "Picada Clásica",
           "descripcion": "Salame, jamón cocido, jamón crudo, bondiola, queso reggianito, queso azul, queso pategras, queso tybo, pickles, aceitunas y papas fritas",
-          "precio": 45000,
+          "precio": 50000,
           "disponible": true
         },
         {
           "id": "pic2",
           "nombre": "Picada Playera",
           "descripcion": "Rabas a la romana, bastones de salmón, langostinos y lenguado rebozados, cazuela de salsa tártara y papas fritas",
-          "precio": 54000,
+          "precio": 60000,
           "disponible": true
         },
         {
           "id": "pic3",
           "nombre": "Picada Campestre",
           "descripcion": "Milanesas y supremas cortadas en tiras, bastones de muzzarella, aros de cebolla y papas fritas con cheddar",
-          "precio": 45000,
+          "precio": 50000,
           "disponible": true
         }
       ]
