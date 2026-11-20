@@ -862,14 +862,14 @@
           "id": "cho3",
           "nombre": "Warsteiner 250cc",
           "descripcion": "",
-          "precio": 5500,
+          "precio": 6300,
           "disponible": true
         },
         {
           "id": "cho4",
           "nombre": "Warsteiner 500cc",
           "descripcion": "",
-          "precio": 8800,
+          "precio": 11000,
           "disponible": true
         },
         {
