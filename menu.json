@@ -274,28 +274,35 @@
           "id": "ens1",
           "nombre": "Ensalada de Campo",
           "descripcion": "Colchón de lechuga y rúcula, bondiola de cerdo braseada, tomate, queso parmesano c/ aderezo de mostaza, miel y salsa de soja",
-          "precio": 19000,
+          "precio": 24000,
           "disponible": true
         },
         {
           "id": "ens2",
           "nombre": "Ensalada de Mar",
           "descripcion": "Colchón de rúcula y lechuga, langostinos rebozados, tomate y panceta ahumada",
-          "precio": 25000,
+          "precio": 28000,
           "disponible": true
         },
         {
           "id": "ens3",
           "nombre": "Ensalada Gourmet",
           "descripcion": "Colchón de lechuga y rúcula, tomate, pollo, queso, croutons y aderezo de mostaza antigua",
-          "precio": 19000,
+          "precio": 22000,
           "disponible": true
         },
         {
           "id": "ens4",
           "nombre": "Ensalada de Salmón Ahumado",
           "descripcion": "Colchón de lechuga y rúcula, salmón ahumado, tomate, cebolla salteada, aceitunas negras y aderezo de roquefort",
-          "precio": 25000,
+          "precio": 29000,
+          "disponible": true
+        },
+        {
+          "id": "new_1795203815200_1",
+          "nombre": "",
+          "descripcion": "",
+          "precio": 0,
           "disponible": true
         }
       ]
