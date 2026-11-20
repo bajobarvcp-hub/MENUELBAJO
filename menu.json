@@ -162,49 +162,49 @@
           "id": "che1",
           "nombre": "Salmón al Roquefort",
           "descripcion": "Salmón al grill con crema roquefort sobre vegetales grillados",
-          "precio": 36500,
+          "precio": 40000,
           "disponible": true
         },
         {
           "id": "che2",
           "nombre": "Entraña a la Pimienta",
           "descripcion": "Entraña con crema de pimienta negra, acompañada de ensalada de rúcula y parmesano",
-          "precio": 33000,
+          "precio": 37000,
           "disponible": true
         },
         {
           "id": "che3",
           "nombre": "Pollo a la Mostaza",
           "descripcion": "Pechuga de pollo con crema de mostaza, acompañada de papas españolas",
-          "precio": 22000,
+          "precio": 25000,
           "disponible": true
         },
         {
           "id": "che4",
           "nombre": "Merluza a los 4 Quesos",
           "descripcion": "Merluza a los 4 quesos, acompañada de batata frita",
-          "precio": 21000,
+          "precio": 24000,
           "disponible": true
         },
         {
           "id": "che5",
           "nombre": "Bondiola de Cerdo a la Cerveza",
           "descripcion": "Bondiola de cerdo braseada a la cerveza, acompañada de papas españolas",
-          "precio": 27000,
+          "precio": 30000,
           "disponible": true
         },
         {
           "id": "new_1778365034324_1",
           "nombre": "Lenguado Rebozado",
           "descripcion": "Lenguado rebozado, acompañado de papas cuña y salsa brava.",
-          "precio": 27000,
+          "precio": 30000,
           "disponible": true
         },
         {
           "id": "che7",
           "nombre": "Guiso de Lenteja",
           "descripcion": "Chorizo colorado, chorizo de cerdo, carne vacuna, panceta ahumada, lentejas cocidas en salsa",
-          "precio": 23000,
+          "precio": 26000,
           "disponible": true
         }
       ]
