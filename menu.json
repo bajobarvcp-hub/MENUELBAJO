@@ -358,91 +358,91 @@
           "id": "san1",
           "nombre": "Tostado",
           "descripcion": "Pan de miga, jamón cocido, queso tybo y mayonesa",
-          "precio": 14000,
+          "precio": 16000,
           "disponible": true
         },
         {
           "id": "san2",
           "nombre": "Tostado de Baguetín",
           "descripcion": "Jamón cocido y queso tybo",
-          "precio": 14000,
+          "precio": 16000,
           "disponible": true
         },
         {
           "id": "san3",
           "nombre": "Tostado El Bajo",
           "descripcion": "Pan de campo, jamón, queso y mayonesa",
-          "precio": 17000,
+          "precio": 19000,
           "disponible": true
         },
         {
           "id": "san4",
           "nombre": "Crudo y Queso",
           "descripcion": "Pan de baguetín, jamón crudo, rúcula y queso parmesano",
-          "precio": 17000,
+          "precio": 19000,
           "disponible": true
         },
         {
           "id": "san5",
           "nombre": "Hamburguesa",
           "descripcion": "Medallón de carne, queso cheddar, lechuga y tomate",
-          "precio": 18500,
+          "precio": 20000,
           "disponible": true
         },
         {
           "id": "san6",
           "nombre": "Hamburguesa El Bajo",
           "descripcion": "Medallón de carne, doble cheddar y panceta",
-          "precio": 20000,
+          "precio": 22000,
           "disponible": true
         },
         {
           "id": "san7",
           "nombre": "Burger de Lomo",
           "descripcion": "Medallón de lomo 200g, cebolla caramelizada, cheddar, panceta y mayonesa casera",
-          "precio": 22000,
+          "precio": 24000,
           "disponible": true
         },
         {
           "id": "san8",
           "nombre": "Lomo Completo",
           "descripcion": "Bife de lomo, lechuga, tomate, jamón, queso, huevo y mayonesa casera",
-          "precio": 22000,
+          "precio": 24000,
           "disponible": true
         },
         {
           "id": "san9",
           "nombre": "Lomo El Bajo",
           "descripcion": "Bife de lomo, jamón, queso, huevo, panceta ahumada, pimientos asados y mayonesa casera",
-          "precio": 24000,
+          "precio": 26000,
           "disponible": true
         },
         {
           "id": "san10",
           "nombre": "Salmón Ahumado",
           "descripcion": "Pan de salvado, salmón ahumado, tomates deshidratados, rúcula y queso crema",
-          "precio": 25000,
+          "precio": 28000,
           "disponible": true
         },
         {
           "id": "san11",
           "nombre": "Bondiola Braseada",
           "descripcion": "Bondiola braseada, cebollas caramelizadas, pimientos asados, panceta ahumada y huevo frito",
-          "precio": 22000,
+          "precio": 24000,
           "disponible": true
         },
         {
           "id": "san12",
           "nombre": "Vegetariano",
           "descripcion": "Pan árabe, vegetales grillados y gratinado con queso provolone (pimientos, cebolla, zanahorias, zapallito, berenjena) y rúcula",
-          "precio": 21000,
+          "precio": 23000,
           "disponible": true
         },
         {
           "id": "san13",
           "nombre": "Sándwich de Mila/Suprema",
           "descripcion": "Milanesa de ternera o suprema de pollo, lechuga, tomate, jamón, queso, huevo y mayonesa casera",
-          "precio": 22000,
+          "precio": 23000,
           "disponible": true
         }
       ]
