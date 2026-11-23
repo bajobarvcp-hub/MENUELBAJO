@@ -254,7 +254,7 @@
           "nombre": "Ñoquis con Ragú de lomo",
           "descripcion": "",
           "precio": 28000,
-          "disponible": false
+          "disponible": true
         },
         {
           "id": "new_1774559084770_2",
